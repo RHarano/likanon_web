@@ -2679,14 +2679,10 @@ select {
     bottom: 2rem;
     right: 2rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 0.75rem 1.25rem;
-    background: var(--color-primary);
-    color: var(--color-white);
-    border-radius: var(--radius-full);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    gap: 0.375rem;
+    color: var(--color-text-light);
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
@@ -2694,12 +2690,34 @@ select {
     z-index: 999;
 }
 
+.back-to-top-arrow {
+    width: 1px;
+    height: 40px;
+    background: var(--color-text-muted);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.back-to-top-arrow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid var(--color-text-muted);
+    border-left: 1px solid var(--color-text-muted);
+    transition: all 0.3s ease;
+}
+
 .back-to-top-text {
     font-family: var(--font-accent);
-    font-size: 0.6875rem;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    writing-mode: vertical-rl;
+    transition: all 0.3s ease;
 }
 
 .back-to-top.visible {
@@ -2709,26 +2727,30 @@ select {
 }
 
 .back-to-top:hover {
-    background: var(--color-gold);
-    color: var(--color-primary);
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(201, 162, 39, 0.3);
+    color: var(--color-gold);
 }
 
-.back-to-top:active {
-    transform: translateY(-2px);
-    transition: all 0.1s ease;
+.back-to-top:hover .back-to-top-arrow {
+    background: var(--color-gold);
+    height: 50px;
+}
+
+.back-to-top:hover .back-to-top-arrow::before {
+    border-color: var(--color-gold);
 }
 
 @media (max-width: 768px) {
     .back-to-top {
         bottom: 1.5rem;
         right: 1rem;
-        padding: 0.625rem 1rem;
+    }
+
+    .back-to-top-arrow {
+        height: 32px;
     }
 
     .back-to-top-text {
-        font-size: 0.625rem;
+        font-size: 0.5625rem;
     }
 }
 
