@@ -334,27 +334,120 @@
 
 @media (max-width: 768px) {
     .blog-hero {
-        padding: 8rem 0 3rem;
+        padding: 7rem 0 2rem;
+    }
+
+    .blog-hero-title {
+        font-size: 1.5rem;
+    }
+
+    .blog-hero-desc {
+        font-size: 0.875rem;
+    }
+
+    .blog-categories {
+        padding: var(--spacing-md) 0;
+        top: 60px;
     }
 
     .category-filter {
         justify-content: flex-start;
         overflow-x: auto;
         flex-wrap: nowrap;
-        padding-bottom: var(--spacing-sm);
+        padding: 0 var(--spacing-md) var(--spacing-sm);
+        margin: 0 calc(-1 * var(--spacing-md));
         -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .category-filter::-webkit-scrollbar {
+        display: none;
     }
 
     .category-btn {
         flex-shrink: 0;
+        padding: 0.5rem 1rem;
+        font-size: 0.8125rem;
+    }
+
+    .blog-featured-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
     }
 
     .blog-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .blog-section {
+        margin-bottom: var(--spacing-2xl);
     }
 
     .blog-section-title {
-        font-size: 1.125rem;
+        font-size: 1rem;
+        gap: var(--spacing-sm);
+    }
+
+    .blog-section-title .icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .blog-section-title .icon svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .blog-card-content {
+        padding: var(--spacing-md);
+    }
+
+    .blog-card-title {
+        font-size: 0.9375rem;
+        line-height: 1.5;
+    }
+
+    .blog-card-excerpt {
+        font-size: 0.8125rem;
+        -webkit-line-clamp: 2;
+    }
+
+    .blog-posts {
+        padding-bottom: 80px;
+    }
+
+    /* Better card layout on mobile */
+    .blog-card {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .blog-card .blog-card-image {
+        width: 120px;
+        min-width: 120px;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .blog-card .blog-card-placeholder {
+        height: 100%;
+    }
+
+    .blog-card .blog-card-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .blog-card.featured {
+        flex-direction: column;
+    }
+
+    .blog-card.featured .blog-card-image {
+        width: 100%;
+        aspect-ratio: 16/9;
     }
 }
 
