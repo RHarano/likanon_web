@@ -422,7 +422,74 @@
     }
 
     .article-body {
-        padding: var(--spacing-lg);
+        padding: var(--spacing-md);
+    }
+
+    .article-body h2 {
+        font-size: 1.25rem;
+        margin: var(--spacing-2xl) 0 var(--spacing-md);
+    }
+
+    .article-body h3 {
+        font-size: 1.0625rem;
+        margin: var(--spacing-lg) 0 var(--spacing-sm);
+    }
+
+    .article-body p {
+        font-size: 0.9375rem;
+        line-height: 1.9;
+    }
+
+    .article-body ul,
+    .article-body ol {
+        padding-left: var(--spacing-md);
+        margin: var(--spacing-md) 0;
+    }
+
+    .article-body li {
+        font-size: 0.9375rem;
+        line-height: 1.8;
+        margin-bottom: var(--spacing-md);
+        padding-left: var(--spacing-xs);
+    }
+
+    .article-body li strong {
+        display: block;
+        margin-bottom: 0.25em;
+        color: var(--color-primary);
+    }
+
+    /* 目次 */
+    .table-of-contents {
+        padding: var(--spacing-md);
+    }
+
+    .table-of-contents li {
+        font-size: 0.875rem;
+        line-height: 1.6;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    /* ボックス系 */
+    .info-box,
+    .tip-box,
+    .example-box,
+    .summary-box {
+        padding: var(--spacing-md);
+        margin: var(--spacing-md) 0;
+    }
+
+    .info-box p,
+    .tip-box p,
+    .example-box p {
+        font-size: 0.875rem;
+        line-height: 1.7;
+    }
+
+    /* リード文 */
+    .article-lead {
+        font-size: 0.9375rem;
+        line-height: 1.8;
     }
 
     .article-sidebar {
@@ -431,5 +498,18 @@
 
     .article-nav .container {
         grid-template-columns: 1fr;
+    }
+
+    /* CTA */
+    .article-cta {
+        padding: var(--spacing-lg);
+    }
+
+    .article-cta h3 {
+        font-size: 1.125rem;
+    }
+
+    .article-cta p {
+        font-size: 0.875rem;
     }
 }
