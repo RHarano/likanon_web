@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ホームページの表示速度が遅いと離脱率が上がり、SEOにも悪影響。今すぐできる表示速度改善テクニック5つを初心者向けに解説します。">
+    <meta name="keywords" content="ホームページ 表示速度, サイト 高速化, ページスピード 改善, WordPress 速度">
+    <title>ホームページの表示速度を改善する5つの方法 | LIKaNON</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#service">サービス</a></li>
+                    <li><a href="../index.html#portfolio">実績</a></li>
+                    <li><a href="../index.html#merit">選ばれる理由</a></li>
+                    <li><a href="../blog.html" class="active">ブログ</a></li>
+                    <li><a href="../index.html#contact" class="nav-cta">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 記事 -->
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category web">Webの豆知識</span>
+                    <time datetime="2024-11-28">2024.11.28</time>
+                    <span class="read-time">読了時間：5分</span>
+                </div>
+                <h1 class="article-title">ホームページの表示速度を改善する5つの方法</h1>
+                <p class="article-lead">「サイトが重い」「読み込みが遅い」それだけで、お客様は離れていきます。表示速度は、ユーザー体験だけでなくSEOにも影響する重要な要素。今すぐできる改善方法をご紹介します。</p>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 目次 -->
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#why-speed-matters">なぜ表示速度が重要なのか</a></li>
+                            <li><a href="#check-speed">まずは現状を確認しよう</a></li>
+                            <li><a href="#method-1">方法1：画像を最適化する</a></li>
+                            <li><a href="#method-2">方法2：ブラウザキャッシュを活用する</a></li>
+                            <li><a href="#method-3">方法3：不要なプラグインを削除する</a></li>
+                            <li><a href="#method-4">方法4：サーバーを見直す</a></li>
+                            <li><a href="#method-5">方法5：CDNを導入する</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <section id="why-speed-matters">
+                        <h2>なぜ表示速度が重要なのか</h2>
+                        <p>Googleの調査によると、<strong>ページの読み込みに3秒以上かかると、53%のユーザーが離脱する</strong>というデータがあります。</p>
+                        <p>さらに、表示速度はGoogleの検索ランキング要因の一つ。つまり、遅いサイトは検索順位も下がりやすいのです。</p>
+
+                        <div class="info-box">
+                            <h4>表示速度と離脱率の関係</h4>
+                            <ul>
+                                <li>1秒→3秒：離脱率 32%増加</li>
+                                <li>1秒→5秒：離脱率 90%増加</li>
+                                <li>1秒→6秒：離脱率 106%増加</li>
+                            </ul>
+                            <p>※出典：Google / SOASTA Research</p>
+                        </div>
+
+                        <p>特にスマホユーザーは待つことを嫌います。モバイル時代において、表示速度の改善は必須と言えるでしょう。</p>
+                    </section>
+
+                    <section id="check-speed">
+                        <h2>まずは現状を確認しよう</h2>
+                        <p>改善の前に、今のサイトがどれくらいの速度なのか確認しましょう。</p>
+
+                        <h3>PageSpeed Insights（無料）</h3>
+                        <p>Googleが提供する無料ツール。URLを入力するだけで、パソコン・スマホ両方のスコアと改善点を教えてくれます。</p>
+                        <p><strong>目標スコア</strong>：50点以上が「平均的」、90点以上が「良好」とされています。</p>
+
+                        <div class="tip-box">
+                            <p><strong>チェックポイント</strong>：スコアの数字だけでなく、「改善できる項目」を確認しましょう。具体的に何を直せばいいかがわかります。</p>
+                        </div>
+                    </section>
+
+                    <section id="method-1">
+                        <h2>方法1：画像を最適化する</h2>
+                        <p>多くのサイトで、<strong>表示速度を遅くしている最大の原因は「画像」</strong>です。</p>
+
+                        <h3>画像最適化のポイント</h3>
+                        <ul>
+                            <li><strong>適切なサイズにリサイズ</strong>：幅4000pxの画像を幅800pxで表示しているなら、元のサイズを小さくする</li>
+                            <li><strong>圧縮する</strong>：TinyPNG、Squooshなどのツールで画質を保ったまま容量削減</li>
+                            <li><strong>WebP形式を使う</strong>：JPEGやPNGより30〜50%軽い次世代フォーマット</li>
+                            <li><strong>遅延読み込み（Lazy Load）</strong>：画面に表示されるまで画像を読み込まない設定</li>
+                        </ul>
+
+                        <div class="example-box">
+                            <p><strong>改善例</strong></p>
+                            <p>Before：トップページの画像合計 8MB</p>
+                            <p>After：最適化後 800KB（90%削減！）</p>
+                        </div>
+                    </section>
+
+                    <section id="method-2">
+                        <h2>方法2：ブラウザキャッシュを活用する</h2>
+                        <p>キャッシュとは、一度読み込んだデータを保存しておく仕組み。2回目以降のアクセスが劇的に速くなります。</p>
+
+                        <h3>設定方法</h3>
+                        <ul>
+                            <li><strong>WordPressの場合</strong>：WP Super Cache、W3 Total Cacheなどのプラグインで簡単設定</li>
+                            <li><strong>それ以外</strong>：.htaccessファイルでキャッシュ期間を設定</li>
+                        </ul>
+
+                        <div class="tip-box">
+                            <p><strong>注意</strong>：キャッシュを設定すると、サイト更新が反映されにくくなることも。更新時はキャッシュをクリアしましょう。</p>
+                        </div>
+                    </section>
+
+                    <section id="method-3">
+                        <h2>方法3：不要なプラグインを削除する</h2>
+                        <p>WordPressサイトでよくある問題。便利だからと入れすぎたプラグインが、サイトを重くしています。</p>
+
+                        <h3>見直しのポイント</h3>
+                        <ul>
+                            <li>使っていないプラグインは「無効化」ではなく「削除」</li>
+                            <li>似た機能のプラグインが複数ないかチェック</li>
+                            <li>長期間更新されていないプラグインは代替を探す</li>
+                            <li>「P3 (Plugin Performance Profiler)」で重いプラグインを特定</li>
+                        </ul>
+
+                        <p><strong>目安</strong>：プラグインは15〜20個以内に抑えるのがベストです。</p>
+                    </section>
+
+                    <section id="method-4">
+                        <h2>方法4：サーバーを見直す</h2>
+                        <p>いくらサイトを軽くしても、サーバー自体が遅ければ意味がありません。</p>
+
+                        <h3>サーバー選びのポイント</h3>
+                        <ul>
+                            <li><strong>表示速度を重視したサーバーを選ぶ</strong>：エックスサーバー、ConoHa WINGなどが高速と評判</li>
+                            <li><strong>共用サーバーの混雑を避ける</strong>：格安サーバーは速度が不安定になりがち</li>
+                            <li><strong>PHPバージョンを最新に</strong>：古いバージョンは処理が遅い</li>
+                        </ul>
+
+                        <div class="tip-box">
+                            <p><strong>サーバー移行</strong>は専門知識が必要です。不安な方はプロに依頼するのがおすすめです。</p>
+                        </div>
+                    </section>
+
+                    <section id="method-5">
+                        <h2>方法5：CDNを導入する</h2>
+                        <p>CDN（Content Delivery Network）とは、世界中のサーバーにコンテンツを分散配置し、ユーザーに最も近いサーバーから配信する仕組みです。</p>
+
+                        <h3>CDNのメリット</h3>
+                        <ul>
+                            <li>物理的な距離による遅延を軽減</li>
+                            <li>サーバーへの負荷を分散</li>
+                            <li>大量アクセス時も安定</li>
+                        </ul>
+
+                        <p><strong>おすすめCDN</strong>：Cloudflare（無料プランあり）が導入しやすくておすすめです。</p>
+                    </section>
+
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <p>表示速度の改善は、ユーザー体験の向上、離脱率の低下、SEO効果と、いいことづくめです。</p>
+
+                        <div class="summary-box">
+                            <h4>今すぐできる改善チェックリスト</h4>
+                            <ul>
+                                <li>PageSpeed Insightsで現状を確認</li>
+                                <li>画像を圧縮・最適化する</li>
+                                <li>キャッシュプラグインを導入する</li>
+                                <li>不要なプラグインを削除する</li>
+                                <li>サーバー・PHPバージョンを確認する</li>
+                            </ul>
+                        </div>
+
+                        <p>「自分でやるのは難しい」「時間がない」という方は、ぜひLIKaNONにお任せください。表示速度の改善から、SEO対策、サイト運用まで一貫してサポートします。</p>
+                    </section>
+
+                    <div class="article-cta">
+                        <h3>サイト速度改善のご相談</h3>
+                        <p>「なんだかサイトが重い気がする」そんなお悩み、解決します。</p>
+                        <a href="../index.html#contact" class="btn btn-primary btn-large">
+                            無料相談はこちら
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h3>この記事を書いた人</h3>
+                        <div class="author-card">
+                            <div class="author-info">
+                                <p class="author-name">LIKaNON</p>
+                                <p class="author-desc">Web制作・デザイン歴8年以上。表示速度にこだわったサイト制作を得意としています。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>関連記事</h3>
+                        <ul class="related-posts">
+                            <li><a href="seo-guide-2024.html">【2024年最新】小規模事業者のためのSEO対策完全ガイド</a></li>
+                            <li><a href="#">SSL証明書とは？必要な理由と導入方法</a></li>
+                            <li><a href="#">アクセス解析の見方｜Googleアナリティクス活用法</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="../blog.html?category=web">Webの豆知識</a></li>
+                            <li><a href="../blog.html?category=seo">SEO対策</a></li>
+                            <li><a href="../blog.html?category=design">デザインの豆知識</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-profile">
+                <div class="footer-profile-inner">
+                    <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <div class="footer-profile-content">
+                        <p class="footer-profile-text">
+                            デザインとWeb制作で<strong>8年以上</strong>の実績。<br>
+                            HP制作・リニューアル・運用代行まで、一貫してサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LIKaNON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <script src="../script.js"></script>
+    <script src="../blog.js"></script>
+</body>
+</html>

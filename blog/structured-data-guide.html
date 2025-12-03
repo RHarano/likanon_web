@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="構造化データとは何か、リッチスニペットの種類と効果、初心者でもできる実装方法を解説。検索結果で目立つサイトを作りましょう。">
+    <meta name="keywords" content="構造化データ, リッチスニペット, SEO, JSON-LD, schema.org">
+    <title>構造化データとは？リッチスニペットで検索結果を目立たせる | LIKaNON</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#service">サービス</a></li>
+                    <li><a href="../index.html#portfolio">実績</a></li>
+                    <li><a href="../index.html#merit">選ばれる理由</a></li>
+                    <li><a href="../blog.html" class="active">ブログ</a></li>
+                    <li><a href="../index.html#contact" class="nav-cta">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 記事 -->
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category seo">SEO対策</span>
+                    <time datetime="2024-11-15">2024.11.15</time>
+                    <span class="read-time">読了時間：7分</span>
+                </div>
+                <h1 class="article-title">構造化データとは？リッチスニペットで検索結果を目立たせる</h1>
+                <p class="article-lead">検索結果で星評価やFAQ、パンくずリストが表示されているサイトを見たことはありませんか？それが「リッチスニペット」です。構造化データを使って、検索結果を目立たせる方法を解説します。</p>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#what-is-structured-data">構造化データとは</a></li>
+                            <li><a href="#rich-snippets">リッチスニペットの種類</a></li>
+                            <li><a href="#benefits">導入するメリット</a></li>
+                            <li><a href="#how-to-implement">実装方法</a></li>
+                            <li><a href="#common-types">よく使われる構造化データ</a></li>
+                            <li><a href="#testing">テスト方法</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <section id="what-is-structured-data">
+                        <h2>構造化データとは</h2>
+                        <p>構造化データとは、<strong>Webページの内容を検索エンジンに正確に伝えるための記述形式</strong>です。</p>
+                        <p>人間は文章を読んで「これは会社の住所だな」「これは商品の価格だな」と理解できますが、検索エンジン（ロボット）は文脈を理解するのが苦手です。</p>
+                        <p>構造化データを使うことで、「これは会社名」「これは電話番号」「これは営業時間」といった情報を、検索エンジンに明確に伝えられます。</p>
+
+                        <div class="info-box">
+                            <h4>構造化データの規格</h4>
+                            <ul>
+                                <li><strong>schema.org</strong>：Google、Microsoft、Yahooが共同策定した標準規格</li>
+                                <li><strong>JSON-LD</strong>：Googleが推奨する記述形式</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="rich-snippets">
+                        <h2>リッチスニペットの種類</h2>
+                        <p>構造化データを設定すると、検索結果に追加情報が表示されることがあります。これを<strong>リッチスニペット</strong>（リッチリザルト）と呼びます。</p>
+
+                        <h3>主なリッチスニペットの種類</h3>
+                        <ul>
+                            <li><strong>パンくずリスト</strong>：ページの階層構造を表示</li>
+                            <li><strong>FAQ</strong>：よくある質問と回答を展開表示</li>
+                            <li><strong>レビュー・評価</strong>：星マークと評価点を表示</li>
+                            <li><strong>商品情報</strong>：価格、在庫状況を表示</li>
+                            <li><strong>レシピ</strong>：調理時間、カロリーを表示</li>
+                            <li><strong>イベント</strong>：日時、場所を表示</li>
+                            <li><strong>ローカルビジネス</strong>：住所、営業時間、電話番号を表示</li>
+                            <li><strong>How To</strong>：手順をステップ表示</li>
+                        </ul>
+
+                        <div class="tip-box">
+                            <p><strong>注意</strong>：構造化データを設定しても、リッチスニペットが<strong>必ず表示されるわけではありません</strong>。Googleが判断して表示するかどうかを決めます。</p>
+                        </div>
+                    </section>
+
+                    <section id="benefits">
+                        <h2>導入するメリット</h2>
+
+                        <h3>1. クリック率（CTR）の向上</h3>
+                        <p>リッチスニペットが表示されると、検索結果の中で目立ちます。通常の検索結果よりも多くの情報が表示されるため、<strong>クリック率が向上</strong>します。</p>
+
+                        <h3>2. 検索エンジンの理解度向上</h3>
+                        <p>構造化データを使うことで、検索エンジンがページの内容を正確に理解できます。これにより、<strong>適切な検索クエリに表示されやすく</strong>なります。</p>
+
+                        <h3>3. 音声検索への対応</h3>
+                        <p>GoogleアシスタントやSiriなどの音声検索では、構造化データの情報が参照されることがあります。<strong>音声検索時代への備え</strong>になります。</p>
+
+                        <h3>4. 競合との差別化</h3>
+                        <p>まだ構造化データを導入していないサイトも多いため、導入するだけで<strong>検索結果で目立つ</strong>ことができます。</p>
+                    </section>
+
+                    <section id="how-to-implement">
+                        <h2>実装方法</h2>
+                        <p>構造化データの実装には、主に<strong>JSON-LD形式</strong>が使われます。HTMLの&lt;head&gt;タグ内、または&lt;body&gt;タグ内に記述します。</p>
+
+                        <div class="info-box">
+                            <h4>基本的な書き方（ローカルビジネスの例）</h4>
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "株式会社サンプル",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "〇〇区〇〇1-2-3",
+    "addressLocality": "東京都",
+    "postalCode": "100-0001",
+    "addressCountry": "JP"
+  },
+  "telephone": "03-1234-5678",
+  "openingHours": "Mo-Fr 09:00-18:00"
+}
+&lt;/script&gt;</code></pre>
+                        </div>
+
+                        <h3>WordPressの場合</h3>
+                        <p>WordPressなら、プラグインを使って簡単に構造化データを設定できます。</p>
+                        <ul>
+                            <li><strong>Yoast SEO</strong>：基本的な構造化データを自動出力</li>
+                            <li><strong>Rank Math</strong>：詳細な構造化データ設定が可能</li>
+                            <li><strong>Schema Pro</strong>：構造化データ専用プラグイン</li>
+                        </ul>
+                    </section>
+
+                    <section id="common-types">
+                        <h2>よく使われる構造化データ</h2>
+
+                        <h3>ローカルビジネス（店舗・会社）</h3>
+                        <p>店舗や会社のサイトでは必須と言えます。住所、電話番号、営業時間、地図情報などを設定します。</p>
+
+                        <h3>FAQ（よくある質問）</h3>
+                        <p>質問と回答のペアを設定すると、検索結果にアコーディオン形式で表示されることがあります。表示面積が大きくなるため、CTR向上に効果的です。</p>
+
+                        <h3>記事・ブログ</h3>
+                        <p>ブログやニュース記事には、Article構造化データを設定します。公開日、更新日、著者情報などを含めます。</p>
+
+                        <h3>パンくずリスト</h3>
+                        <p>サイトの階層構造を示すパンくずリストは、ほぼすべてのサイトで設定すべき構造化データです。</p>
+                    </section>
+
+                    <section id="testing">
+                        <h2>テスト方法</h2>
+                        <p>構造化データが正しく設定されているかは、Googleのツールでチェックできます。</p>
+
+                        <div class="info-box">
+                            <h4>テストツール</h4>
+                            <ul>
+                                <li><strong>リッチリザルトテスト</strong>：リッチスニペット対応状況を確認</li>
+                                <li><strong>Schema Markup Validator</strong>：構造化データの文法チェック</li>
+                                <li><strong>Google Search Console</strong>：実際のエラーや警告を確認</li>
+                            </ul>
+                        </div>
+
+                        <p>設定後は必ずテストツールでエラーがないか確認しましょう。エラーがあると、リッチスニペットが表示されません。</p>
+                    </section>
+
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <p>構造化データは、検索結果を目立たせ、クリック率を向上させる重要なSEO施策です。</p>
+
+                        <div class="summary-box">
+                            <h4>構造化データのポイント</h4>
+                            <ul>
+                                <li>検索エンジンにページ内容を正確に伝える</li>
+                                <li>リッチスニペットでクリック率が向上</li>
+                                <li>JSON-LD形式での記述がGoogleの推奨</li>
+                                <li>ローカルビジネス、FAQ、パンくずが特に重要</li>
+                                <li>設定後は必ずテストツールで確認</li>
+                            </ul>
+                        </div>
+
+                        <p>「構造化データを設定したいけど、やり方がわからない」という方は、LIKaNONにお任せください。サイトに最適な構造化データの設計・実装をサポートします。</p>
+                    </section>
+
+                    <div class="article-cta">
+                        <h3>構造化データの設定代行</h3>
+                        <p>SEO効果を最大化する構造化データの設計・実装を行います。</p>
+                        <a href="../index.html#contact" class="btn btn-primary btn-large">
+                            無料相談はこちら
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h3>この記事を書いた人</h3>
+                        <div class="author-card">
+                            <div class="author-info">
+                                <p class="author-name">LIKaNON</p>
+                                <p class="author-desc">Web制作・デザイン歴8年以上。SEO対策も得意としています。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>関連記事</h3>
+                        <ul class="related-posts">
+                            <li><a href="seo-guide-2024.html">【2024年最新】小規模事業者のためのSEO対策完全ガイド</a></li>
+                            <li><a href="meta-description-tips.html">meta descriptionの書き方｜クリック率を上げる7つのコツ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="../blog.html?category=seo">SEO対策</a></li>
+                            <li><a href="../blog.html?category=web">Webの豆知識</a></li>
+                            <li><a href="../blog.html?category=design">デザインの豆知識</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-profile">
+                <div class="footer-profile-inner">
+                    <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <div class="footer-profile-content">
+                        <p class="footer-profile-text">
+                            デザインとWeb制作で<strong>8年以上</strong>の実績。<br>
+                            HP制作・リニューアル・運用代行まで、一貫してサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LIKaNON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <script src="../script.js"></script>
+    <script src="../blog.js"></script>
+</body>
+</html>

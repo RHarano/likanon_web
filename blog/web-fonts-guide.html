@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="読みやすいWebフォントの選び方と設定方法を解説。Google Fontsの使い方、日本語フォントのおすすめ、パフォーマンスへの影響も紹介します。">
+    <meta name="keywords" content="Webフォント, Google Fonts, 日本語フォント, CSS, Web制作">
+    <title>読みやすいWebフォントの選び方と設定方法 | LIKaNON</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#service">サービス</a></li>
+                    <li><a href="../index.html#portfolio">実績</a></li>
+                    <li><a href="../index.html#merit">選ばれる理由</a></li>
+                    <li><a href="../blog.html" class="active">ブログ</a></li>
+                    <li><a href="../index.html#contact" class="nav-cta">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 記事 -->
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category design">デザインの豆知識</span>
+                    <time datetime="2024-11-08">2024.11.08</time>
+                    <span class="read-time">読了時間：6分</span>
+                </div>
+                <h1 class="article-title">読みやすいWebフォントの選び方と設定方法</h1>
+                <p class="article-lead">フォントはWebサイトの印象を大きく左右します。読みやすく、ブランドイメージに合ったフォントの選び方と、Google Fontsを使った設定方法を解説します。</p>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#what-is-webfont">Webフォントとは</a></li>
+                            <li><a href="#font-types">フォントの種類と特徴</a></li>
+                            <li><a href="#how-to-choose">選び方のポイント</a></li>
+                            <li><a href="#google-fonts">Google Fontsの使い方</a></li>
+                            <li><a href="#japanese-fonts">おすすめ日本語フォント</a></li>
+                            <li><a href="#performance">パフォーマンスへの配慮</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <section id="what-is-webfont">
+                        <h2>Webフォントとは</h2>
+                        <p>Webフォントとは、<strong>インターネット経由で読み込んで使用するフォント</strong>のことです。</p>
+                        <p>従来、Webサイトでは閲覧者のパソコンにインストールされているフォント（システムフォント）しか使えませんでした。そのため、デザイナーが意図したフォントで表示されない問題がありました。</p>
+                        <p>Webフォントを使うことで、<strong>どのデバイスでも同じフォントで表示</strong>できるようになります。</p>
+
+                        <div class="info-box">
+                            <h4>Webフォントのメリット</h4>
+                            <ul>
+                                <li>デザインの一貫性を保てる</li>
+                                <li>ブランドイメージを表現しやすい</li>
+                                <li>多くのフォントから選べる</li>
+                                <li>テキストなのでSEOに有利（画像テキストより）</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="font-types">
+                        <h2>フォントの種類と特徴</h2>
+                        <p>フォントは大きく分けて以下の種類があります。</p>
+
+                        <h3>ゴシック体（Sans-serif）</h3>
+                        <p>線の太さが均一で、端に装飾（セリフ）がないフォント。</p>
+                        <ul>
+                            <li><strong>特徴</strong>：モダン、シンプル、読みやすい</li>
+                            <li><strong>用途</strong>：Webサイト全般、UI、見出し</li>
+                            <li><strong>例</strong>：Noto Sans JP、游ゴシック、ヒラギノ角ゴ</li>
+                        </ul>
+
+                        <h3>明朝体（Serif）</h3>
+                        <p>線の太さに強弱があり、端に装飾（セリフ）があるフォント。</p>
+                        <ul>
+                            <li><strong>特徴</strong>：伝統的、上品、フォーマル</li>
+                            <li><strong>用途</strong>：長文、和風サイト、高級感を出したい時</li>
+                            <li><strong>例</strong>：Noto Serif JP、游明朝、ヒラギノ明朝</li>
+                        </ul>
+
+                        <h3>手書き風・デザインフォント</h3>
+                        <p>個性的なデザインのフォント。</p>
+                        <ul>
+                            <li><strong>特徴</strong>：個性的、親しみやすい、インパクト</li>
+                            <li><strong>用途</strong>：見出し、ロゴ、アクセント</li>
+                            <li><strong>注意</strong>：本文には使わない（読みにくい）</li>
+                        </ul>
+
+                        <div class="tip-box">
+                            <p><strong>基本ルール</strong>：本文はゴシック体か明朝体、見出しや装飾にデザインフォントを使う。1つのサイトで<strong>2〜3種類</strong>に抑えましょう。</p>
+                        </div>
+                    </section>
+
+                    <section id="how-to-choose">
+                        <h2>選び方のポイント</h2>
+
+                        <h3>1. 読みやすさを最優先</h3>
+                        <p>本文に使うフォントは、<strong>読みやすさが最重要</strong>です。長時間読んでも疲れないフォントを選びましょう。</p>
+                        <ul>
+                            <li>線が細すぎない</li>
+                            <li>文字間隔が適切</li>
+                            <li>小さいサイズでも判読できる</li>
+                        </ul>
+
+                        <h3>2. ブランドイメージに合わせる</h3>
+                        <p>フォントはサイトの印象を大きく左右します。</p>
+                        <ul>
+                            <li><strong>信頼感・誠実さ</strong>：ゴシック体（太め）</li>
+                            <li><strong>高級感・上品さ</strong>：明朝体</li>
+                            <li><strong>親しみやすさ</strong>：丸ゴシック</li>
+                            <li><strong>モダン・先進的</strong>：細めのゴシック体</li>
+                        </ul>
+
+                        <h3>3. 日本語と英語の相性</h3>
+                        <p>日本語フォントと英語フォントを組み合わせる場合、相性を確認しましょう。太さ、高さ、雰囲気が合っているかがポイントです。</p>
+
+                        <h3>4. ウェイト（太さ）のバリエーション</h3>
+                        <p>見出し、本文、強調など、複数の太さを使い分けます。ウェイトのバリエーションが豊富なフォントを選ぶと便利です。</p>
+                    </section>
+
+                    <section id="google-fonts">
+                        <h2>Google Fontsの使い方</h2>
+                        <p>Google Fontsは、<strong>無料で使えるWebフォントサービス</strong>です。商用利用も可能で、最も手軽にWebフォントを導入できます。</p>
+
+                        <h3>設定手順</h3>
+                        <ol>
+                            <li><a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts</a>にアクセス</li>
+                            <li>使いたいフォントを検索・選択</li>
+                            <li>必要なウェイト（太さ）を選択</li>
+                            <li>「Select」→「Embed code」からコードを取得</li>
+                            <li>HTMLのheadタグ内にコードを貼り付け</li>
+                            <li>CSSでfont-familyを指定</li>
+                        </ol>
+
+                        <div class="info-box">
+                            <h4>コード例</h4>
+<pre><code>&lt;!-- HTML head内 --&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"&gt;
+
+/* CSS */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <section id="japanese-fonts">
+                        <h2>おすすめ日本語フォント</h2>
+
+                        <h3>Google Fontsで使える日本語フォント</h3>
+                        <ul>
+                            <li><strong>Noto Sans JP</strong>：最も人気。読みやすく、ウェイトも豊富</li>
+                            <li><strong>Noto Serif JP</strong>：明朝体。上品で読みやすい</li>
+                            <li><strong>M PLUS 1p</strong>：丸みがあり、親しみやすい</li>
+                            <li><strong>Kosugi Maru</strong>：丸ゴシック。カジュアルな印象</li>
+                            <li><strong>Zen Kaku Gothic</strong>：モダンでスタイリッシュ</li>
+                        </ul>
+
+                        <h3>システムフォント（無料で使える）</h3>
+                        <ul>
+                            <li><strong>游ゴシック</strong>：Windows/Mac標準。上品で読みやすい</li>
+                            <li><strong>ヒラギノ角ゴ</strong>：Mac標準。美しく読みやすい</li>
+                            <li><strong>メイリオ</strong>：Windows標準。画面表示に最適化</li>
+                        </ul>
+
+                        <div class="tip-box">
+                            <p><strong>おすすめの組み合わせ</strong>：見出しは「Noto Sans JP Bold」、本文は「Noto Sans JP Regular」が鉄板です。統一感がありつつ、メリハリも出せます。</p>
+                        </div>
+                    </section>
+
+                    <section id="performance">
+                        <h2>パフォーマンスへの配慮</h2>
+                        <p>Webフォント、特に日本語フォントはファイルサイズが大きく、<strong>表示速度に影響</strong>します。以下の点に注意しましょう。</p>
+
+                        <h3>1. 使うウェイトを絞る</h3>
+                        <p>必要なウェイトだけを読み込みましょう。全ウェイトを読み込むとファイルサイズが膨大になります。</p>
+
+                        <h3>2. display=swapを使う</h3>
+                        <p>フォント読み込み中は代替フォントを表示し、読み込み完了後に切り替える設定。ユーザーを待たせません。</p>
+
+                        <h3>3. preconnectを設定</h3>
+                        <p>Google Fontsへの接続を事前に確立し、読み込みを高速化します。</p>
+
+                        <h3>4. サブセット化を検討</h3>
+                        <p>使用する文字だけを抽出したフォントファイルを使う方法。上級者向けですが、大幅な軽量化が可能です。</p>
+
+                        <div class="info-box">
+                            <h4>目安</h4>
+                            <ul>
+                                <li>日本語フォントは1ウェイトで約1〜2MB</li>
+                                <li>英語フォントは1ウェイトで約20〜50KB</li>
+                                <li>読み込むフォントは合計2〜3ウェイトに抑える</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <p>フォント選びは、サイトの印象と読みやすさを左右する重要な要素です。</p>
+
+                        <div class="summary-box">
+                            <h4>Webフォント選びのポイント</h4>
+                            <ul>
+                                <li>本文は読みやすさ重視（ゴシック体か明朝体）</li>
+                                <li>ブランドイメージに合ったフォントを選ぶ</li>
+                                <li>1サイトで2〜3種類に抑える</li>
+                                <li>Google Fontsなら無料で簡単に導入可能</li>
+                                <li>日本語は「Noto Sans JP」がおすすめ</li>
+                                <li>パフォーマンスに配慮し、ウェイトを絞る</li>
+                            </ul>
+                        </div>
+
+                        <p>「サイトのフォントを変えたい」「どのフォントが合うかわからない」という方は、LIKaNONにご相談ください。ブランドイメージに合ったフォント選びから設定までサポートします。</p>
+                    </section>
+
+                    <div class="article-cta">
+                        <h3>Webデザインのご相談</h3>
+                        <p>フォント選びから全体のデザインまで、トータルでサポートします。</p>
+                        <a href="../index.html#contact" class="btn btn-primary btn-large">
+                            無料相談はこちら
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h3>この記事を書いた人</h3>
+                        <div class="author-card">
+                            <div class="author-info">
+                                <p class="author-name">LIKaNON</p>
+                                <p class="author-desc">Web制作・デザイン歴8年以上。フォント選びにもこだわっています。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>関連記事</h3>
+                        <ul class="related-posts">
+                            <li><a href="color-scheme-by-industry.html">配色で印象が変わる！業種別おすすめカラースキーム</a></li>
+                            <li><a href="website-speed-optimization.html">ホームページの表示速度を改善する5つの方法</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="../blog.html?category=design">デザインの豆知識</a></li>
+                            <li><a href="../blog.html?category=web">Webの豆知識</a></li>
+                            <li><a href="../blog.html?category=seo">SEO対策</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-profile">
+                <div class="footer-profile-inner">
+                    <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <div class="footer-profile-content">
+                        <p class="footer-profile-text">
+                            デザインとWeb制作で<strong>8年以上</strong>の実績。<br>
+                            HP制作・リニューアル・運用代行まで、一貫してサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LIKaNON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <script src="../script.js"></script>
+    <script src="../blog.js"></script>
+</body>
+</html>

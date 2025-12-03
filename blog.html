@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LIKaNONのブログ。Web制作・デザイン・SNS運用に役立つ豆知識やお役立ちコラムを発信しています。SEO対策、ホームページ運用のヒントが満載。">
+    <meta name="keywords" content="Web制作 ブログ, SEO対策, ホームページ 豆知識, デザイン Tips, SNS運用 コツ">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="LIKaNON">
+
+    <!-- Open Graph / SNS -->
+    <meta property="og:title" content="ブログ | LIKaNON - Web制作・デザインの豆知識">
+    <meta property="og:description" content="Web制作・デザイン・SNS運用に役立つ豆知識やお役立ちコラムを発信中。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://likanon.com/blog.html">
+    <meta property="og:site_name" content="LIKaNON">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ブログ | LIKaNON">
+    <meta name="twitter:description" content="Web制作・デザイン・SNS運用の豆知識を発信">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://likanon.com/blog.html">
+
+    <title>ブログ | LIKaNON - Web制作・デザインの豆知識</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+
+    <!-- Structured Data for Blog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "LIKaNON ブログ",
+        "description": "Web制作・デザイン・SNS運用に役立つ豆知識やお役立ちコラム",
+        "url": "https://likanon.com/blog.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "LIKaNON",
+            "url": "https://likanon.com"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#service">サービス</a></li>
+                    <li><a href="index.html#portfolio">実績</a></li>
+                    <li><a href="index.html#merit">選ばれる理由</a></li>
+                    <li><a href="blog.html" class="active">ブログ</a></li>
+                    <li><a href="index.html#contact" class="nav-cta">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ブログヒーロー -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="blog-hero-content">
+                <p class="blog-hero-sub">Blog</p>
+                <h1 class="blog-hero-title">お役立ちコラム</h1>
+                <p class="blog-hero-desc">
+                    Web制作・デザイン・SNS運用に関する<br class="sp-only">
+                    豆知識やノウハウをお届けします
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- カテゴリーフィルター -->
+    <section class="blog-categories">
+        <div class="container">
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all">
+                    すべて
+                </button>
+                <button class="category-btn" data-category="web">
+                    <span class="category-icon web"></span>
+                    Webの豆知識
+                </button>
+                <button class="category-btn" data-category="design">
+                    <span class="category-icon design"></span>
+                    デザインの豆知識
+                </button>
+                <button class="category-btn" data-category="sns">
+                    <span class="category-icon sns"></span>
+                    SNS運用の豆知識
+                </button>
+                <button class="category-btn" data-category="column">
+                    <span class="category-icon column"></span>
+                    お役立ちコラム
+                </button>
+                <button class="category-btn" data-category="seo">
+                    <span class="category-icon seo"></span>
+                    SEO対策
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ブログ記事一覧 -->
+    <section class="blog-posts section">
+        <div class="container">
+            <!-- 人気記事 -->
+            <div class="blog-section">
+                <h2 class="blog-section-title">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </span>
+                    人気の記事
+                </h2>
+                <div class="blog-featured-grid">
+                    <article class="blog-card featured" data-category="seo">
+                        <a href="blog/seo-guide-2024.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">【2024年最新】小規模事業者のためのSEO対策完全ガイド</h3>
+                                <p class="blog-card-excerpt">GoogleのアルゴリズムアップデートにかかわらずSEOで成功するための基本と実践テクニックを解説します。</p>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-12-01">2024.12.01</time>
+                                    <span class="read-time">読了時間：8分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card featured" data-category="web">
+                        <a href="blog/website-speed-optimization.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>Web</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">ホームページの表示速度を改善する5つの方法</h3>
+                                <p class="blog-card-excerpt">サイトの読み込みが遅いと離脱率UP。今すぐできる表示速度改善テクニックをご紹介。</p>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-11-28">2024.11.28</time>
+                                    <span class="read-time">読了時間：5分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 最新記事 -->
+            <div class="blog-section">
+                <h2 class="blog-section-title">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </span>
+                    最新記事
+                </h2>
+                <div class="blog-grid">
+                    <!-- SEO対策記事 -->
+                    <article class="blog-card" data-category="seo">
+                        <a href="blog/meta-description-tips.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">meta descriptionの書き方｜クリック率を上げる7つのコツ</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-11-25">2024.11.25</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="design">
+                        <a href="blog/color-scheme-by-industry.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder design">
+                                    <span>Design</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category design">デザインの豆知識</span>
+                                <h3 class="blog-card-title">配色で印象が変わる！業種別おすすめカラースキーム</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-11-22">2024.11.22</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="sns">
+                        <a href="blog/instagram-best-posting-time.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder sns">
+                                    <span>SNS</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category sns">SNS運用の豆知識</span>
+                                <h3 class="blog-card-title">Instagram投稿のベストな時間帯とは？</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-11-20">2024.11.20</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="web">
+                        <a href="blog/ssl-certificate-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>Web</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">SSL証明書とは？必要な理由と導入方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-11-18">2024.11.18</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="seo">
+                        <a href="blog/structured-data-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">構造化データとは？リッチスニペットで検索結果を目立たせる</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-11-15">2024.11.15</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="column">
+                        <a href="blog/how-to-choose-web-agency.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder column">
+                                    <span>Column</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category column">お役立ちコラム</span>
+                                <h3 class="blog-card-title">ホームページ制作会社の選び方｜失敗しない5つのポイント</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-11-12">2024.11.12</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="seo">
+                        <a href="blog/local-seo-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">ローカルSEOとは？地域ビジネスのための集客戦略</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-11-10">2024.11.10</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="design">
+                        <a href="blog/web-fonts-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder design">
+                                    <span>Design</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category design">デザインの豆知識</span>
+                                <h3 class="blog-card-title">読みやすいWebフォントの選び方と設定方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-11-08">2024.11.08</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="seo">
+                        <a href="#" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">内部リンクの最適化｜SEO効果を最大化する設計</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-11-05">2024.11.05</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="sns">
+                        <a href="#" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder sns">
+                                    <span>SNS</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category sns">SNS運用の豆知識</span>
+                                <h3 class="blog-card-title">ハッシュタグ戦略｜効果的な付け方と選び方</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-11-02">2024.11.02</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="web">
+                        <a href="#" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>Web</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">アクセス解析の見方｜Googleアナリティクス活用法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-10-30">2024.10.30</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card" data-category="seo">
+                        <a href="#" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">画像SEO完全ガイド｜alt属性からファイル名まで</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-10-28">2024.10.28</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- ページネーション -->
+            <div class="blog-pagination">
+                <a href="#" class="pagination-btn active">1</a>
+                <a href="#" class="pagination-btn">2</a>
+                <a href="#" class="pagination-btn">3</a>
+                <span class="pagination-dots">...</span>
+                <a href="#" class="pagination-btn">10</a>
+                <a href="#" class="pagination-btn next">
+                    次へ
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Web制作のご相談、<br class="sp-only">お気軽にどうぞ</h2>
+                <p>
+                    ホームページ制作・リニューアル・運用代行など、<br>
+                    まずはお気軽にご相談ください。
+                </p>
+                <a href="index.html#contact" class="btn btn-primary btn-large">
+                    無料相談はこちら
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-profile">
+                <div class="footer-profile-inner">
+                    <img src="img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <div class="footer-profile-content">
+                        <p class="footer-profile-text">
+                            デザインとWeb制作で<strong>8年以上</strong>の実績。<br>
+                            HP制作・リニューアル・運用代行まで、一貫してサポートします。<br>
+                            「伝わる・成果が出る」サイト制作を、あなたのビジネスのパートナーとして。
+                        </p>
+                        <div class="footer-profile-stats">
+                            <div class="footer-stat">
+                                <span class="footer-stat-number">100+</span>
+                                <span class="footer-stat-label">制作実績</span>
+                            </div>
+                            <div class="footer-stat">
+                                <span class="footer-stat-number">98%</span>
+                                <span class="footer-stat-label">満足度</span>
+                            </div>
+                            <div class="footer-stat">
+                                <span class="footer-stat-number">8年</span>
+                                <span class="footer-stat-label">経験</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <div class="footer-nav-column">
+                    <h4>Service</h4>
+                    <ul>
+                        <li><a href="index.html#web-production">Web制作</a></li>
+                        <li><a href="index.html#renewal">リニューアル</a></li>
+                        <li><a href="index.html#support">運用サポート</a></li>
+                        <li><a href="index.html#other-services">デザイン制作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="index.html#merit">選ばれる理由</a></li>
+                        <li><a href="index.html#portfolio">制作実績</a></li>
+                        <li><a href="blog.html">ブログ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="index.html#contact">お問い合わせ</a></li>
+                        <li><a href="mailto:info@likanon.com">info@likanon.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 LIKaNON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOPに戻るボタン -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>
