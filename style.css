@@ -2282,49 +2282,13 @@ select {
         padding-bottom: 70px;
     }
 
-    /* Header */
+    /* Header - SPではナビ非表示、追従フッターで対応 */
     .nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background: var(--color-bg);
-        transition: right var(--transition-normal);
-        z-index: 1001;
-    }
-
-    .nav.active {
-        right: 0;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        gap: var(--spacing-xl);
-    }
-
-    .nav-list a {
-        font-size: 1.125rem;
-        color: var(--color-primary);
+        display: none;
     }
 
     .hamburger {
-        display: flex;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+        display: none;
     }
 
     /* Hero */
