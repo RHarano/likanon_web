@@ -2348,16 +2348,24 @@ select {
 
     .stat-item {
         text-align: center;
-        flex: 1;
-        min-width: 0;
+        flex: 0 0 auto;
+        white-space: nowrap;
     }
 
     .stat-number {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        display: inline;
+    }
+
+    .stat-suffix {
+        font-size: 1rem;
+        display: inline;
     }
 
     .stat-label {
-        font-size: 0.75rem;
+        font-size: 0.6875rem;
+        display: block;
+        white-space: nowrap;
     }
 
     /* Sections */
