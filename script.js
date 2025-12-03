@@ -179,6 +179,52 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ========================================
+    // Lightbox for gallery images
+    // ========================================
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxClose = document.querySelector('.lightbox-close');
+
+    if (designGallery && lightbox) {
+        // Click on gallery item to open lightbox
+        designGallery.addEventListener('click', function(e) {
+            const galleryItem = e.target.closest('.gallery-item');
+            if (galleryItem) {
+                const img = galleryItem.querySelector('img');
+                if (img) {
+                    lightboxImage.src = img.src;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+        });
+
+        // Close lightbox
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        if (lightboxClose) {
+            lightboxClose.addEventListener('click', closeLightbox);
+        }
+
+        // Close on background click
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    }
+
+    // ========================================
     // Header scroll effect
     // ========================================
     const header = document.getElementById('header');
