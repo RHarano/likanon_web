@@ -2852,6 +2852,14 @@ select {
         stroke: var(--color-white);
     }
 
+    .mobile-fixed-footer a.active {
+        color: var(--color-gold);
+    }
+
+    .mobile-fixed-footer a.active svg {
+        stroke: var(--color-gold);
+    }
+
     /* Adjust back-to-top button position */
     .back-to-top {
         bottom: 80px;
