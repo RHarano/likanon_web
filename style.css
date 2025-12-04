@@ -835,8 +835,8 @@ select {
 /* Web Works Grid */
 .web-works-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-xl);
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
 }
 
 .web-work-item {
@@ -921,27 +921,27 @@ select {
 }
 
 .web-work-info {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
 }
 
 .web-work-tag {
     display: inline-block;
-    padding: 0.25rem 0.75rem;
-    font-size: 0.6875rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.625rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--color-gold-dark);
     background: rgba(201, 162, 39, 0.12);
     border-radius: var(--radius-full);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
 }
 
 .web-work-info h4 {
-    font-size: 1.0625rem;
+    font-size: 0.875rem;
     font-weight: 600;
     color: var(--color-primary);
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0;
 }
 
 .web-work-info p {
@@ -956,13 +956,17 @@ select {
     }
 
     .web-works-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .design-gallery {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .web-works-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .portfolio-category-desc {
@@ -977,6 +981,10 @@ select {
 @media (max-width: 480px) {
     .design-gallery {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .web-works-grid {
+        grid-template-columns: 1fr;
     }
 }
 
