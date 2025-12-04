@@ -480,9 +480,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // ========================================
-    // Form handling with validation
+    // Form handling with validation & EmailJS
     // ========================================
     const contactForm = document.getElementById('contact-form');
+
+    // EmailJS Configuration - 要設定
+    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+    const EMAILJS_TEMPLATE_NOTIFY = 'template_notify';      // info@likanon.com への通知用
+    const EMAILJS_TEMPLATE_AUTOREPLY = 'template_autoreply'; // 自動返信用
+
+    // Initialize EmailJS
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+    }
 
     if (contactForm) {
         const formInputs = contactForm.querySelectorAll('input, select, textarea');
@@ -527,7 +538,19 @@ document.addEventListener('DOMContentLoaded', function() {
             return isValid;
         }
 
-        contactForm.addEventListener('submit', function(e) {
+        // サービス名を日本語に変換
+        function getServiceName(value) {
+            const services = {
+                'web': 'Web制作について',
+                'support': 'HP管理・運用代行について',
+                'sns': 'SNS運用について',
+                'design': 'デザイン制作について',
+                'other': 'その他'
+            };
+            return services[value] || value;
+        }
+
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
             let isFormValid = true;
@@ -547,14 +570,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
+            // Get form data
+            const formData = {
+                name: contactForm.querySelector('#name').value,
+                email: contactForm.querySelector('#email').value,
+                company: contactForm.querySelector('#company').value || '未入力',
+                service: getServiceName(contactForm.querySelector('#service').value),
+                message: contactForm.querySelector('#message').value
+            };
+
             // Success state
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = '送信中...';
             submitBtn.disabled = true;
 
-            // Simulate form submission
-            setTimeout(() => {
+            try {
+                // 1. info@likanon.com への通知メール送信
+                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_NOTIFY, formData);
+
+                // 2. お客様への自動返信メール送信
+                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_AUTOREPLY, formData);
+
+                // 送信成功
                 submitBtn.textContent = '送信完了!';
                 submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
 
@@ -563,8 +601,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
                     submitBtn.style.background = '';
-                }, 2000);
-            }, 1500);
+                }, 3000);
+
+            } catch (error) {
+                console.error('EmailJS Error:', error);
+                submitBtn.textContent = '送信失敗';
+                submitBtn.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
+
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                }, 3000);
+
+                alert('送信に失敗しました。お手数ですが、メールまたはInstagramよりお問い合わせください。');
+            }
         });
     }
 
