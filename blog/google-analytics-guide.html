@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N2Y1QF8ZQV');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Googleアナリティクス（GA4）の見方を初心者向けに解説。アクセス解析で見るべき指標、改善につなげる分析方法を具体的に紹介します。">
+    <meta name="keywords" content="Googleアナリティクス 見方, GA4 使い方, アクセス解析 初心者, ホームページ 分析">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="LIKaNON">
+
+    <meta property="og:title" content="アクセス解析の見方｜Googleアナリティクス活用法 | LIKaNON">
+    <meta property="og:description" content="GA4の見方を初心者向けに解説。見るべき指標と改善方法を紹介">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://likanon.com/blog/google-analytics-guide.html">
+    <meta property="og:site_name" content="LIKaNON">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://likanon.com/img/ogp.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="アクセス解析の見方｜Googleアナリティクス活用法">
+    <meta name="twitter:description" content="GA4の見方を初心者向けに解説。見るべき指標と改善方法">
+    <meta name="twitter:image" content="https://likanon.com/img/ogp.png">
+
+    <link rel="canonical" href="https://likanon.com/blog/google-analytics-guide.html">
+
+    <link rel="icon" href="/img/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+    <title>アクセス解析の見方｜Googleアナリティクス活用法 | LIKaNON</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "アクセス解析の見方｜Googleアナリティクス活用法",
+        "datePublished": "2024-12-05",
+        "dateModified": "2024-12-05",
+        "author": {
+            "@type": "Organization",
+            "name": "LIKaNON"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "LIKaNON",
+            "url": "https://likanon.com"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#service">サービス</a></li>
+                    <li><a href="../index.html#portfolio">実績</a></li>
+                    <li><a href="../index.html#merit">選ばれる理由</a></li>
+                    <li><a href="../blog.html" class="active">ブログ</a></li>
+                    <li><a href="../index.html#contact" class="nav-cta">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 記事ヘッダー -->
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category seo">SEO対策</span>
+                    <time datetime="2024-12-05">2024.12.05</time>
+                    <span class="read-time">読了時間：10分</span>
+                </div>
+                <h1 class="article-title">アクセス解析の見方｜Googleアナリティクス活用法</h1>
+                <p class="article-lead">「Googleアナリティクスを入れたけど、何を見ればいいかわからない」そんな方のために、GA4で最低限チェックすべき指標と、改善につなげる分析方法をわかりやすく解説します。</p>
+            </div>
+        </header>
+
+        <!-- 記事本文 -->
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 目次 -->
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#what-is-ga4">Googleアナリティクス（GA4）とは</a></li>
+                            <li><a href="#key-metrics">必ずチェックすべき5つの指標</a></li>
+                            <li><a href="#reports">よく使うレポートの見方</a></li>
+                            <li><a href="#analysis-tips">改善につなげる分析のコツ</a></li>
+                            <li><a href="#common-mistakes">初心者がやりがちな間違い</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <!-- セクション1 -->
+                    <section id="what-is-ga4">
+                        <h2>Googleアナリティクス（GA4）とは</h2>
+                        <p><strong>Googleアナリティクス4（GA4）</strong>は、Googleが無料で提供するアクセス解析ツールです。2023年7月に従来のユニバーサルアナリティクス（UA）から完全移行し、現在はGA4が標準となっています。</p>
+
+                        <h3>GA4でわかること</h3>
+                        <ul>
+                            <li>どれくらいの人がサイトを見ているか</li>
+                            <li>どこから来ているか（検索、SNS、直接など）</li>
+                            <li>どのページが人気か</li>
+                            <li>どれくらいの時間滞在しているか</li>
+                            <li>お問い合わせや購入などの成果</li>
+                        </ul>
+
+                        <div class="info-box">
+                            <h4>UAとGA4の違い</h4>
+                            <p>UAは「ページ」を中心とした計測でしたが、GA4は「イベント」を中心とした計測に変わりました。クリック、スクロール、動画再生なども自動で計測できるようになっています。</p>
+                        </div>
+                    </section>
+
+                    <!-- セクション2 -->
+                    <section id="key-metrics">
+                        <h2>必ずチェックすべき5つの指標</h2>
+                        <p>GA4には多くの指標がありますが、まずは以下の5つを押さえましょう。</p>
+
+                        <h3>1. ユーザー数</h3>
+                        <p>サイトを訪れた<strong>ユニークユーザーの数</strong>です。同じ人が何度来ても1人とカウントされます。</p>
+                        <ul>
+                            <li><strong>アクティブユーザー</strong>：設定期間中にサイトを訪れた人数</li>
+                            <li><strong>新規ユーザー</strong>：初めてサイトを訪れた人数</li>
+                            <li><strong>リピーター</strong>：2回以上訪れている人数</li>
+                        </ul>
+                        <div class="tip-box">
+                            <p><strong>見るポイント</strong>：新規とリピーターのバランスを確認。リピーターが多いサイトは、ファンがついている証拠です。</p>
+                        </div>
+
+                        <h3>2. セッション数</h3>
+                        <p><strong>サイトへの訪問回数</strong>です。1人のユーザーが3回訪問すれば、セッション数は3になります。</p>
+                        <p>セッションは以下の条件でリセットされます：</p>
+                        <ul>
+                            <li>30分以上操作がなかった場合</li>
+                            <li>日付が変わった場合</li>
+                            <li>流入元が変わった場合</li>
+                        </ul>
+
+                        <h3>3. エンゲージメント率</h3>
+                        <p>GA4で新しく導入された重要指標です。<strong>意味のある訪問の割合</strong>を示します。</p>
+                        <p>エンゲージメントのあるセッションとは：</p>
+                        <ul>
+                            <li>10秒以上サイトに滞在</li>
+                            <li>2ページ以上閲覧</li>
+                            <li>コンバージョンイベントが発生</li>
+                        </ul>
+                        <div class="example-box">
+                            <p><strong>目安</strong>：エンゲージメント率50%以上が理想。40%以下なら改善が必要かもしれません。</p>
+                        </div>
+
+                        <h3>4. 平均エンゲージメント時間</h3>
+                        <p>ユーザーが<strong>実際にページを見ていた時間</strong>の平均です。UAの「平均セッション時間」より正確な指標になっています。</p>
+                        <ul>
+                            <li>ブログ記事：2〜3分以上が理想</li>
+                            <li>サービスページ：1〜2分程度</li>
+                            <li>トップページ：30秒〜1分程度</li>
+                        </ul>
+
+                        <h3>5. コンバージョン</h3>
+                        <p>サイトの<strong>目標達成数</strong>です。お問い合わせ、資料請求、購入など、事前に設定した目標の達成回数を計測します。</p>
+                        <div class="info-box">
+                            <h4>コンバージョン設定は必須</h4>
+                            <p>コンバージョンを設定していないと、サイトが成果を出しているか判断できません。必ず設定しましょう。</p>
+                        </div>
+                    </section>
+
+                    <!-- セクション3 -->
+                    <section id="reports">
+                        <h2>よく使うレポートの見方</h2>
+
+                        <h3>集客レポート：どこから来ているか</h3>
+                        <p>「レポート」→「集客」→「トラフィック獲得」で確認できます。</p>
+                        <ul>
+                            <li><strong>Organic Search</strong>：Google/Yahoo検索からの流入</li>
+                            <li><strong>Direct</strong>：URLの直接入力やブックマーク</li>
+                            <li><strong>Referral</strong>：他サイトからのリンク</li>
+                            <li><strong>Organic Social</strong>：SNSからの流入</li>
+                            <li><strong>Paid Search</strong>：検索広告からの流入</li>
+                        </ul>
+                        <div class="tip-box">
+                            <p><strong>活用法</strong>：Organic Searchが増えていればSEO対策が効いている証拠。SNSからの流入が少なければ、SNS運用を強化する目安になります。</p>
+                        </div>
+
+                        <h3>ページとスクリーンレポート：人気ページを知る</h3>
+                        <p>「レポート」→「エンゲージメント」→「ページとスクリーン」で確認できます。</p>
+                        <p>どのページがよく見られているか、どのページで離脱しているかがわかります。</p>
+
+                        <h3>ユーザー属性レポート：誰が見ているか</h3>
+                        <p>「レポート」→「ユーザー属性」→「概要」で確認できます。</p>
+                        <ul>
+                            <li>年齢層</li>
+                            <li>性別</li>
+                            <li>地域（都道府県・市区町村）</li>
+                            <li>使用デバイス（PC/スマホ/タブレット）</li>
+                        </ul>
+                    </section>
+
+                    <!-- セクション4 -->
+                    <section id="analysis-tips">
+                        <h2>改善につなげる分析のコツ</h2>
+
+                        <h3>1. 期間比較で変化を見る</h3>
+                        <p>単月のデータだけでなく、<strong>前月比・前年比</strong>で比較することで、トレンドが見えてきます。</p>
+                        <p>GA4では日付範囲の右側にある「比較」をオンにすると、簡単に比較できます。</p>
+
+                        <h3>2. 目標から逆算する</h3>
+                        <p>「お問い合わせを月10件にしたい」という目標がある場合：</p>
+                        <ul>
+                            <li>現在のコンバージョン率が1%なら</li>
+                            <li>月間1,000セッションが必要</li>
+                            <li>現在500セッションなら、2倍の集客が必要</li>
+                        </ul>
+                        <p>このように<strong>具体的な数字で考える</strong>ことで、何をすべきか明確になります。</p>
+
+                        <h3>3. ランディングページを分析する</h3>
+                        <p>ユーザーが最初に訪れるページ（ランディングページ）は特に重要です。</p>
+                        <ul>
+                            <li>エンゲージメント率が低いページは改善が必要</li>
+                            <li>直帰が多いページは、内容やデザインを見直す</li>
+                            <li>人気ページは、さらに強化する</li>
+                        </ul>
+
+                        <h3>4. デバイス別に確認する</h3>
+                        <p>スマホとPCで大きく数値が違う場合、<strong>スマホ対応に問題がある</strong>可能性があります。</p>
+                        <div class="example-box">
+                            <p><strong>例</strong>：PCのエンゲージメント率は60%なのに、スマホは30%→スマホでの表示や操作性に問題がある可能性大</p>
+                        </div>
+                    </section>
+
+                    <!-- セクション5 -->
+                    <section id="common-mistakes">
+                        <h2>初心者がやりがちな間違い</h2>
+
+                        <h3>1. データを見るだけで満足する</h3>
+                        <p>アクセス解析は<strong>改善のためのツール</strong>です。見るだけでなく、必ずアクションにつなげましょう。</p>
+
+                        <h3>2. 短期間で判断する</h3>
+                        <p>1日や1週間のデータで一喜一憂しても意味がありません。<strong>最低1ヶ月単位</strong>で傾向を見ましょう。</p>
+
+                        <h3>3. すべての数値を追おうとする</h3>
+                        <p>GA4には膨大な指標がありますが、すべてを見る必要はありません。<strong>自社の目標に関連する指標に絞って</strong>定期的にチェックしましょう。</p>
+
+                        <h3>4. コンバージョンを設定していない</h3>
+                        <p>コンバージョンを設定していないと、サイトが本当に成果を出しているかわかりません。お問い合わせボタンのクリック、電話番号タップなど、必ず設定しましょう。</p>
+                    </section>
+
+                    <!-- まとめ -->
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <p>Googleアナリティクスは、正しく活用すれば<strong>サイト改善の強力な武器</strong>になります。</p>
+
+                        <div class="summary-box">
+                            <h4>今日から始めるGA4活用チェックリスト</h4>
+                            <ul>
+                                <li>まずはユーザー数・セッション数の推移を確認</li>
+                                <li>エンゲージメント率をチェック（50%以上が目標）</li>
+                                <li>集客チャネルで流入元を把握</li>
+                                <li>人気ページと離脱ページを特定</li>
+                                <li>コンバージョンを必ず設定する</li>
+                                <li>月1回は定期的にレポートを確認</li>
+                            </ul>
+                        </div>
+
+                        <p>「設定方法がわからない」「分析結果をどう活かせばいいかわからない」という方は、LIKaNONにご相談ください。GA4の設定から分析レポート作成まで、サポートいたします。</p>
+                    </section>
+
+                    <!-- CTA -->
+                    <div class="article-cta">
+                        <h3>アクセス解析のご相談、承ります</h3>
+                        <p>GA4の設定、レポート作成、改善提案まで、まるっとお任せください。</p>
+                        <a href="../index.html#contact" class="btn btn-primary btn-large">
+                            無料相談はこちら
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- サイドバー -->
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h3>この記事を書いた人</h3>
+                        <div class="author-card">
+                            <div class="author-info">
+                                <p class="author-name">LIKaNON</p>
+                                <p class="author-desc">Web制作・デザイン歴8年以上。SEO対策を施したホームページ制作から運用まで一貫サポート。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>関連記事</h3>
+                        <ul class="related-posts">
+                            <li><a href="seo-guide-2024.html">【2024年最新】小規模事業者のためのSEO対策完全ガイド</a></li>
+                            <li><a href="website-speed-optimization.html">ホームページの表示速度を改善する5つの方法</a></li>
+                            <li><a href="meta-description-tips.html">meta descriptionの書き方｜クリック率を上げる7つのコツ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="../blog.html?category=seo">SEO対策</a></li>
+                            <li><a href="../blog.html?category=web">Webの豆知識</a></li>
+                            <li><a href="../blog.html?category=design">デザインの豆知識</a></li>
+                            <li><a href="../blog.html?category=sns">SNS運用の豆知識</a></li>
+                            <li><a href="../blog.html?category=column">お役立ちコラム</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-profile">
+                <div class="footer-profile-inner">
+                    <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <div class="footer-profile-content">
+                        <p class="footer-profile-text">
+                            デザインとWeb制作で<strong>8年以上</strong>の実績。<br class="pc-only">
+                            HP制作・リニューアル・運用代行まで、一貫してサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 LIKaNON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOPに戻るボタン -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <span class="back-to-top-arrow"></span>
+        <span class="back-to-top-text">TOP</span>
+    </a>
+
+    <script src="../script.js"></script>
+    <script src="../blog.js"></script>
+</body>
+</html>
