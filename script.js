@@ -485,7 +485,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contact-form');
 
     // EmailJS Configuration - 要設定
-    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+    const EMAILJS_PUBLIC_KEY = '-OReOLPf7bJxodiyB';
     const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
     const EMAILJS_TEMPLATE_NOTIFY = 'template_notify';      // info@likanon.com への通知用
     const EMAILJS_TEMPLATE_AUTOREPLY = 'template_autoreply'; // 自動返信用
