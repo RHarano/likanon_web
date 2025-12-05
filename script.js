@@ -451,6 +451,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ========================================
+    // Web Works Image Loading with Skeleton
+    // ========================================
+    const webWorkImages = document.querySelectorAll('.web-work-image img');
+
+    webWorkImages.forEach(img => {
+        // 画像が既に読み込まれている場合
+        if (img.complete && img.naturalHeight !== 0) {
+            img.classList.add('loaded');
+            img.parentElement.classList.add('loaded');
+        } else {
+            // 画像読み込み完了時
+            img.addEventListener('load', function() {
+                this.classList.add('loaded');
+                this.parentElement.classList.add('loaded');
+            });
+
+            // 画像読み込みエラー時はスケルトンを非表示
+            img.addEventListener('error', function() {
+                this.parentElement.classList.add('loaded');
+            });
+        }
+    });
+
+    // ========================================
     // Smooth number counting animation
     // ========================================
     function animateValue(element, start, end, duration) {

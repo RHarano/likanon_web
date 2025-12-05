@@ -855,7 +855,15 @@ select {
 .web-work-image {
     aspect-ratio: 16/10;
     overflow: hidden;
-    background: var(--color-bg-muted);
+    background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    position: relative;
+}
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }
 
 .web-work-image img {
@@ -863,7 +871,17 @@ select {
     height: 100%;
     object-fit: cover;
     object-position: top;
-    transition: transform var(--transition-slow);
+    transition: transform var(--transition-slow), opacity 0.3s ease;
+    opacity: 0;
+}
+
+.web-work-image img.loaded {
+    opacity: 1;
+}
+
+.web-work-image.loaded {
+    animation: none;
+    background: var(--color-bg-muted);
 }
 
 .web-work-item:hover .web-work-image img {
