@@ -8,3 +8,5 @@ Sitemap: https://likanon.com/sitemap.xml
 # Disallow admin or private directories (if any)
 Disallow: /private/
 Disallow: /admin/
+
+
