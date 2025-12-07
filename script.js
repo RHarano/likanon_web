@@ -510,9 +510,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // EmailJS Configuration - 要設定
     const EMAILJS_PUBLIC_KEY = '-OReOLPf7bJxodiyB';
-    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-    const EMAILJS_TEMPLATE_NOTIFY = 'template_notify';      // info@likanon.com への通知用
-    const EMAILJS_TEMPLATE_AUTOREPLY = 'template_autoreply'; // 自動返信用
+    const EMAILJS_SERVICE_ID = 'service_gdk8rj2';
+    const EMAILJS_TEMPLATE_NOTIFY = 'template_0ge2rep';      // info@likanon.com への通知用
+    const EMAILJS_TEMPLATE_AUTOREPLY = 'template_zzv5vad'; // 自動返信用
 
     // Initialize EmailJS
     if (typeof emailjs !== 'undefined') {
