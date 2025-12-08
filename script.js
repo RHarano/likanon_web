@@ -727,7 +727,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ========================================
 document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
-        document.title = 'またお会いしましょう | LIKaNON';
+        document.title = 'LIKaNON | Web制作・デザイン';
     } else {
         document.title = 'LIKaNON | プロのWeb制作・デザイン | 個人事業主ならではの丁寧なサポート';
     }
