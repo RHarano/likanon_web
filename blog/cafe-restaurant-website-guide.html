@@ -67,6 +67,18 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://likanon.com/"},
+            {"@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://likanon.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": "カフェ・飲食店のホームページ制作", "item": "https://likanon.com/blog/cafe-restaurant-website-guide.html"}
+        ]
+    }
+    </script>
+
     <style>
         .case-study {
             background: linear-gradient(135deg, #fef9f3 0%, #fff5eb 100%);
@@ -198,6 +210,16 @@
             </button>
         </div>
     </header>
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="../index.html">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="../blog.html">ブログ</a></li>
+                <li class="breadcrumb-item current" aria-current="page">飲食店HP制作ガイド</li>
+            </ol>
+        </div>
+    </nav>
 
     <article class="article">
         <header class="article-header">

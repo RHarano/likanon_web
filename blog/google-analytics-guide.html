@@ -66,6 +66,18 @@
         }
     }
     </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://likanon.com/"},
+            {"@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://likanon.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": "Googleアナリティクス活用法", "item": "https://likanon.com/blog/google-analytics-guide.html"}
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- ヘッダー -->
@@ -90,6 +102,16 @@
             </button>
         </div>
     </header>
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="../index.html">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="../blog.html">ブログ</a></li>
+                <li class="breadcrumb-item current" aria-current="page">GA活用法</li>
+            </ol>
+        </div>
+    </nav>
 
     <!-- 記事ヘッダー -->
     <article class="article">
