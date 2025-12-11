@@ -416,11 +416,13 @@
         width: 100px;
         min-width: 100px;
         flex-shrink: 0;
+        align-self: stretch;
     }
 
     .blog-card .blog-card-placeholder {
+        width: 100%;
         height: 100%;
-        min-height: 100px;
+        min-height: 100%;
     }
 
     .blog-card .blog-card-content {
