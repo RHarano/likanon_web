@@ -264,11 +264,26 @@ select {
     letter-spacing: -0.02em;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: var(--color-primary);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-normal);
+}
+
+.logo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
 .logo-image {
-    height: 48px;
+    height: 36px;
     width: auto;
-    max-width: 160px;
+    max-width: 140px;
     object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 
 .nav-list {
@@ -2327,6 +2342,15 @@ select {
 
     .hamburger {
         display: none;
+    }
+
+    /* Logo - Mobile */
+    .logo {
+        padding: 0.375rem 0.75rem;
+    }
+
+    .logo-image {
+        height: 28px;
     }
 
     /* Hero */
