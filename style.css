@@ -2831,12 +2831,12 @@ select {
 
 /* ----- Mobile Fixed Footer Navigation ----- */
 .mobile-fixed-footer {
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: 768px) {
     .mobile-fixed-footer {
-        display: flex;
+        display: flex !important;
         position: fixed;
         bottom: 0;
         left: 0;
