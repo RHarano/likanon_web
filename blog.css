@@ -5,15 +5,15 @@
 /* Blog Hero */
 .blog-hero {
     padding: 10rem 0 4rem;
-    background: linear-gradient(135deg, var(--color-bg-soft) 0%, var(--color-bg) 100%);
+    background: var(--color-bg);
     text-align: center;
 }
 
 .blog-hero-sub {
     font-family: var(--font-accent);
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 600;
-    color: var(--color-gold);
+    color: var(--color-text-muted);
     letter-spacing: 0.15em;
     text-transform: uppercase;
     margin-bottom: var(--spacing-md);
@@ -65,13 +65,13 @@
 }
 
 .category-btn:hover {
-    border-color: var(--color-gold);
-    color: var(--color-gold);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 .category-btn.active {
-    background: var(--color-accent);
-    border-color: var(--color-accent);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
     color: var(--color-white);
 }
 
@@ -81,11 +81,11 @@
     border-radius: 50%;
 }
 
-.category-icon.web { background: #7a9eb8; }
-.category-icon.design { background: #a892b0; }
-.category-icon.sns { background: #d4a5a5; }
-.category-icon.column { background: #8fb595; }
-.category-icon.seo { background: var(--color-gold); }
+.category-icon.web { background: #3b82f6; }
+.category-icon.design { background: #8b5cf6; }
+.category-icon.sns { background: #ec4899; }
+.category-icon.column { background: #10b981; }
+.category-icon.seo { background: #f59e0b; }
 
 /* Blog Section */
 .blog-section {
@@ -110,9 +110,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-gold);
+    background: var(--color-primary);
     color: var(--color-white);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
 }
 
 /* Blog Grid */
@@ -172,23 +172,23 @@
 }
 
 .blog-card-placeholder.web {
-    background: linear-gradient(135deg, #9ab8cc 0%, #6a92a8 100%);
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
 }
 
 .blog-card-placeholder.design {
-    background: linear-gradient(135deg, #baa8c4 0%, #927a9e 100%);
+    background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
 }
 
 .blog-card-placeholder.sns {
-    background: linear-gradient(135deg, #e0b8b8 0%, #c89090 100%);
+    background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
 }
 
 .blog-card-placeholder.column {
-    background: linear-gradient(135deg, #a8c9ad 0%, #7da884 100%);
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
 }
 
 .blog-card-placeholder.seo {
-    background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold-dark) 100%);
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
 }
 
 .blog-card-content {
@@ -207,28 +207,28 @@
 }
 
 .blog-card-category.web {
-    color: #5a8099;
-    background: rgba(122, 158, 184, 0.15);
+    color: #2563eb;
+    background: rgba(59, 130, 246, 0.1);
 }
 
 .blog-card-category.design {
-    color: #7a6285;
-    background: rgba(168, 146, 176, 0.15);
+    color: #7c3aed;
+    background: rgba(139, 92, 246, 0.1);
 }
 
 .blog-card-category.sns {
-    color: #a87575;
-    background: rgba(212, 165, 165, 0.15);
+    color: #db2777;
+    background: rgba(236, 72, 153, 0.1);
 }
 
 .blog-card-category.column {
-    color: #5f8a66;
-    background: rgba(143, 181, 149, 0.15);
+    color: #059669;
+    background: rgba(16, 185, 129, 0.1);
 }
 
 .blog-card-category.seo {
-    color: var(--color-gold-dark);
-    background: rgba(201, 168, 108, 0.15);
+    color: #d97706;
+    background: rgba(245, 158, 11, 0.1);
 }
 
 .blog-card-title {
@@ -298,13 +298,13 @@
 }
 
 .pagination-btn:hover {
-    border-color: var(--color-gold);
-    color: var(--color-gold);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 .pagination-btn.active {
-    background: var(--color-accent);
-    border-color: var(--color-accent);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
     color: var(--color-white);
 }
 
@@ -318,7 +318,7 @@
 
 /* Nav Active State */
 .nav-list a.active {
-    color: var(--color-gold);
+    color: var(--color-primary);
 }
 
 /* Responsive */
@@ -493,7 +493,7 @@
 }
 
 .breadcrumb-item a:hover {
-    color: var(--color-gold);
+    color: var(--color-primary);
 }
 
 .breadcrumb-item.current {
@@ -513,10 +513,10 @@
 }
 
 /* ===========================================
-   Subtle Gold Accents for Blog
+   Subtle Accents for Blog
    =========================================== */
 
-/* Gold accent on blog card hover */
+/* Accent on blog card hover */
 .blog-card {
     position: relative;
 }
@@ -528,17 +528,11 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg,
-        transparent 0%,
-        var(--color-gold-light) 30%,
-        var(--color-gold) 50%,
-        var(--color-gold-light) 70%,
-        transparent 100%
-    );
+    background: var(--color-primary);
     opacity: 0;
     transition: opacity var(--transition-normal);
 }
 
 .blog-card:hover::after {
-    opacity: 0.8;
+    opacity: 1;
 }

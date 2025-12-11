@@ -5,40 +5,41 @@
 
 /* ----- CSS Variables ----- */
 :root {
-    /* Colors - Beige & Gold Feminine Theme */
-    --color-bg: #fffcf9;
-    --color-bg-soft: #faf6f1;
-    --color-bg-muted: #f5efe8;
+    /* Colors - Modern Clean Corporate Theme */
+    --color-bg: #ffffff;
+    --color-bg-soft: #f8f9fa;
+    --color-bg-muted: #f1f3f5;
+    --color-bg-dark: #1a1a1a;
 
-    --color-primary: #4a4039;
-    --color-primary-light: #6b5d52;
+    --color-primary: #1a1a1a;
+    --color-primary-light: #333333;
 
-    --color-accent: #b8967a;
-    --color-accent-light: #d4b99a;
-    --color-accent-dark: #9a7b5f;
+    --color-accent: #32373c;
+    --color-accent-light: #4a5056;
+    --color-accent-dark: #1a1d20;
 
-    --color-gold: #c9a86c;
-    --color-gold-light: #ddc499;
-    --color-gold-dark: #a88b4a;
+    --color-gold: #32373c;
+    --color-gold-light: #4a5056;
+    --color-gold-dark: #1a1d20;
 
-    --color-text: #4a4039;
-    --color-text-light: #7a6f64;
-    --color-text-muted: #a69e95;
+    --color-text: #1a1a1a;
+    --color-text-light: #555555;
+    --color-text-muted: #888888;
 
     --color-white: #ffffff;
     --color-black: #000000;
 
-    --color-border: #e8e0d8;
-    --color-border-light: #f2ece5;
+    --color-border: #e5e7eb;
+    --color-border-light: #f1f3f5;
 
-    --color-success: #7cb587;
-    --color-error: #d4847a;
+    --color-success: #22c55e;
+    --color-error: #ef4444;
 
-    /* Typography - Feminine & Elegant */
-    --font-primary: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-accent: 'Montserrat', sans-serif;
-    --font-heading: 'Cormorant Garamond', 'Noto Serif JP', serif;
-    --font-heading-jp: 'Noto Serif JP', serif;
+    /* Typography - Modern & Clean */
+    --font-primary: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-accent: 'Inter', 'Noto Sans JP', sans-serif;
+    --font-heading: 'Inter', 'Noto Sans JP', sans-serif;
+    --font-heading-jp: 'Noto Sans JP', sans-serif;
 
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -59,11 +60,11 @@
     --radius-2xl: 24px;
     --radius-full: 9999px;
 
-    /* Shadows - Soft & Warm */
-    --shadow-sm: 0 1px 3px rgba(74, 64, 57, 0.05);
-    --shadow-md: 0 4px 12px rgba(74, 64, 57, 0.06);
-    --shadow-lg: 0 12px 40px rgba(74, 64, 57, 0.08);
-    --shadow-xl: 0 20px 60px rgba(74, 64, 57, 0.1);
+    /* Shadows - Clean & Modern */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.15);
 
     /* Transitions */
     --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -158,12 +159,13 @@ select {
     align-items: center;
     justify-content: center;
     gap: var(--spacing-sm);
-    padding: 0.875rem 1.75rem;
+    padding: 1rem 2rem;
     font-size: 0.9375rem;
-    font-weight: 500;
-    border-radius: var(--radius-lg);
+    font-weight: 600;
+    border-radius: var(--radius-full);
     transition: all var(--transition-normal);
     cursor: pointer;
+    letter-spacing: 0.02em;
 }
 
 .btn svg {
@@ -175,14 +177,14 @@ select {
 }
 
 .btn-primary {
-    background-color: var(--color-accent);
+    background-color: var(--color-primary);
     color: var(--color-white);
 }
 
 .btn-primary:hover {
-    background-color: var(--color-accent-dark);
+    background-color: var(--color-primary-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-lg);
 }
 
 .btn-secondary {
@@ -198,12 +200,12 @@ select {
 
 .btn-outline {
     background: transparent;
-    color: var(--color-accent);
-    border: 2px solid var(--color-accent);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
 }
 
 .btn-outline:hover {
-    background: var(--color-accent);
+    background: var(--color-primary);
     color: var(--color-white);
 }
 
@@ -214,8 +216,8 @@ select {
 }
 
 .btn-ghost:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 .btn-large {
@@ -283,18 +285,19 @@ select {
 }
 
 .nav-list a:hover {
-    color: var(--color-accent);
+    color: var(--color-primary);
 }
 
 .nav-cta {
-    padding: 0.5rem 1.25rem !important;
-    background-color: var(--color-accent);
+    padding: 0.625rem 1.5rem !important;
+    background-color: var(--color-primary);
     color: var(--color-white) !important;
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-full);
+    font-weight: 600;
 }
 
 .nav-cta:hover {
-    background-color: var(--color-accent-dark);
+    background-color: var(--color-primary-light);
 }
 
 .hamburger {
@@ -320,7 +323,7 @@ select {
     display: flex;
     align-items: center;
     padding: 8rem 0 4rem;
-    background: linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-bg) 100%);
+    background: var(--color-bg);
 }
 
 .hero-inner {
@@ -341,22 +344,22 @@ select {
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-sm);
-    padding: 0.375rem 0.875rem;
-    background: var(--color-accent);
-    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    background: var(--color-bg-muted);
+    color: var(--color-text);
     border-radius: var(--radius-full);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
     margin-bottom: var(--spacing-lg);
 }
 
 .hero-sub {
     display: inline-block;
     font-family: var(--font-accent);
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 600;
-    color: var(--color-accent);
+    color: var(--color-text-muted);
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: var(--spacing-md);
@@ -467,17 +470,17 @@ select {
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-accent);
+    color: var(--color-text-muted);
     margin-bottom: var(--spacing-sm);
 }
 
 .section-title {
     font-family: var(--font-heading-jp);
     font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-primary);
     margin-bottom: var(--spacing-md);
-    letter-spacing: 0.03em;
+    letter-spacing: -0.01em;
 }
 
 .section-description {
@@ -2968,393 +2971,18 @@ select {
 }
 
 /* ===========================================
-   Floral Decorations - Elegant Botanical Style
+   Minimal Decorations
    =========================================== */
 
-/* Hero Flower Decoration - Top Right - Elegant Rose */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 80px;
-    right: 3%;
-    width: 220px;
-    height: 220px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='petal1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23d4b99a' stop-opacity='0.3'/%3E%3Cstop offset='100%25' stop-color='%23c9a86c' stop-opacity='0.15'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg transform='translate(100,100)'%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(0)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(45)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(90)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(135)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(180)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(225)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(270)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(315)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(22.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(67.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(112.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(157.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(202.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(247.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(292.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(337.5)'/%3E%3Ccircle fill='%23c9a86c' opacity='0.25' cx='0' cy='0' r='12'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.9;
+/* Simple section divider */
+.section-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--color-primary);
+    margin: var(--spacing-md) auto;
 }
 
-/* Hero Flower Decoration - Bottom Left - Delicate Blossom */
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: 60px;
-    left: 2%;
-    width: 160px;
-    height: 160px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Cdefs%3E%3ClinearGradient id='petal2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23e8ddd0' stop-opacity='0.4'/%3E%3Cstop offset='100%25' stop-color='%23d4b99a' stop-opacity='0.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg transform='translate(75,75)'%3E%3Cpath fill='url(%23petal2)' d='M0,-45 Q15,-30 12,-10 Q5,5 0,0 Q-5,5 -12,-10 Q-15,-30 0,-45' transform='rotate(0)'/%3E%3Cpath fill='url(%23petal2)' d='M0,-45 Q15,-30 12,-10 Q5,5 0,0 Q-5,5 -12,-10 Q-15,-30 0,-45' transform='rotate(72)'/%3E%3Cpath fill='url(%23petal2)' d='M0,-45 Q15,-30 12,-10 Q5,5 0,0 Q-5,5 -12,-10 Q-15,-30 0,-45' transform='rotate(144)'/%3E%3Cpath fill='url(%23petal2)' d='M0,-45 Q15,-30 12,-10 Q5,5 0,0 Q-5,5 -12,-10 Q-15,-30 0,-45' transform='rotate(216)'/%3E%3Cpath fill='url(%23petal2)' d='M0,-45 Q15,-30 12,-10 Q5,5 0,0 Q-5,5 -12,-10 Q-15,-30 0,-45' transform='rotate(288)'/%3E%3Ccircle fill='%23c9a86c' opacity='0.3' cx='0' cy='0' r='8'/%3E%3Ccircle fill='%23b8967a' opacity='0.2' cx='0' cy='0' r='4'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* Footer Flower Decoration - Subtle Petals */
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 30px;
-    right: 5%;
-    width: 140px;
-    height: 140px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cg transform='translate(60,60)'%3E%3Cpath fill='%23ffffff' opacity='0.06' d='M0,-40 Q12,-25 10,-8 Q4,4 0,0 Q-4,4 -10,-8 Q-12,-25 0,-40' transform='rotate(0)'/%3E%3Cpath fill='%23ffffff' opacity='0.06' d='M0,-40 Q12,-25 10,-8 Q4,4 0,0 Q-4,4 -10,-8 Q-12,-25 0,-40' transform='rotate(60)'/%3E%3Cpath fill='%23ffffff' opacity='0.06' d='M0,-40 Q12,-25 10,-8 Q4,4 0,0 Q-4,4 -10,-8 Q-12,-25 0,-40' transform='rotate(120)'/%3E%3Cpath fill='%23ffffff' opacity='0.06' d='M0,-40 Q12,-25 10,-8 Q4,4 0,0 Q-4,4 -10,-8 Q-12,-25 0,-40' transform='rotate(180)'/%3E%3Cpath fill='%23ffffff' opacity='0.06' d='M0,-40 Q12,-25 10,-8 Q4,4 0,0 Q-4,4 -10,-8 Q-12,-25 0,-40' transform='rotate(240)'/%3E%3Cpath fill='%23ffffff' opacity='0.06' d='M0,-40 Q12,-25 10,-8 Q4,4 0,0 Q-4,4 -10,-8 Q-12,-25 0,-40' transform='rotate(300)'/%3E%3Ccircle fill='%23ffffff' opacity='0.08' cx='0' cy='0' r='6'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    pointer-events: none;
-}
-
-/* Scattered Petals Effect - Service Section */
-.service::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 10%;
-    width: 80px;
-    height: 80px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cpath fill='%23d4b99a' opacity='0.15' d='M30,5 Q40,20 35,35 Q30,45 25,35 Q20,20 30,5' transform='rotate(-15 30 30)'/%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* Section Divider with Floral Touch */
-.section-divider-floral {
-    position: relative;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.section-divider-floral::before {
-    content: '';
-    position: absolute;
-    width: 70%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent 0%, var(--color-border) 15%, var(--color-gold) 50%, var(--color-border) 85%, transparent 100%);
-}
-
-.section-divider-floral::after {
-    content: '';
-    width: 32px;
-    height: 32px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg transform='translate(20,20)'%3E%3Cpath fill='%23c9a86c' opacity='0.7' d='M0,-15 Q5,-10 4,-3 Q2,2 0,0 Q-2,2 -4,-3 Q-5,-10 0,-15' transform='rotate(0)'/%3E%3Cpath fill='%23c9a86c' opacity='0.7' d='M0,-15 Q5,-10 4,-3 Q2,2 0,0 Q-2,2 -4,-3 Q-5,-10 0,-15' transform='rotate(72)'/%3E%3Cpath fill='%23c9a86c' opacity='0.7' d='M0,-15 Q5,-10 4,-3 Q2,2 0,0 Q-2,2 -4,-3 Q-5,-10 0,-15' transform='rotate(144)'/%3E%3Cpath fill='%23c9a86c' opacity='0.7' d='M0,-15 Q5,-10 4,-3 Q2,2 0,0 Q-2,2 -4,-3 Q-5,-10 0,-15' transform='rotate(216)'/%3E%3Cpath fill='%23c9a86c' opacity='0.7' d='M0,-15 Q5,-10 4,-3 Q2,2 0,0 Q-2,2 -4,-3 Q-5,-10 0,-15' transform='rotate(288)'/%3E%3Ccircle fill='%23b8967a' cx='0' cy='0' r='3'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: var(--color-bg);
-    padding: 0 var(--spacing-md);
-    z-index: 1;
-}
-
-/* Hide flower decorations on mobile for cleaner look */
-@media (max-width: 768px) {
-    .hero::before,
-    .hero::after {
-        display: none;
-    }
-
-    .footer::before {
-        display: none;
-    }
-
-    .service::before {
-        display: none;
-    }
-}
-
-/* ===========================================
-   Falling Petals Animation - エレガントな花びら
-   =========================================== */
-
-/* Soft floating animation - ふわふわ浮遊 */
-@keyframes floatDown1 {
-    0% {
-        transform: translateY(-5vh) translateX(0) rotate(0deg);
-        opacity: 0;
-    }
-    5% {
-        opacity: 0.6;
-    }
-    20% {
-        transform: translateY(20vh) translateX(30px) rotate(45deg);
-    }
-    40% {
-        transform: translateY(40vh) translateX(-20px) rotate(90deg);
-    }
-    60% {
-        transform: translateY(60vh) translateX(25px) rotate(180deg);
-    }
-    80% {
-        transform: translateY(80vh) translateX(-15px) rotate(270deg);
-    }
-    95% {
-        opacity: 0.4;
-    }
-    100% {
-        transform: translateY(105vh) translateX(10px) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-@keyframes floatDown2 {
-    0% {
-        transform: translateY(-5vh) translateX(0) rotate(30deg);
-        opacity: 0;
-    }
-    5% {
-        opacity: 0.5;
-    }
-    25% {
-        transform: translateY(25vh) translateX(-35px) rotate(120deg);
-    }
-    50% {
-        transform: translateY(50vh) translateX(20px) rotate(210deg);
-    }
-    75% {
-        transform: translateY(75vh) translateX(-25px) rotate(300deg);
-    }
-    95% {
-        opacity: 0.3;
-    }
-    100% {
-        transform: translateY(105vh) translateX(15px) rotate(390deg);
-        opacity: 0;
-    }
-}
-
-@keyframes floatDown3 {
-    0% {
-        transform: translateY(-5vh) translateX(0) rotate(-20deg);
-        opacity: 0;
-    }
-    5% {
-        opacity: 0.55;
-    }
-    30% {
-        transform: translateY(30vh) translateX(40px) rotate(70deg);
-    }
-    55% {
-        transform: translateY(55vh) translateX(-30px) rotate(160deg);
-    }
-    80% {
-        transform: translateY(80vh) translateX(20px) rotate(250deg);
-    }
-    95% {
-        opacity: 0.25;
-    }
-    100% {
-        transform: translateY(105vh) translateX(-10px) rotate(340deg);
-        opacity: 0;
-    }
-}
-
-/* Petal container - subtle z-index */
+/* Hide petals container (legacy) */
 .petals-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    overflow: hidden;
-}
-
-/* Individual petal styles */
-.petal {
-    position: absolute;
-    top: -30px;
-    pointer-events: none;
-    will-change: transform, opacity;
-    filter: blur(0.2px);
-}
-
-/* Sakura petal shape - 桜の花びら */
-.petal::before {
-    content: '';
-    display: block;
-    width: var(--petal-size, 14px);
-    height: var(--petal-size, 14px);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='sakura' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23fdf5f0' stop-opacity='0.85'/%3E%3Cstop offset='50%25' stop-color='%23f5e8e0' stop-opacity='0.7'/%3E%3Cstop offset='100%25' stop-color='%23e8d5c8' stop-opacity='0.6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M12,2 Q18,6 16,12 Q14,18 12,22 Q10,18 8,12 Q6,6 12,2' fill='url(%23sakura)'/%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-/* Gold petal - ゴールド */
-.petal.gold::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='gold' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23e8dcc8' stop-opacity='0.75'/%3E%3Cstop offset='50%25' stop-color='%23d4c4a8' stop-opacity='0.6'/%3E%3Cstop offset='100%25' stop-color='%23c9b896' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M12,2 Q18,6 16,12 Q14,18 12,22 Q10,18 8,12 Q6,6 12,2' fill='url(%23gold)'/%3E%3C/svg%3E");
-}
-
-/* Pink petal - ピンク */
-.petal.pink::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='pink' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23fef0f0' stop-opacity='0.8'/%3E%3Cstop offset='50%25' stop-color='%23f8e0e0' stop-opacity='0.65'/%3E%3Cstop offset='100%25' stop-color='%23f0d0d0' stop-opacity='0.55'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M12,2 Q18,6 16,12 Q14,18 12,22 Q10,18 8,12 Q6,6 12,2' fill='url(%23pink)'/%3E%3C/svg%3E");
-}
-
-/* Round petal - 丸い花びら */
-.petal.round::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='round' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23fdf8f4' stop-opacity='0.8'/%3E%3Cstop offset='100%25' stop-color='%23e8dcd0' stop-opacity='0.55'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cellipse cx='12' cy='12' rx='8' ry='10' fill='url(%23round)'/%3E%3C/svg%3E");
-}
-
-/* Petal positions - ゆっくり長い時間 */
-.petal:nth-child(1) {
-    left: 3%;
-    --petal-size: 12px;
-    animation: floatDown1 20s ease-in-out infinite;
-    animation-delay: 0s;
-}
-
-.petal:nth-child(2) {
-    left: 12%;
-    --petal-size: 16px;
-    animation: floatDown2 26s ease-in-out infinite;
-    animation-delay: 4s;
-}
-
-.petal:nth-child(3) {
-    left: 22%;
-    --petal-size: 10px;
-    animation: floatDown3 18s ease-in-out infinite;
-    animation-delay: 8s;
-}
-
-.petal:nth-child(4) {
-    left: 32%;
-    --petal-size: 14px;
-    animation: floatDown1 24s ease-in-out infinite;
-    animation-delay: 2s;
-}
-
-.petal:nth-child(5) {
-    left: 42%;
-    --petal-size: 18px;
-    animation: floatDown2 28s ease-in-out infinite;
-    animation-delay: 6s;
-}
-
-.petal:nth-child(6) {
-    left: 52%;
-    --petal-size: 11px;
-    animation: floatDown3 19s ease-in-out infinite;
-    animation-delay: 10s;
-}
-
-.petal:nth-child(7) {
-    left: 62%;
-    --petal-size: 15px;
-    animation: floatDown1 25s ease-in-out infinite;
-    animation-delay: 5s;
-}
-
-.petal:nth-child(8) {
-    left: 72%;
-    --petal-size: 13px;
-    animation: floatDown2 22s ease-in-out infinite;
-    animation-delay: 9s;
-}
-
-.petal:nth-child(9) {
-    left: 82%;
-    --petal-size: 17px;
-    animation: floatDown3 27s ease-in-out infinite;
-    animation-delay: 1s;
-}
-
-.petal:nth-child(10) {
-    left: 92%;
-    --petal-size: 9px;
-    animation: floatDown1 17s ease-in-out infinite;
-    animation-delay: 12s;
-}
-
-.petal:nth-child(11) {
-    left: 8%;
-    --petal-size: 14px;
-    animation: floatDown2 30s ease-in-out infinite;
-    animation-delay: 15s;
-}
-
-.petal:nth-child(12) {
-    left: 27%;
-    --petal-size: 12px;
-    animation: floatDown3 16s ease-in-out infinite;
-    animation-delay: 18s;
-}
-
-.petal:nth-child(13) {
-    left: 47%;
-    --petal-size: 16px;
-    animation: floatDown1 32s ease-in-out infinite;
-    animation-delay: 14s;
-}
-
-.petal:nth-child(14) {
-    left: 67%;
-    --petal-size: 10px;
-    animation: floatDown2 18s ease-in-out infinite;
-    animation-delay: 16s;
-}
-
-.petal:nth-child(15) {
-    left: 87%;
-    --petal-size: 13px;
-    animation: floatDown3 23s ease-in-out infinite;
-    animation-delay: 20s;
-}
-
-/* Reduce motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-    .petal {
-        animation: none !important;
-        display: none;
-    }
-}
-
-/* Hide petals on mobile for performance */
-@media (max-width: 768px) {
-    .petals-container {
-        display: none;
-    }
-}
-
-/* Section Title Flower Accent - 小さな花飾り */
-.section-header {
-    position: relative;
-}
-
-.section-header::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 14px;
-    margin: var(--spacing-md) auto 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 14'%3E%3Cg transform='translate(25,7)'%3E%3Cpath fill='%23d4c4a8' opacity='0.5' d='M0,-5 Q2,-3 1.5,-0.5 Q0.5,1 0,0 Q-0.5,1 -1.5,-0.5 Q-2,-3 0,-5' transform='rotate(0)'/%3E%3Cpath fill='%23d4c4a8' opacity='0.5' d='M0,-5 Q2,-3 1.5,-0.5 Q0.5,1 0,0 Q-0.5,1 -1.5,-0.5 Q-2,-3 0,-5' transform='rotate(72)'/%3E%3Cpath fill='%23d4c4a8' opacity='0.5' d='M0,-5 Q2,-3 1.5,-0.5 Q0.5,1 0,0 Q-0.5,1 -1.5,-0.5 Q-2,-3 0,-5' transform='rotate(144)'/%3E%3Cpath fill='%23d4c4a8' opacity='0.5' d='M0,-5 Q2,-3 1.5,-0.5 Q0.5,1 0,0 Q-0.5,1 -1.5,-0.5 Q-2,-3 0,-5' transform='rotate(216)'/%3E%3Cpath fill='%23d4c4a8' opacity='0.5' d='M0,-5 Q2,-3 1.5,-0.5 Q0.5,1 0,0 Q-0.5,1 -1.5,-0.5 Q-2,-3 0,-5' transform='rotate(288)'/%3E%3Ccircle fill='%23c9b896' cx='0' cy='0' r='1.2' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* Gold Flourish Decoration for Headers */
-.section-sub::before,
-.section-sub::after {
-    content: '✦';
-    display: inline-block;
-    margin: 0 var(--spacing-sm);
-    color: var(--color-gold);
-    font-size: 0.5em;
-    opacity: 0.4;
-    vertical-align: middle;
+    display: none;
 }
