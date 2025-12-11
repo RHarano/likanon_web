@@ -375,6 +375,12 @@ select {
     letter-spacing: 0.05em;
 }
 
+.hero-title .title-line-1,
+.hero-title .title-line-2,
+.hero-title .title-line-3 {
+    display: block;
+}
+
 .hero-title .highlight {
     color: #3b82f6;
 }
@@ -2453,20 +2459,22 @@ select {
 
     /* Floating Ideas - Mobile */
     .floating-ideas {
-        height: 50px;
-        margin-bottom: var(--spacing-sm);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+        height: auto;
+        margin-bottom: var(--spacing-md);
+        justify-content: center;
     }
 
     .idea-bubble {
+        position: static;
         padding: 0.375rem 0.75rem;
         font-size: 0.625rem;
+        opacity: 1;
+        animation: none;
+        transform: none;
     }
-
-    .idea-bubble.idea-1 { left: 0%; }
-    .idea-bubble.idea-2 { left: 20%; }
-    .idea-bubble.idea-3 { left: 40%; }
-    .idea-bubble.idea-4 { left: 60%; }
-    .idea-bubble.idea-5 { left: 80%; }
 
     .hero-description {
         font-size: 0.9375rem;
