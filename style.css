@@ -367,18 +367,23 @@ select {
 
 .hero-title {
     font-family: var(--font-heading-jp);
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(1.5rem, 4vw, 3rem);
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.5;
     color: var(--color-primary);
     margin-bottom: var(--spacing-lg);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
 }
 
 .hero-title .title-line-1,
-.hero-title .title-line-2,
-.hero-title .title-line-3 {
+.hero-title .title-line-2 {
     display: block;
+    white-space: nowrap;
+}
+
+/* SP専用行はPCでは非表示 */
+.hero-title .title-line-3 {
+    display: none;
 }
 
 .hero-title .highlight {
@@ -2444,13 +2449,24 @@ select {
     }
 
     .hero-title {
-        font-size: 1.75rem;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
+        font-size: 1.375rem;
+        line-height: 1.6;
+        letter-spacing: 0;
+    }
+
+    .hero-title .title-line-1,
+    .hero-title .title-line-2 {
+        white-space: nowrap;
+    }
+
+    /* SP専用行を表示 */
+    .hero-title .title-line-3 {
+        display: block;
+        white-space: nowrap;
     }
 
     .hero-title .highlight {
-        display: inline-block;
+        display: inline;
         background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
