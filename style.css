@@ -150,7 +150,7 @@ select {
 }
 
 .highlight {
-    color: var(--color-gold);
+    color: #3b82f6;
 }
 
 /* ----- Buttons ----- */
@@ -376,7 +376,7 @@ select {
 }
 
 .hero-title .highlight {
-    color: var(--color-gold);
+    color: #3b82f6;
 }
 
 .hero-description {
@@ -441,7 +441,7 @@ select {
 
 .stat-suffix {
     font-size: 1.25rem;
-    color: var(--color-gold);
+    color: #3b82f6;
 }
 
 .stat-label {
@@ -2047,7 +2047,7 @@ select {
 .footer {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(180deg, var(--color-primary) 0%, #362e28 100%);
+    background: linear-gradient(180deg, #1a1a1a 0%, #111111 100%);
     color: var(--color-white);
     padding: var(--spacing-4xl) 0 var(--spacing-xl);
 }
@@ -2086,7 +2086,7 @@ select {
 }
 
 .footer-profile-text strong {
-    color: var(--color-gold);
+    color: #60a5fa;
     font-weight: 600;
 }
 
@@ -2104,7 +2104,7 @@ select {
     font-family: var(--font-accent);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-gold);
+    color: #60a5fa;
     line-height: 1;
     margin-bottom: var(--spacing-xs);
 }
@@ -2150,8 +2150,8 @@ select {
     display: inline-block;
     font-size: 0.75rem;
     font-weight: 500;
-    color: var(--color-gold);
-    background: var(--color-gold-light);
+    color: var(--color-text-muted);
+    background: var(--color-bg-muted);
     padding: 0.25em 0.75em;
     border-radius: var(--radius-full);
     margin-bottom: var(--spacing-sm);
@@ -2219,7 +2219,7 @@ select {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: var(--color-gold);
+    color: rgba(255, 255, 255, 0.5);
     margin-bottom: var(--spacing-md);
 }
 
@@ -2235,7 +2235,7 @@ select {
 
 .footer-nav-column a:hover {
     opacity: 1;
-    color: var(--color-gold-light);
+    color: #60a5fa;
 }
 
 /* Footer Bottom */
