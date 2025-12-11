@@ -406,7 +406,7 @@
     }
 
     /* Better card layout on mobile */
-    .blog-card {
+    .blog-card-link {
         display: flex;
         flex-direction: row;
         align-items: stretch;
@@ -416,7 +416,7 @@
         width: 100px;
         min-width: 100px;
         flex-shrink: 0;
-        align-self: stretch;
+        aspect-ratio: 1/1;
         position: relative;
     }
 
@@ -440,7 +440,7 @@
         padding: var(--spacing-sm);
     }
 
-    .blog-card.featured {
+    .blog-card.featured .blog-card-link {
         flex-direction: column;
     }
 
