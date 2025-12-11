@@ -5,34 +5,34 @@
 
 /* ----- CSS Variables ----- */
 :root {
-    /* Colors - Navy & Gold Premium Theme */
-    --color-bg: #ffffff;
-    --color-bg-soft: #f8fafc;
-    --color-bg-muted: #f1f5f9;
+    /* Colors - Beige & Gold Feminine Theme */
+    --color-bg: #fffcf9;
+    --color-bg-soft: #faf6f1;
+    --color-bg-muted: #f5efe8;
 
-    --color-primary: #0f172a;
-    --color-primary-light: #334155;
+    --color-primary: #4a4039;
+    --color-primary-light: #6b5d52;
 
-    --color-accent: #1e3a5f;
-    --color-accent-light: #2d4a6f;
-    --color-accent-dark: #0f2744;
+    --color-accent: #b8967a;
+    --color-accent-light: #d4b99a;
+    --color-accent-dark: #9a7b5f;
 
-    --color-gold: #c9a227;
-    --color-gold-light: #dbb93c;
-    --color-gold-dark: #a68721;
+    --color-gold: #c9a86c;
+    --color-gold-light: #ddc499;
+    --color-gold-dark: #a88b4a;
 
-    --color-text: #0f172a;
-    --color-text-light: #475569;
-    --color-text-muted: #94a3b8;
+    --color-text: #4a4039;
+    --color-text-light: #7a6f64;
+    --color-text-muted: #a69e95;
 
     --color-white: #ffffff;
     --color-black: #000000;
 
-    --color-border: #e2e8f0;
-    --color-border-light: #f1f5f9;
+    --color-border: #e8e0d8;
+    --color-border-light: #f2ece5;
 
-    --color-success: #22c55e;
-    --color-error: #ef4444;
+    --color-success: #7cb587;
+    --color-error: #d4847a;
 
     /* Typography */
     --font-primary: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -57,11 +57,11 @@
     --radius-2xl: 24px;
     --radius-full: 9999px;
 
-    /* Shadows */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.12);
+    /* Shadows - Soft & Warm */
+    --shadow-sm: 0 1px 3px rgba(74, 64, 57, 0.05);
+    --shadow-md: 0 4px 12px rgba(74, 64, 57, 0.06);
+    --shadow-lg: 0 12px 40px rgba(74, 64, 57, 0.08);
+    --shadow-xl: 0 20px 60px rgba(74, 64, 57, 0.1);
 
     /* Transitions */
     --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1036,7 +1036,7 @@ select {
 }
 
 .comparison-item.pro {
-    background: linear-gradient(135deg, rgba(30, 58, 95, 0.03) 0%, rgba(45, 74, 111, 0.03) 100%);
+    background: linear-gradient(135deg, rgba(184, 150, 122, 0.08) 0%, rgba(201, 168, 108, 0.08) 100%);
     border-color: var(--color-gold);
 }
 
@@ -1491,7 +1491,7 @@ select {
 .support-reasons {
     margin-top: var(--spacing-3xl);
     padding: var(--spacing-2xl);
-    background: linear-gradient(135deg, rgba(30, 58, 95, 0.03) 0%, rgba(45, 74, 111, 0.03) 100%);
+    background: linear-gradient(135deg, rgba(184, 150, 122, 0.08) 0%, rgba(201, 168, 108, 0.08) 100%);
     border-radius: var(--radius-xl);
     border: 1px solid var(--color-gold);
 }
@@ -2035,7 +2035,9 @@ select {
 
 /* ----- Footer ----- */
 .footer {
-    background: linear-gradient(180deg, var(--color-primary) 0%, #0a1628 100%);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--color-primary) 0%, #362e28 100%);
     color: var(--color-white);
     padding: var(--spacing-4xl) 0 var(--spacing-xl);
 }
@@ -2956,4 +2958,93 @@ select {
 
 .gallery-item:hover .gallery-image img {
     transform: scale(1.05);
+}
+
+/* ===========================================
+   Floral Decorations - Minimal & Elegant
+   =========================================== */
+
+/* Hero Flower Decoration - Top Right */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    right: 5%;
+    width: 180px;
+    height: 180px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23c9a86c' opacity='0.12'%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(0 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(72 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(144 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(216 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(288 50 50)'/%3E%3Ccircle cx='50' cy='50' r='8'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Hero Flower Decoration - Bottom Left */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 80px;
+    left: 3%;
+    width: 120px;
+    height: 120px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23b8967a' opacity='0.1'%3E%3Cellipse cx='50' cy='30' rx='10' ry='18' transform='rotate(0 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='10' ry='18' transform='rotate(60 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='10' ry='18' transform='rotate(120 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='10' ry='18' transform='rotate(180 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='10' ry='18' transform='rotate(240 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='10' ry='18' transform='rotate(300 50 50)'/%3E%3Ccircle cx='50' cy='50' r='6'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Footer Flower Decoration */
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: 8%;
+    width: 100px;
+    height: 100px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff' opacity='0.05'%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(0 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(72 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(144 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(216 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(288 50 50)'/%3E%3Ccircle cx='50' cy='50' r='8'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+/* Section Divider with Floral Touch */
+.section-divider-floral {
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-divider-floral::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 20%, var(--color-border) 80%, transparent 100%);
+}
+
+.section-divider-floral::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23c9a86c' opacity='0.6'%3E%3Cellipse cx='50' cy='35' rx='8' ry='14' transform='rotate(0 50 50)'/%3E%3Cellipse cx='50' cy='35' rx='8' ry='14' transform='rotate(72 50 50)'/%3E%3Cellipse cx='50' cy='35' rx='8' ry='14' transform='rotate(144 50 50)'/%3E%3Cellipse cx='50' cy='35' rx='8' ry='14' transform='rotate(216 50 50)'/%3E%3Cellipse cx='50' cy='35' rx='8' ry='14' transform='rotate(288 50 50)'/%3E%3Ccircle cx='50' cy='50' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--color-bg);
+    padding: 0 var(--spacing-md);
+    z-index: 1;
+}
+
+/* Hide flower decorations on mobile for cleaner look */
+@media (max-width: 768px) {
+    .hero::before,
+    .hero::after {
+        display: none;
+    }
+
+    .footer::before {
+        display: none;
+    }
 }

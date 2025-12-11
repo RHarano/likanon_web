@@ -81,10 +81,10 @@
     border-radius: 50%;
 }
 
-.category-icon.web { background: #3b82f6; }
-.category-icon.design { background: #8b5cf6; }
-.category-icon.sns { background: #ec4899; }
-.category-icon.column { background: #22c55e; }
+.category-icon.web { background: #7a9eb8; }
+.category-icon.design { background: #a892b0; }
+.category-icon.sns { background: #d4a5a5; }
+.category-icon.column { background: #8fb595; }
 .category-icon.seo { background: var(--color-gold); }
 
 /* Blog Section */
@@ -172,19 +172,19 @@
 }
 
 .blog-card-placeholder.web {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #9ab8cc 0%, #6a92a8 100%);
 }
 
 .blog-card-placeholder.design {
-    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    background: linear-gradient(135deg, #baa8c4 0%, #927a9e 100%);
 }
 
 .blog-card-placeholder.sns {
-    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+    background: linear-gradient(135deg, #e0b8b8 0%, #c89090 100%);
 }
 
 .blog-card-placeholder.column {
-    background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+    background: linear-gradient(135deg, #a8c9ad 0%, #7da884 100%);
 }
 
 .blog-card-placeholder.seo {
@@ -207,28 +207,28 @@
 }
 
 .blog-card-category.web {
-    color: #3b82f6;
-    background: rgba(59, 130, 246, 0.1);
+    color: #5a8099;
+    background: rgba(122, 158, 184, 0.15);
 }
 
 .blog-card-category.design {
-    color: #8b5cf6;
-    background: rgba(139, 92, 246, 0.1);
+    color: #7a6285;
+    background: rgba(168, 146, 176, 0.15);
 }
 
 .blog-card-category.sns {
-    color: #ec4899;
-    background: rgba(236, 72, 153, 0.1);
+    color: #a87575;
+    background: rgba(212, 165, 165, 0.15);
 }
 
 .blog-card-category.column {
-    color: #22c55e;
-    background: rgba(34, 197, 94, 0.1);
+    color: #5f8a66;
+    background: rgba(143, 181, 149, 0.15);
 }
 
 .blog-card-category.seo {
     color: var(--color-gold-dark);
-    background: rgba(201, 162, 39, 0.12);
+    background: rgba(201, 168, 108, 0.15);
 }
 
 .blog-card-title {
