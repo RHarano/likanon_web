@@ -34,9 +34,11 @@
     --color-success: #7cb587;
     --color-error: #d4847a;
 
-    /* Typography */
+    /* Typography - Feminine & Elegant */
     --font-primary: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-accent: 'Montserrat', sans-serif;
+    --font-heading: 'Cormorant Garamond', 'Noto Serif JP', serif;
+    --font-heading-jp: 'Noto Serif JP', serif;
 
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -361,11 +363,13 @@ select {
 }
 
 .hero-title {
+    font-family: var(--font-heading-jp);
     font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    line-height: 1.3;
+    font-weight: 500;
+    line-height: 1.4;
     color: var(--color-primary);
     margin-bottom: var(--spacing-lg);
+    letter-spacing: 0.05em;
 }
 
 .hero-title .highlight {
@@ -468,11 +472,12 @@ select {
 }
 
 .section-title {
+    font-family: var(--font-heading-jp);
     font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-weight: 700;
+    font-weight: 500;
     color: var(--color-primary);
     margin-bottom: var(--spacing-md);
-    letter-spacing: -0.02em;
+    letter-spacing: 0.03em;
 }
 
 .section-description {
@@ -483,7 +488,9 @@ select {
 
 /* ----- Service Section ----- */
 .service {
+    position: relative;
     background: var(--color-bg);
+    overflow: hidden;
 }
 
 .service-grid {
@@ -2961,57 +2968,73 @@ select {
 }
 
 /* ===========================================
-   Floral Decorations - Minimal & Elegant
+   Floral Decorations - Elegant Botanical Style
    =========================================== */
 
-/* Hero Flower Decoration - Top Right */
+/* Hero Flower Decoration - Top Right - Elegant Rose */
 .hero::before {
     content: '';
     position: absolute;
-    top: 100px;
-    right: 5%;
-    width: 180px;
-    height: 180px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23c9a86c' opacity='0.12'%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(0 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(72 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(144 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(216 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(288 50 50)'/%3E%3Ccircle cx='50' cy='50' r='8'/%3E%3C/g%3E%3C/svg%3E");
+    top: 80px;
+    right: 3%;
+    width: 220px;
+    height: 220px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='petal1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23d4b99a' stop-opacity='0.3'/%3E%3Cstop offset='100%25' stop-color='%23c9a86c' stop-opacity='0.15'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg transform='translate(100,100)'%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(0)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(45)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(90)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(135)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(180)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(225)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(270)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-35' rx='18' ry='40' transform='rotate(315)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(22.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(67.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(112.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(157.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(202.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(247.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(292.5)'/%3E%3Cellipse fill='url(%23petal1)' cx='0' cy='-20' rx='12' ry='25' transform='rotate(337.5)'/%3E%3Ccircle fill='%23c9a86c' opacity='0.25' cx='0' cy='0' r='12'/%3E%3C/g%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none;
     z-index: 0;
+    opacity: 0.9;
 }
 
-/* Hero Flower Decoration - Bottom Left */
+/* Hero Flower Decoration - Bottom Left - Delicate Blossom */
 .hero::after {
     content: '';
     position: absolute;
-    bottom: 80px;
-    left: 3%;
-    width: 120px;
-    height: 120px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23b8967a' opacity='0.1'%3E%3Cellipse cx='50' cy='30' rx='10' ry='18' transform='rotate(0 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='10' ry='18' transform='rotate(60 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='10' ry='18' transform='rotate(120 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='10' ry='18' transform='rotate(180 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='10' ry='18' transform='rotate(240 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='10' ry='18' transform='rotate(300 50 50)'/%3E%3Ccircle cx='50' cy='50' r='6'/%3E%3C/g%3E%3C/svg%3E");
+    bottom: 60px;
+    left: 2%;
+    width: 160px;
+    height: 160px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Cdefs%3E%3ClinearGradient id='petal2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23e8ddd0' stop-opacity='0.4'/%3E%3Cstop offset='100%25' stop-color='%23d4b99a' stop-opacity='0.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg transform='translate(75,75)'%3E%3Cpath fill='url(%23petal2)' d='M0,-45 Q15,-30 12,-10 Q5,5 0,0 Q-5,5 -12,-10 Q-15,-30 0,-45' transform='rotate(0)'/%3E%3Cpath fill='url(%23petal2)' d='M0,-45 Q15,-30 12,-10 Q5,5 0,0 Q-5,5 -12,-10 Q-15,-30 0,-45' transform='rotate(72)'/%3E%3Cpath fill='url(%23petal2)' d='M0,-45 Q15,-30 12,-10 Q5,5 0,0 Q-5,5 -12,-10 Q-15,-30 0,-45' transform='rotate(144)'/%3E%3Cpath fill='url(%23petal2)' d='M0,-45 Q15,-30 12,-10 Q5,5 0,0 Q-5,5 -12,-10 Q-15,-30 0,-45' transform='rotate(216)'/%3E%3Cpath fill='url(%23petal2)' d='M0,-45 Q15,-30 12,-10 Q5,5 0,0 Q-5,5 -12,-10 Q-15,-30 0,-45' transform='rotate(288)'/%3E%3Ccircle fill='%23c9a86c' opacity='0.3' cx='0' cy='0' r='8'/%3E%3Ccircle fill='%23b8967a' opacity='0.2' cx='0' cy='0' r='4'/%3E%3C/g%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none;
     z-index: 0;
 }
 
-/* Footer Flower Decoration */
+/* Footer Flower Decoration - Subtle Petals */
 .footer::before {
     content: '';
     position: absolute;
-    top: 40px;
-    right: 8%;
-    width: 100px;
-    height: 100px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff' opacity='0.05'%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(0 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(72 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(144 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(216 50 50)'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='20' transform='rotate(288 50 50)'/%3E%3Ccircle cx='50' cy='50' r='8'/%3E%3C/g%3E%3C/svg%3E");
+    top: 30px;
+    right: 5%;
+    width: 140px;
+    height: 140px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cg transform='translate(60,60)'%3E%3Cpath fill='%23ffffff' opacity='0.06' d='M0,-40 Q12,-25 10,-8 Q4,4 0,0 Q-4,4 -10,-8 Q-12,-25 0,-40' transform='rotate(0)'/%3E%3Cpath fill='%23ffffff' opacity='0.06' d='M0,-40 Q12,-25 10,-8 Q4,4 0,0 Q-4,4 -10,-8 Q-12,-25 0,-40' transform='rotate(60)'/%3E%3Cpath fill='%23ffffff' opacity='0.06' d='M0,-40 Q12,-25 10,-8 Q4,4 0,0 Q-4,4 -10,-8 Q-12,-25 0,-40' transform='rotate(120)'/%3E%3Cpath fill='%23ffffff' opacity='0.06' d='M0,-40 Q12,-25 10,-8 Q4,4 0,0 Q-4,4 -10,-8 Q-12,-25 0,-40' transform='rotate(180)'/%3E%3Cpath fill='%23ffffff' opacity='0.06' d='M0,-40 Q12,-25 10,-8 Q4,4 0,0 Q-4,4 -10,-8 Q-12,-25 0,-40' transform='rotate(240)'/%3E%3Cpath fill='%23ffffff' opacity='0.06' d='M0,-40 Q12,-25 10,-8 Q4,4 0,0 Q-4,4 -10,-8 Q-12,-25 0,-40' transform='rotate(300)'/%3E%3Ccircle fill='%23ffffff' opacity='0.08' cx='0' cy='0' r='6'/%3E%3C/g%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none;
+}
+
+/* Scattered Petals Effect - Service Section */
+.service::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 10%;
+    width: 80px;
+    height: 80px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cpath fill='%23d4b99a' opacity='0.15' d='M30,5 Q40,20 35,35 Q30,45 25,35 Q20,20 30,5' transform='rotate(-15 30 30)'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 0;
 }
 
 /* Section Divider with Floral Touch */
 .section-divider-floral {
     position: relative;
-    height: 40px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3020,16 +3043,16 @@ select {
 .section-divider-floral::before {
     content: '';
     position: absolute;
-    width: 60%;
+    width: 70%;
     height: 1px;
-    background: linear-gradient(90deg, transparent 0%, var(--color-border) 20%, var(--color-border) 80%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, var(--color-border) 15%, var(--color-gold) 50%, var(--color-border) 85%, transparent 100%);
 }
 
 .section-divider-floral::after {
     content: '';
-    width: 24px;
-    height: 24px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='%23c9a86c' opacity='0.6'%3E%3Cellipse cx='50' cy='35' rx='8' ry='14' transform='rotate(0 50 50)'/%3E%3Cellipse cx='50' cy='35' rx='8' ry='14' transform='rotate(72 50 50)'/%3E%3Cellipse cx='50' cy='35' rx='8' ry='14' transform='rotate(144 50 50)'/%3E%3Cellipse cx='50' cy='35' rx='8' ry='14' transform='rotate(216 50 50)'/%3E%3Cellipse cx='50' cy='35' rx='8' ry='14' transform='rotate(288 50 50)'/%3E%3Ccircle cx='50' cy='50' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    width: 32px;
+    height: 32px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg transform='translate(20,20)'%3E%3Cpath fill='%23c9a86c' opacity='0.7' d='M0,-15 Q5,-10 4,-3 Q2,2 0,0 Q-2,2 -4,-3 Q-5,-10 0,-15' transform='rotate(0)'/%3E%3Cpath fill='%23c9a86c' opacity='0.7' d='M0,-15 Q5,-10 4,-3 Q2,2 0,0 Q-2,2 -4,-3 Q-5,-10 0,-15' transform='rotate(72)'/%3E%3Cpath fill='%23c9a86c' opacity='0.7' d='M0,-15 Q5,-10 4,-3 Q2,2 0,0 Q-2,2 -4,-3 Q-5,-10 0,-15' transform='rotate(144)'/%3E%3Cpath fill='%23c9a86c' opacity='0.7' d='M0,-15 Q5,-10 4,-3 Q2,2 0,0 Q-2,2 -4,-3 Q-5,-10 0,-15' transform='rotate(216)'/%3E%3Cpath fill='%23c9a86c' opacity='0.7' d='M0,-15 Q5,-10 4,-3 Q2,2 0,0 Q-2,2 -4,-3 Q-5,-10 0,-15' transform='rotate(288)'/%3E%3Ccircle fill='%23b8967a' cx='0' cy='0' r='3'/%3E%3C/g%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
     background-color: var(--color-bg);
@@ -3045,6 +3068,10 @@ select {
     }
 
     .footer::before {
+        display: none;
+    }
+
+    .service::before {
         display: none;
     }
 }
