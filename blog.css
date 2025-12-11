@@ -382,13 +382,23 @@
     }
 
     .blog-card-title {
-        font-size: 0.9375rem;
-        line-height: 1.5;
+        font-size: 0.875rem;
+        line-height: 1.4;
+        -webkit-line-clamp: 2;
     }
 
     .blog-card-excerpt {
-        font-size: 0.8125rem;
-        -webkit-line-clamp: 2;
+        display: none;
+    }
+
+    .blog-card-category {
+        font-size: 0.5625rem;
+        padding: 0.125rem 0.375rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .blog-card-meta {
+        font-size: 0.6875rem;
     }
 
     .blog-posts {
@@ -399,24 +409,27 @@
     .blog-card {
         display: flex;
         flex-direction: row;
+        align-items: stretch;
     }
 
     .blog-card .blog-card-image {
-        width: 120px;
-        min-width: 120px;
-        height: auto;
-        aspect-ratio: 1;
+        width: 100px;
+        min-width: 100px;
+        flex-shrink: 0;
     }
 
     .blog-card .blog-card-placeholder {
         height: 100%;
+        min-height: 100px;
     }
 
     .blog-card .blog-card-content {
         flex: 1;
+        min-width: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: var(--spacing-sm);
     }
 
     .blog-card.featured {
@@ -426,6 +439,15 @@
     .blog-card.featured .blog-card-image {
         width: 100%;
         aspect-ratio: 16/9;
+    }
+
+    .blog-card.featured .blog-card-content {
+        padding: var(--spacing-md);
+    }
+
+    .blog-card.featured .blog-card-title {
+        font-size: 1rem;
+        -webkit-line-clamp: 3;
     }
 }
 
