@@ -368,30 +368,20 @@
     text-align: center;
 }
 
-.author-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #1a1a1a 0%, #3b3b3b 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-white);
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-
 .author-info {
     width: 100%;
 }
 
 .author-name {
-    font-size: 1rem;
+    display: inline-block;
+    font-size: 1.125rem;
     font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-sm);
+    color: var(--color-white);
+    background: var(--color-primary);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 0.05em;
 }
 
 .author-desc {
