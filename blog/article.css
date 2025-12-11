@@ -583,3 +583,35 @@
         font-size: 0.875rem;
     }
 }
+
+/* ===========================================
+   Subtle Gold Accents for Articles
+   =========================================== */
+
+/* Article nav gold hover effect */
+.nav-prev,
+.nav-next {
+    position: relative;
+}
+
+.nav-prev::before,
+.nav-next::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        var(--color-gold) 50%,
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.nav-prev:hover::before,
+.nav-next:hover::before {
+    opacity: 0.8;
+}
