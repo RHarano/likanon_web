@@ -2549,6 +2549,7 @@ select {
     }
 
     .hero-stats {
+        width: 100%;
         flex-wrap: nowrap;
         gap: var(--spacing-sm);
         justify-content: space-between;
