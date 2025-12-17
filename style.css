@@ -581,7 +581,7 @@ select {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
 }
 
@@ -635,6 +635,16 @@ select {
 .service-icon svg {
     width: 24px;
     height: 24px;
+}
+
+.service-icon.shopify {
+    background: linear-gradient(135deg, #96bf48 0%, #5e8e3e 100%);
+    color: var(--color-white);
+}
+
+.service-icon.wordpress {
+    background: linear-gradient(135deg, #21759b 0%, #464646 100%);
+    color: var(--color-white);
 }
 
 .service-card h3 {
