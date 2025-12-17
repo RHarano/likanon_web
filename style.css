@@ -1773,7 +1773,7 @@ select {
 
 .other-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-xl);
 }
 
@@ -1822,6 +1822,10 @@ select {
 
 .other-visual.logo {
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.other-visual.print {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
 }
 
 .other-card h3 {
