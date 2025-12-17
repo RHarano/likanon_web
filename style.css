@@ -581,7 +581,7 @@ select {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-lg);
 }
 
@@ -644,6 +644,16 @@ select {
 
 .service-icon.wordpress {
     background: linear-gradient(135deg, #21759b 0%, #464646 100%);
+    color: var(--color-white);
+}
+
+.service-icon.meo {
+    background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+    color: var(--color-white);
+}
+
+.service-icon.line {
+    background: linear-gradient(135deg, #00b900 0%, #00c300 100%);
     color: var(--color-white);
 }
 
