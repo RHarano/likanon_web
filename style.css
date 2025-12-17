@@ -581,7 +581,7 @@ select {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
 }
 
@@ -601,7 +601,6 @@ select {
 }
 
 .service-card.main {
-    grid-column: span 2;
     background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
     border: none;
     color: var(--color-white);
@@ -2376,10 +2375,6 @@ select {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .service-card.main {
-        grid-column: span 2;
-    }
-
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -2630,10 +2625,6 @@ select {
     /* Service */
     .service-grid {
         grid-template-columns: 1fr;
-    }
-
-    .service-card.main {
-        grid-column: span 1;
     }
 
     /* Portfolio */
