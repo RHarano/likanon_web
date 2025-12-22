@@ -2045,15 +2045,18 @@ select {
     box-shadow: var(--shadow-sm);
 }
 
-.formrun-embed-wrapper {
+.google-form-wrapper {
     background: var(--color-bg);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);
     overflow: hidden;
 }
 
-.formrun-embed-wrapper iframe {
+.google-form-wrapper iframe {
     display: block;
+    width: 100%;
+    min-height: 800px;
+    border: none;
 }
 
 .form-group {
