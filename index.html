@@ -1265,11 +1265,11 @@
             </div>
             <div class="contact-wrapper">
                 <div class="formrun-embed-wrapper">
-                    <iframe
-                        src="https://form.run/embed/@r-harano--cV91Pw3T1eio0B6pzDlb"
-                        style="width: 100%; min-height: 600px; border: none;"
-                        title="お問い合わせフォーム"
-                    ></iframe>
+                    <div
+                        class="formrun-embed"
+                        data-formrun-form="@r-harano--cV91Pw3T1eio0B6pzDlb"
+                        data-formrun-redirect="true"
+                    ></div>
                 </div>
                 <div class="contact-info">
                     <div class="contact-info-item">
@@ -1430,10 +1430,8 @@
         </a>
     </nav>
 
-    <!-- EmailJS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
     <!-- JavaScript -->
+    <script src="https://sdk.form.run/js/v2/embed.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
