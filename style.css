@@ -2045,6 +2045,17 @@ select {
     box-shadow: var(--shadow-sm);
 }
 
+.formrun-embed-wrapper {
+    background: var(--color-bg);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.formrun-embed-wrapper iframe {
+    display: block;
+}
+
 .form-group {
     margin-bottom: var(--spacing-lg);
 }
