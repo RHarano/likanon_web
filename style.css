@@ -3243,3 +3243,302 @@ select {
 .petals-container {
     display: none;
 }
+
+/* ===========================================
+   Target Audience Section (こんな方におすすめ)
+   =========================================== */
+.target-audience {
+    background: var(--color-bg);
+}
+
+.target-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.target-card {
+    background: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.target-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.target-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto var(--spacing-md);
+    background: var(--color-primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.target-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--color-primary);
+}
+
+.target-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
+}
+
+.target-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .target-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .target-card {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .target-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===========================================
+   Process Section (制作の流れ)
+   =========================================== */
+.process {
+    background: var(--color-white);
+}
+
+.process-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-accent));
+}
+
+.process-step {
+    display: flex;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+    position: relative;
+}
+
+.process-number {
+    width: 50px;
+    height: 50px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.process-content {
+    flex: 1;
+    background: var(--color-bg);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.process-content h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
+}
+
+.process-content p {
+    font-size: 0.9375rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
+}
+
+.process-time {
+    display: inline-block;
+    font-size: 0.8125rem;
+    color: var(--color-primary);
+    background: var(--color-primary-light);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+}
+
+.process-cta {
+    text-align: center;
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-border);
+}
+
+.process-cta p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .process-timeline::before {
+        left: 20px;
+    }
+
+    .process-step {
+        gap: var(--spacing-md);
+    }
+
+    .process-number {
+        width: 42px;
+        height: 42px;
+        font-size: 0.875rem;
+    }
+
+    .process-content {
+        padding: var(--spacing-md);
+    }
+}
+
+/* ===========================================
+   FAQ Section (よくある質問)
+   =========================================== */
+.faq {
+    background: var(--color-bg);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    cursor: pointer;
+    list-style: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question:hover {
+    background: var(--color-bg);
+}
+
+.faq-question > span:first-child {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.faq-question > span:nth-child(2) {
+    flex: 1;
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+.faq-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+    content: '';
+    position: absolute;
+    background: var(--color-text-light);
+    transition: transform 0.3s ease;
+}
+
+.faq-icon::before {
+    width: 14px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.faq-icon::after {
+    width: 2px;
+    height: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.faq-item[open] .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-answer {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+    padding-left: calc(var(--spacing-lg) + 1.5rem);
+}
+
+.faq-answer p {
+    font-size: 0.9375rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+.faq-cta {
+    text-align: center;
+    margin-top: var(--spacing-2xl);
+}
+
+.faq-cta p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .faq-question {
+        padding: var(--spacing-md);
+    }
+
+    .faq-answer {
+        padding: 0 var(--spacing-md) var(--spacing-md);
+        padding-left: calc(var(--spacing-md) + 1.5rem);
+    }
+}
