@@ -2,11 +2,8 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# サイトマップの場所
 Sitemap: https://likanon.com/sitemap.xml
 
-# Disallow admin or private directories (if any)
-Disallow: /private/
-Disallow: /admin/
-
-
+# クロール遅延（サーバー負荷軽減）
+Crawl-delay: 1
