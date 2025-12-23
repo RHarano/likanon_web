@@ -82,12 +82,12 @@
     border-radius: 50%;
 }
 
-/* 落ち着いた色 - カテゴリ別 */
-.category-icon.web { background: #6b8e9e; }      /* ソフトブルーグレー */
-.category-icon.design { background: #9e8a7a; }   /* ソフトベージュブラウン */
-.category-icon.sns { background: #8e7a9e; }      /* ソフトパープル */
-.category-icon.column { background: #7a9e8a; }   /* ソフトグリーン */
-.category-icon.seo { background: #9e8e7a; }
+/* カテゴリアイコン - 視認性の良いカラー */
+.category-icon.web { background: #2563eb; }      /* ブルー */
+.category-icon.design { background: #7c3aed; }   /* パープル */
+.category-icon.sns { background: #db2777; }      /* ピンク */
+.category-icon.column { background: #059669; }   /* グリーン */
+.category-icon.seo { background: #d97706; }      /* オレンジ */
 
 .category-btn.active .category-icon {
     background: var(--color-white);
@@ -177,12 +177,12 @@
     background: var(--color-bg-soft);
 }
 
-/* プレースホルダー - カテゴリ別ソフトカラー */
-.blog-card-placeholder.web { background: #e8f0f3; color: #5a7a87; }
-.blog-card-placeholder.design { background: #f3eeea; color: #8a7668; }
-.blog-card-placeholder.sns { background: #f0eaf3; color: #7a6887; }
-.blog-card-placeholder.column { background: #eaf3ee; color: #688a76; }
-.blog-card-placeholder.seo { background: #f3f0ea; color: #877a68; }
+/* プレースホルダー - カテゴリ別カラー（視認性向上） */
+.blog-card-placeholder.web { background: rgba(59, 130, 246, 0.08); color: #2563eb; }
+.blog-card-placeholder.design { background: rgba(139, 92, 246, 0.08); color: #7c3aed; }
+.blog-card-placeholder.sns { background: rgba(236, 72, 153, 0.08); color: #db2777; }
+.blog-card-placeholder.column { background: rgba(16, 185, 129, 0.08); color: #059669; }
+.blog-card-placeholder.seo { background: rgba(245, 158, 11, 0.08); color: #d97706; }
 
 .blog-card-content {
     padding: var(--spacing-lg);
@@ -201,12 +201,12 @@
     background: var(--color-bg-soft);
 }
 
-/* カテゴリバッジ - カテゴリ別ソフトカラー */
-.blog-card-category.web { background: #e8f0f3; color: #5a7a87; }
-.blog-card-category.design { background: #f3eeea; color: #8a7668; }
-.blog-card-category.sns { background: #f0eaf3; color: #7a6887; }
-.blog-card-category.column { background: #eaf3ee; color: #688a76; }
-.blog-card-category.seo { background: #f3f0ea; color: #877a68; }
+/* カテゴリバッジ - カテゴリ別カラー（視認性向上） */
+.blog-card-category.web { background: rgba(59, 130, 246, 0.1); color: #2563eb; }
+.blog-card-category.design { background: rgba(139, 92, 246, 0.1); color: #7c3aed; }
+.blog-card-category.sns { background: rgba(236, 72, 153, 0.1); color: #db2777; }
+.blog-card-category.column { background: rgba(16, 185, 129, 0.1); color: #059669; }
+.blog-card-category.seo { background: rgba(245, 158, 11, 0.1); color: #d97706; }
 
 .blog-card-title {
     font-size: 1rem;
