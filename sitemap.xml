@@ -30,6 +30,12 @@
 
     <!-- ブログ記事 -->
     <url>
+        <loc>https://likanon.com/blog/website-neglect-risks.html</loc>
+        <lastmod>2024-12-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://likanon.com/blog/sole-proprietor-homepage-guide.html</loc>
         <lastmod>2024-12-25</lastmod>
         <changefreq>monthly</changefreq>
