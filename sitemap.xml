@@ -38,6 +38,12 @@
 
     <!-- ブログ記事 -->
     <url>
+        <loc>https://likanon.com/blog/beginner-guide-increase-blog-traffic-seo-social-media-methods.html</loc>
+        <lastmod>2024-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://likanon.com/blog/affordable-homepage-guide.html</loc>
         <lastmod>2024-12-29</lastmod>
         <changefreq>monthly</changefreq>
