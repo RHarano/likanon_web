@@ -446,7 +446,7 @@
         /* 実績数セクション */
         .lp-stats {
             padding: 3rem 0;
-            background: var(--color-primary);
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%);
             color: white;
         }
         .stats-grid {
@@ -461,18 +461,21 @@
             align-items: center;
         }
         .stat-number {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
             line-height: 1;
+            color: white;
         }
         .stat-unit {
             font-size: 1.25rem;
             font-weight: 600;
+            color: white;
         }
         .stat-label {
             font-size: 0.875rem;
             opacity: 0.9;
             margin-top: 0.5rem;
+            color: rgba(255,255,255,0.9);
         }
 
         /* お客様の声セクション */
@@ -513,48 +516,64 @@
         /* 制作の流れセクション */
         .lp-process {
             padding: 5rem 0;
+            background: #f8fafc;
+        }
+        .lp-process h2 {
+            text-align: center;
+            font-size: 1.75rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
         }
         .lp-process-lead {
             text-align: center;
-            color: var(--color-text-light);
+            color: #64748b;
             margin-bottom: 3rem;
         }
         .process-steps {
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            gap: 1rem;
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
         .process-step {
             text-align: center;
             flex: 1;
-            max-width: 200px;
+            max-width: 180px;
+            min-width: 150px;
+            background: white;
+            padding: 1.5rem 1rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         .step-number {
-            width: 48px;
-            height: 48px;
+            width: 56px;
+            height: 56px;
             background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 700;
             margin: 0 auto 1rem;
         }
         .process-step h3 {
-            font-size: 1rem;
+            font-size: 1.125rem;
             margin-bottom: 0.5rem;
+            color: #1e293b;
         }
         .process-step p {
             font-size: 0.875rem;
-            color: var(--color-text-light);
+            color: #64748b;
+            line-height: 1.6;
         }
         .process-arrow {
-            font-size: 1.5rem;
-            color: #cbd5e1;
-            padding-top: 0.75rem;
+            font-size: 2rem;
+            color: #3b82f6;
+            padding-top: 1.5rem;
+            font-weight: bold;
         }
 
         /* 安心保証セクション */
@@ -643,6 +662,13 @@
             }
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            .stat-unit {
+                font-size: 1rem;
             }
             .testimonials-grid {
                 grid-template-columns: 1fr;
@@ -650,10 +676,14 @@
             .process-steps {
                 flex-direction: column;
                 align-items: center;
+                gap: 1rem;
+            }
+            .process-step {
+                max-width: 280px;
+                width: 100%;
             }
             .process-arrow {
-                transform: rotate(90deg);
-                padding: 0.5rem 0;
+                display: none;
             }
             .guarantee-grid {
                 grid-template-columns: 1fr;

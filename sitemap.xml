@@ -3,7 +3,7 @@
     <!-- メインページ -->
     <url>
         <loc>https://likanon.com/</loc>
-        <lastmod>2025-12-28</lastmod>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -11,19 +11,19 @@
     <!-- ブログ一覧ページ -->
     <url>
         <loc>https://likanon.com/blog.html</loc>
-        <lastmod>2025-12-30</lastmod>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog-page2.html</loc>
-        <lastmod>2025-12-15</lastmod>
+        <lastmod>2025-12-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog-page3.html</loc>
-        <lastmod>2025-11-20</lastmod>
+        <lastmod>2025-12-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
     </url>
@@ -31,7 +31,7 @@
     <!-- ランディングページ -->
     <url>
         <loc>https://likanon.com/lp/affordable-homepage.html</loc>
-        <lastmod>2025-12-25</lastmod>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -39,91 +39,91 @@
     <!-- ブログ記事 -->
     <url>
         <loc>https://likanon.com/blog/eeat-seo-guide.html</loc>
-        <lastmod>2025-12-30</lastmod>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/search-intent-guide.html</loc>
-        <lastmod>2025-12-28</lastmod>
+        <lastmod>2025-12-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/mobile-seo-guide.html</loc>
-        <lastmod>2025-12-26</lastmod>
+        <lastmod>2025-12-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/seo-writing-guide.html</loc>
-        <lastmod>2025-12-24</lastmod>
+        <lastmod>2025-12-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/core-web-vitals-guide.html</loc>
-        <lastmod>2025-12-22</lastmod>
+        <lastmod>2025-12-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/beginner-guide-increase-blog-traffic-seo-social-media-methods.html</loc>
-        <lastmod>2025-12-20</lastmod>
+        <lastmod>2025-12-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/affordable-homepage-guide.html</loc>
-        <lastmod>2025-12-18</lastmod>
+        <lastmod>2025-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/2025-seo-strategy-benefits-beyond-rankings.html</loc>
-        <lastmod>2025-12-16</lastmod>
+        <lastmod>2025-12-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/complete-beginner-blog-guide-setup-to-monetization.html</loc>
-        <lastmod>2025-12-14</lastmod>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/website-neglect-risks.html</loc>
-        <lastmod>2025-12-12</lastmod>
+        <lastmod>2025-12-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/sole-proprietor-homepage-guide.html</loc>
-        <lastmod>2025-12-10</lastmod>
+        <lastmod>2025-12-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/freelance-vs-agency.html</loc>
-        <lastmod>2025-12-08</lastmod>
+        <lastmod>2025-12-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/keyword-research-guide.html</loc>
-        <lastmod>2025-12-06</lastmod>
+        <lastmod>2025-12-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/ec-site-guide.html</loc>
-        <lastmod>2025-12-04</lastmod>
+        <lastmod>2025-12-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/website-maintenance-guide.html</loc>
-        <lastmod>2025-12-02</lastmod>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -207,97 +207,97 @@
     </url>
     <url>
         <loc>https://likanon.com/blog/structured-data-guide.html</loc>
-        <lastmod>2025-11-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://likanon.com/blog/ssl-certificate-guide.html</loc>
         <lastmod>2025-11-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://likanon.com/blog/image-seo-guide.html</loc>
-        <lastmod>2025-11-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://likanon.com/blog/internal-link-optimization.html</loc>
+        <loc>https://likanon.com/blog/ssl-certificate-guide.html</loc>
         <lastmod>2025-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://likanon.com/blog/image-seo-guide.html</loc>
+        <lastmod>2025-10-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/internal-link-optimization.html</loc>
+        <lastmod>2025-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://likanon.com/blog/google-analytics-guide.html</loc>
-        <lastmod>2025-11-01</lastmod>
+        <lastmod>2025-10-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/website-speed-optimization.html</loc>
-        <lastmod>2025-11-29</lastmod>
+        <lastmod>2025-10-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/seo-guide-2024.html</loc>
-        <lastmod>2025-11-27</lastmod>
+        <lastmod>2025-10-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/website-cost-guide.html</loc>
-        <lastmod>2025-11-25</lastmod>
+        <lastmod>2025-10-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/dental-clinic-website-guide.html</loc>
-        <lastmod>2025-11-23</lastmod>
+        <lastmod>2025-10-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/salon-website-guide.html</loc>
-        <lastmod>2025-11-21</lastmod>
+        <lastmod>2025-10-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/cafe-restaurant-website-guide.html</loc>
-        <lastmod>2025-11-19</lastmod>
+        <lastmod>2025-10-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/seitaiin-shukkyaku-guide.html</loc>
-        <lastmod>2025-11-17</lastmod>
+        <lastmod>2025-10-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/sns-and-hp-why-both.html</loc>
-        <lastmod>2025-11-15</lastmod>
+        <lastmod>2025-10-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/meta-description-tips.html</loc>
-        <lastmod>2025-11-13</lastmod>
+        <lastmod>2025-10-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/color-scheme-by-industry.html</loc>
-        <lastmod>2025-11-11</lastmod>
+        <lastmod>2025-10-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://likanon.com/blog/instagram-best-posting-time.html</loc>
-        <lastmod>2025-11-09</lastmod>
+        <lastmod>2025-10-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
