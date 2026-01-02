@@ -460,16 +460,15 @@
     <!-- ヘッダー -->
     <header class="header">
         <div class="header-inner">
-            <a href="../index.html" class="logo">
+            <a href="#" class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
                 <img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image">
             </a>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="../index.html#service">サービス</a></li>
-                    <li><a href="../index.html#portfolio">実績</a></li>
-                    <li><a href="../index.html#process">制作の流れ</a></li>
-                    <li><a href="../blog.html">ブログ</a></li>
-                    <li><a href="../index.html#contact" class="nav-cta">お問い合わせ</a></li>
+                    <li><a href="#features">特徴</a></li>
+                    <li><a href="#price">料金</a></li>
+                    <li><a href="#faq">よくある質問</a></li>
+                    <li><a href="#contact" class="nav-cta">無料相談</a></li>
                 </ul>
             </nav>
             <button class="hamburger" aria-label="メニュー">
@@ -491,12 +490,12 @@
                 <span class="price">5</span>
                 <span class="unit">万円〜</span>
             </div>
-            <a href="../index.html#contact" class="btn btn-primary btn-large">無料相談する</a>
+            <a href="mailto:info@likanon.com?subject=【格安HP制作】無料相談のお問い合わせ" class="btn btn-primary btn-large">無料相談する</a>
         </div>
     </section>
 
     <!-- 特徴セクション -->
-    <section class="lp-features">
+    <section class="lp-features" id="features">
         <div class="container">
             <h2>なぜ格安で制作できるのか</h2>
             <p class="lp-features-lead">フリーランスだからこそ実現できる、高品質×低価格</p>
@@ -560,7 +559,7 @@
                         <li>お問い合わせフォーム</li>
                         <li>納品後1ヶ月無料サポート</li>
                     </ul>
-                    <a href="../index.html#contact" class="btn btn-outline">相談する</a>
+                    <a href="mailto:info@likanon.com?subject=【格安HP制作】無料相談のお問い合わせ" class="btn btn-outline">相談する</a>
                 </div>
                 <div class="pricing-card popular">
                     <h3>スタンダードプラン</h3>
@@ -574,7 +573,7 @@
                         <li>アクセス解析設置</li>
                         <li>納品後1ヶ月無料サポート</li>
                     </ul>
-                    <a href="../index.html#contact" class="btn btn-primary">相談する</a>
+                    <a href="mailto:info@likanon.com?subject=【格安HP制作】無料相談のお問い合わせ" class="btn btn-primary">相談する</a>
                 </div>
                 <div class="pricing-card">
                     <h3>プレミアムプラン</h3>
@@ -588,7 +587,7 @@
                         <li>ブログ機能</li>
                         <li>納品後2ヶ月無料サポート</li>
                     </ul>
-                    <a href="../index.html#contact" class="btn btn-outline">相談する</a>
+                    <a href="mailto:info@likanon.com?subject=【格安HP制作】無料相談のお問い合わせ" class="btn btn-outline">相談する</a>
                 </div>
             </div>
         </div>
@@ -674,11 +673,11 @@
     </section>
 
     <!-- CTAセクション -->
-    <section class="lp-cta">
+    <section class="lp-cta" id="contact">
         <div class="container">
             <h2>まずは無料でご相談ください</h2>
             <p>お見積もりは無料です。お気軽にお問い合わせください。</p>
-            <a href="../index.html#contact" class="btn btn-primary btn-large">無料相談する</a>
+            <a href="mailto:info@likanon.com?subject=【格安HP制作】無料相談のお問い合わせ" class="btn btn-primary btn-large">無料相談する</a>
         </div>
     </section>
 
@@ -700,26 +699,24 @@
 
             <div class="footer-nav">
                 <div class="footer-nav-column">
-                    <h4>Service</h4>
+                    <h4>このページ</h4>
                     <ul>
-                        <li><a href="../index.html#web-production">Web制作</a></li>
-                        <li><a href="../index.html#renewal">リニューアル</a></li>
-                        <li><a href="../index.html#support">運用サポート</a></li>
-                    </ul>
-                </div>
-                <div class="footer-nav-column">
-                    <h4>About</h4>
-                    <ul>
-                        <li><a href="../index.html#merit">選ばれる理由</a></li>
-                        <li><a href="../index.html#portfolio">制作実績</a></li>
-                        <li><a href="../blog.html">ブログ</a></li>
+                        <li><a href="#features">特徴</a></li>
+                        <li><a href="#price">料金プラン</a></li>
+                        <li><a href="#faq">よくある質問</a></li>
                     </ul>
                 </div>
                 <div class="footer-nav-column">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="../index.html#contact">お問い合わせ</a></li>
                         <li><a href="mailto:info@likanon.com">info@likanon.com</a></li>
+                        <li><a href="#contact">無料相談</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-column">
+                    <h4>公式サイト</h4>
+                    <ul>
+                        <li><a href="https://likanon.com/" target="_blank" rel="noopener">LIKaNON トップ</a></li>
                     </ul>
                 </div>
             </div>
