@@ -531,24 +531,26 @@
         }
         .process-steps {
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 1.5rem;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
         }
         .process-step {
-            text-align: center;
-            flex: 1;
-            max-width: 180px;
-            min-width: 150px;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            width: 100%;
             background: white;
-            padding: 1.5rem 1rem;
+            padding: 1.5rem 2rem;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         .step-number {
             width: 56px;
             height: 56px;
+            min-width: 56px;
             background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
             color: white;
             border-radius: 50%;
@@ -557,23 +559,20 @@
             justify-content: center;
             font-size: 1.5rem;
             font-weight: 700;
-            margin: 0 auto 1rem;
         }
-        .process-step h3 {
+        .process-content {
+            flex: 1;
+        }
+        .process-content h3 {
             font-size: 1.125rem;
-            margin-bottom: 0.5rem;
+            margin: 0 0 0.25rem 0;
             color: #1e293b;
         }
-        .process-step p {
+        .process-content p {
             font-size: 0.875rem;
             color: #64748b;
             line-height: 1.6;
-        }
-        .process-arrow {
-            font-size: 2rem;
-            color: #3b82f6;
-            padding-top: 1.5rem;
-            font-weight: bold;
+            margin: 0;
         }
 
         /* 安心保証セクション */
@@ -673,17 +672,14 @@
             .testimonials-grid {
                 grid-template-columns: 1fr;
             }
-            .process-steps {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
             .process-step {
-                max-width: 280px;
-                width: 100%;
+                padding: 1.25rem 1.5rem;
             }
-            .process-arrow {
-                display: none;
+            .step-number {
+                width: 48px;
+                height: 48px;
+                min-width: 48px;
+                font-size: 1.25rem;
             }
             .guarantee-grid {
                 grid-template-columns: 1fr;
@@ -901,26 +897,31 @@
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3>無料相談</h3>
-                    <p>ご要望をヒアリング。お見積りは無料です。</p>
+                    <div class="process-content">
+                        <h3>無料相談</h3>
+                        <p>ご要望をヒアリング。お見積りは無料です。</p>
+                    </div>
                 </div>
-                <div class="process-arrow">→</div>
                 <div class="process-step">
                     <div class="step-number">2</div>
-                    <h3>デザイン提案</h3>
-                    <p>ご要望を元にデザイン案をご提案します。</p>
+                    <div class="process-content">
+                        <h3>デザイン提案</h3>
+                        <p>ご要望を元にデザイン案をご提案します。</p>
+                    </div>
                 </div>
-                <div class="process-arrow">→</div>
                 <div class="process-step">
                     <div class="step-number">3</div>
-                    <h3>制作・修正</h3>
-                    <p>制作を進め、確認・修正を重ねます。</p>
+                    <div class="process-content">
+                        <h3>制作・修正</h3>
+                        <p>制作を進め、確認・修正を重ねます。</p>
+                    </div>
                 </div>
-                <div class="process-arrow">→</div>
                 <div class="process-step">
                     <div class="step-number">4</div>
-                    <h3>公開・納品</h3>
-                    <p>サイトを公開。納品後もサポートします。</p>
+                    <div class="process-content">
+                        <h3>公開・納品</h3>
+                        <p>サイトを公開。納品後もサポートします。</p>
+                    </div>
                 </div>
             </div>
         </div>
