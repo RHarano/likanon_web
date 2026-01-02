@@ -38,6 +38,36 @@
 
     <!-- ブログ記事 -->
     <url>
+        <loc>https://likanon.com/blog/eeat-seo-guide.html</loc>
+        <lastmod>2024-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/search-intent-guide.html</loc>
+        <lastmod>2024-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/mobile-seo-guide.html</loc>
+        <lastmod>2024-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/seo-writing-guide.html</loc>
+        <lastmod>2024-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/core-web-vitals-guide.html</loc>
+        <lastmod>2024-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://likanon.com/blog/beginner-guide-increase-blog-traffic-seo-social-media-methods.html</loc>
         <lastmod>2024-12-30</lastmod>
         <changefreq>monthly</changefreq>

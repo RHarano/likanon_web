@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N2Y1QF8ZQV');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Core Web Vitals（コアウェブバイタル）とは？LCP・FID・CLSの3つの指標の意味と改善方法を徹底解説。Googleのページ体験シグナルとして重要なCore Web Vitalsの測定方法、具体的な改善施策、合格基準まで完全ガイド。">
+    <meta name="keywords" content="Core Web Vitals, コアウェブバイタル, LCP, FID, CLS, ページ速度, SEO">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="LIKaNON">
+
+    <meta property="og:title" content="【2025年版】Core Web Vitals完全ガイド｜LCP・FID・CLSの改善方法 | LIKaNON">
+    <meta property="og:description" content="Core Web Vitalsの3つの指標と改善方法を解説。Googleのページ体験シグナルを最適化してSEO効果を高める">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://likanon.com/blog/core-web-vitals-guide.html">
+    <meta property="og:site_name" content="LIKaNON">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://likanon.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="【2025年版】Core Web Vitals完全ガイド｜LCP・FID・CLSの改善方法">
+    <meta name="twitter:description" content="Core Web Vitalsの3つの指標と改善方法を解説。Googleのページ体験シグナルを最適化してSEO効果を高める">
+    <meta name="twitter:image" content="https://likanon.com/img/og-image.png">
+
+    <link rel="canonical" href="https://likanon.com/blog/core-web-vitals-guide.html">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/likanonlogo.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+    <title>【2025年版】Core Web Vitals完全ガイド｜LCP・FID・CLSの改善方法 | LIKaNON</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "【2025年版】Core Web Vitals完全ガイド｜LCP・FID・CLSの改善方法",
+        "datePublished": "2024-12-30",
+        "dateModified": "2024-12-30",
+        "author": {"@type": "Organization", "name": "LIKaNON"},
+        "publisher": {"@type": "Organization", "name": "LIKaNON", "url": "https://likanon.com"},
+        "description": "Core Web Vitals（コアウェブバイタル）とは？LCP・FID・CLSの3つの指標の意味と改善方法を徹底解説。"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://likanon.com/"},
+            {"@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://likanon.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": "Core Web Vitals完全ガイド", "item": "https://likanon.com/blog/core-web-vitals-guide.html"}
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Core Web Vitalsとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Core Web Vitals（コアウェブバイタル）は、Googleが定めたウェブページのユーザー体験を測定する3つの指標です。LCP（読み込み速度）、FID（インタラクティブ性）、CLS（視覚的安定性）から構成され、2021年からGoogleの検索ランキング要素の一つとなっています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Core Web Vitalsの合格基準は？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Googleが定める合格基準は、LCP（Largest Contentful Paint）が2.5秒以内、FID（First Input Delay）が100ミリ秒以内、CLS（Cumulative Layout Shift）が0.1以下です。これらを75%以上のページビューで達成する必要があります。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Core Web Vitalsを測定する方法は？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "PageSpeed Insights、Google Search Console、Chrome DevTools、Lighthouse、Web Vitals拡張機能などで測定できます。PageSpeed InsightsとSearch Consoleでは実際のユーザーデータ（フィールドデータ）も確認できます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Core Web VitalsはSEOにどう影響しますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Core Web Vitalsは2021年からGoogleの検索ランキング要素の一つです。ただし、コンテンツの質が最も重要であることに変わりはありません。同等のコンテンツ品質のページ間では、Core Web Vitalsが優れているページが上位表示される傾向があります。"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#service">サービス</a></li>
+                    <li><a href="../index.html#portfolio">実績</a></li>
+                    <li><a href="../index.html#process">制作の流れ</a></li>
+                    <li><a href="../blog.html" class="active">ブログ</a></li>
+                    <li><a href="../index.html#contact" class="nav-cta">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="../index.html">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="../blog.html">ブログ</a></li>
+                <li class="breadcrumb-item current" aria-current="page">Core Web Vitals完全ガイド</li>
+            </ol>
+        </div>
+    </nav>
+
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category seo">SEO対策</span>
+                    <time datetime="2024-12-30">2024.12.30</time>
+                    <span class="read-time">読了時間：15分</span>
+                </div>
+                <h1 class="article-title">【2025年版】Core Web Vitals完全ガイド｜LCP・FID・CLSの改善方法</h1>
+                <p class="article-lead">「Core Web Vitalsって何？」「PageSpeed Insightsのスコアが低いけど、どうすればいいの？」そんな疑問をお持ちの方へ。Core Web Vitalsは、Googleがページ体験を測定する重要な指標で、検索順位にも影響します。本記事では、3つの指標（LCP・FID・CLS）の意味から具体的な改善方法まで、初心者にもわかりやすく解説します。</p>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#what">Core Web Vitalsとは</a></li>
+                            <li><a href="#lcp">LCP（Largest Contentful Paint）の改善方法</a></li>
+                            <li><a href="#fid">FID（First Input Delay）の改善方法</a></li>
+                            <li><a href="#cls">CLS（Cumulative Layout Shift）の改善方法</a></li>
+                            <li><a href="#measure">Core Web Vitalsの測定方法</a></li>
+                            <li><a href="#priority">改善の優先順位と進め方</a></li>
+                            <li><a href="#faq">よくある質問</a></li>
+                        </ol>
+                    </div>
+
+                    <section id="what">
+                        <h2>1. Core Web Vitalsとは</h2>
+                        <p>Core Web Vitals（コアウェブバイタル）は、<strong>Googleが定めたウェブページのユーザー体験を測定する3つの指標</strong>です。</p>
+
+                        <h3>3つの指標</h3>
+                        <div class="info-box">
+                            <h4>Core Web Vitalsの3指標</h4>
+                            <ul>
+                                <li><strong>LCP（Largest Contentful Paint）</strong>：最大コンテンツの表示時間 → 読み込み速度</li>
+                                <li><strong>FID（First Input Delay）</strong>：初回入力の遅延時間 → インタラクティブ性</li>
+                                <li><strong>CLS（Cumulative Layout Shift）</strong>：レイアウトのずれ → 視覚的安定性</li>
+                            </ul>
+                        </div>
+
+                        <h3>合格基準</h3>
+                        <p>Googleが定める「良好」の基準は以下の通りです：</p>
+                        <ul>
+                            <li><strong>LCP</strong>：2.5秒以内（4秒以上は「不良」）</li>
+                            <li><strong>FID</strong>：100ミリ秒以内（300ミリ秒以上は「不良」）</li>
+                            <li><strong>CLS</strong>：0.1以下（0.25以上は「不良」）</li>
+                        </ul>
+                        <p>これらの基準を<strong>75%以上のページビュー</strong>で達成する必要があります。</p>
+
+                        <h3>SEOへの影響</h3>
+                        <p>Core Web Vitalsは2021年6月から検索ランキング要素の一つになりました。ただし、<strong>コンテンツの質が最も重要</strong>であることに変わりはありません。</p>
+                        <p>同等のコンテンツ品質のページ同士では、Core Web Vitalsが優れているページが上位表示される傾向があります。</p>
+
+                        <h3>INPへの移行（2024年3月〜）</h3>
+                        <p>2024年3月から、FIDに代わって<strong>INP（Interaction to Next Paint）</strong>が正式な指標となりました。INPはすべてのインタラクション（クリック、タップ、キー入力）の応答性を測定します。</p>
+                        <ul>
+                            <li><strong>INP合格基準</strong>：200ミリ秒以内</li>
+                        </ul>
+                    </section>
+
+                    <section id="lcp">
+                        <h2>2. LCP（Largest Contentful Paint）の改善方法</h2>
+                        <p>LCPは、<strong>ページ内で最も大きなコンテンツ（画像やテキストブロック）が表示されるまでの時間</strong>を測定します。ユーザーが「ページが読み込まれた」と感じるタイミングに近い指標です。</p>
+
+                        <h3>LCPが遅くなる原因</h3>
+                        <ul>
+                            <li><strong>サーバー応答時間が遅い</strong>：TTFB（Time to First Byte）が長い</li>
+                            <li><strong>レンダリングをブロックするリソース</strong>：CSSやJavaScriptの読み込み</li>
+                            <li><strong>リソースの読み込み時間</strong>：大きな画像やフォント</li>
+                            <li><strong>クライアントサイドレンダリング</strong>：JavaScriptによるコンテンツ生成</li>
+                        </ul>
+
+                        <h3>改善方法1：サーバー応答の高速化</h3>
+                        <ul>
+                            <li><strong>CDN（コンテンツ配信ネットワーク）の利用</strong>：地理的に近いサーバーから配信</li>
+                            <li><strong>キャッシュの活用</strong>：サーバーサイドキャッシュ、ブラウザキャッシュ</li>
+                            <li><strong>サーバースペックの向上</strong>：より高速なホスティングへ移行</li>
+                            <li><strong>データベースクエリの最適化</strong>：WordPressなどCMS利用時</li>
+                        </ul>
+
+                        <h3>改善方法2：画像の最適化</h3>
+                        <p>LCPの要素が画像の場合（多くのサイトで該当）、画像の最適化が効果的です。</p>
+                        <ul>
+                            <li><strong>WebP形式の使用</strong>：JPEGより25-35%軽量</li>
+                            <li><strong>適切なサイズで配信</strong>：srcset属性でレスポンシブ画像</li>
+                            <li><strong>圧縮</strong>：画質を落とさず容量を削減</li>
+                            <li><strong>preloadの使用</strong>：LCP画像を優先的に読み込む</li>
+                        </ul>
+                        <pre><code>&lt;link rel="preload" as="image" href="hero-image.webp"&gt;</code></pre>
+
+                        <h3>改善方法3：レンダリングブロックの解消</h3>
+                        <ul>
+                            <li><strong>CSSのインライン化</strong>：クリティカルCSSを&lt;head&gt;に直接記述</li>
+                            <li><strong>JavaScriptの遅延読み込み</strong>：defer属性やasync属性を使用</li>
+                            <li><strong>不要なCSSの削除</strong>：使用していないスタイルを除去</li>
+                        </ul>
+                    </section>
+
+                    <section id="fid">
+                        <h2>3. FID（First Input Delay）の改善方法</h2>
+                        <p>FIDは、<strong>ユーザーが最初にページを操作（クリック、タップなど）してから、ブラウザがその操作に応答するまでの時間</strong>を測定します。</p>
+                        <p>※2024年3月からINPに置き換わりましたが、改善方法は同様です。</p>
+
+                        <h3>FID/INPが遅くなる原因</h3>
+                        <ul>
+                            <li><strong>長いJavaScriptタスク</strong>：メインスレッドをブロック</li>
+                            <li><strong>大きなJavaScriptバンドル</strong>：解析・実行に時間がかかる</li>
+                            <li><strong>サードパーティスクリプト</strong>：広告、アナリティクスなど</li>
+                        </ul>
+
+                        <h3>改善方法1：JavaScriptの最適化</h3>
+                        <ul>
+                            <li><strong>コード分割（Code Splitting）</strong>：必要な部分だけを読み込む</li>
+                            <li><strong>不要なJavaScriptの削除</strong>：使っていないコードを除去</li>
+                            <li><strong>圧縮（Minify）</strong>：ファイルサイズを削減</li>
+                            <li><strong>Tree Shaking</strong>：未使用のコードを自動削除</li>
+                        </ul>
+
+                        <h3>改善方法2：長いタスクの分割</h3>
+                        <p>50ミリ秒以上かかるタスクは「長いタスク」とみなされ、FID/INPに悪影響を与えます。</p>
+                        <ul>
+                            <li><strong>タスクを小さく分割</strong>：setTimeout、requestIdleCallbackの活用</li>
+                            <li><strong>Web Workerの使用</strong>：重い処理をバックグラウンドで実行</li>
+                            <li><strong>遅延読み込み</strong>：必要になってから実行</li>
+                        </ul>
+
+                        <h3>改善方法3：サードパーティスクリプトの管理</h3>
+                        <ul>
+                            <li><strong>本当に必要か見直す</strong>：使っていないスクリプトを削除</li>
+                            <li><strong>遅延読み込み</strong>：ページ読み込み後に実行</li>
+                            <li><strong>ファサードパターン</strong>：ユーザー操作まで読み込まない</li>
+                        </ul>
+                    </section>
+
+                    <section id="cls">
+                        <h2>4. CLS（Cumulative Layout Shift）の改善方法</h2>
+                        <p>CLSは、<strong>ページ読み込み中にレイアウトが予期せずずれる度合い</strong>を測定します。ボタンをクリックしようとしたら位置がずれて別のボタンを押してしまった、という経験はCLSが原因です。</p>
+
+                        <h3>CLSが発生する原因</h3>
+                        <ul>
+                            <li><strong>サイズ未指定の画像・動画</strong>：読み込み後にスペースが確保される</li>
+                            <li><strong>動的に挿入されるコンテンツ</strong>：広告、バナー、通知</li>
+                            <li><strong>Webフォントの読み込み</strong>：FOUT（Flash of Unstyled Text）</li>
+                            <li><strong>非同期で読み込まれる要素</strong>：後から表示される埋め込みコンテンツ</li>
+                        </ul>
+
+                        <h3>改善方法1：画像・動画のサイズ指定</h3>
+                        <p>すべての画像と動画に<strong>width属性とheight属性</strong>を指定します。</p>
+                        <pre><code>&lt;img src="image.jpg" width="800" height="600" alt="説明"&gt;</code></pre>
+                        <p>またはCSSでアスペクト比を指定：</p>
+                        <pre><code>.image-container {
+  aspect-ratio: 16 / 9;
+}</code></pre>
+
+                        <h3>改善方法2：広告・埋め込みコンテンツのスペース確保</h3>
+                        <ul>
+                            <li><strong>プレースホルダーの設置</strong>：広告枠のサイズを事前に確保</li>
+                            <li><strong>固定サイズの広告枠</strong>：動的なサイズ変更を避ける</li>
+                            <li><strong>遅延読み込みの位置に注意</strong>：ファーストビュー外で読み込む</li>
+                        </ul>
+
+                        <h3>改善方法3：Webフォントの最適化</h3>
+                        <ul>
+                            <li><strong>font-display: swap</strong>：システムフォントを先に表示</li>
+                            <li><strong>フォントのpreload</strong>：優先的に読み込む</li>
+                            <li><strong>フォントのサブセット化</strong>：使用する文字だけを読み込む</li>
+                        </ul>
+                        <pre><code>&lt;link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin&gt;</code></pre>
+
+                        <h3>改善方法4：動的コンテンツの制御</h3>
+                        <ul>
+                            <li><strong>上部に動的コンテンツを挿入しない</strong>：既存コンテンツを押し下げない</li>
+                            <li><strong>transform属性でアニメーション</strong>：レイアウトに影響を与えない</li>
+                            <li><strong>ユーザー操作起点のみ許可</strong>：自動で表示される要素を避ける</li>
+                        </ul>
+                    </section>
+
+                    <section id="measure">
+                        <h2>5. Core Web Vitalsの測定方法</h2>
+                        <p>Core Web Vitalsを測定するためのツールを紹介します。</p>
+
+                        <h3>フィールドデータ（実際のユーザーデータ）</h3>
+                        <p>実際のユーザーが体験した値を収集したデータです。最も信頼性が高いです。</p>
+                        <ul>
+                            <li><strong>Google Search Console</strong>：「ウェブに関する主な指標」レポート</li>
+                            <li><strong>PageSpeed Insights</strong>：「実際のユーザーの環境で評価する」セクション</li>
+                            <li><strong>Chrome UX Report（CrUX）</strong>：Googleが収集した実データ</li>
+                        </ul>
+
+                        <h3>ラボデータ（シミュレーション）</h3>
+                        <p>ツールが模擬的に測定したデータです。開発・デバッグに有用です。</p>
+                        <ul>
+                            <li><strong>PageSpeed Insights</strong>：「パフォーマンスの問題を診断する」セクション</li>
+                            <li><strong>Lighthouse</strong>：Chrome DevToolsで実行可能</li>
+                            <li><strong>Web Vitals拡張機能</strong>：Chromeブラウザ拡張</li>
+                        </ul>
+
+                        <h3>測定手順（PageSpeed Insights）</h3>
+                        <ol>
+                            <li><a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">PageSpeed Insights</a>にアクセス</li>
+                            <li>URLを入力して「分析」をクリック</li>
+                            <li>モバイル/デスクトップのスコアを確認</li>
+                            <li>「診断」セクションで改善ポイントを確認</li>
+                        </ol>
+
+                        <div class="info-box">
+                            <h4>フィールドデータとラボデータの違い</h4>
+                            <ul>
+                                <li><strong>フィールドデータ</strong>：実際のユーザー体験（Googleが使用）</li>
+                                <li><strong>ラボデータ</strong>：標準環境でのシミュレーション（デバッグ用）</li>
+                            </ul>
+                            <p>SEO的にはフィールドデータが重要ですが、改善作業ではラボデータも活用します。</p>
+                        </div>
+                    </section>
+
+                    <section id="priority">
+                        <h2>6. 改善の優先順位と進め方</h2>
+                        <p>すべてを一度に改善するのは難しいため、優先順位をつけて取り組みましょう。</p>
+
+                        <h3>優先順位の考え方</h3>
+                        <ol>
+                            <li><strong>「不良」を「改善が必要」に</strong>：まず最低ラインをクリア</li>
+                            <li><strong>影響の大きいページから</strong>：トップページ、主要なランディングページ</li>
+                            <li><strong>効果の大きい施策から</strong>：画像最適化、キャッシュ設定</li>
+                        </ol>
+
+                        <h3>効果が大きい改善施策TOP5</h3>
+                        <div class="info-box">
+                            <h4>優先的に取り組むべき施策</h4>
+                            <ol>
+                                <li><strong>画像の最適化</strong>：WebP変換、圧縮、サイズ指定（LCP・CLS改善）</li>
+                                <li><strong>不要なJavaScriptの削除</strong>：使っていないコードを除去（FID改善）</li>
+                                <li><strong>CDNの導入</strong>：サーバー応答の高速化（LCP改善）</li>
+                                <li><strong>キャッシュの設定</strong>：ブラウザキャッシュ、サーバーキャッシュ（全体改善）</li>
+                                <li><strong>サードパーティスクリプトの見直し</strong>：不要なものを削除（FID・LCP改善）</li>
+                            </ol>
+                        </div>
+
+                        <h3>改善の進め方</h3>
+                        <ol>
+                            <li><strong>現状を計測</strong>：PageSpeed Insightsでスコアを確認</li>
+                            <li><strong>問題を特定</strong>：「診断」セクションで改善ポイントを把握</li>
+                            <li><strong>施策を実行</strong>：優先度の高いものから対応</li>
+                            <li><strong>効果を測定</strong>：改善後に再度計測</li>
+                            <li><strong>繰り返す</strong>：目標スコアに達するまで継続</li>
+                        </ol>
+
+                        <h3>WordPressサイトの場合</h3>
+                        <p>WordPressを使用している場合は、以下のプラグインが有効です：</p>
+                        <ul>
+                            <li><strong>WP Rocket</strong>：キャッシュ、遅延読み込み（有料）</li>
+                            <li><strong>Autoptimize</strong>：CSS/JavaScript最適化（無料）</li>
+                            <li><strong>ShortPixel</strong>：画像最適化、WebP変換</li>
+                            <li><strong>Perfmatters</strong>：不要な機能の無効化（有料）</li>
+                        </ul>
+                    </section>
+
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <p>Core Web Vitalsは、<strong>ユーザー体験を数値化した重要な指標</strong>であり、SEOにも影響します。</p>
+                        <p>3つの指標と改善のポイントをまとめると：</p>
+                        <ul>
+                            <li><strong>LCP</strong>（2.5秒以内）：画像最適化、サーバー高速化、レンダリングブロック解消</li>
+                            <li><strong>FID/INP</strong>（100/200ミリ秒以内）：JavaScript最適化、長いタスクの分割</li>
+                            <li><strong>CLS</strong>（0.1以下）：画像サイズ指定、広告枠の事前確保、フォント最適化</li>
+                        </ul>
+                        <p>まずはPageSpeed Insightsで現状を確認し、「診断」で指摘された項目から優先的に対応していきましょう。地道な改善の積み重ねが、ユーザー体験とSEOの両方を向上させます。</p>
+                    </section>
+
+                    <section id="faq" class="faq-section">
+                        <h2>よくある質問</h2>
+
+                        <div class="faq-item">
+                            <h3>Core Web Vitalsとは何ですか？</h3>
+                            <p>Core Web Vitals（コアウェブバイタル）は、Googleが定めたウェブページのユーザー体験を測定する3つの指標です。LCP（読み込み速度）、FID（インタラクティブ性）、CLS（視覚的安定性）から構成され、2021年からGoogleの検索ランキング要素の一つとなっています。</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Core Web Vitalsの合格基準は？</h3>
+                            <p>Googleが定める合格基準は、LCP（Largest Contentful Paint）が2.5秒以内、FID（First Input Delay）が100ミリ秒以内、CLS（Cumulative Layout Shift）が0.1以下です。これらを75%以上のページビューで達成する必要があります。</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Core Web Vitalsを測定する方法は？</h3>
+                            <p>PageSpeed Insights、Google Search Console、Chrome DevTools、Lighthouse、Web Vitals拡張機能などで測定できます。PageSpeed InsightsとSearch Consoleでは実際のユーザーデータ（フィールドデータ）も確認できます。</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Core Web VitalsはSEOにどう影響しますか？</h3>
+                            <p>Core Web Vitalsは2021年からGoogleの検索ランキング要素の一つです。ただし、コンテンツの質が最も重要であることに変わりはありません。同等のコンテンツ品質のページ間では、Core Web Vitalsが優れているページが上位表示される傾向があります。</p>
+                        </div>
+                    </section>
+
+                    <div class="article-cta">
+                        <h3>サイト高速化でお困りの方へ</h3>
+                        <p>Core Web Vitalsの改善をサポートします。お気軽にご相談ください。</p>
+                        <a href="../index.html#contact" class="btn btn-primary">無料相談する</a>
+                    </div>
+                </div>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h3>この記事を書いた人</h3>
+                        <div class="author-card">
+                            <div class="author-info">
+                                <span class="author-name">LIKaNON</span>
+                                <p class="author-desc">デザインとWeb制作で8年以上の実績。HP制作・リニューアル・運用代行まで、一貫してサポートします。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>関連記事</h3>
+                        <ul class="related-posts">
+                            <li><a href="website-speed-optimization.html">ホームページの表示速度改善ガイド</a></li>
+                            <li><a href="mobile-seo-guide.html">モバイルSEO完全ガイド</a></li>
+                            <li><a href="seo-guide-2024.html">小規模事業者のためのSEO対策完全ガイド</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="../blog.html?category=seo">SEO対策</a></li>
+                            <li><a href="../blog.html?category=web">Webの豆知識</a></li>
+                            <li><a href="../blog.html?category=design">デザインのコツ</a></li>
+                            <li><a href="../blog.html?category=sns">SNS運用</a></li>
+                            <li><a href="../blog.html?category=column">お役立ちコラム</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                        <p class="footer-desc">デザインとWeb制作で、あなたの「好き」と「ビジネス」をつなげるパートナー。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-nav-column">
+                    <h4>Service</h4>
+                    <ul>
+                        <li><a href="../index.html#web-production">Web制作</a></li>
+                        <li><a href="../index.html#renewal">リニューアル</a></li>
+                        <li><a href="../index.html#support">運用サポート</a></li>
+                        <li><a href="../index.html#other-services">デザイン制作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="../index.html#merit">選ばれる理由</a></li>
+                        <li><a href="../index.html#portfolio">制作実績</a></li>
+                        <li><a href="../blog.html">ブログ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="../index.html#contact">お問い合わせ</a></li>
+                        <li><a href="mailto:info@likanon.com">info@likanon.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LIKaNON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <span class="back-to-top-arrow"></span>
+        <span class="back-to-top-text">TOP</span>
+    </a>
+
+    <nav class="mobile-fixed-footer">
+        <a href="../index.html#web-production">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span>Web制作</span>
+        </a>
+        <a href="../index.html#service" class="instagram-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="url(#instagram-gradient)">
+                <defs>
+                    <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FFDC80"/>
+                        <stop offset="25%" style="stop-color:#F77737"/>
+                        <stop offset="50%" style="stop-color:#E1306C"/>
+                        <stop offset="75%" style="stop-color:#C13584"/>
+                        <stop offset="100%" style="stop-color:#833AB4"/>
+                    </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>運用代行</span>
+        </a>
+        <a href="../index.html#contact" class="highlight-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>相談</span>
+        </a>
+        <a href="../index.html#portfolio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <span>実績</span>
+        </a>
+        <a href="../blog.html" class="active">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <span>ブログ</span>
+        </a>
+    </nav>
+
+    <script src="../script.js" defer></script>
+    <script src="../blog.js" defer></script>
+</body>
+</html>

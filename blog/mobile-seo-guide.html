@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N2Y1QF8ZQV');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="モバイルSEO対策の完全ガイド。モバイルファーストインデックスへの対応方法、レスポンシブデザイン、ページ速度改善、モバイルユーザビリティの最適化まで、スマホ時代に必須のSEO施策を徹底解説します。">
+    <meta name="keywords" content="モバイルSEO, モバイルファーストインデックス, レスポンシブデザイン, スマホ対応, モバイルフレンドリー">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="LIKaNON">
+
+    <meta property="og:title" content="【2025年版】モバイルSEO完全ガイド｜モバイルファーストインデックス対応の必須施策 | LIKaNON">
+    <meta property="og:description" content="モバイルSEO対策を徹底解説。モバイルファーストインデックス対応からページ速度改善まで必須施策を紹介">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://likanon.com/blog/mobile-seo-guide.html">
+    <meta property="og:site_name" content="LIKaNON">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://likanon.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="【2025年版】モバイルSEO完全ガイド｜モバイルファーストインデックス対応の必須施策">
+    <meta name="twitter:description" content="モバイルSEO対策を徹底解説。モバイルファーストインデックス対応からページ速度改善まで必須施策を紹介">
+    <meta name="twitter:image" content="https://likanon.com/img/og-image.png">
+
+    <link rel="canonical" href="https://likanon.com/blog/mobile-seo-guide.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/likanonlogo.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+    <title>【2025年版】モバイルSEO完全ガイド｜モバイルファーストインデックス対応の必須施策 | LIKaNON</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "【2025年版】モバイルSEO完全ガイド｜モバイルファーストインデックス対応の必須施策",
+        "datePublished": "2024-12-30",
+        "dateModified": "2024-12-30",
+        "author": {
+            "@type": "Organization",
+            "name": "LIKaNON"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "LIKaNON",
+            "url": "https://likanon.com"
+        },
+        "description": "モバイルSEO対策の完全ガイド。モバイルファーストインデックスへの対応方法を徹底解説。"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://likanon.com/"},
+            {"@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://likanon.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": "モバイルSEO完全ガイド", "item": "https://likanon.com/blog/mobile-seo-guide.html"}
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "モバイルファーストインデックスとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "モバイルファーストインデックスとは、Googleがウェブサイトをクロール・インデックスする際に、PC版ではなくモバイル版のコンテンツを優先的に使用する仕組みです。2019年7月以降、すべての新規サイトでデフォルトとなっています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "モバイルフレンドリーかどうかを確認する方法は？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Googleの「モバイルフレンドリーテスト」ツールやGoogle Search Consoleの「モバイルユーザビリティ」レポートで確認できます。PageSpeed Insightsでもモバイル対応状況をチェックできます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "レスポンシブデザインとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "レスポンシブデザインとは、1つのHTMLで画面サイズに応じてレイアウトが自動的に変化するウェブデザインの手法です。PC、タブレット、スマートフォンなど、あらゆるデバイスに対応できます。Googleが推奨するモバイル対応の方法です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "モバイルSEOで最も重要なことは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "モバイルSEOで最も重要なのは、①ページ速度の最適化、②タップしやすいボタンサイズ、③読みやすいフォントサイズ、④横スクロールの防止、⑤PC版と同等のコンテンツ提供です。特にCore Web Vitalsへの対応が重要です。"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#service">サービス</a></li>
+                    <li><a href="../index.html#portfolio">実績</a></li>
+                    <li><a href="../index.html#process">制作の流れ</a></li>
+                    <li><a href="../blog.html" class="active">ブログ</a></li>
+                    <li><a href="../index.html#contact" class="nav-cta">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="../index.html">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="../blog.html">ブログ</a></li>
+                <li class="breadcrumb-item current" aria-current="page">モバイルSEO完全ガイド</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- 記事 -->
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category seo">SEO対策</span>
+                    <time datetime="2024-12-30">2024.12.30</time>
+                    <span class="read-time">読了時間：14分</span>
+                </div>
+                <h1 class="article-title">【2025年版】モバイルSEO完全ガイド｜モバイルファーストインデックス対応の必須施策</h1>
+                <p class="article-lead">現在、日本のインターネット利用の約70%がスマートフォンからと言われています。Googleも「モバイルファーストインデックス」を導入し、モバイル対応はSEOにおいて必須となりました。本記事では、モバイルSEOの基本から具体的な対策方法まで、スマホ時代に検索上位を獲得するための施策を徹底解説します。</p>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <!-- 目次 -->
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#mfi">モバイルファーストインデックスとは</a></li>
+                            <li><a href="#check">モバイル対応状況のチェック方法</a></li>
+                            <li><a href="#responsive">レスポンシブデザインの重要性</a></li>
+                            <li><a href="#speed">モバイルページ速度の最適化</a></li>
+                            <li><a href="#ux">モバイルユーザビリティの改善</a></li>
+                            <li><a href="#content">モバイル向けコンテンツ設計</a></li>
+                            <li><a href="#technical">技術的なモバイルSEO対策</a></li>
+                            <li><a href="#faq">よくある質問</a></li>
+                        </ol>
+                    </div>
+
+                    <!-- セクション1 -->
+                    <section id="mfi">
+                        <h2>1. モバイルファーストインデックスとは</h2>
+                        <p>モバイルファーストインデックス（MFI）とは、<strong>Googleがウェブサイトをクロール・インデックスする際に、PC版ではなくモバイル版のコンテンツを優先的に使用する仕組み</strong>です。</p>
+
+                        <h3>導入の背景</h3>
+                        <p>かつてGoogleは、デスクトップ版のコンテンツを基準にページを評価していました。しかし、モバイルからの検索がデスクトップを上回るようになり、2018年からモバイルファーストインデックスへの移行が始まりました。</p>
+                        <ul>
+                            <li><strong>2018年3月</strong>：モバイルファーストインデックス開始</li>
+                            <li><strong>2019年7月</strong>：新規サイトはデフォルトでMFI適用</li>
+                            <li><strong>2021年3月</strong>：全サイトでMFIに完全移行</li>
+                        </ul>
+
+                        <h3>MFIが意味すること</h3>
+                        <p>モバイルファーストインデックスにより、以下のことが起きています：</p>
+                        <ul>
+                            <li><strong>モバイル版のコンテンツが評価対象</strong>：PC版にしかないコンテンツは評価されない</li>
+                            <li><strong>モバイル版の構造化データが使用される</strong>：リッチリザルト表示に影響</li>
+                            <li><strong>モバイル版の内部リンクが評価される</strong>：PC版のみのリンクは無視される</li>
+                            <li><strong>モバイル版の画像・動画が評価される</strong>：alt属性なども含む</li>
+                        </ul>
+
+                        <div class="info-box">
+                            <h4>重要なポイント</h4>
+                            <p>「モバイルファーストインデックス」は、モバイル専用サイトを優遇するものではありません。<strong>モバイル版のコンテンツを基準に評価する</strong>という意味です。PC版とモバイル版で同等のコンテンツを提供することが重要です。</p>
+                        </div>
+                    </section>
+
+                    <!-- セクション2 -->
+                    <section id="check">
+                        <h2>2. モバイル対応状況のチェック方法</h2>
+                        <p>まずは現在のサイトがモバイルに適切に対応しているかを確認しましょう。</p>
+
+                        <h3>Google Search Console</h3>
+                        <p>Search Consoleの「モバイルユーザビリティ」レポートで、問題のあるページを特定できます。</p>
+                        <p>確認手順：</p>
+                        <ol>
+                            <li>Search Consoleにログイン</li>
+                            <li>左メニューから「エクスペリエンス」→「モバイルユーザビリティ」を選択</li>
+                            <li>エラーがあるページを確認</li>
+                        </ol>
+                        <p>よくあるエラー：</p>
+                        <ul>
+                            <li>テキストが小さすぎて読めない</li>
+                            <li>クリック可能な要素同士が近すぎる</li>
+                            <li>コンテンツの幅が画面の幅を超えている</li>
+                            <li>ビューポートが設定されていない</li>
+                        </ul>
+
+                        <h3>PageSpeed Insights</h3>
+                        <p><strong>PageSpeed Insights</strong>では、モバイルでのパフォーマンスを詳細に分析できます。</p>
+                        <p>URL: <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">https://pagespeed.web.dev/</a></p>
+                        <p>確認できる項目：</p>
+                        <ul>
+                            <li>パフォーマンススコア（0-100）</li>
+                            <li>Core Web Vitals（LCP、FID、CLS）</li>
+                            <li>改善すべき項目と具体的な方法</li>
+                        </ul>
+
+                        <h3>Chrome DevTools</h3>
+                        <p>Chromeの開発者ツールでモバイル表示をシミュレートできます。</p>
+                        <ol>
+                            <li>F12キーで開発者ツールを開く</li>
+                            <li>左上のデバイスアイコンをクリック</li>
+                            <li>様々なデバイスサイズでの表示を確認</li>
+                        </ol>
+                    </section>
+
+                    <!-- セクション3 -->
+                    <section id="responsive">
+                        <h2>3. レスポンシブデザインの重要性</h2>
+                        <p>レスポンシブデザインとは、<strong>1つのHTMLで画面サイズに応じてレイアウトが自動的に変化するウェブデザイン</strong>の手法です。Googleが推奨するモバイル対応の方法です。</p>
+
+                        <h3>モバイル対応の3つの方法</h3>
+                        <p>モバイル対応には主に3つの方法がありますが、Googleはレスポンシブデザインを推奨しています。</p>
+
+                        <div class="info-box">
+                            <h4>モバイル対応の方法</h4>
+                            <ul>
+                                <li><strong>レスポンシブデザイン（推奨）</strong>：1つのURLで画面サイズに応じて表示が変わる</li>
+                                <li><strong>動的配信</strong>：1つのURLでユーザーエージェントに応じて異なるHTMLを配信</li>
+                                <li><strong>別URL（m.example.com）</strong>：モバイル専用のURLを用意する</li>
+                            </ul>
+                        </div>
+
+                        <h3>レスポンシブデザインのメリット</h3>
+                        <ul>
+                            <li><strong>URLが1つ</strong>：リンクの分散がなく、SEO効果が集中</li>
+                            <li><strong>管理が容易</strong>：1つのHTMLを管理するだけ</li>
+                            <li><strong>Googleが推奨</strong>：クロール効率が良い</li>
+                            <li><strong>リダイレクト不要</strong>：表示速度に影響しない</li>
+                            <li><strong>将来のデバイスにも対応</strong>：新しい画面サイズにも自動対応</li>
+                        </ul>
+
+                        <h3>レスポンシブデザインの実装ポイント</h3>
+                        <p>レスポンシブデザインを実装する際の基本的なポイントです。</p>
+
+                        <h4>1. viewportメタタグの設定</h4>
+                        <p>すべてのページのheadタグ内に以下を記述：</p>
+                        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+
+                        <h4>2. CSSメディアクエリの使用</h4>
+                        <p>画面サイズに応じてスタイルを切り替え：</p>
+                        <pre><code>/* スマートフォン */
+@media (max-width: 767px) {
+  .container { padding: 15px; }
+}
+
+/* タブレット */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container { padding: 30px; }
+}
+
+/* デスクトップ */
+@media (min-width: 1024px) {
+  .container { padding: 60px; }
+}</code></pre>
+
+                        <h4>3. 画像のレスポンシブ対応</h4>
+                        <p>画像が画面幅を超えないように設定：</p>
+                        <pre><code>img {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+                    </section>
+
+                    <!-- セクション4 -->
+                    <section id="speed">
+                        <h2>4. モバイルページ速度の最適化</h2>
+                        <p>モバイルユーザーはPC以上に表示速度に敏感です。<strong>3秒以上かかると53%のユーザーが離脱する</strong>というデータもあります。</p>
+
+                        <h3>Core Web Vitalsへの対応</h3>
+                        <p>Core Web Vitalsは、Googleがページ体験を測定する3つの指標です。</p>
+
+                        <div class="info-box">
+                            <h4>Core Web Vitals</h4>
+                            <ul>
+                                <li><strong>LCP（Largest Contentful Paint）</strong>：最大コンテンツの表示時間 → 2.5秒以内</li>
+                                <li><strong>FID（First Input Delay）</strong>：初回入力遅延 → 100ミリ秒以内</li>
+                                <li><strong>CLS（Cumulative Layout Shift）</strong>：レイアウトのずれ → 0.1以下</li>
+                            </ul>
+                        </div>
+
+                        <h3>速度改善の具体的な方法</h3>
+
+                        <h4>1. 画像の最適化</h4>
+                        <ul>
+                            <li><strong>WebP形式の使用</strong>：JPEGより25-35%軽量</li>
+                            <li><strong>適切なサイズで配信</strong>：表示サイズより大きな画像は不要</li>
+                            <li><strong>遅延読み込み（lazy loading）</strong>：画面外の画像は後から読み込む</li>
+                            <li><strong>画像圧縮</strong>：TinyPNGなどで圧縮</li>
+                        </ul>
+
+                        <h4>2. CSSとJavaScriptの最適化</h4>
+                        <ul>
+                            <li><strong>ファイルの圧縮（minify）</strong>：不要な空白やコメントを削除</li>
+                            <li><strong>クリティカルCSSの優先読み込み</strong>：ファーストビューに必要なCSSを優先</li>
+                            <li><strong>JavaScriptの遅延読み込み</strong>：defer属性やasync属性を活用</li>
+                            <li><strong>不要なコードの削除</strong>：使用していないCSSやJSを削除</li>
+                        </ul>
+
+                        <h4>3. サーバー・インフラの改善</h4>
+                        <ul>
+                            <li><strong>CDNの利用</strong>：コンテンツを世界中のサーバーから配信</li>
+                            <li><strong>キャッシュの活用</strong>：ブラウザキャッシュとサーバーキャッシュ</li>
+                            <li><strong>HTTP/2の有効化</strong>：複数リソースの並列読み込み</li>
+                            <li><strong>Gzip圧縮</strong>：テキストファイルの圧縮転送</li>
+                        </ul>
+                    </section>
+
+                    <!-- セクション5 -->
+                    <section id="ux">
+                        <h2>5. モバイルユーザビリティの改善</h2>
+                        <p>速度だけでなく、<strong>モバイルでの使いやすさ</strong>もSEOに影響します。</p>
+
+                        <h3>タップターゲットのサイズ</h3>
+                        <p>ボタンやリンクは、<strong>最低でも48×48ピクセル</strong>のタップ領域を確保しましょう。</p>
+                        <ul>
+                            <li>ボタンは十分な大きさに</li>
+                            <li>リンク同士は8ピクセル以上離す</li>
+                            <li>ナビゲーションメニューは押しやすく</li>
+                        </ul>
+
+                        <h3>フォントサイズ</h3>
+                        <p>本文は<strong>最低16ピクセル</strong>を推奨します。</p>
+                        <ul>
+                            <li>本文：16px以上</li>
+                            <li>見出し：本文より大きく、階層を明確に</li>
+                            <li>行間：1.5〜1.8程度</li>
+                        </ul>
+
+                        <h3>横スクロールの防止</h3>
+                        <p>コンテンツが画面幅を超えて横スクロールが発生すると、ユーザビリティが低下します。</p>
+                        <ul>
+                            <li>画像にmax-width: 100%を設定</li>
+                            <li>テーブルは横スクロール可能なコンテナで囲む</li>
+                            <li>固定幅の要素を避ける</li>
+                        </ul>
+
+                        <h3>ポップアップ・インタースティシャルの制限</h3>
+                        <p>Googleは、コンテンツを覆う邪魔なポップアップを表示するページを低く評価します。</p>
+                        <ul>
+                            <li><strong>避けるべき</strong>：画面全体を覆うポップアップ、閉じにくいバナー</li>
+                            <li><strong>許容される</strong>：法的に必要な通知（Cookie同意など）、ログインダイアログ、控えめなバナー</li>
+                        </ul>
+                    </section>
+
+                    <!-- セクション6 -->
+                    <section id="content">
+                        <h2>6. モバイル向けコンテンツ設計</h2>
+                        <p>モバイルユーザーの行動パターンに合わせたコンテンツ設計が重要です。</p>
+
+                        <h3>PC版とモバイル版でコンテンツを同等に</h3>
+                        <p>モバイルファーストインデックスでは、モバイル版のコンテンツが評価されます。</p>
+                        <ul>
+                            <li>PC版とモバイル版で<strong>同じテキストコンテンツ</strong>を提供</li>
+                            <li><strong>同じ見出し構造</strong>（h1〜h6）を維持</li>
+                            <li><strong>同じ画像</strong>（alt属性含む）を使用</li>
+                            <li><strong>同じ内部リンク</strong>を設置</li>
+                            <li><strong>同じ構造化データ</strong>を実装</li>
+                        </ul>
+
+                        <h3>モバイルでの読みやすさ</h3>
+                        <ul>
+                            <li><strong>短い段落</strong>：1段落3〜4行程度</li>
+                            <li><strong>見出しの活用</strong>：スキャンしやすい構成</li>
+                            <li><strong>箇条書き</strong>：ポイントを整理</li>
+                            <li><strong>余白の確保</strong>：詰め込みすぎない</li>
+                        </ul>
+
+                        <h3>アコーディオン・タブの使用</h3>
+                        <p>Googleは、アコーディオンやタブで隠されたコンテンツも<strong>通常のコンテンツと同等に評価する</strong>と公式に発表しています。</p>
+                        <p>モバイルでは、長いコンテンツをアコーディオンで整理することでユーザビリティが向上します。</p>
+                    </section>
+
+                    <!-- セクション7 -->
+                    <section id="technical">
+                        <h2>7. 技術的なモバイルSEO対策</h2>
+                        <p>技術面でのモバイルSEO対策も確認しておきましょう。</p>
+
+                        <h3>AMPは必須ではない</h3>
+                        <p>AMP（Accelerated Mobile Pages）は、かつてはモバイル検索で優遇されていましたが、現在は<strong>必須ではありません</strong>。</p>
+                        <p>通常のレスポンシブサイトでCore Web Vitalsを満たしていれば、AMPなしでも問題ありません。</p>
+
+                        <h3>構造化データのモバイル対応</h3>
+                        <p>構造化データは、モバイル版にも実装されていることを確認しましょう。</p>
+                        <ul>
+                            <li>Article構造化データ</li>
+                            <li>BreadcrumbList構造化データ</li>
+                            <li>FAQ構造化データ</li>
+                            <li>LocalBusiness構造化データ（実店舗の場合）</li>
+                        </ul>
+
+                        <h3>モバイル用のメタタグ</h3>
+                        <p>以下のメタタグがモバイル版に正しく実装されているか確認：</p>
+                        <ul>
+                            <li><strong>viewport</strong>：画面サイズへの対応</li>
+                            <li><strong>description</strong>：検索結果に表示される説明文</li>
+                            <li><strong>robots</strong>：クロール指示</li>
+                            <li><strong>canonical</strong>：正規URL</li>
+                        </ul>
+
+                        <h3>内部リンクのモバイル対応</h3>
+                        <p>PC版にある内部リンクがモバイル版にもあることを確認。ハンバーガーメニュー内のリンクもクロール対象になります。</p>
+                    </section>
+
+                    <!-- まとめ -->
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <p>モバイルファーストインデックスの時代において、<strong>モバイルSEO対策は必須</strong>です。</p>
+                        <p>重要なポイントをまとめると：</p>
+                        <ol>
+                            <li><strong>レスポンシブデザイン</strong>で1つのURLでPC・モバイル両対応</li>
+                            <li><strong>Core Web Vitals</strong>を意識したページ速度の最適化</li>
+                            <li><strong>モバイルユーザビリティ</strong>の改善（タップターゲット、フォントサイズ）</li>
+                            <li>PC版と<strong>同等のコンテンツ</strong>をモバイル版でも提供</li>
+                            <li>Search Consoleで定期的に<strong>問題をチェック</strong></li>
+                        </ol>
+                        <p>モバイル対応は一度やれば終わりではなく、継続的な改善が必要です。定期的にチェックして、モバイルユーザーにとって最適なサイトを目指しましょう。</p>
+                    </section>
+
+                    <!-- FAQ -->
+                    <section id="faq" class="faq-section">
+                        <h2>よくある質問</h2>
+
+                        <div class="faq-item">
+                            <h3>モバイルファーストインデックスとは何ですか？</h3>
+                            <p>モバイルファーストインデックスとは、Googleがウェブサイトをクロール・インデックスする際に、PC版ではなくモバイル版のコンテンツを優先的に使用する仕組みです。2019年7月以降、すべての新規サイトでデフォルトとなっています。</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>モバイルフレンドリーかどうかを確認する方法は？</h3>
+                            <p>Googleの「モバイルフレンドリーテスト」ツールやGoogle Search Consoleの「モバイルユーザビリティ」レポートで確認できます。PageSpeed Insightsでもモバイル対応状況をチェックできます。</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>レスポンシブデザインとは何ですか？</h3>
+                            <p>レスポンシブデザインとは、1つのHTMLで画面サイズに応じてレイアウトが自動的に変化するウェブデザインの手法です。PC、タブレット、スマートフォンなど、あらゆるデバイスに対応できます。Googleが推奨するモバイル対応の方法です。</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>モバイルSEOで最も重要なことは何ですか？</h3>
+                            <p>モバイルSEOで最も重要なのは、①ページ速度の最適化、②タップしやすいボタンサイズ、③読みやすいフォントサイズ、④横スクロールの防止、⑤PC版と同等のコンテンツ提供です。特にCore Web Vitalsへの対応が重要です。</p>
+                        </div>
+                    </section>
+
+                    <div class="article-cta">
+                        <h3>モバイル対応でお困りの方へ</h3>
+                        <p>スマホ対応のホームページ制作・リニューアルをサポートします。お気軽にご相談ください。</p>
+                        <a href="../index.html#contact" class="btn btn-primary">無料相談する</a>
+                    </div>
+                </div>
+
+                <!-- サイドバー -->
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h3>この記事を書いた人</h3>
+                        <div class="author-card">
+                            <div class="author-info">
+                                <span class="author-name">LIKaNON</span>
+                                <p class="author-desc">デザインとWeb制作で8年以上の実績。HP制作・リニューアル・運用代行まで、一貫してサポートします。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>関連記事</h3>
+                        <ul class="related-posts">
+                            <li><a href="website-speed-optimization.html">ホームページの表示速度改善ガイド</a></li>
+                            <li><a href="core-web-vitals-guide.html">Core Web Vitals完全ガイド</a></li>
+                            <li><a href="seo-guide-2024.html">小規模事業者のためのSEO対策完全ガイド</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="../blog.html?category=seo">SEO対策</a></li>
+                            <li><a href="../blog.html?category=web">Webの豆知識</a></li>
+                            <li><a href="../blog.html?category=design">デザインのコツ</a></li>
+                            <li><a href="../blog.html?category=sns">SNS運用</a></li>
+                            <li><a href="../blog.html?category=column">お役立ちコラム</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                        <p class="footer-desc">デザインとWeb制作で、あなたの「好き」と「ビジネス」をつなげるパートナー。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <div class="footer-nav-column">
+                    <h4>Service</h4>
+                    <ul>
+                        <li><a href="../index.html#web-production">Web制作</a></li>
+                        <li><a href="../index.html#renewal">リニューアル</a></li>
+                        <li><a href="../index.html#support">運用サポート</a></li>
+                        <li><a href="../index.html#other-services">デザイン制作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="../index.html#merit">選ばれる理由</a></li>
+                        <li><a href="../index.html#portfolio">制作実績</a></li>
+                        <li><a href="../blog.html">ブログ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="../index.html#contact">お問い合わせ</a></li>
+                        <li><a href="mailto:info@likanon.com">info@likanon.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 LIKaNON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOPに戻るボタン -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <span class="back-to-top-arrow"></span>
+        <span class="back-to-top-text">TOP</span>
+    </a>
+
+    <!-- Mobile Fixed Footer -->
+    <nav class="mobile-fixed-footer">
+        <a href="../index.html#web-production">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span>Web制作</span>
+        </a>
+        <a href="../index.html#service" class="instagram-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="url(#instagram-gradient)">
+                <defs>
+                    <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FFDC80"/>
+                        <stop offset="25%" style="stop-color:#F77737"/>
+                        <stop offset="50%" style="stop-color:#E1306C"/>
+                        <stop offset="75%" style="stop-color:#C13584"/>
+                        <stop offset="100%" style="stop-color:#833AB4"/>
+                    </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>運用代行</span>
+        </a>
+        <a href="../index.html#contact" class="highlight-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>相談</span>
+        </a>
+        <a href="../index.html#portfolio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <span>実績</span>
+        </a>
+        <a href="../blog.html" class="active">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <span>ブログ</span>
+        </a>
+    </nav>
+
+    <!-- JavaScript -->
+    <script src="../script.js" defer></script>
+    <script src="../blog.js" defer></script>
+</body>
+</html>
