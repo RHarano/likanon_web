@@ -209,15 +209,15 @@
     list-style: none;
 }
 
-.table-of-contents li {
+.table-of-contents ol li {
     font-size: 0.9375rem;
     margin-bottom: var(--spacing-sm);
     counter-increment: toc-counter;
-    padding-left: var(--spacing-xl);
+    padding-left: calc(var(--spacing-xl) + 8px);
     position: relative;
 }
 
-.table-of-contents li::before {
+.table-of-contents ol li::before {
     content: counter(toc-counter);
     position: absolute;
     left: 0;
@@ -229,9 +229,9 @@
     font-size: 0.75rem;
     font-weight: 600;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    line-height: 24px;
+    transform: none;
 }
 
 .table-of-contents a {
@@ -856,9 +856,19 @@
         margin: var(--spacing-2xl) 0 var(--spacing-md);
     }
 
+    .article-body h2::before {
+        width: 60px;
+    }
+
     .article-body h3 {
-        font-size: 1.0625rem;
+        font-size: 1rem;
         margin: var(--spacing-lg) 0 var(--spacing-sm);
+        padding: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .article-body h4 {
+        font-size: 0.9375rem;
+        padding-left: var(--spacing-sm);
     }
 
     .article-body p {
@@ -868,46 +878,106 @@
 
     .article-body ul,
     .article-body ol {
-        padding-left: var(--spacing-md);
+        padding-left: 0;
         margin: var(--spacing-md) 0;
+    }
+
+    .article-body ul > li {
+        padding-left: var(--spacing-md);
+    }
+
+    .article-body ul > li::before {
+        width: 6px;
+        height: 6px;
+        top: 0.65em;
     }
 
     .article-body li {
         font-size: 0.9375rem;
         line-height: 1.8;
-        margin-bottom: var(--spacing-md);
-        padding-left: var(--spacing-xs);
-    }
-
-    .article-body li strong {
-        display: block;
-        margin-bottom: 0.25em;
-        color: var(--color-primary);
-    }
-
-    /* 目次 */
-    .table-of-contents {
-        padding: var(--spacing-md);
-    }
-
-    .table-of-contents li {
-        font-size: 0.875rem;
-        line-height: 1.6;
         margin-bottom: var(--spacing-sm);
     }
 
-    /* ボックス系 */
+    .article-body li strong {
+        background: none;
+    }
+
+    /* 目次 - スマホ */
+    .table-of-contents {
+        padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .table-of-contents::before {
+        font-size: 0.6875rem;
+        padding: 0.375rem 1rem;
+    }
+
+    .table-of-contents ol {
+        margin-top: var(--spacing-md);
+    }
+
+    .table-of-contents ol li {
+        font-size: 0.8125rem;
+        line-height: 1.5;
+        margin-bottom: var(--spacing-sm);
+        padding-left: calc(var(--spacing-lg) + 4px);
+    }
+
+    .table-of-contents ol li::before {
+        width: 20px;
+        height: 20px;
+        font-size: 0.6875rem;
+        line-height: 20px;
+    }
+
+    /* ボックス系 - スマホ */
     .info-box,
     .tip-box,
     .example-box,
     .summary-box {
-        padding: var(--spacing-md);
-        margin: var(--spacing-md) 0;
+        padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
+        margin: var(--spacing-lg) 0;
+    }
+
+    .info-box::before,
+    .tip-box::before {
+        font-size: 0.625rem;
+        padding: 0.2rem 0.5rem;
+        top: -8px;
+    }
+
+    .summary-box {
+        padding-top: var(--spacing-xl);
+    }
+
+    .summary-box::before {
+        font-size: 0.6875rem;
+        padding: 0.25rem 1rem;
+        top: -10px;
+    }
+
+    .info-box h4,
+    .summary-box h4 {
+        font-size: 0.9375rem;
     }
 
     .info-box p,
     .tip-box p,
     .example-box p {
+        font-size: 0.875rem;
+        line-height: 1.7;
+    }
+
+    .info-box ul,
+    .tip-box ul,
+    .summary-box ul {
+        margin: var(--spacing-sm) 0 0;
+    }
+
+    .info-box li,
+    .tip-box li,
+    .summary-box li {
         font-size: 0.875rem;
         line-height: 1.7;
     }
@@ -926,7 +996,7 @@
         grid-template-columns: 1fr;
     }
 
-    /* CTA */
+    /* CTA - スマホ */
     .article-cta {
         padding: var(--spacing-lg);
     }
@@ -937,6 +1007,50 @@
 
     .article-cta p {
         font-size: 0.875rem;
+    }
+
+    /* FAQ - スマホ */
+    .faq-item {
+        padding: var(--spacing-md);
+    }
+
+    .faq-item h3 {
+        font-size: 0.9375rem !important;
+        padding: 0 !important;
+        margin: 0 0 var(--spacing-sm) !important;
+        border: none !important;
+        background: none !important;
+    }
+
+    .faq-item p {
+        font-size: 0.875rem;
+    }
+
+    .faq-item:hover {
+        transform: none;
+    }
+
+    /* 比較表 - スマホ */
+    .comparison-table {
+        margin: var(--spacing-md) calc(-1 * var(--spacing-md));
+        width: calc(100% + var(--spacing-md) * 2);
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .comparison-table table {
+        min-width: 400px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: var(--spacing-sm);
+        font-size: 0.8125rem;
+        white-space: normal;
+    }
+
+    .comparison-table td:first-child {
+        white-space: normal;
     }
 }
 
