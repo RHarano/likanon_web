@@ -173,6 +173,63 @@
     background: linear-gradient(transparent 60%, rgba(59, 130, 246, 0.15) 60%);
 }
 
+/* Inline Code */
+.article-body code {
+    background: rgba(59, 130, 246, 0.08);
+    color: #1e40af;
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.875em;
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+/* Links in article */
+.article-body a {
+    color: #2563eb;
+    text-decoration: underline;
+    text-decoration-color: rgba(37, 99, 235, 0.3);
+    text-underline-offset: 2px;
+    transition: all var(--transition-fast);
+}
+
+.article-body a:hover {
+    color: #1d4ed8;
+    text-decoration-color: #1d4ed8;
+}
+
+/* Ordered List (ol) Styling */
+.article-body > ol,
+.article-body section > ol {
+    list-style: none;
+    counter-reset: ol-counter;
+    padding-left: 0;
+}
+
+.article-body > ol > li,
+.article-body section > ol > li {
+    position: relative;
+    padding-left: calc(var(--spacing-xl) + 4px);
+    counter-increment: ol-counter;
+}
+
+.article-body > ol > li::before,
+.article-body section > ol > li::before {
+    content: counter(ol-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e3a5f 100%);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+}
+
 /* Table of Contents */
 .table-of-contents {
     background: linear-gradient(135deg, var(--color-bg-soft) 0%, rgba(59, 130, 246, 0.03) 100%);
@@ -429,6 +486,79 @@
 }
 
 /* ===========================================
+   Related Articles Section
+   =========================================== */
+.related-articles {
+    margin-top: var(--spacing-3xl);
+    padding-top: var(--spacing-2xl);
+    border-top: 1px solid var(--color-border-light);
+}
+
+.related-articles h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.related-card {
+    display: block;
+    padding: var(--spacing-lg);
+    background: var(--color-bg-soft);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-light);
+    transition: all var(--transition-fast);
+    text-decoration: none;
+}
+
+.related-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.related-card .related-category {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-xs);
+}
+
+.related-card h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+@media (max-width: 768px) {
+    .related-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .related-card {
+        padding: var(--spacing-md);
+    }
+
+    .related-card h3 {
+        font-size: 0.8125rem;
+    }
+}
+
+/* ===========================================
    Comparison Table (LP記事用など)
    =========================================== */
 .comparison-table {
@@ -535,11 +665,15 @@
     transform: translateX(4px);
 }
 
-.faq-item h3 {
+.faq-item h3,
+.faq-item .faq-question {
     font-size: 1rem !important;
     font-weight: 600;
     color: var(--color-primary);
     margin: 0 0 var(--spacing-sm) !important;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
     line-height: 1.5;
 }
 
@@ -900,6 +1034,26 @@
 
     .article-body li strong {
         background: none;
+    }
+
+    /* 番号付きリスト - スマホ */
+    .article-body > ol > li,
+    .article-body section > ol > li {
+        padding-left: calc(var(--spacing-lg) + 4px);
+    }
+
+    .article-body > ol > li::before,
+    .article-body section > ol > li::before {
+        width: 20px;
+        height: 20px;
+        font-size: 0.6875rem;
+        line-height: 20px;
+    }
+
+    /* コード - スマホ */
+    .article-body code {
+        font-size: 0.8125em;
+        padding: 0.1em 0.3em;
     }
 
     /* 目次 - スマホ */
