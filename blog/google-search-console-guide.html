@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N2Y1QF8ZQV');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Google Search Console（サーチコンソール）の使い方を初心者向けに徹底解説。登録方法から検索パフォーマンス分析、インデックス登録、エラー修正まで、SEO改善に必須の機能を図解付きで紹介します。">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1e3a5f">
+
+    <meta property="og:title" content="【2025年版】Google Search Console完全ガイド｜初心者でもわかる使い方・設定・活用法">
+    <meta property="og:description" content="サーチコンソールの登録から活用法まで徹底解説。検索パフォーマンス分析、インデックス登録、エラー修正など、SEO改善に必須の機能を図解付きで紹介">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://likanon.com/blog/google-search-console-guide.html">
+    <meta property="og:site_name" content="LIKaNON">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://likanon.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="【2025年版】Google Search Console完全ガイド｜初心者でもわかる使い方・設定・活用法">
+    <meta name="twitter:description" content="サーチコンソールの登録から活用法まで徹底解説。検索パフォーマンス分析、インデックス登録、エラー修正など、SEO改善に必須の機能を図解付きで紹介">
+    <meta name="twitter:image" content="https://likanon.com/img/og-image.png">
+
+    <link rel="canonical" href="https://likanon.com/blog/google-search-console-guide.html">
+
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/likanonlogo.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+    <title>【2025年版】Google Search Console完全ガイド｜初心者でもわかる使い方・設定・活用法 | LIKaNON</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "【2025年版】Google Search Console完全ガイド｜初心者でもわかる使い方・設定・活用法",
+        "datePublished": "2025-01-12",
+        "dateModified": "2025-01-12",
+        "author": {
+            "@type": "Organization",
+            "name": "LIKaNON"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "LIKaNON",
+            "url": "https://likanon.com"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://likanon.com/"},
+            {"@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://likanon.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": "Google Search Console完全ガイド", "item": "https://likanon.com/blog/google-search-console-guide.html"}
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Google Search Consoleの登録・設定方法",
+        "description": "Google Search Consoleにサイトを登録して使い始めるための手順",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Googleアカウントでログイン",
+                "text": "Google Search Consoleにアクセスし、Googleアカウントでログインする"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "プロパティタイプを選択",
+                "text": "ドメインプロパティまたはURLプレフィックスを選択し、サイトURLを入力する"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "所有権の確認",
+                "text": "HTMLファイル、HTMLタグ、DNSレコードなどで所有権を確認する"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "サイトマップを送信",
+                "text": "XMLサイトマップのURLを登録し、Googleにページ構成を伝える"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "データ収集を待つ",
+                "text": "登録後、2〜3日でデータが蓄積され始める"
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Google Search Consoleは無料で使えますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "はい、Google Search Consoleは完全無料で利用できます。Googleアカウントがあれば、サイトの規模に関係なく全機能を無料で使えます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Search ConsoleとGoogle Analyticsの違いは？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Search Consoleは「Google検索でのサイトの見え方」を分析するツールで、検索キーワードや掲載順位がわかります。Google Analyticsは「サイト訪問後のユーザー行動」を分析するツールで、ページ閲覧数や滞在時間がわかります。両方を連携させることで、検索から訪問後まで一貫した分析が可能です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "インデックスされるまでどのくらいかかりますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "新しいページがGoogleにインデックスされるまで、通常1日〜数週間かかります。Search Consoleの「URL検査」からインデックス登録をリクエストすると、クロールの優先度が上がり、早ければ数時間〜1日程度でインデックスされることもあります。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "サーチコンソールはどのくらいの頻度で確認すべきですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "週1回程度の確認をおすすめします。エラーや問題が発生した場合はメール通知が届くので、日常的には週1回の定期チェックで十分です。大規模なサイト更新やSEO施策を行った後は、毎日確認することをおすすめします。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "検索パフォーマンスのデータはいつから見られますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Search Consoleに登録後、データが表示されるまで2〜3日かかります。なお、登録前のデータは表示されないため、サイト公開後できるだけ早く登録することをおすすめします。データは最大16ヶ月分保存されます。"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html#service">サービス</a></li>
+                    <li><a href="../index.html#portfolio">実績</a></li>
+                    <li><a href="../index.html#merit">選ばれる理由</a></li>
+                    <li><a href="../blog.html" class="active">ブログ</a></li>
+                    <li><a href="../index.html#contact" class="nav-cta">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="../index.html">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="../blog.html">ブログ</a></li>
+                <li class="breadcrumb-item current" aria-current="page">Google Search Console完全ガイド</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- 記事 -->
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category seo">SEO対策</span>
+                    <time datetime="2025-01-12">2025.01.12</time>
+                    <span class="read-time">読了時間：15分</span>
+                </div>
+                <h1 class="article-title">【2025年版】Google Search Console完全ガイド｜初心者でもわかる使い方・設定・活用法</h1>
+                <p class="article-lead">「サーチコンソールって何ができるの？」「登録したけど使い方がわからない」そんな方に向けて、Google Search Consoleの基本から実践的な活用方法まで、初心者にもわかりやすく徹底解説します。</p>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#what-is-gsc">Google Search Consoleとは？</a></li>
+                            <li><a href="#gsc-vs-ga">Search ConsoleとGoogle Analyticsの違い</a></li>
+                            <li><a href="#gsc-setup">Search Consoleの登録・設定方法</a></li>
+                            <li><a href="#gsc-features">主要機能の使い方</a></li>
+                            <li><a href="#search-performance">検索パフォーマンスの見方・活用法</a></li>
+                            <li><a href="#url-inspection">URL検査とインデックス登録</a></li>
+                            <li><a href="#error-handling">エラー・問題の確認と修正方法</a></li>
+                            <li><a href="#gsc-tips">SEO改善に役立つ活用テクニック</a></li>
+                            <li><a href="#gsc-faq">よくある質問</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <section id="what-is-gsc">
+                        <h2>Google Search Consoleとは？</h2>
+                        <p>Google Search Console（サーチコンソール、通称「サチコ」）は、<strong>Googleが無料で提供するWebサイト管理ツール</strong>です。</p>
+                        <p>あなたのサイトが<strong>Google検索でどのように表示されているか</strong>を確認し、検索結果での表示を改善するために使います。</p>
+
+                        <h3>Search Consoleでできること</h3>
+                        <ul>
+                            <li><strong>検索パフォーマンス分析</strong>：どんなキーワードで検索され、何回表示・クリックされたかがわかる</li>
+                            <li><strong>インデックス状況の確認</strong>：ページがGoogleに登録されているか確認できる</li>
+                            <li><strong>エラーの検出と修正</strong>：クロールエラーやモバイル表示の問題を発見</li>
+                            <li><strong>サイトマップの送信</strong>：サイト構成をGoogleに伝えてクロールを促進</li>
+                            <li><strong>セキュリティ問題の通知</strong>：マルウェアやハッキングの警告を受け取る</li>
+                        </ul>
+
+                        <div class="info-box">
+                            <h4>なぜSearch Consoleが必要？</h4>
+                            <p>SEO対策で最も重要なのは「Googleからサイトがどう見えているか」を把握することです。Search Consoleを使わないSEOは、地図を持たずに旅に出るようなもの。必ず設定しておきましょう。</p>
+                        </div>
+                    </section>
+
+                    <section id="gsc-vs-ga">
+                        <h2>Search ConsoleとGoogle Analyticsの違い</h2>
+                        <p>よく混同されがちな2つのツールですが、<strong>役割が全く異なります</strong>。両方を使い分けることで、より効果的なサイト改善ができます。</p>
+
+                        <h3>比較表</h3>
+                        <div class="comparison-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>項目</th>
+                                        <th>Search Console</th>
+                                        <th>Google Analytics</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>分析対象</td>
+                                        <td>Google検索での表示</td>
+                                        <td>サイト訪問後の行動</td>
+                                    </tr>
+                                    <tr>
+                                        <td>わかること</td>
+                                        <td>検索キーワード、順位、クリック率</td>
+                                        <td>ページビュー、滞在時間、離脱率</td>
+                                    </tr>
+                                    <tr>
+                                        <td>データの範囲</td>
+                                        <td>検索結果に表示された時点まで</td>
+                                        <td>サイト訪問後から</td>
+                                    </tr>
+                                    <tr>
+                                        <td>主な用途</td>
+                                        <td>SEO対策・検索流入改善</td>
+                                        <td>サイト改善・コンバージョン分析</td>
+                                    </tr>
+                                    <tr>
+                                        <td>エラー検出</td>
+                                        <td>クロールエラー、インデックス問題</td>
+                                        <td>なし</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tip-box">
+                            <p><strong>ポイント</strong>：Search Consoleは「検索結果でどう見えるか」、Analyticsは「サイトでどう行動するか」を分析します。両方を連携させると、検索から訪問後まで一貫した分析が可能になります。</p>
+                        </div>
+                    </section>
+
+                    <section id="gsc-setup">
+                        <h2>Search Consoleの登録・設定方法</h2>
+                        <p>Search Consoleの設定は<strong>5〜10分程度</strong>で完了します。以下の手順で進めましょう。</p>
+
+                        <h3>ステップ1：Search Consoleにアクセス</h3>
+                        <p><a href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console</a>にアクセスし、Googleアカウントでログインします。</p>
+
+                        <h3>ステップ2：プロパティタイプを選択</h3>
+                        <p>「プロパティを追加」から、以下2種類のどちらかを選びます。</p>
+
+                        <h4>ドメインプロパティ（推奨）</h4>
+                        <ul>
+                            <li>ドメイン全体（www有無、http/https含む）を一括管理</li>
+                            <li>DNSレコードでの所有権確認が必要</li>
+                            <li>例：<code>example.com</code>を入力</li>
+                        </ul>
+
+                        <h4>URLプレフィックスプロパティ</h4>
+                        <ul>
+                            <li>特定のURL（プロトコル、www含む）のみを管理</li>
+                            <li>複数の確認方法から選べる</li>
+                            <li>例：<code>https://www.example.com/</code>を入力</li>
+                        </ul>
+
+                        <div class="info-box">
+                            <h4>どちらを選ぶべき？</h4>
+                            <p>可能であれば「ドメインプロパティ」がおすすめです。http/httpsやwwwの有無に関係なく、サイト全体のデータを一括で見られます。DNS設定が難しい場合は「URLプレフィックス」でも問題ありません。</p>
+                        </div>
+
+                        <h3>ステップ3：所有権を確認</h3>
+                        <p>サイトの所有者であることをGoogleに証明します。</p>
+
+                        <h4>主な確認方法</h4>
+                        <ul>
+                            <li><strong>HTMLファイル</strong>：指定のHTMLファイルをサーバーにアップロード</li>
+                            <li><strong>HTMLタグ</strong>：metaタグをサイトの&lt;head&gt;内に追加</li>
+                            <li><strong>DNSレコード</strong>：TXTレコードをDNS設定に追加</li>
+                            <li><strong>Google Analytics</strong>：GA4のトラッキングコードで確認</li>
+                            <li><strong>Googleタグマネージャー</strong>：GTMコンテナで確認</li>
+                        </ul>
+
+                        <div class="tip-box">
+                            <p><strong>簡単な方法</strong>：すでにGoogle Analyticsを設定済みなら、「Google Analytics」での確認が最も簡単です。追加作業なしで所有権が確認できます。</p>
+                        </div>
+
+                        <h3>ステップ4：サイトマップを送信</h3>
+                        <p>所有権確認後、左メニューの「サイトマップ」から<strong>XMLサイトマップを送信</strong>します。</p>
+                        <ul>
+                            <li>サイトマップURLを入力（例：<code>sitemap.xml</code>）</li>
+                            <li>「送信」をクリック</li>
+                            <li>ステータスが「成功しました」と表示されればOK</li>
+                        </ul>
+
+                        <h3>ステップ5：データ収集を待つ</h3>
+                        <p>設定完了後、<strong>2〜3日でデータが表示</strong>され始めます。登録前のデータは表示されないため、できるだけ早く設定することをおすすめします。</p>
+                    </section>
+
+                    <section id="gsc-features">
+                        <h2>主要機能の使い方</h2>
+                        <p>Search Consoleには多くの機能がありますが、まず押さえるべき<strong>重要な機能</strong>を紹介します。</p>
+
+                        <h3>1. 検索パフォーマンス</h3>
+                        <p>最も重要な機能。<strong>どんなキーワードで何回表示され、何回クリックされたか</strong>がわかります。</p>
+                        <ul>
+                            <li><strong>クエリ</strong>：検索されたキーワード一覧</li>
+                            <li><strong>ページ</strong>：検索結果に表示されたページ一覧</li>
+                            <li><strong>国</strong>：検索されている国・地域</li>
+                            <li><strong>デバイス</strong>：PC/モバイル/タブレットの内訳</li>
+                            <li><strong>検索での見え方</strong>：リッチリザルトなどの表示形式</li>
+                        </ul>
+
+                        <h3>2. URL検査</h3>
+                        <p>特定のページが<strong>Googleにどう認識されているか</strong>を詳しく調べられます。</p>
+                        <ul>
+                            <li>インデックス登録状況の確認</li>
+                            <li>クロール済みかどうかの確認</li>
+                            <li>インデックス登録のリクエスト</li>
+                            <li>レンダリング結果（Googleがページをどう見ているか）の確認</li>
+                        </ul>
+
+                        <h3>3. インデックス作成</h3>
+                        <p>サイト全体の<strong>インデックス状況</strong>を確認できます。</p>
+                        <ul>
+                            <li><strong>ページ</strong>：インデックス登録済み/未登録のページ数</li>
+                            <li><strong>動画ページ</strong>：動画コンテンツの状況</li>
+                            <li><strong>サイトマップ</strong>：送信したサイトマップの状態</li>
+                            <li><strong>削除</strong>：特定URLの検索結果からの一時削除</li>
+                        </ul>
+
+                        <h3>4. エクスペリエンス</h3>
+                        <p>ユーザー体験に関する問題を検出します。</p>
+                        <ul>
+                            <li><strong>ページエクスペリエンス</strong>：Core Web Vitalsなどの総合評価</li>
+                            <li><strong>ウェブに関する主な指標</strong>：LCP、FID、CLSの詳細</li>
+                            <li><strong>モバイルユーザビリティ</strong>：スマホ表示の問題</li>
+                            <li><strong>HTTPS</strong>：SSL証明書の状態</li>
+                        </ul>
+
+                        <h3>5. セキュリティと手動による対策</h3>
+                        <p>重大な問題があれば通知されます。</p>
+                        <ul>
+                            <li><strong>手動による対策</strong>：Googleからのペナルティ</li>
+                            <li><strong>セキュリティの問題</strong>：マルウェア、ハッキングの検出</li>
+                        </ul>
+                    </section>
+
+                    <section id="search-performance">
+                        <h2>検索パフォーマンスの見方・活用法</h2>
+                        <p>Search Consoleで最も活用する「検索パフォーマンス」機能の<strong>見方と改善への活かし方</strong>を解説します。</p>
+
+                        <h3>4つの主要指標</h3>
+                        <div class="comparison-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>指標</th>
+                                        <th>意味</th>
+                                        <th>改善のヒント</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>合計クリック数</td>
+                                        <td>検索結果からサイトがクリックされた回数</td>
+                                        <td>タイトル・説明文を改善してCTRを上げる</td>
+                                    </tr>
+                                    <tr>
+                                        <td>合計表示回数</td>
+                                        <td>検索結果に表示された回数</td>
+                                        <td>狙うキーワードでコンテンツを強化</td>
+                                    </tr>
+                                    <tr>
+                                        <td>平均CTR</td>
+                                        <td>表示に対するクリック率</td>
+                                        <td>3%以下なら改善の余地あり</td>
+                                    </tr>
+                                    <tr>
+                                        <td>平均掲載順位</td>
+                                        <td>検索結果での平均順位</td>
+                                        <td>10位以内を目指してコンテンツ改善</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3>SEO改善に活かす分析方法</h3>
+
+                        <h4>1. 上位表示できているキーワードを発見</h4>
+                        <p>「クエリ」タブで<strong>平均掲載順位でソート</strong>すると、すでに上位表示できているキーワードがわかります。</p>
+                        <ul>
+                            <li>1〜10位：そのまま維持・さらに強化</li>
+                            <li>11〜20位：コンテンツ追加で1ページ目を狙う</li>
+                            <li>21位以下：競合分析して大幅改善が必要</li>
+                        </ul>
+
+                        <h4>2. CTR改善の余地があるページを発見</h4>
+                        <p>順位は高いのにCTRが低いページは、<strong>タイトルやメタディスクリプションの改善</strong>で流入を増やせます。</p>
+                        <ul>
+                            <li>順位5位以内でCTR 5%以下 → 改善余地大</li>
+                            <li>タイトルに数字や具体性を追加</li>
+                            <li>ディスクリプションで読者の悩みに訴求</li>
+                        </ul>
+
+                        <h4>3. 伸びているキーワードをチェック</h4>
+                        <p>期間を比較して<strong>表示回数が増えているキーワード</strong>を発見。トレンドに乗ったコンテンツ強化ができます。</p>
+
+                        <div class="tip-box">
+                            <p><strong>活用のコツ</strong>：週1回、検索パフォーマンスをチェックする習慣をつけましょう。順位やクリック数の変化をいち早く察知し、素早く対応できます。</p>
+                        </div>
+                    </section>
+
+                    <section id="url-inspection">
+                        <h2>URL検査とインデックス登録</h2>
+                        <p>新しいページを公開したら、<strong>URL検査ツール</strong>でGoogleへのインデックス登録をリクエストしましょう。</p>
+
+                        <h3>URL検査の使い方</h3>
+                        <ol>
+                            <li>画面上部の検索バーに調べたいURLを入力</li>
+                            <li>「Googleインデックスからデータを取得しています」と表示される</li>
+                            <li>結果画面でインデックス状況を確認</li>
+                        </ol>
+
+                        <h3>結果の見方</h3>
+
+                        <h4>「URLはGoogleに登録されています」</h4>
+                        <p>正常にインデックスされている状態。検索結果に表示される可能性があります。</p>
+
+                        <h4>「URLがGoogleに登録されていません」</h4>
+                        <p>インデックスされていない状態。原因を確認し、対処が必要です。</p>
+                        <ul>
+                            <li><strong>検出 - インデックス未登録</strong>：クロール待ちの状態</li>
+                            <li><strong>クロール済み - インデックス未登録</strong>：品質が低いと判断された可能性</li>
+                            <li><strong>noindex タグによって除外</strong>：意図的にインデックスを拒否している</li>
+                            <li><strong>リダイレクトエラー</strong>：リダイレクト設定に問題あり</li>
+                        </ul>
+
+                        <h3>インデックス登録をリクエストする方法</h3>
+                        <ol>
+                            <li>URL検査結果画面で「インデックス登録をリクエスト」をクリック</li>
+                            <li>「URLはインデックス登録の優先キューに追加されました」と表示</li>
+                            <li>通常1日〜数日でインデックスされる</li>
+                        </ol>
+
+                        <div class="info-box">
+                            <h4>注意点</h4>
+                            <p>インデックス登録リクエストは1日あたりの回数に制限があります。大量のページを一度に登録したい場合は、サイトマップを更新して送信するのが効率的です。</p>
+                        </div>
+                    </section>
+
+                    <section id="error-handling">
+                        <h2>エラー・問題の確認と修正方法</h2>
+                        <p>Search Consoleで検出される<strong>よくあるエラーとその対処法</strong>を紹介します。</p>
+
+                        <h3>インデックス関連のエラー</h3>
+
+                        <h4>「クロール済み - インデックス未登録」</h4>
+                        <p>Googleがページを見たが、インデックスする価値がないと判断した状態。</p>
+                        <ul>
+                            <li><strong>原因</strong>：コンテンツが薄い、重複コンテンツ、低品質</li>
+                            <li><strong>対処</strong>：コンテンツを充実させる、オリジナリティを追加</li>
+                        </ul>
+
+                        <h4>「検出 - インデックス未登録」</h4>
+                        <p>Googleがページの存在を認識したが、まだクロールしていない状態。</p>
+                        <ul>
+                            <li><strong>原因</strong>：クロールの優先度が低い、サイトの規模が大きい</li>
+                            <li><strong>対処</strong>：URL検査からインデックス登録をリクエスト</li>
+                        </ul>
+
+                        <h4>「リダイレクトエラー」</h4>
+                        <p>リダイレクトの設定に問題がある状態。</p>
+                        <ul>
+                            <li><strong>原因</strong>：リダイレクトループ、長すぎるリダイレクトチェーン</li>
+                            <li><strong>対処</strong>：リダイレクト設定を見直す</li>
+                        </ul>
+
+                        <h3>モバイルユーザビリティのエラー</h3>
+
+                        <h4>「テキストが小さすぎて読めません」</h4>
+                        <ul>
+                            <li><strong>対処</strong>：フォントサイズを16px以上に設定</li>
+                        </ul>
+
+                        <h4>「クリック可能な要素同士が近すぎます」</h4>
+                        <ul>
+                            <li><strong>対処</strong>：リンクやボタンの間隔を広げる（8px以上推奨）</li>
+                        </ul>
+
+                        <h4>「コンテンツの幅が画面の幅を超えています」</h4>
+                        <ul>
+                            <li><strong>対処</strong>：レスポンシブデザインを適用、横スクロールを解消</li>
+                        </ul>
+
+                        <h3>Core Web Vitalsのエラー</h3>
+
+                        <h4>「LCPの問題: 2.5秒超」</h4>
+                        <p>最大コンテンツの読み込みが遅い。</p>
+                        <ul>
+                            <li><strong>対処</strong>：画像の最適化、サーバー応答の高速化</li>
+                        </ul>
+
+                        <h4>「CLSに関する問題: 0.1超」</h4>
+                        <p>ページ読み込み中にレイアウトがずれる。</p>
+                        <ul>
+                            <li><strong>対処</strong>：画像・動画にサイズ属性を指定、フォント読み込みの最適化</li>
+                        </ul>
+
+                        <div class="tip-box">
+                            <p><strong>修正後の対応</strong>：エラーを修正したら、該当する問題の「修正を検証」ボタンをクリック。Googleが再確認し、問題が解消されれば「合格」に変わります。</p>
+                        </div>
+                    </section>
+
+                    <section id="gsc-tips">
+                        <h2>SEO改善に役立つ活用テクニック</h2>
+                        <p>Search Consoleを使いこなすための<strong>実践的なテクニック</strong>を紹介します。</p>
+
+                        <h3>テクニック1：「惜しいキーワード」を見つける</h3>
+                        <p>検索パフォーマンスで<strong>11〜20位のキーワード</strong>をフィルタリング。少しの改善で1ページ目に入る可能性があるキーワードです。</p>
+                        <ol>
+                            <li>検索パフォーマンス → 「平均掲載順位」をON</li>
+                            <li>「掲載順位」でフィルタ → 「次より大きい：10」「次より小さい：21」</li>
+                            <li>表示されたキーワードに対応するページを強化</li>
+                        </ol>
+
+                        <h3>テクニック2：カニバリゼーションを発見</h3>
+                        <p>同じキーワードで複数のページが競合している状態（カニバリゼーション）を発見できます。</p>
+                        <ol>
+                            <li>検索パフォーマンスで特定のキーワードをクリック</li>
+                            <li>「ページ」タブをクリック</li>
+                            <li>同じキーワードで複数のページが表示されていたら要注意</li>
+                        </ol>
+                        <p><strong>対処法</strong>：記事を統合する、内部リンクで優先ページを明示する、canonicalタグを設定する</p>
+
+                        <h3>テクニック3：季節トレンドを把握</h3>
+                        <p>期間を過去12ヶ月などに設定し、<strong>検索需要の季節変動</strong>を確認。需要が高まる時期の前にコンテンツを更新・強化しましょう。</p>
+
+                        <h3>テクニック4：Google Analyticsと連携</h3>
+                        <p>GA4とSearch Consoleを連携すると、<strong>検索キーワードとサイト内行動を紐づけて</strong>分析できます。</p>
+                        <ol>
+                            <li>GA4の「管理」→「Search Consoleのリンク」</li>
+                            <li>「リンク」をクリックしてプロパティを選択</li>
+                            <li>GA4の「集客」→「Search Console」でデータを確認</li>
+                        </ol>
+
+                        <h3>テクニック5：定期レポートを作成</h3>
+                        <p>Looker Studio（旧データポータル）と連携して、<strong>自動更新されるレポート</strong>を作成できます。クライアントへの報告や社内共有に便利です。</p>
+
+                        <div class="summary-box">
+                            <h4>Search Console活用チェックリスト</h4>
+                            <ul>
+                                <li>週1回は検索パフォーマンスをチェック</li>
+                                <li>新しいページを公開したらインデックス登録をリクエスト</li>
+                                <li>エラーが通知されたら早めに対処</li>
+                                <li>11〜20位のキーワードを重点的に改善</li>
+                                <li>GA4と連携してより深い分析を</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="gsc-faq">
+                        <h2>よくある質問</h2>
+                        <div class="faq-section">
+                            <div class="faq-item">
+                                <h3 class="faq-question">Q. Google Search Consoleは無料で使えますか？</h3>
+                                <div class="faq-answer">
+                                    <p>はい、<strong>完全無料</strong>で利用できます。Googleアカウントがあれば、サイトの規模に関係なく全機能を無料で使えます。</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h3 class="faq-question">Q. Search ConsoleとGoogle Analyticsの違いは？</h3>
+                                <div class="faq-answer">
+                                    <p>Search Consoleは「Google検索でのサイトの見え方」を分析するツールで、検索キーワードや掲載順位がわかります。Google Analyticsは「サイト訪問後のユーザー行動」を分析するツールで、ページ閲覧数や滞在時間がわかります。<strong>両方を連携させる</strong>ことで、検索から訪問後まで一貫した分析が可能です。</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h3 class="faq-question">Q. インデックスされるまでどのくらいかかりますか？</h3>
+                                <div class="faq-answer">
+                                    <p>新しいページがGoogleにインデックスされるまで、<strong>通常1日〜数週間</strong>かかります。Search Consoleの「URL検査」からインデックス登録をリクエストすると、クロールの優先度が上がり、早ければ数時間〜1日程度でインデックスされることもあります。</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h3 class="faq-question">Q. サーチコンソールはどのくらいの頻度で確認すべきですか？</h3>
+                                <div class="faq-answer">
+                                    <p><strong>週1回程度</strong>の確認をおすすめします。エラーや問題が発生した場合はメール通知が届くので、日常的には週1回の定期チェックで十分です。大規模なサイト更新やSEO施策を行った後は、毎日確認することをおすすめします。</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h3 class="faq-question">Q. 検索パフォーマンスのデータはいつから見られますか？</h3>
+                                <div class="faq-answer">
+                                    <p>Search Consoleに登録後、データが表示されるまで<strong>2〜3日</strong>かかります。なお、登録前のデータは表示されないため、サイト公開後できるだけ早く登録することをおすすめします。データは<strong>最大16ヶ月分</strong>保存されます。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <p>Google Search Consoleは、<strong>SEO対策に欠かせない無料ツール</strong>です。本記事のポイントをおさらいしましょう。</p>
+
+                        <div class="summary-box">
+                            <h4>この記事のポイント</h4>
+                            <ul>
+                                <li><strong>Search Consoleとは</strong>：Google検索でのサイトの見え方を分析・改善するツール</li>
+                                <li><strong>登録方法</strong>：プロパティを追加 → 所有権確認 → サイトマップ送信</li>
+                                <li><strong>検索パフォーマンス</strong>：クリック数・表示回数・CTR・順位でSEO効果を測定</li>
+                                <li><strong>URL検査</strong>：ページのインデックス状況確認、登録リクエストに活用</li>
+                                <li><strong>エラー対処</strong>：インデックスエラー・モバイル問題を早期発見・修正</li>
+                                <li><strong>活用のコツ</strong>：週1回の定期チェック、11〜20位のキーワード改善、GA4連携</li>
+                            </ul>
+                        </div>
+
+                        <p>Search Consoleを使いこなすことで、「どのキーワードで検索されているか」「どのページに改善余地があるか」が明確になり、<strong>効果的なSEO対策</strong>が可能になります。</p>
+                        <p>まだ登録していない方は、今すぐSearch Consoleを設定して、サイトの検索パフォーマンスを改善していきましょう。</p>
+
+                        <div class="info-box">
+                            <h4>SEOやサイト分析でお困りですか？</h4>
+                            <p>LIKaNONでは、Search Consoleの設定からSEO対策まで、サイト改善をトータルでサポートしています。「データの見方がわからない」「何を改善すればいいかわからない」という方は、お気軽にご相談ください。</p>
+                        </div>
+                    </section>
+
+                    <!-- 関連記事 -->
+                    <section class="related-articles">
+                        <h2>関連記事</h2>
+                        <div class="related-grid">
+                            <a href="seo-guide-2024.html" class="related-card">
+                                <span class="related-category seo">SEO対策</span>
+                                <h3>【2025年最新】SEO対策完全ガイド｜AI時代の検索上位表示戦略</h3>
+                            </a>
+                            <a href="google-analytics-guide.html" class="related-card">
+                                <span class="related-category seo">SEO対策</span>
+                                <h3>Google Analytics 4（GA4）の使い方完全ガイド</h3>
+                            </a>
+                            <a href="keyword-research-guide.html" class="related-card">
+                                <span class="related-category seo">SEO対策</span>
+                                <h3>キーワード選定の完全ガイド｜SEOで成果を出す方法</h3>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">SEO対策・サイト改善のご相談</h2>
+                <p class="cta-text">Search Consoleの活用方法やSEO対策について、<br>専門スタッフが丁寧にサポートいたします。</p>
+                <a href="../index.html#contact" class="cta-button">無料で相談する</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <p class="footer-desc">個人事業主・小規模店舗のための<br>Web制作パートナー</p>
+                </div>
+                <nav class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h4>サービス</h4>
+                        <ul>
+                            <li><a href="../index.html#service">サービス内容</a></li>
+                            <li><a href="../index.html#portfolio">制作実績</a></li>
+                            <li><a href="../index.html#merit">選ばれる理由</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h4>コンテンツ</h4>
+                        <ul>
+                            <li><a href="../blog.html">ブログ</a></li>
+                            <li><a href="../index.html#faq">よくある質問</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h4>お問い合わせ</h4>
+                        <ul>
+                            <li><a href="../index.html#contact">無料相談</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 LIKaNON All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="../privacy.html">プライバシーポリシー</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
