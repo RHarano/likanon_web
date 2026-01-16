@@ -3542,3 +3542,87 @@ select {
         padding-left: calc(var(--spacing-md) + 1.5rem);
     }
 }
+
+/* ===========================================
+   Page Hero (独立ページ用)
+   =========================================== */
+.page-hero {
+    padding: 10rem 0 4rem;
+    background: var(--color-bg);
+    text-align: center;
+}
+
+.page-hero-sub {
+    display: inline-block;
+    font-family: var(--font-accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-md);
+}
+
+.page-hero-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.page-hero-desc {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+/* ===========================================
+   Breadcrumb (パンくずリスト)
+   =========================================== */
+.breadcrumb {
+    padding: var(--spacing-sm) 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    margin-top: 70px;
+}
+
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-item a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.breadcrumb-item a:hover {
+    color: var(--color-primary);
+}
+
+.breadcrumb-item:not(:last-child)::after {
+    content: '›';
+    margin-left: var(--spacing-sm);
+    color: var(--color-text-muted);
+}
+
+.breadcrumb-item.current {
+    color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 8rem 0 3rem;
+    }
+    
+    .breadcrumb {
+        margin-top: 60px;
+    }
+}
