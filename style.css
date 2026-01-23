@@ -3846,3 +3846,202 @@ select {
         font-size: 0.8125rem;
     }
 }
+
+/* ===========================================
+   Mobile CTA Enhancement (スマホCTA強化)
+   =========================================== */
+@media (max-width: 768px) {
+    /* メインCTAボタン（無料相談）を強調 */
+    .mobile-fixed-footer a.mobile-cta-main {
+        flex: 1.3;
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        color: white;
+        position: relative;
+        border-radius: 8px 8px 0 0;
+        margin: 0 4px;
+        animation: pulse-mobile-cta 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse-mobile-cta {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4); }
+        50% { box-shadow: 0 0 0 8px rgba(231, 76, 60, 0); }
+    }
+    
+    .mobile-fixed-footer a.mobile-cta-main svg {
+        stroke: white;
+    }
+    
+    /* 残り枠バッジ */
+    .mobile-cta-badge {
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ffd700;
+        color: #1a1a1a;
+        font-size: 0.5rem;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: 10px;
+        white-space: nowrap;
+        animation: bounce-badge 2s ease-in-out infinite;
+    }
+    
+    /* LINEボタン */
+    .mobile-fixed-footer a.line-cta {
+        background: #06C755;
+        color: white;
+        border-radius: 8px 8px 0 0;
+        margin: 0 2px;
+    }
+    
+    .mobile-fixed-footer a.line-cta svg {
+        fill: white;
+        width: 22px;
+        height: 22px;
+    }
+    
+    /* フッター全体の高さ調整 */
+    .mobile-fixed-footer {
+        height: 68px;
+        padding-bottom: env(safe-area-inset-bottom, 0);
+    }
+    
+    .mobile-fixed-footer a {
+        font-size: 0.625rem;
+    }
+    
+    /* 通常リンクのスタイル調整 */
+    .mobile-fixed-footer a:not(.mobile-cta-main):not(.line-cta) {
+        flex: 0.8;
+    }
+}
+
+/* ===========================================
+   Mobile Floating Banner (スマホ用フローティングバナー)
+   =========================================== */
+.mobile-floating-banner {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-floating-banner {
+        display: block;
+        position: fixed;
+        bottom: 76px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-normal);
+    }
+    
+    .mobile-floating-banner.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .mobile-floating-banner-inner {
+        background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+        color: white;
+        padding: 10px 16px;
+        border-radius: var(--radius-full);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        font-size: 0.75rem;
+    }
+    
+    .mobile-floating-banner-badge {
+        background: #e74c3c;
+        color: white;
+        font-size: 0.625rem;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: var(--radius-sm);
+    }
+    
+    .mobile-floating-banner-text strong {
+        color: #ffd700;
+    }
+    
+    .mobile-floating-banner-close {
+        background: transparent;
+        border: none;
+        color: rgba(255,255,255,0.6);
+        padding: 4px;
+        cursor: pointer;
+        margin-left: 4px;
+    }
+}
+
+/* ===========================================
+   Mobile Hero Enhancement (スマホヒーロー強化)
+   =========================================== */
+@media (max-width: 768px) {
+    /* ヒーローボタンをより目立たせる */
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .hero-buttons .btn-outline {
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        color: white;
+        border-color: transparent;
+    }
+    
+    /* 統計情報を目立たせる */
+    .hero-stats {
+        background: var(--color-bg-soft);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-md);
+        margin-top: var(--spacing-lg);
+    }
+}
+
+/* ===========================================
+   Mobile Contact Enhancement (スマホ問い合わせ強化)
+   =========================================== */
+@media (max-width: 768px) {
+    .contact-benefits {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .contact-benefit {
+        background: var(--color-bg-soft);
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-full);
+        font-size: 0.8125rem;
+    }
+    
+    /* LINEボタンをより目立たせる */
+    .contact-method.line {
+        background: #06C755;
+        color: white;
+        padding: 1rem;
+        border-radius: var(--radius-lg);
+        font-size: 1rem;
+    }
+    
+    .contact-method.line svg {
+        fill: white;
+        width: 28px;
+        height: 28px;
+    }
+    
+    .contact-method.line strong {
+        font-size: 1.125rem;
+    }
+}

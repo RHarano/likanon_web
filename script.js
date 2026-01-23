@@ -766,6 +766,49 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========================================
+// Mobile Floating Banner (スマホ用フローティングバナー)
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileFloatingBanner = document.getElementById('mobileFloatingBanner');
+    const mobileFloatingBannerClose = document.getElementById('mobileFloatingBannerClose');
+    const contactSection = document.getElementById('contact');
+
+    if (mobileFloatingBanner && window.innerWidth <= 768) {
+        const bannerClosed = sessionStorage.getItem('mobileFloatingBannerClosed');
+
+        if (!bannerClosed) {
+            window.addEventListener('scroll', function() {
+                const scrollY = window.scrollY;
+                const windowHeight = window.innerHeight;
+
+                if (scrollY > 200) {
+                    if (contactSection) {
+                        const contactTop = contactSection.offsetTop;
+                        if (scrollY + windowHeight > contactTop) {
+                            mobileFloatingBanner.classList.remove('visible');
+                        } else {
+                            mobileFloatingBanner.classList.add('visible');
+                        }
+                    } else {
+                        mobileFloatingBanner.classList.add('visible');
+                    }
+                } else {
+                    mobileFloatingBanner.classList.remove('visible');
+                }
+            }, { passive: true });
+        }
+
+        if (mobileFloatingBannerClose) {
+            mobileFloatingBannerClose.addEventListener('click', function() {
+                mobileFloatingBanner.classList.remove('visible');
+                mobileFloatingBanner.style.display = 'none';
+                sessionStorage.setItem('mobileFloatingBannerClosed', 'true');
+            });
+        }
+    }
+});
+
+// ========================================
 // Promo Banner (限定バナー)
 // ========================================
 document.addEventListener('DOMContentLoaded', function() {
