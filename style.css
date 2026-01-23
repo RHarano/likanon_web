@@ -3626,3 +3626,223 @@ select {
         margin-top: 60px;
     }
 }
+
+/* ===========================================
+   Promo Banner (限定バナー)
+   =========================================== */
+.promo-banner {
+    background: linear-gradient(90deg, #1a1a1a 0%, #333 100%);
+    color: var(--color-white);
+    padding: 0.75rem 1rem;
+    position: relative;
+    z-index: 1001;
+}
+
+.promo-banner-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.promo-badge {
+    background: #e74c3c;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    animation: pulse-badge 2s ease-in-out infinite;
+}
+
+@keyframes pulse-badge {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.promo-text {
+    font-size: 0.875rem;
+}
+
+.promo-text strong {
+    color: #ffd700;
+}
+
+.promo-link {
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    transition: opacity var(--transition-fast);
+}
+
+.promo-link:hover {
+    opacity: 0.8;
+}
+
+.promo-close {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.6);
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color var(--transition-fast);
+}
+
+.promo-close:hover {
+    color: white;
+}
+
+.promo-banner.hidden {
+    display: none;
+}
+
+/* Banner表示時のheader調整 */
+.header.with-banner {
+    top: 42px;
+}
+
+@media (max-width: 768px) {
+    .promo-banner {
+        padding: 0.5rem;
+    }
+    
+    .promo-banner-inner {
+        gap: var(--spacing-sm);
+        font-size: 0.75rem;
+    }
+    
+    .promo-badge {
+        font-size: 0.65rem;
+    }
+    
+    .promo-text {
+        font-size: 0.75rem;
+    }
+    
+    .promo-link {
+        font-size: 0.7rem;
+    }
+    
+    .promo-close {
+        right: 0.5rem;
+    }
+    
+    .header.with-banner {
+        top: 36px;
+    }
+}
+
+/* ===========================================
+   Floating CTA (PC用追従ボタン)
+   =========================================== */
+.floating-cta {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all var(--transition-normal);
+}
+
+.floating-cta.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.floating-cta-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    box-shadow: 0 4px 20px rgba(231, 76, 60, 0.4);
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.floating-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(231, 76, 60, 0.5);
+}
+
+.floating-cta-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ffd700;
+    color: #1a1a1a;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+    animation: bounce-badge 2s ease-in-out infinite;
+}
+
+@keyframes bounce-badge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+.floating-cta-text {
+    white-space: nowrap;
+}
+
+/* モバイルでは非表示（固定フッターがあるため） */
+@media (max-width: 768px) {
+    .floating-cta {
+        display: none;
+    }
+}
+
+/* ===========================================
+   Contact Benefits (問い合わせ特典)
+   =========================================== */
+.contact-benefits {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.contact-benefit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+}
+
+.contact-benefit svg {
+    color: #22c55e;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .contact-benefits {
+        gap: var(--spacing-md);
+    }
+    
+    .contact-benefit {
+        font-size: 0.8125rem;
+    }
+}

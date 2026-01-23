@@ -732,3 +732,67 @@ document.addEventListener('visibilitychange', function() {
         document.title = 'LIKaNON | プロのWeb制作・デザイン | 個人事業主ならではの丁寧なサポート';
     }
 });
+
+// ========================================
+// Floating CTA (PC用追従ボタン)
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const floatingCta = document.getElementById('floatingCta');
+    const contactSection = document.getElementById('contact');
+
+    if (floatingCta) {
+        window.addEventListener('scroll', function() {
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+
+            // 300px以上スクロールで表示
+            if (scrollY > 300) {
+                // コンタクトセクションに近づいたら非表示
+                if (contactSection) {
+                    const contactTop = contactSection.offsetTop;
+                    if (scrollY + windowHeight > contactTop + 100) {
+                        floatingCta.classList.remove('visible');
+                    } else {
+                        floatingCta.classList.add('visible');
+                    }
+                } else {
+                    floatingCta.classList.add('visible');
+                }
+            } else {
+                floatingCta.classList.remove('visible');
+            }
+        }, { passive: true });
+    }
+});
+
+// ========================================
+// Promo Banner (限定バナー)
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const promoBanner = document.getElementById('promoBanner');
+    const promoClose = document.getElementById('promoClose');
+    const header = document.getElementById('header');
+
+    // バナーが閉じられたかセッションストレージで確認
+    const bannerClosed = sessionStorage.getItem('promoBannerClosed');
+
+    if (promoBanner && !bannerClosed) {
+        // ヘッダーの位置を調整
+        if (header) {
+            header.classList.add('with-banner');
+        }
+
+        // 閉じるボタン
+        if (promoClose) {
+            promoClose.addEventListener('click', function() {
+                promoBanner.classList.add('hidden');
+                if (header) {
+                    header.classList.remove('with-banner');
+                }
+                sessionStorage.setItem('promoBannerClosed', 'true');
+            });
+        }
+    } else if (promoBanner && bannerClosed) {
+        promoBanner.classList.add('hidden');
+    }
+});
