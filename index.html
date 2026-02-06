@@ -259,21 +259,6 @@
     </script>
 </head>
 <body>
-    <!-- 限定バナー -->
-    <div class="promo-banner" id="promoBanner">
-        <div class="promo-banner-inner">
-            <span class="promo-badge">期間限定</span>
-            <span class="promo-text">1月中のお申込みで<strong>初期費用10%OFF</strong></span>
-            <a href="#contact" class="promo-link">詳しく見る →</a>
-            <button class="promo-close" id="promoClose" aria-label="閉じる">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-    </div>
-
     <!-- ヘッダー -->
     <header class="header" id="header">
         <div class="header-inner">
@@ -1671,30 +1656,45 @@
                     </span>
                 </div>
             </div>
-            <div class="contact-wrapper">
-                <div class="google-form-wrapper">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdb2B7n7Ks46CF35T9Pm6XjXCPfinYrJMAM_aGNnNbx9x4Apw/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-info-item">
-                        <h4>LINEでもお問い合わせいただけます</h4>
-                        <p>
-                            お急ぎの場合やLINEでのご連絡をご希望の方は、
-                            公式LINEからもお問い合わせいただけます。
-                        </p>
+            <!-- 問い合わせ方法 -->
+            <div class="contact-methods-grid">
+                <!-- LINE -->
+                <a href="https://lin.ee/43NTiCQ" target="_blank" rel="noopener" class="contact-card contact-card-line">
+                    <div class="contact-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                        </svg>
                     </div>
-                    <div class="contact-info-item">
-                        <a href="https://lin.ee/43NTiCQ" target="_blank" rel="noopener" class="contact-method line">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-                            </svg>
-                            <div>
-                                <strong>公式LINE</strong>
-                                <p>お気軽にご相談ください</p>
-                            </div>
-                        </a>
+                    <div class="contact-card-content">
+                        <span class="contact-card-badge">おすすめ</span>
+                        <h3>LINEで相談する</h3>
+                        <p>友だち追加ですぐに相談OK<br>24時間いつでも送信できます</p>
                     </div>
-                </div>
+                    <span class="contact-card-arrow">→</span>
+                </a>
+
+                <!-- メール -->
+                <a href="mailto:info@likanon.com?subject=%E3%80%90LIKaNON%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B&body=%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%0A%E3%81%8A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%EF%BC%9A%0A%0A%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0A%E2%96%A1%20%E6%96%B0%E8%A6%8FHP%E5%88%B6%E4%BD%9C%0A%E2%96%A1%20HP%E3%83%AA%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%A2%E3%83%AB%0A%E2%96%A1%20SNS%E9%81%8B%E7%94%A8%E4%BB%A3%E8%A1%8C%0A%E2%96%A1%20%E3%81%9D%E3%81%AE%E4%BB%96%0A%0A%E3%81%94%E5%B8%8C%E6%9C%9B%E3%83%BB%E3%81%94%E8%B3%AA%E5%95%8F%EF%BC%9A%0A" class="contact-card contact-card-mail">
+                    <div class="contact-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="contact-card-content">
+                        <h3>メールで相談する</h3>
+                        <p>必要事項が自動入力されます<br>info@likanon.com</p>
+                    </div>
+                    <span class="contact-card-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- 補足情報 -->
+            <div class="contact-note">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    通常24時間以内にご返信いたします
+                </p>
             </div>
         </div>
     </section>
@@ -1782,24 +1782,10 @@
         <span class="back-to-top-text">TOP</span>
     </a>
 
-    <!-- スマホ用フローティングバナー -->
-    <div class="mobile-floating-banner" id="mobileFloatingBanner">
-        <div class="mobile-floating-banner-inner">
-            <span class="mobile-floating-banner-badge">限定</span>
-            <span class="mobile-floating-banner-text">1月中 <strong>10%OFF</strong></span>
-            <button class="mobile-floating-banner-close" id="mobileFloatingBannerClose" aria-label="閉じる">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-    </div>
-
     <!-- PC用フローティングCTA -->
     <div class="floating-cta" id="floatingCta">
         <a href="#contact" class="floating-cta-btn">
-            <span class="floating-cta-badge">今月残り3枠</span>
+            <span class="floating-cta-badge">相談無料</span>
             <span class="floating-cta-text">無料相談する</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
@@ -1826,7 +1812,7 @@
             <span>実績</span>
         </a>
         <a href="/#contact" class="highlight-cta mobile-cta-main">
-            <span class="mobile-cta-badge">残り3枠</span>
+            <span class="mobile-cta-badge">相談無料</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
             </svg>
