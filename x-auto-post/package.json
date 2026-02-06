@@ -1,0 +1,20 @@
+{
+  "name": "likanon-x-auto-post",
+  "version": "1.0.0",
+  "description": "LIKaNON X (Twitter) 自動投稿システム",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "post": "node post.js",
+    "post:random": "node post-random.js",
+    "schedule": "node scheduler.js",
+    "test": "node test-connection.js"
+  },
+  "dependencies": {
+    "twitter-api-v2": "^1.15.0",
+    "dotenv": "^16.3.1",
+    "node-cron": "^3.0.3"
+  },
+  "author": "LIKaNON",
+  "license": "MIT"
+}

@@ -1,0 +1,12 @@
+# 環境変数（APIキー）
+.env
+
+# 投稿ログ
+posted-log.json
+
+# Node.js
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
