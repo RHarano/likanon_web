@@ -4198,3 +4198,76 @@ select {
         font-size: 0.75rem;
     }
 }
+
+/* ===========================================
+   Blog Section on Homepage (トップページブログセクション)
+   =========================================== */
+.blog-section {
+    background: var(--color-bg-soft);
+}
+
+.blog-grid-home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.blog-card-home {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    text-decoration: none;
+    transition: all var(--transition-normal);
+    border: 1px solid var(--color-border);
+}
+
+.blog-card-home:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+}
+
+.blog-card-home .blog-card-category {
+    display: inline-block;
+    background: var(--color-bg-muted);
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-sm);
+}
+
+.blog-card-home h3 {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.5;
+}
+
+.blog-card-home p {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.blog-section-cta {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .blog-grid-home {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .blog-card-home {
+        padding: var(--spacing-lg);
+    }
+
+    .blog-card-home h3 {
+        font-size: 1rem;
+    }
+}
