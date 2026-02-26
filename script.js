@@ -838,4 +838,44 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (promoBanner && bannerClosed) {
         promoBanner.classList.add('hidden');
     }
+
+    // ========================================
+    // GA4 Event Tracking - コンバージョン計測
+    // ========================================
+
+    // LINEリンクのクリック計測
+    document.querySelectorAll('a[href*="lin.ee"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'click_line', {
+                    event_category: 'contact',
+                    event_label: 'LINE問い合わせ'
+                });
+            }
+        });
+    });
+
+    // メールリンクのクリック計測
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'click_email', {
+                    event_category: 'contact',
+                    event_label: 'メール問い合わせ'
+                });
+            }
+        });
+    });
+
+    // CTAボタンのクリック計測
+    document.querySelectorAll('.btn-primary, .nav-cta, .floating-cta-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'click_cta', {
+                    event_category: 'engagement',
+                    event_label: this.textContent.trim() || 'CTA'
+                });
+            }
+        });
+    });
 });
