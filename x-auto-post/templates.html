@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X投稿テンプレート | LIKaNON</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', sans-serif;
+            background: #15202b;
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container { max-width: 600px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        .subtitle {
+            text-align: center;
+            color: #8899a6;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+        .category {
+            background: #192734;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .category-header {
+            background: #1d9bf0;
+            padding: 12px 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .category-header:hover { background: #1a8cd8; }
+        .category-content { display: none; }
+        .category.open .category-content { display: block; }
+        .category.open .category-header .arrow { transform: rotate(180deg); }
+        .post-card {
+            border-bottom: 1px solid #38444d;
+            padding: 16px;
+        }
+        .post-card:last-child { border-bottom: none; }
+        .post-text {
+            white-space: pre-wrap;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        .char-count {
+            color: #8899a6;
+            font-size: 0.8rem;
+        }
+        .copy-btn {
+            background: #1d9bf0;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        .copy-btn:hover { background: #1a8cd8; }
+        .copy-btn.copied {
+            background: #00ba7c;
+        }
+        .arrow {
+            transition: transform 0.3s;
+        }
+        .tips {
+            background: #192734;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+        .tips h3 { margin-bottom: 10px; color: #1d9bf0; }
+        .tips ul { padding-left: 20px; }
+        .tips li { margin-bottom: 5px; color: #8899a6; }
+        a { color: #1d9bf0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>X投稿テンプレート</h1>
+        <p class="subtitle">@likanon_web 用 - クリックでコピー</p>
+
+        <div class="tips">
+            <h3>使い方</h3>
+            <ul>
+                <li>「コピー」ボタンで投稿文をコピー</li>
+                <li><a href="https://twitter.com/compose/tweet" target="_blank">X投稿画面</a>を開いてペースト</li>
+                <li>または <a href="https://buffer.com" target="_blank">Buffer</a> で予約投稿</li>
+            </ul>
+        </div>
+
+        <!-- ブログ記事 -->
+        <div class="category open">
+            <div class="category-header" onclick="toggleCategory(this)">
+                📝 ブログ記事紹介（5件）
+                <span class="arrow">▼</span>
+            </div>
+            <div class="category-content">
+                <div class="post-card">
+                    <div class="post-text">【ブログ更新】
+問い合わせが増えるホームページの5つの特徴
+
+CTAボタンの配置、導線設計、信頼性...
+今すぐできる改善ポイントをまとめました
+
+詳しくはこちら
+https://likanon.com/blog/website-inquiry-improvement-guide.html
+
+#ホームページ制作 #Web集客 #CV改善</div>
+                    <div class="post-meta">
+                        <span class="char-count">176文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-text">ホームページ作ったのに問い合わせが来ない...
+
+その原因、7つに分類できます
+・SEO対策不足
+・導線が弱い
+・信頼性が伝わってない
+etc.
+
+チェックリスト付きで解説
+https://likanon.com/blog/homepage-not-getting-customers.html
+
+#Web制作 #集客</div>
+                    <div class="post-meta">
+                        <span class="char-count">168文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-text">【2026年版】個人事業主の集客方法10選
+
+予算0円からできる方法〜
+有料広告まで徹底比較
+
+「何から始めればいい？」がわかります
+
+https://likanon.com/blog/sole-proprietor-marketing-guide-2026.html
+
+#個人事業主 #集客 #マーケティング</div>
+                    <div class="post-meta">
+                        <span class="char-count">155文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-text">「ホームページ、そろそろリニューアルした方がいい？」
+
+8つのサインをチェック
+✅ スマホで見づらい
+✅ 3年以上デザイン変えてない
+✅ 問い合わせが減ってきた
+...
+
+https://likanon.com/blog/homepage-renewal-timing-guide.html
+
+#Webリニューアル</div>
+                    <div class="post-meta">
+                        <span class="char-count">167文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-text">店舗ビジネスの方、MEO対策してますか？
+
+Googleマップで上位表示されると
+来店数が大きく変わります
+
+Googleビジネスプロフィールの
+最適化方法を解説
+
+https://likanon.com/blog/meo-google-business-profile-guide.html
+
+#MEO対策 #店舗集客 #Googleマップ</div>
+                    <div class="post-meta">
+                        <span class="char-count">173文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- サービス紹介 -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                💼 サービス紹介（4件）
+                <span class="arrow">▼</span>
+            </div>
+            <div class="category-content">
+                <div class="post-card">
+                    <div class="post-text">【LP制作 5万円〜】
+
+・1ページ完結
+・スマホ対応込み
+・SEO基本設定込み
+
+「まずは1ページから始めたい」
+そんな方におすすめです
+
+無料相談はLINEから
+https://lin.ee/43NTiCQ
+
+#LP制作 #ホームページ制作</div>
+                    <div class="post-meta">
+                        <span class="char-count">138文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-text">ホームページ制作、こんな方におすすめ
+
+✅ 個人事業主・フリーランス
+✅ 小規模店舗オーナー
+✅ 予算を抑えたい
+✅ 集客につなげたい
+
+LP 5万円〜 / コーポレート 10万円〜
+
+https://likanon.com
+
+#Web制作 #個人事業主</div>
+                    <div class="post-meta">
+                        <span class="char-count">152文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-text">「ホームページ作りたいけど高すぎる...」
+
+大手制作会社だと50〜100万円が相場
+
+LIKaNONなら
+LP 5万円〜
+コーポレートサイト 10万円〜
+
+品質は妥協しません
+まずは無料相談から
+
+https://likanon.com
+
+#格安ホームページ</div>
+                    <div class="post-meta">
+                        <span class="char-count">143文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-text">Instagram運用代行もやってます
+
+・投稿作成
+・ハッシュタグ選定
+・フォロワー獲得施策
+
+「SNS更新する時間がない」
+「何を投稿すればいいかわからない」
+
+そんな方はご相談ください
+
+https://likanon.com
+
+#Instagram運用 #SNS運用代行</div>
+                    <div class="post-meta">
+                        <span class="char-count">156文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                💡 お役立ちTips（6件）
+                <span class="arrow">▼</span>
+            </div>
+            <div class="category-content">
+                <div class="post-card">
+                    <div class="post-text">【CTAボタンの豆知識】
+
+「お問い合わせ」より
+「無料で相談する」の方がクリック率高い
+
+具体的な行動 + メリット
+これがポイントです
+
+#Webデザイン #CV改善</div>
+                    <div class="post-meta">
+                        <span class="char-count">99文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-text">問い合わせフォーム、項目多すぎませんか？
+
+項目が1つ増えるごとに
+問い合わせ率は5〜10%下がります
+
+必須は3〜5個に抑えましょう
+
+・名前
+・連絡先
+・相談内容
+
+これで十分です
+
+#UX #フォーム最適化</div>
+                    <div class="post-meta">
+                        <span class="char-count">130文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-text">スマホからのアクセス、何%ですか？
+
+多くのサイトで50%以上が
+スマホからの閲覧
+
+・タップしやすいボタン
+・読みやすい文字サイズ
+・高速表示
+
+スマホ対応は必須です
+
+#モバイルファースト #レスポンシブ</div>
+                    <div class="post-meta">
+                        <span class="char-count">126文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-text">SEOで大事なのは「検索意図」
+
+キーワードを入れるだけじゃダメ
+
+「このキーワードで検索する人は
+ 何を知りたいのか？」
+
+これに答えるコンテンツを作る
+
+#SEO対策 #コンテンツマーケティング</div>
+                    <div class="post-meta">
+                        <span class="char-count">117文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-text">ホームページの表示速度、3秒超えてませんか？
+
+3秒以上かかると
+53%のユーザーが離脱します
+
+PageSpeed Insightsでチェック
+https://pagespeed.web.dev/
+
+#表示速度 #UX改善</div>
+                    <div class="post-meta">
+                        <span class="char-count">125文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-text">「とりあえずホームページ作った」で終わってませんか？
+
+作っただけでは集客できません
+
+・SEO対策
+・定期的な更新
+・アクセス解析
+
+運用が大事です
+
+#Web運用 #集客</div>
+                    <div class="post-meta">
+                        <span class="char-count">105文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 実績・信頼性 -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                ⭐ 実績・信頼性（2件）
+                <span class="arrow">▼</span>
+            </div>
+            <div class="category-content">
+                <div class="post-card">
+                    <div class="post-text">Web制作歴8年以上
+累計50件以上の制作実績
+
+個人事業主・小規模店舗専門で
+「成果につながるサイト」を作ります
+
+まずは無料相談から
+
+https://likanon.com
+
+#Web制作実績</div>
+                    <div class="post-meta">
+                        <span class="char-count">111文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-text">LIKaNONが選ばれる理由
+
+✅ 低価格でも高品質
+✅ SEO対策込み
+✅ スマホ対応込み
+✅ 公開後サポートあり
+
+「作って終わり」じゃない
+成果が続くWeb制作
+
+https://likanon.com</div>
+                    <div class="post-meta">
+                        <span class="char-count">122文字</span>
+                        <button class="copy-btn" onclick="copyText(this)">コピー</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleCategory(header) {
+            header.parentElement.classList.toggle('open');
+        }
+
+        function copyText(button) {
+            const postText = button.closest('.post-card').querySelector('.post-text').textContent;
+            navigator.clipboard.writeText(postText).then(() => {
+                button.textContent = 'コピー完了!';
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.textContent = 'コピー';
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
