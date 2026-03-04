@@ -38,6 +38,18 @@
 
     <!-- ブログ記事 -->
     <url>
+        <loc>https://likanon.com/blog/mobile-site-affordable-guide.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/slow-website-fix-guide.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://likanon.com/blog/fukuoka-homepage-agency-guide.html</loc>
         <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
@@ -165,7 +177,7 @@
     </url>
     <url>
         <loc>https://likanon.com/blog/mobile-seo-guide.html</loc>
-        <lastmod>2025-12-28</lastmod>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -351,7 +363,7 @@
     </url>
     <url>
         <loc>https://likanon.com/blog/website-speed-optimization.html</loc>
-        <lastmod>2025-10-25</lastmod>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

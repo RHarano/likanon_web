@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N2Y1QF8ZQV');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="重いサイトを軽くする具体的な方法を解説。ホームページが重い原因を特定し、画像最適化・JavaScript改善・サーバー対策など、表示速度を改善して離脱を防ぐ実践ガイドです。">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1e3a5f">
+
+    <meta property="og:title" content="ホームページが重い原因と解決方法｜表示速度を改善して離脱を防ぐ">
+    <meta property="og:description" content="重いサイトを軽くする具体的な方法を解説。原因特定から改善策まで、表示速度改善の実践ガイド">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://likanon.com/blog/slow-website-fix-guide.html">
+    <meta property="og:site_name" content="LIKaNON">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://likanon.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ホームページが重い原因と解決方法｜表示速度を改善して離脱を防ぐ">
+    <meta name="twitter:description" content="重いサイトを軽くする具体的な方法を解説。原因特定から改善策まで、表示速度改善の実践ガイド">
+    <meta name="twitter:image" content="https://likanon.com/img/og-image.png">
+
+    <link rel="canonical" href="https://likanon.com/blog/slow-website-fix-guide.html">
+
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/likanonlogo.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+    <title>ホームページが重い原因と解決方法｜表示速度を改善して離脱を防ぐ | LIKaNON</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ホームページが重い原因と解決方法｜表示速度を改善して離脱を防ぐ",
+        "datePublished": "2026-03-03",
+        "dateModified": "2026-03-03",
+        "author": {
+            "@type": "Organization",
+            "name": "LIKaNON"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "LIKaNON",
+            "url": "https://likanon.com"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://likanon.com/"},
+            {"@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://likanon.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": "ホームページが重い原因と解決方法", "item": "https://likanon.com/blog/slow-website-fix-guide.html"}
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "重いサイトを軽くする方法",
+        "description": "ホームページの表示速度を改善するための手順",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "現状の速度を計測",
+                "text": "PageSpeed Insightsで現在のサイト速度とボトルネックを確認する"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "画像を最適化",
+                "text": "画像の圧縮、WebP形式への変換、適切なサイズへのリサイズを行う"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "JavaScript/CSSを最適化",
+                "text": "不要なスクリプトの削除、ファイルの圧縮、遅延読み込みを設定する"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "サーバー環境を改善",
+                "text": "高速なサーバーへの移行、キャッシュ設定、CDN導入を検討する"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "定期的に速度をチェック",
+                "text": "改善後も定期的にPageSpeed Insightsでスコアを確認し、継続的に最適化する"
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "ホームページが重い主な原因は何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "主な原因は画像ファイルの大きさ、JavaScriptやCSSの読み込み過多、サーバーの応答速度の遅さ、外部リソースの多さなどです。特に画像の最適化がされていないケースが最も多く見られます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "サイトの表示速度はどうやって確認できますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Google提供の無料ツール「PageSpeed Insights」がおすすめです。URLを入力するだけで、パソコン・スマホ両方のスコアと具体的な改善点を確認できます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "自分でサイトを軽くできますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "画像の圧縮やプラグインの削除など、基本的な対策は自分でも可能です。ただし、サーバー設定やコードの最適化など専門知識が必要な作業は、プロに依頼することをおすすめします。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "表示速度の改善にはどのくらいの費用がかかりますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "基本的な画像最適化やキャッシュ設定は無料ツールで対応可能です。サーバー移行や本格的な改善は数万円〜数十万円程度かかりますが、費用対効果は高いです。"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/#service">サービス</a></li>
+                    <li><a href="/#portfolio">実績</a></li>
+                    <li><a href="/#merit">選ばれる理由</a></li>
+                    <li><a href="/blog.html" class="active">ブログ</a></li>
+                    <li><a href="/#contact" class="nav-cta">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li>
+                <li class="breadcrumb-item current" aria-current="page">ホームページが重い原因と解決方法</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- 記事 -->
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category">Webの豆知識</span>
+                    <time class="article-date" datetime="2026-03-03">2026.03.03</time>
+                </div>
+                <h1 class="article-title">ホームページが重い原因と解決方法｜表示速度を改善して離脱を防ぐ</h1>
+                <p class="article-excerpt">
+                    「サイトが重い」「ページの表示が遅い」とお悩みではありませんか？実は、表示に3秒以上かかると半数以上のユーザーが離脱してしまいます。この記事では、重いサイトを軽くする具体的な方法を、原因別に詳しく解説します。
+                </p>
+            </div>
+        </header>
+
+        <div class="article-body">
+            <div class="container">
+                <!-- 目次 -->
+                <nav class="toc">
+                    <h2 class="toc-title">目次</h2>
+                    <ol class="toc-list">
+                        <li><a href="#why-heavy">ホームページが重いとなぜ問題なのか</a></li>
+                        <li><a href="#causes">サイトが重くなる5つの原因</a></li>
+                        <li><a href="#check-speed">無料ツールで速度をチェックする方法</a></li>
+                        <li><a href="#fix-images">解決策1：画像を最適化して軽くする</a></li>
+                        <li><a href="#fix-js-css">解決策2：JavaScript・CSSを見直す</a></li>
+                        <li><a href="#fix-server">解決策3：サーバー・ホスティングを改善する</a></li>
+                        <li><a href="#fix-plugins">解決策4：プラグイン・外部リソースを整理する</a></li>
+                        <li><a href="#diy-vs-pro">自分でできる対策vs専門家に依頼すべきケース</a></li>
+                        <li><a href="#faq">よくある質問（FAQ）</a></li>
+                    </ol>
+                </nav>
+
+                <!-- 本文 -->
+                <section id="why-heavy" class="article-section">
+                    <h2>ホームページが重いとなぜ問題なのか</h2>
+
+                    <p>「少し遅いくらい大丈夫だろう」と思っていませんか？実は、<strong>ホームページの表示速度は、売上に直結する重要な要素</strong>です。</p>
+
+                    <div class="highlight-box">
+                        <p><strong>表示速度と離脱率の関係（Googleの調査）</strong></p>
+                        <ul>
+                            <li>表示に<strong>1秒→3秒</strong>：離脱率が<strong>32%</strong>増加</li>
+                            <li>表示に<strong>1秒→5秒</strong>：離脱率が<strong>90%</strong>増加</li>
+                            <li>表示に<strong>1秒→6秒</strong>：離脱率が<strong>106%</strong>増加</li>
+                        </ul>
+                    </div>
+
+                    <h3>重いサイトが引き起こす3つの問題</h3>
+
+                    <h4>1. ユーザーの離脱</h4>
+                    <p>特にスマホユーザーは待つことを嫌います。ページが表示される前に「戻る」ボタンを押されてしまえば、どんなに良い商品・サービスも見てもらえません。</p>
+
+                    <h4>2. SEO（検索順位）への悪影響</h4>
+                    <p>Googleは2021年から「Core Web Vitals」という指標を検索ランキングに組み込みました。<strong>表示速度が遅いサイトは、検索順位が下がりやすい</strong>のです。</p>
+
+                    <h4>3. コンバージョン率の低下</h4>
+                    <p>表示速度が1秒遅れるごとに、コンバージョン率（成約率）が<strong>7%低下</strong>するというデータもあります。つまり、重いサイトは機会損失を生んでいます。</p>
+                </section>
+
+                <section id="causes" class="article-section">
+                    <h2>サイトが重くなる5つの原因</h2>
+
+                    <p>重いサイトを軽くするには、まず原因を特定することが大切です。以下の5つが主な原因として挙げられます。</p>
+
+                    <h3>原因1：画像ファイルが大きすぎる</h3>
+                    <p><strong>最も多い原因がこれです。</strong>スマホで撮影した写真をそのままアップロードすると、1枚で3〜5MBになることも。10枚あれば、それだけで30〜50MBという膨大なデータ量になります。</p>
+                    <div class="warning-box">
+                        <h4>よくあるNG例</h4>
+                        <ul>
+                            <li>デジカメの写真をそのままアップロード</li>
+                            <li>幅4000pxの画像を幅800pxで表示</li>
+                            <li>PNG形式の写真（JPEGより容量が大きい）</li>
+                        </ul>
+                    </div>
+
+                    <h3>原因2：JavaScript・CSSの読み込みが多い</h3>
+                    <p>派手なアニメーション、スライダー、ポップアップなど、見た目を良くする機能の多くはJavaScriptで動いています。<strong>使っていない機能のスクリプトが残っていると、無駄な読み込みが発生</strong>します。</p>
+
+                    <h3>原因3：サーバーの応答が遅い</h3>
+                    <p>格安のレンタルサーバーや、スペック不足のサーバーを使っていると、そもそもの応答時間が遅くなります。サイトの作りを改善しても、サーバーがボトルネックでは効果が出ません。</p>
+
+                    <h3>原因4：外部リソースの読み込みが多い</h3>
+                    <p>Webフォント、SNSのシェアボタン、広告、解析タグなど、<strong>外部サービスからデータを取得するたびに読み込み時間が増加</strong>します。</p>
+
+                    <h3>原因5：プラグインの入れすぎ（WordPress）</h3>
+                    <p>WordPressサイトでよくある問題です。便利だからと20個、30個とプラグインを入れると、それぞれが独自のCSSやJavaScriptを読み込み、サイトが重くなります。</p>
+
+                    <div class="info-box">
+                        <h4>原因別：重さへの影響度</h4>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>原因</th>
+                                    <th>影響度</th>
+                                    <th>自分で対応</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>画像の最適化不足</td>
+                                    <td>非常に高い</td>
+                                    <td>可能</td>
+                                </tr>
+                                <tr>
+                                    <td>JavaScript/CSS過多</td>
+                                    <td>高い</td>
+                                    <td>一部可能</td>
+                                </tr>
+                                <tr>
+                                    <td>サーバーの問題</td>
+                                    <td>高い</td>
+                                    <td>要専門知識</td>
+                                </tr>
+                                <tr>
+                                    <td>外部リソース</td>
+                                    <td>中程度</td>
+                                    <td>一部可能</td>
+                                </tr>
+                                <tr>
+                                    <td>プラグイン過多</td>
+                                    <td>高い</td>
+                                    <td>可能</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="check-speed" class="article-section">
+                    <h2>無料ツールで速度をチェックする方法</h2>
+
+                    <p>改善を始める前に、まずは現状を把握しましょう。以下の無料ツールで、サイトの速度と問題点を診断できます。</p>
+
+                    <h3>1. PageSpeed Insights（おすすめ）</h3>
+                    <p>Google公式の無料ツール。<strong>URLを入力するだけで、パソコン・スマホ両方のスコアと改善点</strong>を教えてくれます。</p>
+
+                    <div class="tip-box">
+                        <h4>スコアの目安</h4>
+                        <ul>
+                            <li><strong>0〜49点</strong>：改善が必要（赤）</li>
+                            <li><strong>50〜89点</strong>：平均的（オレンジ）</li>
+                            <li><strong>90〜100点</strong>：良好（緑）</li>
+                        </ul>
+                        <p>まずは<strong>50点以上</strong>を目指しましょう。理想は<strong>70点以上</strong>です。</p>
+                    </div>
+
+                    <h3>2. GTmetrix</h3>
+                    <p>より詳細な分析ができるツール。ページの読み込み過程を視覚的に確認でき、どの段階で時間がかかっているかが一目でわかります。</p>
+
+                    <h3>3. Lighthouse（Chrome DevTools）</h3>
+                    <p>Google Chromeに内蔵されている機能。「F12」→「Lighthouse」タブから実行できます。開発者向けの詳細なレポートが確認できます。</p>
+
+                    <div class="example-box">
+                        <p><strong>PageSpeed Insightsの使い方</strong></p>
+                        <ol>
+                            <li><a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">PageSpeed Insights</a>にアクセス</li>
+                            <li>サイトのURLを入力して「分析」をクリック</li>
+                            <li>数十秒待つとスコアと改善点が表示される</li>
+                            <li>「改善できる項目」を上から順に対応</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section id="fix-images" class="article-section">
+                    <h2>解決策1：画像を最適化して軽くする</h2>
+
+                    <p>画像の最適化は、<strong>最も効果が高く、自分でも取り組みやすい対策</strong>です。</p>
+
+                    <h3>画像を軽くする4つの方法</h3>
+
+                    <h4>1. 適切なサイズにリサイズする</h4>
+                    <p>表示される大きさに合わせて画像サイズを調整します。</p>
+                    <ul>
+                        <li>ブログのアイキャッチ画像：幅1200px程度</li>
+                        <li>コンテンツ内の画像：幅800px程度</li>
+                        <li>サムネイル：幅300〜400px程度</li>
+                    </ul>
+
+                    <h4>2. 画像を圧縮する</h4>
+                    <p>以下の無料ツールで、画質を保ったまま容量を大幅に削減できます。</p>
+                    <ul>
+                        <li><strong>TinyPNG</strong>：PNG・JPEG両対応、ドラッグ&ドロップで簡単</li>
+                        <li><strong>Squoosh</strong>：Google製、細かい調整が可能</li>
+                        <li><strong>iLoveIMG</strong>：一括圧縮が可能</li>
+                    </ul>
+
+                    <h4>3. WebP形式に変換する</h4>
+                    <p>WebPは次世代の画像フォーマットで、<strong>JPEGやPNGより30〜50%軽い</strong>のが特徴です。最新のブラウザはほぼ対応しています。</p>
+
+                    <h4>4. 遅延読み込み（Lazy Load）を設定する</h4>
+                    <p>画面に表示されるまで画像を読み込まない設定です。ファーストビュー（最初に見える部分）の表示が速くなります。</p>
+
+                    <div class="example-box">
+                        <p><strong>画像最適化の効果例</strong></p>
+                        <p>Before：トップページの画像合計 <strong>8MB</strong></p>
+                        <p>After：最適化後 <strong>800KB</strong>（90%削減）</p>
+                        <p>表示速度：<strong>6秒 → 2秒</strong>に改善</p>
+                    </div>
+                </section>
+
+                <section id="fix-js-css" class="article-section">
+                    <h2>解決策2：JavaScript・CSSを見直す</h2>
+
+                    <p>JavaScriptとCSSの最適化は、画像の次に効果が高い対策です。</p>
+
+                    <h3>1. 不要なスクリプトを削除する</h3>
+                    <p>使っていないアニメーション、スライダー、ポップアップなどのスクリプトが残っていないか確認しましょう。</p>
+
+                    <h3>2. ファイルを圧縮（Minify）する</h3>
+                    <p>JavaScript・CSSファイルから、スペースやコメントを削除して軽量化します。WordPressなら「Autoptimize」プラグインで自動化できます。</p>
+
+                    <h3>3. 読み込み順序を最適化する</h3>
+                    <ul>
+                        <li><strong>CSS</strong>：ファーストビューに必要なものを先に読み込む</li>
+                        <li><strong>JavaScript</strong>：async/defer属性で非同期読み込みにする</li>
+                    </ul>
+
+                    <h3>4. 複数ファイルを結合する</h3>
+                    <p>CSS・JavaScriptファイルが複数あると、その分だけリクエスト回数が増えます。可能な範囲で1つにまとめましょう。</p>
+
+                    <div class="warning-box">
+                        <h4>注意：設定を間違えるとサイトが壊れることも</h4>
+                        <p>JavaScript・CSSの最適化は、設定を間違えるとサイトの表示が崩れたり、機能が動かなくなることがあります。必ずバックアップを取ってから作業しましょう。</p>
+                    </div>
+                </section>
+
+                <section id="fix-server" class="article-section">
+                    <h2>解決策3：サーバー・ホスティングを改善する</h2>
+
+                    <p>サイト側の最適化をしても速度が改善しない場合、<strong>サーバーがボトルネック</strong>になっている可能性があります。</p>
+
+                    <h3>サーバー改善の3つの方法</h3>
+
+                    <h4>1. 高速なサーバーに移行する</h4>
+                    <p>表示速度に定評のあるレンタルサーバーとしては、以下が挙げられます。</p>
+                    <ul>
+                        <li><strong>エックスサーバー</strong>：安定性と速度のバランスが良い</li>
+                        <li><strong>ConoHa WING</strong>：国内最速レベル、WordPressに最適化</li>
+                        <li><strong>ロリポップ! ハイスピードプラン</strong>：コスパが良い</li>
+                    </ul>
+
+                    <h4>2. PHPバージョンを最新にする</h4>
+                    <p>WordPressサイトの場合、PHPバージョンが古いと処理速度が遅くなります。PHP 8.x系にすると、PHP 7.x系と比べて<strong>処理速度が約2倍</strong>になることも。</p>
+
+                    <h4>3. CDN（コンテンツ配信ネットワーク）を導入する</h4>
+                    <p>世界中のサーバーにコンテンツをコピーし、ユーザーに最も近いサーバーから配信する仕組みです。</p>
+                    <ul>
+                        <li><strong>Cloudflare</strong>：無料プランあり、導入が簡単</li>
+                        <li>物理的な距離による遅延を軽減</li>
+                        <li>サーバーへの負荷を分散</li>
+                    </ul>
+
+                    <div class="tip-box">
+                        <h4>キャッシュ設定も忘れずに</h4>
+                        <p>一度読み込んだデータをブラウザに保存しておく「キャッシュ」を設定すると、2回目以降のアクセスが劇的に速くなります。WordPressなら「WP Super Cache」などのプラグインで簡単に設定できます。</p>
+                    </div>
+                </section>
+
+                <section id="fix-plugins" class="article-section">
+                    <h2>解決策4：プラグイン・外部リソースを整理する</h2>
+
+                    <p>特にWordPressサイトでは、プラグインの見直しが効果的です。</p>
+
+                    <h3>プラグイン整理のポイント</h3>
+                    <ul>
+                        <li><strong>使っていないプラグインは削除</strong>（無効化だけでなく完全削除）</li>
+                        <li><strong>類似機能のプラグインを統合</strong>（例：SEOプラグインが2つ入っていないか）</li>
+                        <li><strong>長期間更新されていないプラグインは代替を探す</strong></li>
+                        <li><strong>プラグイン数は15〜20個以内</strong>が目安</li>
+                    </ul>
+
+                    <h3>外部リソースの見直し</h3>
+                    <ul>
+                        <li><strong>Webフォント</strong>：本当に必要なフォントだけに絞る（1〜2種類が理想）</li>
+                        <li><strong>SNSボタン</strong>：埋め込み型より軽量なシェアリンクを検討</li>
+                        <li><strong>解析タグ</strong>：不要なタグが残っていないか確認</li>
+                        <li><strong>動画</strong>：自動再生をオフにする、YouTubeはLite Embedを検討</li>
+                    </ul>
+
+                    <div class="checklist">
+                        <h4>プラグイン整理チェックリスト</h4>
+                        <ul>
+                            <li><input type="checkbox"> 使っていないプラグインを削除した</li>
+                            <li><input type="checkbox"> 類似機能のプラグインを統合した</li>
+                            <li><input type="checkbox"> 更新日が1年以上前のプラグインを確認した</li>
+                            <li><input type="checkbox"> プラグイン数を20個以内に抑えた</li>
+                            <li><input type="checkbox"> 重いプラグインを特定した（P3 Plugin Profiler等）</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="diy-vs-pro" class="article-section">
+                    <h2>自分でできる対策vs専門家に依頼すべきケース</h2>
+
+                    <p>重いサイトを軽くする対策には、自分でできるものと、専門家に任せた方が良いものがあります。</p>
+
+                    <div class="info-box">
+                        <h4>対策の難易度と依頼の目安</h4>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>対策</th>
+                                    <th>自分でできる？</th>
+                                    <th>専門家に依頼</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>画像の圧縮</td>
+                                    <td>可能</td>
+                                    <td>不要</td>
+                                </tr>
+                                <tr>
+                                    <td>プラグインの削除</td>
+                                    <td>可能</td>
+                                    <td>不要</td>
+                                </tr>
+                                <tr>
+                                    <td>キャッシュプラグイン導入</td>
+                                    <td>可能</td>
+                                    <td>設定が難しければ</td>
+                                </tr>
+                                <tr>
+                                    <td>JavaScript最適化</td>
+                                    <td>難しい</td>
+                                    <td>おすすめ</td>
+                                </tr>
+                                <tr>
+                                    <td>サーバー移行</td>
+                                    <td>難しい</td>
+                                    <td>おすすめ</td>
+                                </tr>
+                                <tr>
+                                    <td>CDN設定</td>
+                                    <td>やや難しい</td>
+                                    <td>おすすめ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>こんな場合は専門家に相談を</h3>
+                    <ul>
+                        <li>基本的な対策をしても<strong>スコアが50点以下</strong>のまま</li>
+                        <li><strong>サーバーの応答時間</strong>が遅いと指摘されている</li>
+                        <li><strong>JavaScriptの実行時間</strong>が長いと指摘されている</li>
+                        <li>設定を変更したら<strong>サイトの表示が崩れた</strong></li>
+                        <li><strong>時間をかけられない</strong>ので効率よく改善したい</li>
+                    </ul>
+                </section>
+
+                <section id="faq" class="article-section">
+                    <h2>よくある質問（FAQ）</h2>
+
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h3 class="faq-question">Q. ホームページが重い主な原因は何ですか？</h3>
+                            <p class="faq-answer">主な原因は画像ファイルの大きさ、JavaScriptやCSSの読み込み過多、サーバーの応答速度の遅さ、外部リソースの多さなどです。特に画像の最適化がされていないケースが最も多く見られます。</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3 class="faq-question">Q. サイトの表示速度はどうやって確認できますか？</h3>
+                            <p class="faq-answer">Google提供の無料ツール「PageSpeed Insights」がおすすめです。URLを入力するだけで、パソコン・スマホ両方のスコアと具体的な改善点を確認できます。</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3 class="faq-question">Q. 自分でサイトを軽くできますか？</h3>
+                            <p class="faq-answer">画像の圧縮やプラグインの削除など、基本的な対策は自分でも可能です。ただし、サーバー設定やコードの最適化など専門知識が必要な作業は、プロに依頼することをおすすめします。</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3 class="faq-question">Q. 表示速度の改善にはどのくらいの費用がかかりますか？</h3>
+                            <p class="faq-answer">基本的な画像最適化やキャッシュ設定は無料ツールで対応可能です。サーバー移行や本格的な改善は数万円〜数十万円程度かかりますが、離脱率改善・SEO効果を考えると費用対効果は高いです。</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3 class="faq-question">Q. どのくらいの速度を目指せばいいですか？</h3>
+                            <p class="faq-answer">PageSpeed Insightsで50点以上が最低ライン、70点以上が目標、90点以上なら優秀です。実際の体感速度としては、3秒以内の表示を目指しましょう。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- まとめ -->
+                <section class="article-section article-conclusion">
+                    <h2>まとめ</h2>
+                    <p>重いサイトを軽くすることは、<strong>ユーザー体験の向上、離脱率の改善、SEO効果</strong>と、いいことづくめです。まずはPageSpeed Insightsで現状を確認し、できることから始めてみましょう。</p>
+
+                    <div class="summary-box">
+                        <h4>重いサイトを軽くするための5ステップ</h4>
+                        <ol>
+                            <li><strong>現状を把握</strong>：PageSpeed Insightsでスコアを確認</li>
+                            <li><strong>画像を最適化</strong>：圧縮・リサイズ・WebP化</li>
+                            <li><strong>プラグインを整理</strong>：不要なものを削除</li>
+                            <li><strong>キャッシュを設定</strong>：プラグインで簡単導入</li>
+                            <li><strong>サーバーを見直し</strong>：必要に応じて移行を検討</li>
+                        </ol>
+                    </div>
+
+                    <p>「自分でやるのは難しい」「確実に改善したい」という方は、ぜひLIKaNONにお任せください。原因の特定から改善まで、一貫してサポートいたします。</p>
+                </section>
+
+                <!-- 関連記事 -->
+                <section class="related-articles">
+                    <h2>関連記事</h2>
+                    <div class="related-grid">
+                        <a href="/blog/website-speed-optimization.html" class="related-card">
+                            <span class="related-category">Webの豆知識</span>
+                            <h3>ホームページの表示速度を改善する5つの方法</h3>
+                        </a>
+                        <a href="/blog/seo-guide-2024.html" class="related-card">
+                            <span class="related-category">SEO</span>
+                            <h3>小規模事業者のためのSEO対策完全ガイド</h3>
+                        </a>
+                        <a href="/blog/wordpress-maintenance-guide.html" class="related-card">
+                            <span class="related-category">WordPress</span>
+                            <h3>WordPress保守・メンテナンスガイド</h3>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">サイト速度改善のご相談</h2>
+                <p class="cta-text">「サイトが重い」「PageSpeedのスコアを上げたい」<br>そんなお悩み、LIKaNONが解決します。</p>
+                <a href="/#contact" class="cta-button">無料で相談する</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-profile">
+                <div class="footer-profile-inner">
+                    <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <div class="footer-profile-content">
+                        <p class="footer-profile-text">
+                            デザインとWeb制作で<strong>8年以上</strong>の実績。<br class="pc-only">
+                            HP制作・リニューアル・運用代行まで、一貫してサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LIKaNON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <!-- Mobile Fixed Footer -->
+    <nav class="mobile-fixed-footer">
+        <a href="/#web-production">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span>Web制作</span>
+        </a>
+        <a href="/#service" class="instagram-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="url(#instagram-gradient)">
+                <defs>
+                    <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FFDC80"/>
+                        <stop offset="25%" style="stop-color:#F77737"/>
+                        <stop offset="50%" style="stop-color:#E1306C"/>
+                        <stop offset="75%" style="stop-color:#C13584"/>
+                        <stop offset="100%" style="stop-color:#833AB4"/>
+                    </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>運用代行</span>
+        </a>
+        <a href="/#contact" class="highlight-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>相談</span>
+        </a>
+        <a href="/#portfolio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <span>実績</span>
+        </a>
+        <a href="/blog.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <span>ブログ</span>
+        </a>
+    </nav>
+
+    <script src="../script.js" defer></script>
+    <script src="../blog.js" defer></script>
+</body>
+</html>
