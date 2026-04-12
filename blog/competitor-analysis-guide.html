@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N2Y1QF8ZQV');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="競合サイトの分析方法を無料ツールを使って解説。SimilarWeb・Ubersuggest・Google検索を活用し、他社のSEO戦略・集客方法・コンテンツ戦略を調べるコツを紹介します。">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1e3a5f">
+
+    <meta property="og:title" content="競合サイト分析の方法｜無料ツールで他社のSEO・集客戦略を調べるコツ | LIKaNON">
+    <meta property="og:description" content="競合サイトの分析方法を無料ツールを使って解説。他社のSEO戦略・集客方法・コンテンツ戦略を調べるコツを紹介します。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://likanon.com/blog/competitor-analysis-guide.html">
+    <meta property="og:site_name" content="LIKaNON">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://likanon.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="競合サイト分析の方法｜無料ツールで他社のSEO・集客戦略を調べるコツ">
+    <meta name="twitter:description" content="競合サイトの分析方法を無料ツールを使って解説。他社のSEO戦略・集客方法・コンテンツ戦略を調べるコツを紹介します。">
+    <meta name="twitter:image" content="https://likanon.com/img/og-image.png">
+
+    <link rel="canonical" href="https://likanon.com/blog/competitor-analysis-guide.html">
+
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/likanonlogo.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+    <title>競合サイト分析の方法｜無料ツールで他社のSEO・集客戦略を調べるコツ | LIKaNON</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "競合サイト分析の方法｜無料ツールで他社のSEO・集客戦略を調べるコツ",
+        "datePublished": "2026-04-12",
+        "dateModified": "2026-04-12",
+        "author": {
+            "@type": "Organization",
+            "name": "LIKaNON"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "LIKaNON",
+            "url": "https://likanon.com"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://likanon.com/"},
+            {"@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://likanon.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": "競合サイト分析の方法", "item": "https://likanon.com/blog/competitor-analysis-guide.html"}
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "競合分析は無料でもできますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "はい、無料ツールだけでも十分に競合分析は可能です。SimilarWebの無料版でアクセス数やトラフィック源の概要を把握し、Ubersuggestの無料枠でキーワード情報を調べ、Google検索で競合のコンテンツ構成を確認するなど、複数のツールを組み合わせることで精度の高い分析ができます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "競合サイトはどうやって見つければいいですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "最も簡単な方法は、自社が狙っているキーワードでGoogle検索し、上位に表示されるサイトを競合として特定することです。地域ビジネスの場合は「地域名＋業種」で検索しましょう。また、SimilarWebの類似サイト機能や、Googleマップでの近隣同業者の確認も効果的です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "競合分析はどのくらいの頻度でやるべきですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "基本的には月1回の簡易チェックと、四半期（3か月）に1回の詳細分析がおすすめです。検索順位やコンテンツの変化は日々起こるため、主要キーワードの順位チェックは週1回程度行うのが理想です。競合が大きな施策を行った場合は、臨時で詳細な分析を行いましょう。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "競合の被リンクはどうやって調べますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ubersuggestの無料版やAhrefsの無料バックリンクチェッカーを使えば、競合サイトの被リンク元をある程度確認できます。どのようなサイトからリンクを受けているかを把握し、自社でも同様のリンクを獲得できないか検討しましょう。地域メディアやポータルサイトからのリンクは比較的獲得しやすい傾向にあります。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "小さなお店でも競合分析は必要ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "はい、むしろ小さなお店こそ競合分析が重要です。限られた予算とリソースで最大の効果を出すためには、競合がどのような施策で集客しているかを知り、差別化ポイントを明確にすることが不可欠です。すべてを真似する必要はなく、自社の強みを活かせるポイントに集中投資することで効率的に成果を上げられます。"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/#service">サービス</a></li>
+                    <li><a href="/#portfolio">実績</a></li>
+                    <li><a href="/#merit">選ばれる理由</a></li>
+                    <li><a href="/blog.html" class="active">ブログ</a></li>
+                    <li><a href="/#contact" class="nav-cta">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li>
+                <li class="breadcrumb-item current" aria-current="page">競合サイト分析の方法</li>
+            </ol>
+        </div>
+    </nav>
+
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category seo">SEO対策</span>
+                    <time datetime="2026-04-12">2026.04.12</time>
+                    <span class="read-time">読了時間：10分</span>
+                </div>
+                <h1 class="article-title">競合サイト分析の方法｜無料ツールで他社のSEO・集客戦略を調べるコツ</h1>
+                <p class="article-lead">「ライバルのホームページはなぜ自分より上位に表示されるのか？」「他社はどんな集客方法を使っているのか？」こうした疑問を解決するのが競合サイト分析です。本記事では、無料で使えるツールを活用しながら、競合のSEO戦略・コンテンツ・集客方法を効率よく調べる方法を、初心者にも分かりやすく解説します。</p>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#section1">競合分析が必要な理由</a></li>
+                            <li><a href="#section2">競合サイトの見つけ方</a></li>
+                            <li><a href="#section3">無料で使える分析ツール</a></li>
+                            <li><a href="#section4">チェックすべきポイント</a></li>
+                            <li><a href="#section5">分析結果の活かし方</a></li>
+                            <li><a href="#section6">定期的な競合モニタリング</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <section id="section1">
+                        <h2>競合分析が必要な理由</h2>
+                        <p>ホームページを運営していて「なかなかアクセスが増えない」「検索順位が上がらない」と感じたことはありませんか？その原因を探る第一歩が、競合サイトの分析です。競合を知ることで、自社に足りない要素や改善のヒントが見えてきます。</p>
+
+                        <h3>自社の立ち位置を客観的に把握できる</h3>
+                        <p>自社サイトだけを見ていても、それが「良いのか悪いのか」を判断するのは難しいものです。競合サイトと比較することで、コンテンツの量や質、サイト構造、キーワード戦略など、さまざまな観点で自社の現在地を客観的に把握できます。</p>
+                        <p>たとえば「ブログ記事が30本あるから十分だろう」と思っていても、競合が100本以上の記事を公開していた場合、コンテンツ量では大きく差をつけられていることになります。こうした気づきは、競合を分析しなければ得られません。</p>
+
+                        <h3>効率的なSEO戦略が立てられる</h3>
+                        <p>競合がどのキーワードで上位表示されているかを知ることで、自社が狙うべきキーワードの優先順位が明確になります。競合が手薄なキーワード領域を見つけられれば、少ない労力で上位表示を狙えるチャンスがあります。</p>
+                        <div class="info-box">
+                            <h4>競合分析で分かること</h4>
+                            <ul>
+                                <li>競合サイトのアクセス数やトラフィック源の目安</li>
+                                <li>競合が狙っているキーワードと検索順位</li>
+                                <li>競合のコンテンツ戦略（記事数・テーマ・更新頻度）</li>
+                                <li>被リンクの獲得元と数</li>
+                                <li>SNS活用状況や広告出稿の有無</li>
+                            </ul>
+                        </div>
+
+                        <h3>差別化のポイントが見える</h3>
+                        <p>競合と同じことをしていては、後発の自社が勝つのは難しいでしょう。競合分析を通じて「他社がやっていないこと」「他社が弱い領域」を発見し、そこに自社のリソースを集中させることで、効果的な差別化が可能になります。地域密着型のビジネスであれば、エリア特化のコンテンツで差別化を図ることもできます。</p>
+                    </section>
+
+                    <section id="section2">
+                        <h2>競合サイトの見つけ方</h2>
+                        <p>競合分析を始める前に、まず「誰が自社の競合なのか」を明確にする必要があります。競合にはオフラインの競合とオンラインの競合があり、Web上では必ずしも同じとは限りません。</p>
+
+                        <h3>Google検索で直接的な競合を特定する</h3>
+                        <p>最もシンプルで確実な方法は、自社が狙っているキーワードでGoogle検索し、上位10件に表示されるサイトを確認することです。たとえば福岡の美容室なら「福岡 美容室」「天神 美容室 おすすめ」などで検索し、上位に表示される同業者を競合としてリストアップしましょう。</p>
+                        <p>この際、シークレットモード（プライベートブラウジング）で検索することが重要です。通常のブラウザでは過去の検索履歴や閲覧履歴によって結果がパーソナライズされるため、正確な検索順位が分かりません。</p>
+
+                        <h3>Googleマップで地域の競合を確認する</h3>
+                        <p>地域ビジネスの場合、Googleマップでの競合チェックも欠かせません。「業種名＋地域名」で検索したときにマップ上に表示される店舗が、ローカルSEOにおける直接的な競合です。上位3件に表示される「ローカルパック」に入っている競合は、特に注目して分析すべき相手です。</p>
+
+                        <h3>SimilarWebで類似サイトを発見する</h3>
+                        <p>SimilarWebの無料版では、特定のサイトのURLを入力すると「類似サイト」を表示してくれる機能があります。自社サイトや既知の競合サイトを入力することで、気づいていなかった新たな競合を発見できることがあります。</p>
+                        <div class="tip-box">
+                            <h4>競合リストの作り方</h4>
+                            <p>分析対象は3〜5サイトに絞りましょう。多すぎると分析が散漫になります。「直接競合（同業種・同エリア）」2〜3サイトと、「参考にしたい先進的なサイト」1〜2サイトの組み合わせがおすすめです。スプレッドシートにURLと基本情報をまとめておくと管理しやすくなります。</p>
+                        </div>
+                    </section>
+
+                    <section id="section3">
+                        <h2>無料で使える分析ツール</h2>
+                        <p>競合分析に使えるツールは有料のものが多いですが、無料ツールや無料プランだけでも十分に有益な情報を得ることができます。ここでは、特におすすめの無料ツールを紹介します。</p>
+
+                        <h3>SimilarWeb（シミラーウェブ）</h3>
+                        <p>SimilarWebは、競合サイトのアクセス数やトラフィック源を推定できるツールです。無料版でも、月間推定訪問数、平均滞在時間、直帰率、トラフィックの流入元（検索・SNS・直接流入など）の概要を確認できます。</p>
+                        <p>使い方は簡単で、SimilarWebのサイトにアクセスし、分析したい競合のURLを入力するだけです。ただし、アクセス数が少ないサイト（月間数千PV以下）はデータが表示されない場合があります。</p>
+                        <div class="info-box">
+                            <h4>SimilarWebで確認できる主な情報</h4>
+                            <ul>
+                                <li>月間推定訪問数と推移グラフ</li>
+                                <li>平均滞在時間・ページビュー数・直帰率</li>
+                                <li>トラフィック源の内訳（検索・直接・SNS・リファラル）</li>
+                                <li>流入キーワード（上位5件程度）</li>
+                                <li>類似サイトの一覧</li>
+                            </ul>
+                        </div>
+
+                        <h3>Ubersuggest（ウーバーサジェスト）</h3>
+                        <p>Neil Patel氏が提供するUbersuggestは、キーワード調査と競合分析を無料で行えるツールです。1日あたりの検索回数に制限はありますが、競合サイトのURLを入力すると、そのサイトが獲得しているキーワードや推定トラフィック、被リンク数などを確認できます。</p>
+                        <p>特に「トップSEOページ」機能は便利で、競合サイトの中で最もオーガニックトラフィックを集めているページが分かります。競合の稼ぎ頭のコンテンツを知ることで、自社で同じテーマの記事を作る際の参考になります。</p>
+
+                        <h3>Google検索を使った手動分析</h3>
+                        <p>特別なツールがなくても、Google検索だけでかなりの情報を収集できます。「site:競合のドメイン」で検索すれば、Googleにインデックスされているページ数がわかります。また、狙いたいキーワードで検索して上位表示されている記事の見出し構成や文字数を確認することで、コンテンツの質の目安も把握できます。</p>
+
+                        <h3>その他の無料ツール</h3>
+                        <p>Google Search Console（自社サイト分析用）、PageSpeed Insights（表示速度の比較）、Ahrefsの無料バックリンクチェッカー（被リンク調査）なども活用しましょう。これらを組み合わせることで、有料ツールに迫る精度の分析が可能です。</p>
+                        <div class="warning-box">
+                            <h4>無料ツールの注意点</h4>
+                            <p>無料ツールのデータはあくまで推定値であり、完全に正確ではありません。特にアクセス数は実際の値と大きく異なる場合があります。絶対値よりも「競合間の相対的な比較」や「トレンドの変化」に注目して活用しましょう。</p>
+                        </div>
+                    </section>
+
+                    <section id="section4">
+                        <h2>チェックすべきポイント</h2>
+                        <p>ツールを使った定量的な分析に加えて、実際に競合サイトを目で見て確認すべきポイントがあります。ここでは、キーワード・コンテンツ・被リンクの3つの観点から解説します。</p>
+
+                        <h3>キーワード戦略の分析</h3>
+                        <p>競合がどのキーワードで上位表示されているかを調べることは、SEO戦略を立てる上で最も重要なステップです。Ubersuggestで競合サイトのURLを入力し、オーガニックキーワードのリストを確認しましょう。</p>
+                        <p>注目すべきは、検索ボリュームがそこそこある（月間100〜1,000回程度）のに、競合のページが1位ではないキーワードです。こうしたキーワードは、より質の高いコンテンツを作ることで上位を奪える可能性があります。</p>
+
+                        <h3>コンテンツの質と量の比較</h3>
+                        <p>競合サイトのブログやコラムページを確認し、以下の点をチェックしましょう。記事の総数、更新頻度、1記事あたりの文字数、記事のテーマ分類、画像や図解の使用頻度、内部リンクの構造などです。</p>
+                        <div class="tip-box">
+                            <h4>コンテンツ分析のチェックリスト</h4>
+                            <p>競合の記事をいくつか読み込み、「自社ならもっと詳しく書ける」「この視点が抜けている」「実体験に基づく情報が少ない」といったポイントを見つけましょう。それが自社コンテンツの差別化ポイントになります。</p>
+                        </div>
+
+                        <h3>被リンクの分析</h3>
+                        <p>被リンク（外部サイトからのリンク）は、SEOにおいて非常に重要な要素です。Ubersuggestやahrefsの無料ツールで競合の被リンク元を確認し、どのようなサイトからリンクを受けているかを調べましょう。</p>
+                        <p>地域のポータルサイト、業界団体のサイト、ニュースメディアなどからの被リンクが多い場合、自社でも同様のサイトにアプローチすることでリンク獲得のチャンスがあります。</p>
+
+                        <h3>サイト構造とユーザビリティ</h3>
+                        <p>競合サイトの導線設計やユーザビリティも重要なチェックポイントです。トップページから問い合わせページまでの導線、メニュー構造、CTA（行動喚起）の配置、スマートフォンでの表示品質、ページの読み込み速度などを確認しましょう。PageSpeed Insightsを使えば、表示速度を数値で比較することができます。</p>
+                    </section>
+
+                    <section id="section5">
+                        <h2>分析結果の活かし方</h2>
+                        <p>分析して終わりでは意味がありません。ここでは、収集したデータを具体的なアクションに落とし込む方法を解説します。</p>
+
+                        <h3>ギャップ分析で優先施策を決める</h3>
+                        <p>競合と自社を比較して見えてきた「差（ギャップ）」を一覧にし、対策の優先順位をつけましょう。すべてを一度に改善するのは現実的ではないため、「効果が大きく、実施が比較的容易なもの」から着手するのがポイントです。</p>
+                        <div class="info-box">
+                            <h4>優先度の決め方</h4>
+                            <ul>
+                                <li><strong>最優先</strong>：競合にあって自社にない基本的なコンテンツ（サービスページ、FAQ、アクセスページなど）</li>
+                                <li><strong>高優先</strong>：競合が上位表示しているキーワードに対応するブログ記事の作成</li>
+                                <li><strong>中優先</strong>：サイト表示速度やモバイル対応の改善</li>
+                                <li><strong>低優先</strong>：競合が実施しているSNS施策の検討</li>
+                            </ul>
+                        </div>
+
+                        <h3>コンテンツカレンダーに反映する</h3>
+                        <p>競合が手薄なテーマや、自社が勝てる可能性の高いキーワードをリストアップし、コンテンツカレンダー（記事の作成スケジュール）に落とし込みましょう。月に2〜4本の記事を継続的に公開することで、検索エンジンからの評価が徐々に高まっていきます。</p>
+
+                        <h3>競合の成功パターンを参考にする</h3>
+                        <p>競合サイトで特にアクセスを集めているページの構成や切り口を参考に、自社のコンテンツを作成しましょう。ただし、コンテンツのコピーは絶対にNGです。あくまで構成やテーマを参考にしつつ、自社独自の視点や具体例を盛り込んだオリジナルコンテンツを作成することが重要です。</p>
+                        <div class="warning-box">
+                            <h4>競合コンテンツの「参考」と「コピー」の境界線</h4>
+                            <p>構成や見出しの方向性を参考にするのは問題ありませんが、文章の言い回しをそのまま流用するのはコピーコンテンツとなり、Googleからペナルティを受ける可能性があります。必ず自分の言葉で書き直し、自社ならではの情報や経験を加えましょう。</p>
+                        </div>
+                    </section>
+
+                    <section id="section6">
+                        <h2>定期的な競合モニタリング</h2>
+                        <p>競合分析は一度やって終わりではなく、定期的に実施することで真価を発揮します。競合も日々施策を進めているため、継続的なモニタリングが重要です。</p>
+
+                        <h3>月次チェックの項目</h3>
+                        <p>毎月1回、以下の項目を簡易的にチェックしましょう。主要キーワードでの検索順位の変動、競合サイトの新着コンテンツ、自社サイトのアクセス数の推移です。Google Search Consoleのデータと合わせて確認することで、自社の施策の効果も同時に測定できます。</p>
+
+                        <h3>四半期ごとの詳細分析</h3>
+                        <p>3か月に1回は、ツールを使った詳細な分析を行いましょう。競合のトラフィック推移、新たに獲得しているキーワード、被リンクの増減などを確認し、競合の戦略の変化を把握します。この結果を元に、次の四半期のコンテンツ計画や施策の優先順位を見直します。</p>
+                        <div class="tip-box">
+                            <h4>モニタリングを効率化するコツ</h4>
+                            <p>Googleスプレッドシートにテンプレートを作成し、毎月同じフォーマットでデータを記録していくと、推移が一目で分かるようになります。検索順位はGRC（無料版あり）やSearch Consoleで自動的に追跡できるため、手間を最小限に抑えられます。</p>
+                        </div>
+
+                        <h3>競合の変化に素早く対応する</h3>
+                        <p>競合がサイトをリニューアルした、大量の新規コンテンツを公開した、新しいサービスを開始したなどの大きな変化があった場合は、臨時で詳細分析を行いましょう。こうした変化に素早く気づき対応することで、検索順位の急落を防ぎ、チャンスを逃さずに済みます。</p>
+                    </section>
+
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <p>競合サイト分析は、効果的なSEO戦略やWeb集客を行うための基盤となる重要な取り組みです。無料ツールでも十分に有益な情報を収集でき、分析結果を施策に反映することで、限られたリソースでも効率的に成果を上げることが可能です。</p>
+                        <div class="summary-box">
+                            <h4>この記事のポイント</h4>
+                            <ul>
+                                <li>競合分析は自社の立ち位置を客観的に把握し、効率的な施策を立てるために不可欠</li>
+                                <li>Google検索のシークレットモードで、狙いたいキーワードの上位サイトを3〜5つ選んで分析する</li>
+                                <li>SimilarWeb・Ubersuggest・Google検索を組み合わせれば、無料でも精度の高い分析ができる</li>
+                                <li>キーワード・コンテンツ・被リンクの3つの観点で競合をチェックする</li>
+                                <li>分析結果は優先順位をつけてコンテンツカレンダーに反映し、月次・四半期で継続的にモニタリングする</li>
+                            </ul>
+                        </div>
+                        <p>競合分析を元にした戦略的なホームページ運営は、長期的にアクセス数と問い合わせを増やすための最短ルートです。LIKaNONでは、競合分析を踏まえたSEO対策やコンテンツ戦略のご提案も行っております。「ライバルに負けないホームページを作りたい」という方は、ぜひお気軽にご相談ください。</p>
+                    </section>
+
+                    <div class="article-cta">
+                        <h3>競合に差をつけるホームページ制作、お任せください</h3>
+                        <p>競合分析を踏まえたSEO戦略で、検索上位表示を目指しませんか？LIKaNONが最適なWeb戦略をご提案します。</p>
+                        <a href="/#contact" class="btn btn-primary btn-large">
+                            無料相談はこちら
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h3>この記事を書いた人</h3>
+                        <div class="author-card">
+                            <div class="author-info">
+                                <p class="author-name">LIKaNON</p>
+                                <p class="author-desc">Web制作・デザイン歴8年以上。地域ビジネスのWeb集客もサポートしています。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>関連記事</h3>
+                        <ul class="related-posts">
+                            <li><a href="keyword-research-guide.html">キーワードリサーチガイド</a></li>
+                            <li><a href="seo-guide-2024.html">SEO対策ガイド</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="/blog.html?category=seo">SEO対策</a></li>
+                            <li><a href="/blog.html?category=web">Webの豆知識</a></li>
+                            <li><a href="/blog.html?category=sns">SNS運用の豆知識</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-profile">
+                <div class="footer-profile-inner">
+                    <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <div class="footer-profile-content">
+                        <p class="footer-profile-text">
+                            デザインとWeb制作で<strong>8年以上</strong>の実績。<br class="pc-only">
+                            HP制作・リニューアル・運用代行まで、一貫してサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LIKaNON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <nav class="mobile-fixed-footer">
+        <a href="/#web-production">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span>Web制作</span>
+        </a>
+        <a href="/#service" class="instagram-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="url(#instagram-gradient)">
+                <defs>
+                    <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FFDC80"/>
+                        <stop offset="25%" style="stop-color:#F77737"/>
+                        <stop offset="50%" style="stop-color:#E1306C"/>
+                        <stop offset="75%" style="stop-color:#C13584"/>
+                        <stop offset="100%" style="stop-color:#833AB4"/>
+                    </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>運用代行</span>
+        </a>
+        <a href="/#contact" class="highlight-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>相談</span>
+        </a>
+        <a href="/#portfolio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <span>実績</span>
+        </a>
+        <a href="/blog.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <span>ブログ</span>
+        </a>
+    </nav>
+
+    <script src="../script.js" defer></script>
+    <script src="../blog.js" defer></script>
+</body>
+</html>

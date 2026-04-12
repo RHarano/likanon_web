@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N2Y1QF8ZQV');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="チラシとWebを連携させて集客効果を最大化する方法を解説。QRコード活用、ランディングページ連携、LINE登録導線、UTMパラメータによる効果測定まで、紙とネットの相乗効果で売上を伸ばすノウハウを紹介します。">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1e3a5f">
+
+    <meta property="og:title" content="チラシ×Web連携集客術｜紙とネットの相乗効果で売上を伸ばす方法 | LIKaNON">
+    <meta property="og:description" content="チラシとWebを連携させて集客効果を最大化する方法を解説。QRコード・LP連携・LINE登録導線・効果測定まで網羅的に紹介します。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://likanon.com/blog/flyer-web-integration-guide.html">
+    <meta property="og:site_name" content="LIKaNON">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://likanon.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="チラシ×Web連携集客術｜紙とネットの相乗効果で売上を伸ばす方法">
+    <meta name="twitter:description" content="チラシとWebを連携させて集客効果を最大化する方法を解説。QRコード・LP連携・LINE登録導線・効果測定まで網羅的に紹介します。">
+    <meta name="twitter:image" content="https://likanon.com/img/og-image.png">
+
+    <link rel="canonical" href="https://likanon.com/blog/flyer-web-integration-guide.html">
+
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/likanonlogo.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+    <title>チラシ×Web連携集客術｜紙とネットの相乗効果で売上を伸ばす方法 | LIKaNON</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "チラシ×Web連携集客術｜紙とネットの相乗効果で売上を伸ばす方法",
+        "datePublished": "2026-04-12",
+        "dateModified": "2026-04-12",
+        "author": {
+            "@type": "Organization",
+            "name": "LIKaNON"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "LIKaNON",
+            "url": "https://likanon.com"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://likanon.com/"},
+            {"@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://likanon.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": "チラシ×Web連携集客術", "item": "https://likanon.com/blog/flyer-web-integration-guide.html"}
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "チラシにQRコードを載せるとどのくらい効果がありますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "QRコード付きチラシは、QRコードなしのチラシと比較してWebサイトへの流入が平均3〜5倍増加するというデータがあります。特に特典やクーポンと組み合わせた場合、読み取り率がさらに向上します。ただし、QRコードの大きさや配置、誘導文の工夫によって効果は大きく変わります。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "チラシからの集客効果を正確に測定する方法はありますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "UTMパラメータを使う方法が最も正確です。チラシに掲載するURLにUTMパラメータ（utm_source=flyer&utm_medium=print&utm_campaign=202604など）を付与し、Googleアナリティクスで流入を追跡します。QRコード経由のアクセス数、滞在時間、コンバージョン数まで把握できます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "チラシとランディングページはどう連携させるのが効果的ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "チラシ専用のランディングページを用意するのが最も効果的です。チラシのデザインやメッセージと統一感を持たせ、チラシで伝えきれなかった詳細情報や写真、お客様の声などを掲載します。ページ内に予約フォームや問い合わせボタンを設置し、スムーズにコンバージョンへ導く設計が重要です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "チラシとWeb連携の費用対効果を高めるにはどうすればいいですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "まず配布エリアを商圏に絞り、無駄な配布を減らすことが基本です。次にチラシ→QRコード→ランディングページ→問い合わせ（または LINE登録）という導線を明確にし、各段階の数値を計測して改善を繰り返します。チラシのデザインABテストやLP の改善を行うことで、費用対効果を継続的に高められます。"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/#service">サービス</a></li>
+                    <li><a href="/#portfolio">実績</a></li>
+                    <li><a href="/#merit">選ばれる理由</a></li>
+                    <li><a href="/blog.html" class="active">ブログ</a></li>
+                    <li><a href="/#contact" class="nav-cta">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li>
+                <li class="breadcrumb-item current" aria-current="page">チラシ×Web連携集客術</li>
+            </ol>
+        </div>
+    </nav>
+
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category marketing">集客・マーケティング</span>
+                    <time datetime="2026-04-12">2026.04.12</time>
+                    <span class="read-time">読了時間：10分</span>
+                </div>
+                <h1 class="article-title">チラシ×Web連携集客術｜紙とネットの相乗効果で売上を伸ばす方法</h1>
+                <p class="article-lead">「チラシを配っているけど反応がいまいち」「ホームページはあるけどアクセスが少ない」そんなお悩みはありませんか？実は、チラシとWebをうまく連携させることで、それぞれ単体では得られない大きな集客効果を生み出すことができます。本記事では、QRコードの活用、ランディングページとの連携、LINE登録への導線設計、UTMパラメータによる効果測定まで、紙とネットの相乗効果で売上を伸ばす実践的なノウハウを解説します。</p>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#section1">チラシだけ・Webだけでは限界がある理由</a></li>
+                            <li><a href="#section2">チラシにQRコードを載せる効果</a></li>
+                            <li><a href="#section3">ランディングページとの連携</a></li>
+                            <li><a href="#section4">チラシ→LINE登録の導線</a></li>
+                            <li><a href="#section5">効果測定の方法（UTMパラメータ等）</a></li>
+                            <li><a href="#section6">業種別活用事例</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <section id="section1">
+                        <h2>チラシだけ・Webだけでは限界がある理由</h2>
+                        <p>地域ビジネスの集客において、チラシとWebはどちらも重要なツールです。しかし、それぞれ単体で使っていると、どうしても限界にぶつかります。まずはその理由を理解しましょう。</p>
+
+                        <h3>チラシだけの限界</h3>
+                        <p>チラシは地域の方に直接情報を届けられる強力なツールですが、紙面のスペースには限りがあります。伝えたい情報をすべて詰め込もうとすると文字が小さくなり、読みにくくなってしまいます。また、チラシを見て「気になるな」と思っても、すぐに行動に移せない場合、チラシはそのまま捨てられてしまうことがほとんどです。</p>
+                        <p>さらに、チラシ単体では効果測定が難しいという問題もあります。何枚配って、何人が来店したのかを正確に把握するのは困難です。「チラシを見ました」と申告してくれるお客様ばかりではないため、費用対効果の判断が曖昧になりがちです。</p>
+
+                        <h3>Webだけの限界</h3>
+                        <p>一方、ホームページやSNSなどのWeb施策だけに頼る場合も限界があります。特に地域密着型のビジネスでは、SEO対策やSNS運用だけでは、商圏内のお客様にリーチしきれないことがあります。インターネットを積極的に活用しない層、特にシニア世代にはWebだけではアプローチが難しいのが現実です。</p>
+                        <p>また、Web上には競合の情報が溢れており、自社のホームページにたどり着いてもらうまでに時間がかかります。広告費をかければ短期的にアクセスを増やせますが、継続的なコストがかかります。</p>
+
+                        <h3>チラシ×Webの相乗効果とは</h3>
+                        <p>チラシとWebを連携させることで、両者の弱点を補い合うことができます。チラシで「認知」を獲得し、Webで「詳細情報の提供」と「行動への誘導」を行う。この流れを作ることで、チラシの反応率が上がり、Webサイトのアクセスも増え、最終的なコンバージョン（問い合わせ・予約・来店）につながりやすくなります。</p>
+                        <div class="info-box">
+                            <h4>チラシ×Web連携の主なメリット</h4>
+                            <ul>
+                                <li><strong>情報量の拡張</strong>：チラシでは伝えきれない詳細情報をWebで補完できる</li>
+                                <li><strong>行動のハードルを下げる</strong>：QRコードを読み取るだけでWebページにアクセスできる</li>
+                                <li><strong>効果測定が可能に</strong>：Webへの流入を計測することでチラシの効果を数値化できる</li>
+                                <li><strong>継続的な接点を作れる</strong>：チラシ→LINE登録で、一度きりの接触をリピートにつなげられる</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="section2">
+                        <h2>チラシにQRコードを載せる効果</h2>
+                        <p>チラシとWebを連携させる最もシンプルで効果的な方法が、QRコードの活用です。スマートフォンのカメラで読み取るだけでWebページにアクセスできるため、お客様にとって非常にハードルが低い導線になります。</p>
+
+                        <h3>QRコードの基本と作成方法</h3>
+                        <p>QRコードは無料で簡単に作成できます。「QRコード 作成」で検索すると多数の無料ツールが見つかります。URLを入力するだけで即座にQRコードが生成されるため、特別な技術知識は不要です。</p>
+                        <p>作成時のポイントは、印刷サイズを2cm×2cm以上にすることです。小さすぎるとスマートフォンのカメラで読み取れない場合があります。また、白地に黒のQRコードが最も読み取りやすいため、背景色との組み合わせにも注意しましょう。</p>
+
+                        <h3>QRコードの効果的な配置場所</h3>
+                        <p>QRコードはチラシのどこに配置するかで、読み取り率が大きく変わります。最も効果が高いのは、キャッチコピーや特典情報のすぐ近くに配置する方法です。「詳しくはこちら」「今すぐクーポンをGET」などの誘導文と一緒に配置すると、読み取る動機が明確になります。</p>
+                        <div class="tip-box">
+                            <h4>QRコード配置のベストプラクティス</h4>
+                            <p>チラシの右下または中央下部に配置すると、視線の流れに沿って自然に目に入ります。QRコードの周囲には余白を十分に取り、「スマホで読み取ってください」などのアクション指示を添えましょう。複数のQRコードを載せる場合は、それぞれの目的を明記して混乱を防ぎます。</p>
+                        </div>
+
+                        <h3>QRコードの誘導先を最適化する</h3>
+                        <p>QRコードの誘導先は、ホームページのトップページではなく、チラシの内容に直結した専用ページにするのが鉄則です。チラシで「新メニュー」を訴求しているなら、QRコードの誘導先も新メニューの詳細ページにしましょう。トップページに飛ばしてしまうと、お客様は自分で情報を探さなければならず、離脱の原因になります。</p>
+
+                        <h3>読み取り率を上げるデザインのコツ</h3>
+                        <p>QRコードの読み取り率を上げるために、以下のデザイン上の工夫を取り入れましょう。まず、QRコードの近くに「特典」や「限定」といったメリットを明示すること。次に、スマートフォンをかざすイラストを添えて、何をすればいいか視覚的に伝えること。そして、QRコードの下に短いURL（短縮URL）も併記しておくと、QRコードが読み取れない場合のフォローになります。</p>
+                        <div class="warning-box">
+                            <h4>QRコード作成時の注意点</h4>
+                            <p>QRコードを作成したら、必ず印刷前に複数のスマートフォンで読み取りテストを行いましょう。画面上では問題なく読み取れても、印刷すると読み取れなくなるケースがあります。特に色付きのQRコードや、背景と重なる配置の場合は要注意です。</p>
+                        </div>
+                    </section>
+
+                    <section id="section3">
+                        <h2>ランディングページとの連携</h2>
+                        <p>チラシからの集客効果を最大化するには、QRコードの誘導先となるランディングページ（LP）の設計が非常に重要です。チラシとLPを一体的に設計することで、コンバージョン率を大幅に向上させることができます。</p>
+
+                        <h3>チラシ専用LPを用意するメリット</h3>
+                        <p>通常のホームページとは別に、チラシ専用のランディングページを作成することをおすすめします。チラシ専用LPなら、チラシの内容と完全に一致した情報を掲載でき、お客様に「チラシの続きを見ている」という一貫性のある体験を提供できます。</p>
+                        <p>また、専用LPにすることで、チラシ経由のアクセス数や問い合わせ数を正確に把握できるようになります。通常のホームページへの流入と混在しないため、チラシの費用対効果を明確に判断できます。</p>
+
+                        <h3>効果的なLPの構成要素</h3>
+                        <p>チラシ連携LPに必ず含めるべき要素があります。まず、チラシと統一感のあるビジュアルデザイン。次に、チラシでは伝えきれなかった詳細情報（メニュー詳細、施術の流れ、ビフォーアフター写真など）。そして、お客様の声やレビュー、アクセスマップ、問い合わせフォームまたは電話ボタンです。</p>
+                        <div class="info-box">
+                            <h4>チラシ連携LPに必須の要素</h4>
+                            <ul>
+                                <li><strong>ファーストビュー</strong>：チラシと同じキャッチコピー＋特典情報で「正しいページに来た」と安心させる</li>
+                                <li><strong>詳細情報</strong>：チラシでは載せきれなかった写真・説明・料金表</li>
+                                <li><strong>信頼性の証拠</strong>：お客様の声、実績数、メディア掲載情報など</li>
+                                <li><strong>CTA（行動喚起）</strong>：電話ボタン、予約フォーム、LINE友だち追加ボタン</li>
+                                <li><strong>アクセス情報</strong>：地図、駐車場情報、最寄り駅からの行き方</li>
+                            </ul>
+                        </div>
+
+                        <h3>スマートフォン対応は必須</h3>
+                        <p>チラシからQRコードを読み取るのは、ほぼ100%がスマートフォンです。したがって、LPはスマートフォンでの表示を最優先で設計する必要があります。文字サイズ、ボタンの大きさ、画像の表示速度など、スマートフォンでの閲覧体験を徹底的に最適化しましょう。</p>
+                        <p>特に重要なのは、電話ボタンをタップするだけで電話をかけられる「タップコール」の設置です。チラシを見て「今すぐ電話したい」と思ったお客様が、番号を手入力する手間なくすぐに電話できるようにしましょう。</p>
+                    </section>
+
+                    <section id="section4">
+                        <h2>チラシ→LINE登録の導線</h2>
+                        <p>チラシからの集客で最ももったいないのは、一度きりの接触で終わってしまうことです。チラシ→LINE公式アカウント登録の導線を作ることで、一度チラシを見てくれた方と継続的な関係を築くことができます。</p>
+
+                        <h3>なぜLINE登録に誘導するのか</h3>
+                        <p>チラシを見て興味を持っても、すぐに来店や問い合わせにつながるとは限りません。「今は忙しい」「もう少し考えたい」というお客様も多いはずです。そんなとき、LINE友だち追加という軽いアクションなら、ハードルが低く登録してもらいやすいのです。</p>
+                        <p>LINE登録さえしてもらえれば、その後のメッセージ配信でリマインドやクーポン配布ができ、来店のきっかけを何度でも作ることができます。チラシは「出会い」、LINEは「関係維持」と考えましょう。</p>
+
+                        <h3>LINE登録率を上げるチラシデザイン</h3>
+                        <p>チラシにLINE友だち追加のQRコードを載せる場合、登録するメリットを明確に打ち出すことが重要です。「LINE友だち追加で500円OFFクーポンプレゼント」「LINE限定メニューをご案内」など、具体的な特典を明記しましょう。</p>
+                        <div class="tip-box">
+                            <h4>LINE登録率を上げるチラシ文言の例</h4>
+                            <p>「今だけ！LINE友だち追加で初回20%OFFクーポンをプレゼント」「LINEで簡単予約！24時間いつでもOK」「LINE限定のお得な情報を毎週お届け」など、お客様にとってのメリットを具体的に伝えましょう。LINEのロゴマーク（緑色のアイコン）も一緒に掲載すると、何をすればいいか一目でわかります。</p>
+                        </div>
+
+                        <h3>あいさつメッセージの設計</h3>
+                        <p>チラシから登録してくれた方に対するLINEのあいさつメッセージ（自動送信）も重要です。「チラシをご覧いただきありがとうございます」という一言を入れることで、チラシ経由の登録であることが伝わり、親近感が生まれます。あいさつメッセージ内でクーポンを配布したり、予約方法を案内したりして、次のアクションにつなげましょう。</p>
+
+                        <h3>チラシとLINEのステップ配信を組み合わせる</h3>
+                        <p>LINE公式アカウントのステップ配信機能を活用すれば、チラシから登録した方に対して、自動的に段階的な情報提供ができます。登録当日にクーポン配布、3日後にお店の紹介、7日後に人気メニューの案内、14日後に「そろそろいかがですか？」リマインド、という流れを自動化できます。</p>
+                    </section>
+
+                    <section id="section5">
+                        <h2>効果測定の方法（UTMパラメータ等）</h2>
+                        <p>チラシとWebの連携施策を継続的に改善するためには、効果測定が欠かせません。「なんとなく効果がありそう」ではなく、データに基づいた判断ができる仕組みを作りましょう。</p>
+
+                        <h3>UTMパラメータとは</h3>
+                        <p>UTMパラメータとは、URLの末尾に付与する追跡用のパラメータです。Googleアナリティクスと連携することで、「どの媒体から」「どのキャンペーンで」サイトに流入したかを正確に把握できます。チラシに掲載するQRコードのURLにUTMパラメータを付けることで、チラシ経由のアクセスを他の流入と区別できます。</p>
+                        <div class="info-box">
+                            <h4>チラシ用UTMパラメータの設定例</h4>
+                            <ul>
+                                <li><strong>utm_source=flyer</strong>：流入元がチラシであることを示す</li>
+                                <li><strong>utm_medium=print</strong>：媒体種別が紙媒体であることを示す</li>
+                                <li><strong>utm_campaign=202604_spring</strong>：キャンペーン名で配布時期や内容を識別</li>
+                                <li>例：https://example.com/lp?utm_source=flyer&utm_medium=print&utm_campaign=202604_spring</li>
+                            </ul>
+                        </div>
+
+                        <h3>Googleアナリティクスでの確認方法</h3>
+                        <p>UTMパラメータを設定したURLでQRコードを作成し、チラシに掲載します。チラシ配布後、Googleアナリティクス（GA4）の「集客」→「トラフィック獲得」レポートで、utm_sourceが「flyer」のデータを確認できます。アクセス数だけでなく、ページ滞在時間やコンバージョン率も確認し、チラシの品質を評価しましょう。</p>
+
+                        <h3>配布エリア・時期ごとの効果比較</h3>
+                        <p>チラシを複数エリアや複数時期に配布する場合は、エリアや時期ごとに異なるUTMパラメータ（campaign名）を設定しましょう。例えば「202604_areaA」「202604_areaB」のように分けることで、どのエリアの反応が良いかをデータで判断できます。</p>
+                        <div class="tip-box">
+                            <h4>効果測定を続けるコツ</h4>
+                            <p>最初は「チラシ経由のアクセス数」と「問い合わせ数」の2つだけを追いかけることから始めましょう。慣れてきたらコンバージョン率（CVR）や費用対効果（CPA）の計算に進みます。完璧なデータ分析よりも、まず「測る仕組みを作る」ことが大切です。</p>
+                        </div>
+
+                        <h3>QRコード読み取り数の確認</h3>
+                        <p>QRコード作成サービスの中には、読み取り回数を計測できるものがあります。BitlyなどのURL短縮サービスを経由してQRコードを作成すると、クリック数（読み取り数）の推移をダッシュボードで確認できます。UTMパラメータと併用することで、より精度の高い効果測定が可能になります。</p>
+                    </section>
+
+                    <section id="section6">
+                        <h2>業種別活用事例</h2>
+                        <p>チラシとWebの連携は、業種によって最適な方法が異なります。ここでは、代表的な業種ごとの活用事例を紹介します。</p>
+
+                        <h3>飲食店の場合</h3>
+                        <p>飲食店のチラシでは、新メニューやランチのお得なセット情報を掲載し、QRコードからメニュー詳細ページやクーポン取得ページに誘導するのが効果的です。特に「チラシ限定クーポン」はお客様の行動を促しやすく、QRコード読み取り→クーポン表示→来店時に画面提示、という流れがスムーズに作れます。</p>
+                        <p>また、チラシ→LINE登録→ステップ配信で「本日のおすすめ」を毎日配信する導線を作れば、一度の配布で長期的なリピート集客につなげられます。</p>
+
+                        <h3>美容サロンの場合</h3>
+                        <p>美容サロンでは、チラシに施術のビフォーアフター写真を1枚だけ載せ、QRコードから「もっと見る」ギャラリーページに誘導するのが効果的です。紙面では伝えきれない施術事例や、お客様の声をWebで見てもらうことで、信頼感と来店意欲を高めます。</p>
+                        <p>予約への導線としては、QRコード→LPの予約フォーム、またはQRコード→LINE登録→LINEチャット予約のどちらかを用意しましょう。</p>
+
+                        <h3>学習塾・教室の場合</h3>
+                        <p>学習塾や教室のチラシでは、合格実績や生徒の声を簡潔に載せ、QRコードから詳細な実績ページや体験授業の申込フォームに誘導します。保護者がじっくり検討してから申し込む傾向があるため、LPには料金表、カリキュラム、講師紹介など、意思決定に必要な情報を網羅的に掲載しましょう。</p>
+
+                        <h3>不動産・リフォームの場合</h3>
+                        <p>不動産やリフォーム業では、施工事例の写真をチラシに1〜2枚掲載し、QRコードから施工事例ギャラリーやお見積もりフォームに誘導するのが定番です。高単価サービスのため、チラシだけで成約することはまれですが、LP経由で問い合わせを獲得し、対面商談につなげる流れを作ることが重要です。</p>
+                        <div class="warning-box">
+                            <h4>業種共通の注意点</h4>
+                            <p>どの業種でも、チラシとLPのメッセージに矛盾がないよう注意しましょう。チラシで「初回50%OFF」と謳っているのに、LP上で条件が異なると信頼を大きく損ないます。チラシとLPはセットで制作し、内容の整合性を必ず確認してください。</p>
+                        </div>
+                    </section>
+
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <p>チラシとWebは、対立するものではなく、組み合わせることで大きな相乗効果を発揮する最強の集客コンビです。チラシで「認知」、Webで「詳細情報と行動喚起」、LINEで「関係維持とリピート」という流れを作ることで、一度のチラシ配布から長期的な売上向上につなげることができます。</p>
+                        <div class="summary-box">
+                            <h4>この記事のポイント</h4>
+                            <ul>
+                                <li>チラシ単体・Web単体には限界があり、連携させることで相乗効果が生まれる</li>
+                                <li>QRコードは2cm以上の大きさで、特典情報の近くに配置すると読み取り率が向上する</li>
+                                <li>QRコードの誘導先はトップページではなく、チラシ内容と連動した専用LPが効果的</li>
+                                <li>チラシ→LINE登録→ステップ配信の導線で、一度きりの接触をリピートにつなげる</li>
+                                <li>UTMパラメータでチラシの効果を数値化し、継続的な改善を行う</li>
+                            </ul>
+                        </div>
+                        <p>チラシとWebの連携を成功させるには、両方を一体的に設計することが大切です。LIKaNONでは、チラシからの流入を最大化するランディングページ制作や、LINE連携を含めた集客導線の設計をトータルでサポートしています。「チラシは配っているけどWebとの連携ができていない」という方は、お気軽にご相談ください。</p>
+                    </section>
+
+                    <div class="article-cta">
+                        <h3>チラシ×Web連携の集客導線設計、お任せください</h3>
+                        <p>チラシからの流入を最大化するランディングページ制作、LINE連携設計まで、LIKaNONがトータルでサポートします。</p>
+                        <a href="/#contact" class="btn btn-primary btn-large">
+                            無料相談はこちら
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h3>この記事を書いた人</h3>
+                        <div class="author-card">
+                            <div class="author-info">
+                                <p class="author-name">LIKaNON</p>
+                                <p class="author-desc">Web制作・デザイン歴8年以上。地域ビジネスのWeb集客もサポートしています。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>関連記事</h3>
+                        <ul class="related-posts">
+                            <li><a href="landing-page-guide.html">ランディングページ（LP）の基本と活用法</a></li>
+                            <li><a href="sole-proprietor-marketing-guide-2026.html">個人事業主のためのマーケティングガイド</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="/blog.html?category=seo">SEO対策</a></li>
+                            <li><a href="/blog.html?category=web">Webの豆知識</a></li>
+                            <li><a href="/blog.html?category=sns">SNS運用の豆知識</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-profile">
+                <div class="footer-profile-inner">
+                    <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <div class="footer-profile-content">
+                        <p class="footer-profile-text">
+                            デザインとWeb制作で<strong>8年以上</strong>の実績。<br class="pc-only">
+                            HP制作・リニューアル・運用代行まで、一貫してサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LIKaNON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <nav class="mobile-fixed-footer">
+        <a href="/#web-production">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span>Web制作</span>
+        </a>
+        <a href="/#service" class="instagram-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="url(#instagram-gradient)">
+                <defs>
+                    <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FFDC80"/>
+                        <stop offset="25%" style="stop-color:#F77737"/>
+                        <stop offset="50%" style="stop-color:#E1306C"/>
+                        <stop offset="75%" style="stop-color:#C13584"/>
+                        <stop offset="100%" style="stop-color:#833AB4"/>
+                    </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>運用代行</span>
+        </a>
+        <a href="/#contact" class="highlight-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>相談</span>
+        </a>
+        <a href="/#portfolio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <span>実績</span>
+        </a>
+        <a href="/blog.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <span>ブログ</span>
+        </a>
+    </nav>
+
+    <script src="../script.js" defer></script>
+    <script src="../blog.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N2Y1QF8ZQV');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ドメインとサーバーの選び方を初心者向けに解説。ドメインの種類、レンタルサーバー比較（エックスサーバー・ConoHa WING・さくら等）、紐付け方、費用の目安まで、失敗しないための基礎知識をまとめました。">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1e3a5f">
+
+    <meta property="og:title" content="ドメイン・サーバーの選び方ガイド｜初心者でも失敗しない基礎知識 | LIKaNON">
+    <meta property="og:description" content="ドメインとサーバーの選び方を初心者向けに解説。種類の違い、おすすめサービス比較、紐付け方、費用の目安まで網羅的に紹介します。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://likanon.com/blog/domain-server-guide.html">
+    <meta property="og:site_name" content="LIKaNON">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://likanon.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ドメイン・サーバーの選び方ガイド｜初心者でも失敗しない基礎知識">
+    <meta name="twitter:description" content="ドメインとサーバーの選び方を初心者向けに解説。種類の違い、おすすめサービス比較、紐付け方、費用の目安まで網羅的に紹介します。">
+    <meta name="twitter:image" content="https://likanon.com/img/og-image.png">
+
+    <link rel="canonical" href="https://likanon.com/blog/domain-server-guide.html">
+
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/likanonlogo.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+    <title>ドメイン・サーバーの選び方ガイド｜初心者でも失敗しない基礎知識 | LIKaNON</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ドメイン・サーバーの選び方ガイド｜初心者でも失敗しない基礎知識",
+        "datePublished": "2026-04-12",
+        "dateModified": "2026-04-12",
+        "author": {
+            "@type": "Organization",
+            "name": "LIKaNON"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "LIKaNON",
+            "url": "https://likanon.com"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://likanon.com/"},
+            {"@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://likanon.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": "ドメイン・サーバーの選び方ガイド", "item": "https://likanon.com/blog/domain-server-guide.html"}
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "ドメインとサーバーは同じ会社で契約した方がいいですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "同じ会社で契約するとDNS設定が簡単になるメリットがあります。特に初心者の方には、エックスサーバーやConoHa WINGのようにドメインとサーバーをセットで提供しているサービスがおすすめです。ただし、別々の会社で契約しても問題なく利用でき、将来的にサーバーだけ乗り換えたい場合にも柔軟に対応できます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "レンタルサーバーの費用は月額いくらくらいですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "個人事業主や小規模ビジネス向けのレンタルサーバーの月額費用は、500円〜1,500円程度が一般的です。エックスサーバーのスタンダードプランが月額990円〜、ConoHa WINGのベーシックプランが月額1,452円〜（長期契約で割引あり）、さくらのレンタルサーバのスタンダードが月額500円〜です。年間契約にすると月額が安くなるサービスが多いです。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "ドメインの「.com」と「.jp」はどちらを選べばいいですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "日本国内のビジネスであれば、「.com」と「.jp」のどちらでも問題ありません。「.com」は世界的に最も知名度が高く年間1,000〜1,500円程度、「.jp」は日本の事業者としての信頼感があり年間2,500〜3,000円程度です。法人であれば「.co.jp」を選ぶとさらに信頼性が高まりますが、個人事業主は取得できないため「.com」または「.jp」がおすすめです。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "サーバーの引っ越し（移行）は難しいですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "サーバーの引っ越し自体は技術的に可能ですが、ファイルの移行、データベースの移行、DNS設定の変更、SSL証明書の再設定など、複数の作業が必要になります。WordPressの場合は移行プラグインを使えば比較的簡単ですが、不安な場合は制作会社やサーバー会社の移行代行サービスを利用するのが安全です。多くのサーバー会社が無料〜数千円程度で移行代行を提供しています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "ドメインを更新し忘れるとどうなりますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ドメインの更新を忘れると、一定の猶予期間（通常30〜45日程度）の後にドメインが失効し、第三者に取得される可能性があります。ドメインが失効すると、ホームページが表示されなくなり、メールも届かなくなります。自動更新設定を有効にし、登録メールアドレスの更新通知を確実に受け取れるようにしておくことが最も重要な対策です。"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/#service">サービス</a></li>
+                    <li><a href="/#portfolio">実績</a></li>
+                    <li><a href="/#merit">選ばれる理由</a></li>
+                    <li><a href="/blog.html" class="active">ブログ</a></li>
+                    <li><a href="/#contact" class="nav-cta">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li>
+                <li class="breadcrumb-item current" aria-current="page">ドメイン・サーバーの選び方ガイド</li>
+            </ol>
+        </div>
+    </nav>
+
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category web">Webの豆知識</span>
+                    <time datetime="2026-04-12">2026.04.12</time>
+                    <span class="read-time">読了時間：10分</span>
+                </div>
+                <h1 class="article-title">ドメイン・サーバーの選び方ガイド｜初心者でも失敗しない基礎知識</h1>
+                <p class="article-lead">ホームページを作るには「ドメイン」と「サーバー」が必要ですが、「何を選べばいいか分からない」「専門用語が多くて難しそう」と感じている方も多いのではないでしょうか。本記事では、ドメインとサーバーの基礎知識から、種類の違い、おすすめサービスの比較、紐付け方、費用の目安まで、初心者でも失敗しないための情報を分かりやすく解説します。</p>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#section1">ドメインとは・種類と選び方</a></li>
+                            <li><a href="#section2">サーバーとは・種類と選び方</a></li>
+                            <li><a href="#section3">おすすめドメイン取得サービス比較</a></li>
+                            <li><a href="#section4">おすすめレンタルサーバー比較</a></li>
+                            <li><a href="#section5">ドメインとサーバーの紐付け方</a></li>
+                            <li><a href="#section6">費用の目安と更新時の注意点</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <section id="section1">
+                        <h2>ドメインとは・種類と選び方</h2>
+                        <p>ドメインとは、インターネット上のホームページの「住所」にあたるものです。例えば「likanon.com」がドメインで、ブラウザのアドレスバーに入力することでホームページにアクセスできます。まずはドメインの基本を理解しましょう。</p>
+
+                        <h3>ドメインの仕組み</h3>
+                        <p>ドメインは、人間にとって覚えやすい文字列をIPアドレス（コンピューターが使う数字の羅列）に変換する仕組みです。例えば、Webサイトのデータは「123.456.789.0」のようなIPアドレスを持つサーバーに保存されていますが、この数字を覚えるのは大変です。そこで「likanon.com」のような分かりやすい名前（ドメイン）を使って、人間がアクセスしやすくしているのです。</p>
+                        <p>ドメインは世界中で一意（ユニーク）であり、同じドメイン名は2つと存在しません。そのため、欲しいドメイン名がすでに他の人に取得されている場合は、別の名前を考える必要があります。</p>
+
+                        <h3>トップレベルドメイン（TLD）の種類</h3>
+                        <p>ドメインの末尾部分（.comや.jpなど）を「トップレベルドメイン（TLD）」と呼びます。TLDにはさまざまな種類があり、それぞれ特徴が異なります。</p>
+                        <div class="info-box">
+                            <h4>主なトップレベルドメインの特徴</h4>
+                            <ul>
+                                <li><strong>.com</strong>：世界で最も利用されているTLD。商用サイト向け。年間約1,000〜1,500円</li>
+                                <li><strong>.jp</strong>：日本を示すTLD。日本の事業者としての信頼感がある。年間約2,500〜3,000円</li>
+                                <li><strong>.co.jp</strong>：日本の法人のみ取得可能。最も信頼性が高い。年間約3,500〜4,000円</li>
+                                <li><strong>.net</strong>：ネットワーク関連で使われることが多い。年間約1,000〜1,500円</li>
+                                <li><strong>.org</strong>：非営利団体向けだが、誰でも取得可能。年間約1,000〜1,500円</li>
+                                <li><strong>.shop / .store</strong>：ECサイトやショップ向け。年間約1,000〜5,000円</li>
+                            </ul>
+                        </div>
+
+                        <h3>ビジネスに適したドメイン名の選び方</h3>
+                        <p>ドメイン名を決める際は、以下のポイントを意識しましょう。まず、屋号や店舗名をそのままローマ字で表記するのが最も分かりやすい方法です。名刺や口頭で伝えたときに、相手がすぐに入力できる短さとシンプルさが理想です。</p>
+                        <p>ハイフン（-）の使用は1つまでに抑え、数字の使用もできるだけ避けましょう。長すぎるドメイン名は覚えにくく、入力ミスの原因にもなります。理想は15文字以内です。</p>
+                        <div class="tip-box">
+                            <h4>ドメイン名の良い例・悪い例</h4>
+                            <p>良い例：「tanaka-dental.com」「cafe-hana.jp」「yamada-kaikei.com」のように、屋号がそのまま分かるもの。悪い例：「t-d-clinic-123-fukuoka.com」のように、ハイフンや数字が多く長すぎるものは避けましょう。</p>
+                        </div>
+
+                        <h3>ドメイン取得前の確認事項</h3>
+                        <p>希望するドメインを取得する前に、商標権を侵害していないか確認しましょう。有名企業のブランド名や商標と類似したドメインを取得すると、法的トラブルに発展する可能性があります。また、過去に別の人が使っていたドメイン（中古ドメイン）は、以前の使用状況によってはSEOにマイナスの影響がある場合があります。Wayback Machine（web.archive.org）で過去のサイト内容を確認しておくと安心です。</p>
+                    </section>
+
+                    <section id="section2">
+                        <h2>サーバーとは・種類と選び方</h2>
+                        <p>サーバーとは、ホームページのデータ（HTML、画像、動画など）を保管し、インターネットを通じて世界中に公開するためのコンピューターです。ドメインが「住所」なら、サーバーは「土地と建物」にあたります。</p>
+
+                        <h3>レンタルサーバーとは</h3>
+                        <p>自前でサーバーを用意するのは、個人事業主や中小企業にとって費用も手間もかかりすぎます。そこで利用するのが「レンタルサーバー」です。サーバー会社がサーバーの管理・運用をすべて行ってくれるため、利用者はサーバーの技術的な知識がなくても、月額数百円〜数千円でホームページを公開できます。</p>
+
+                        <h3>サーバーの種類</h3>
+                        <p>レンタルサーバーにはいくつかの種類がありますが、個人事業主や小規模ビジネスの場合は「共用サーバー」で十分です。</p>
+                        <div class="info-box">
+                            <h4>サーバーの種類と特徴</h4>
+                            <ul>
+                                <li><strong>共用サーバー</strong>：1台のサーバーを複数のユーザーで共有。安価で管理が簡単。個人事業主におすすめ</li>
+                                <li><strong>VPS（仮想専用サーバー）</strong>：1台のサーバーを仮想的に分割。カスタマイズ性が高いが、技術知識が必要</li>
+                                <li><strong>専用サーバー</strong>：1台のサーバーを丸ごと占有。大規模サイト向け。高額</li>
+                                <li><strong>クラウドサーバー</strong>：需要に応じてリソースを増減可能。AWS、GCPなど。従量課金制</li>
+                            </ul>
+                        </div>
+
+                        <h3>サーバー選びで重視すべきポイント</h3>
+                        <p>レンタルサーバーを選ぶ際に重視すべきポイントは、表示速度（サーバーの処理性能）、安定性（稼働率99.99%以上が理想）、サポート体制（電話・チャット対応の有無）、WordPressの簡単インストール機能、SSL証明書の無料提供、バックアップ機能の5つです。</p>
+                        <p>特に表示速度は重要です。サーバーの処理が遅いとホームページの表示に時間がかかり、お客様が離脱する原因になります。また、Googleの検索順位にも表示速度は影響するため、安いだけでサーバーを選ぶのはおすすめしません。</p>
+                        <div class="warning-box">
+                            <h4>無料サーバーは避けるべき理由</h4>
+                            <p>無料のレンタルサーバーも存在しますが、ビジネス利用には不向きです。広告が強制表示される、独自ドメインが使えない（または制限がある）、表示速度が遅い、サポートがない、突然サービスが終了するリスクがある、といったデメリットがあります。ビジネス用途なら、月額500円程度の有料サーバーを利用しましょう。</p>
+                        </div>
+                    </section>
+
+                    <section id="section3">
+                        <h2>おすすめドメイン取得サービス比較</h2>
+                        <p>ドメインの取得は、ドメイン専門の登録サービスまたはレンタルサーバー会社を通じて行います。主要なサービスの特徴を比較しましょう。</p>
+
+                        <h3>お名前.com</h3>
+                        <p>国内最大のドメイン登録サービスで、取り扱いドメイン数が豊富です。頻繁にセールを行っており、初年度は格安でドメインを取得できることがあります。ただし、更新料は通常価格に戻るため、2年目以降の費用も確認しておきましょう。管理画面がやや複雑なのと、営業メールが多いのが気になる点です。</p>
+
+                        <h3>ムームードメイン</h3>
+                        <p>GMOペパボが運営するドメイン登録サービスで、シンプルで使いやすい管理画面が特徴です。ロリポップ！やヘテムルなど、同じGMO系列のレンタルサーバーとの連携がスムーズに行えます。料金もお手頃で、初心者にもおすすめのサービスです。</p>
+
+                        <h3>レンタルサーバーのドメイン取得サービス</h3>
+                        <p>エックスサーバーやConoHa WINGなどのレンタルサーバー会社も、ドメイン取得サービスを提供しています。サーバー契約とセットでドメインが永久無料になるキャンペーンを実施していることが多く、費用面で非常にお得です。また、同じ管理画面でドメインとサーバーの両方を管理できるため、初心者にとって最もシンプルな選択肢です。</p>
+                        <div class="tip-box">
+                            <h4>初心者へのおすすめ</h4>
+                            <p>初めてドメインとサーバーを契約する場合は、レンタルサーバーのドメインセットプランがおすすめです。エックスサーバーやConoHa WINGでサーバーを契約すると、対象ドメインが永久無料になるキャンペーンが頻繁に行われています。管理も一元化でき、DNS設定も自動で行われるため、技術的なハードルが最も低い方法です。</p>
+                        </div>
+                    </section>
+
+                    <section id="section4">
+                        <h2>おすすめレンタルサーバー比較</h2>
+                        <p>個人事業主や小規模ビジネスにおすすめのレンタルサーバーを比較します。いずれも国内で実績のあるサービスで、WordPressの利用に対応しています。</p>
+
+                        <h3>エックスサーバー</h3>
+                        <p>国内シェアNo.1のレンタルサーバーで、20年以上の運用実績があります。高速・高安定のサーバー環境に定評があり、サポート体制も充実しています。スタンダードプランは月額990円〜（36ヶ月契約の場合）で、ディスク容量300GB、転送量無制限、無料SSL、自動バックアップが含まれます。WordPressの簡単インストール機能もあり、初心者からビジネスユーザーまで幅広くおすすめできます。</p>
+
+                        <h3>ConoHa WING</h3>
+                        <p>GMOインターネットグループが運営する高速レンタルサーバーで、国内最速を謳っています。管理画面がシンプルで使いやすく、初心者にも人気があります。WINGパックのベーシックプランは月額1,452円〜（36ヶ月契約の場合は月額678円〜）で、独自ドメインが最大2つ無料です。表示速度を重視する方におすすめです。</p>
+
+                        <h3>さくらのレンタルサーバ</h3>
+                        <p>老舗のレンタルサーバーで、安定性に定評があります。スタンダードプランは月額500円と、主要サービスの中で最も安価な価格帯です。ディスク容量300GB、無料SSL、WordPressインストール機能を備えています。コストを重視する方や、シンプルなサイト運営をする方におすすめです。</p>
+
+                        <h3>ロリポップ！</h3>
+                        <p>GMOペパボが運営するレンタルサーバーで、ハイスピードプランが月額550円〜（36ヶ月契約の場合）と非常にリーズナブルです。LiteSpeedという高速なWebサーバーを採用しており、価格の割に表示速度が良好です。ムームードメインとの連携がスムーズで、低コストでホームページを始めたい方に適しています。</p>
+
+                        <div class="info-box">
+                            <h4>レンタルサーバー比較まとめ</h4>
+                            <ul>
+                                <li><strong>エックスサーバー</strong>：安定性・実績重視の方に。月額990円〜</li>
+                                <li><strong>ConoHa WING</strong>：表示速度・使いやすさ重視の方に。月額678円〜（WINGパック36ヶ月）</li>
+                                <li><strong>さくらのレンタルサーバ</strong>：コスト重視の方に。月額500円〜</li>
+                                <li><strong>ロリポップ！</strong>：低コスト×高速を両立したい方に。月額550円〜</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="section5">
+                        <h2>ドメインとサーバーの紐付け方</h2>
+                        <p>ドメインとサーバーを別々に契約した場合、両者を「紐付ける」作業が必要です。この作業はDNS（Domain Name System）の設定を通じて行います。</p>
+
+                        <h3>DNS設定とは</h3>
+                        <p>DNS設定とは、ドメインにアクセスしたとき、どのサーバーのデータを表示するかを指定する設定です。具体的には、ドメイン管理画面で「ネームサーバー」をレンタルサーバー会社が指定する値に変更する作業を行います。</p>
+                        <p>例えば、お名前.comでドメインを取得し、エックスサーバーでサイトを公開する場合、お名前.comの管理画面でネームサーバーをエックスサーバー指定のもの（ns1.xserver.jp、ns2.xserver.jp など）に変更します。</p>
+
+                        <h3>紐付けの手順</h3>
+                        <p>ドメインとサーバーの紐付けは、以下の3ステップで行います。まず、レンタルサーバーの管理画面で「ドメイン追加」を行い、取得したドメインを登録します。次に、ドメイン管理サービスの管理画面で、ネームサーバーをレンタルサーバー会社指定の値に変更します。最後に、DNS設定が反映されるまで数時間〜最大72時間待ちます。</p>
+                        <div class="warning-box">
+                            <h4>DNS設定の反映には時間がかかる</h4>
+                            <p>ネームサーバーを変更してから、設定が世界中のDNSサーバーに反映されるまでに数時間〜最大72時間かかることがあります。この間、ホームページが一時的に表示されなくなる場合があります。サイトのリニューアルや移行の際は、この反映時間を考慮してスケジュールを組みましょう。</p>
+                        </div>
+
+                        <h3>同じ会社で契約する場合の簡単さ</h3>
+                        <p>ドメインとサーバーを同じ会社で契約すると、DNS設定が自動的に行われるか、ワンクリックで完了するケースがほとんどです。エックスサーバーやConoHa WINGでドメインもセットで取得すると、面倒なDNS設定を意識することなく、すぐにホームページの設定に取りかかれます。初心者の方には、この方法が最もおすすめです。</p>
+
+                        <h3>SSL証明書の設定</h3>
+                        <p>ドメインとサーバーの紐付けが完了したら、SSL証明書の設定も行いましょう。SSL証明書を設定すると、URLが「http://」から「https://」に変わり、通信が暗号化されます。現在のレンタルサーバーのほとんどが無料のSSL証明書（Let's Encrypt）を提供しており、管理画面からワンクリックで設定できます。</p>
+                        <div class="tip-box">
+                            <h4>SSLは必須です</h4>
+                            <p>SSL証明書の設定は任意ではなく、事実上の必須事項です。SSL未対応のサイト（http://）は、ブラウザに「保護されていない通信」と警告が表示され、お客様に不安を与えます。また、Googleの検索順位にもマイナスの影響があります。無料で設定できるため、必ず有効化しましょう。</p>
+                        </div>
+                    </section>
+
+                    <section id="section6">
+                        <h2>費用の目安と更新時の注意点</h2>
+                        <p>ドメインとサーバーは、取得・契約時の初期費用だけでなく、毎年の更新費用が発生します。長期的なランニングコストを理解しておきましょう。</p>
+
+                        <h3>年間費用の目安</h3>
+                        <p>個人事業主や小規模ビジネスの場合、ドメインとサーバーにかかる年間費用の目安は以下の通りです。ドメインが年間1,000〜3,000円、レンタルサーバーが年間6,000〜18,000円で、合計すると年間7,000〜21,000円程度です。月額に換算すると約600〜1,750円と、非常にリーズナブルです。</p>
+
+                        <h3>ドメインの更新料に注意</h3>
+                        <p>ドメインの取得費用と更新費用は異なる場合があります。特にお名前.comなどでは、初年度の取得費用が1円〜数百円と格安でも、2年目以降の更新費用が年間1,500〜3,000円になるケースがあります。契約前に、2年目以降の更新料を必ず確認しましょう。</p>
+                        <div class="info-box">
+                            <h4>ドメイン費用の初年度と更新料の例</h4>
+                            <ul>
+                                <li><strong>.com</strong>：初年度 1円〜500円 → 更新料 年間1,400〜1,600円程度</li>
+                                <li><strong>.jp</strong>：初年度 300円〜1,000円 → 更新料 年間2,500〜3,100円程度</li>
+                                <li><strong>.co.jp</strong>：初年度 2,000円〜4,000円 → 更新料 年間3,500〜4,500円程度</li>
+                            </ul>
+                        </div>
+
+                        <h3>更新忘れのリスクと対策</h3>
+                        <p>ドメインの更新を忘れると、ホームページが表示されなくなり、メールも届かなくなります。さらに、失効したドメインは第三者に取得される可能性があり、取り戻すのが困難（または高額な費用が必要）になります。</p>
+                        <p>対策としては、自動更新を必ず有効にすること、登録しているクレジットカードの有効期限を管理すること、ドメイン管理サービスからの更新通知メールを受け取れるメールアドレスを設定しておくことが重要です。</p>
+
+                        <h3>サーバー契約の長期プランと短期プランの使い分け</h3>
+                        <p>多くのレンタルサーバーでは、12ヶ月・24ヶ月・36ヶ月と長期契約するほど月額料金が安くなります。例えばエックスサーバーのスタンダードプランは、3ヶ月契約で月額1,320円、36ヶ月契約で月額990円です。長期的に使うことが確定しているなら36ヶ月契約がお得ですが、まだ事業の方向性が定まっていない場合は、12ヶ月契約から始めるのが無難です。</p>
+                        <div class="warning-box">
+                            <h4>契約前に確認すべきこと</h4>
+                            <p>レンタルサーバーの長期契約は途中解約しても返金されないケースがほとんどです。36ヶ月契約は月額は安くなりますが、3年分を一括で支払うことになるため、まずは12ヶ月契約で使い勝手を確認してから長期契約に切り替えることをおすすめします。</p>
+                        </div>
+                    </section>
+
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <p>ドメインとサーバーは、ホームページを公開するための基盤です。最初は専門用語が多くて難しく感じるかもしれませんが、基本的な仕組みさえ理解すれば、選び方も設定もそれほど難しくはありません。</p>
+                        <div class="summary-box">
+                            <h4>この記事のポイント</h4>
+                            <ul>
+                                <li>ドメインはインターネット上の「住所」、サーバーは「土地と建物」にあたる</li>
+                                <li>ビジネス用ドメインは「.com」か「.jp」が定番。短く覚えやすい名前にする</li>
+                                <li>レンタルサーバーは共用サーバーで十分。表示速度と安定性を重視して選ぶ</li>
+                                <li>初心者はドメインとサーバーを同じ会社で契約するのが最もシンプル</li>
+                                <li>年間の維持費用は7,000〜21,000円程度とリーズナブル</li>
+                                <li>ドメインの自動更新を必ず有効にし、失効リスクを防ぐ</li>
+                            </ul>
+                        </div>
+                        <p>ドメインやサーバーの選定に迷ったら、お気軽にご相談ください。LIKaNONでは、ホームページ制作のご依頼時にドメイン取得やサーバー設定のサポートも行っています。お客様の事業に最適な環境をご提案いたします。</p>
+                    </section>
+
+                    <div class="article-cta">
+                        <h3>ドメイン・サーバーの選定もお任せください</h3>
+                        <p>ホームページ制作と合わせて、ドメイン取得・サーバー設定・SSL導入までLIKaNONがサポートします。</p>
+                        <a href="/#contact" class="btn btn-primary btn-large">
+                            無料相談はこちら
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h3>この記事を書いた人</h3>
+                        <div class="author-card">
+                            <div class="author-info">
+                                <p class="author-name">LIKaNON</p>
+                                <p class="author-desc">Web制作・デザイン歴8年以上。地域ビジネスのWeb集客もサポートしています。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>関連記事</h3>
+                        <ul class="related-posts">
+                            <li><a href="wordpress-guide.html">WordPressの基本と活用ガイド</a></li>
+                            <li><a href="ssl-certificate-guide.html">SSL証明書の基本と導入ガイド</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="/blog.html?category=seo">SEO対策</a></li>
+                            <li><a href="/blog.html?category=web">Webの豆知識</a></li>
+                            <li><a href="/blog.html?category=sns">SNS運用の豆知識</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-profile">
+                <div class="footer-profile-inner">
+                    <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <div class="footer-profile-content">
+                        <p class="footer-profile-text">
+                            デザインとWeb制作で<strong>8年以上</strong>の実績。<br class="pc-only">
+                            HP制作・リニューアル・運用代行まで、一貫してサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LIKaNON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <nav class="mobile-fixed-footer">
+        <a href="/#web-production">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span>Web制作</span>
+        </a>
+        <a href="/#service" class="instagram-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="url(#instagram-gradient)">
+                <defs>
+                    <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FFDC80"/>
+                        <stop offset="25%" style="stop-color:#F77737"/>
+                        <stop offset="50%" style="stop-color:#E1306C"/>
+                        <stop offset="75%" style="stop-color:#C13584"/>
+                        <stop offset="100%" style="stop-color:#833AB4"/>
+                    </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>運用代行</span>
+        </a>
+        <a href="/#contact" class="highlight-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>相談</span>
+        </a>
+        <a href="/#portfolio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <span>実績</span>
+        </a>
+        <a href="/blog.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <span>ブログ</span>
+        </a>
+    </nav>
+
+    <script src="../script.js" defer></script>
+    <script src="../blog.js" defer></script>
+</body>
+</html>
