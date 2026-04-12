@@ -53,7 +53,7 @@
         "@type": "Article",
         "headline": "構造化データとは？リッチスニペットで検索結果を目立たせる",
         "datePublished": "2024-11-15",
-        "dateModified": "2024-11-15",
+        "dateModified": "2026-04-12",
         "author": {
             "@type": "Organization",
             "name": "LIKaNON"
@@ -74,6 +74,38 @@
             {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://likanon.com/"},
             {"@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://likanon.c/blog.html"},
             {"@type": "ListItem", "position": 3, "name": "構造化データガイド", "item": "https://likanon.com/blog/structured-data-guide.html"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "構造化データとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "構造化データとは、Webページの情報を検索エンジンが理解しやすい形式で記述するためのマークアップです。Schema.orgの語彙を使ってJSON-LD形式で記述するのが一般的で、検索結果のリッチスニペット表示につながります。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "リッチスニペットとは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "リッチスニペットとは、検索結果に表示される通常のタイトル・説明文に加え、星評価、価格、FAQ、レシピ手順などの追加情報が表示される形式のことです。目立つ表示によりクリック率の向上が期待できます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "構造化データの実装方法は？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "JSON-LD形式でHTMLのheadタグ内にscriptタグとして記述するのが最も簡単な方法です。Googleの構造化データテストツールで正しく実装されているか検証できます。WordPressならプラグインで簡単に追加できます。"
+                }
+            }
         ]
     }
     </script>
