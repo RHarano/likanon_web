@@ -1976,6 +1976,26 @@ select {
     color: var(--color-accent);
 }
 
+.sns-cta {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+
+.sns-cta .btn-sns-lp {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 0.875rem 1.75rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
+
+.sns-cta-note {
+    margin-top: var(--spacing-sm);
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
 @media (max-width: 768px) {
     .other-card.sns-feature {
         grid-template-columns: 1fr;
