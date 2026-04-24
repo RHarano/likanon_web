@@ -4187,6 +4187,188 @@ select {
     text-align: center;
     font-size: 0.875rem;
     color: var(--color-text-muted);
+    margin-top: var(--spacing-2xl);
+}
+
+/* お問い合わせフォーム */
+.contact-divider {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    max-width: 720px;
+    margin: var(--spacing-2xl) auto var(--spacing-xl);
+    color: var(--color-text-muted);
+    font-size: 0.8125rem;
+}
+
+.contact-divider::before,
+.contact-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+}
+
+.contact-divider span {
+    flex-shrink: 0;
+    font-weight: 500;
+}
+
+.contact-form {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group-full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-required,
+.form-optional {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    padding: 0.125rem 0.5rem;
+    border-radius: var(--radius-sm);
+    letter-spacing: 0.05em;
+}
+
+.form-required {
+    color: #dc2626;
+    background: rgba(220, 38, 38, 0.08);
+}
+
+.form-optional {
+    color: var(--color-text-muted);
+    background: var(--color-bg-soft);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    font-family: inherit;
+    color: var(--color-text);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.7;
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px;
+    padding-right: 2.5rem;
+}
+
+.form-privacy {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    cursor: pointer;
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--color-text-light);
+}
+
+.form-checkbox input[type="checkbox"] {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 0.1em;
+    cursor: pointer;
+    accent-color: var(--color-primary);
+}
+
+.form-submit-wrap {
+    text-align: center;
+    margin-top: var(--spacing-sm);
+}
+
+.form-submit {
+    min-width: 240px;
+    padding: 0.95rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.form-submit-note {
+    margin-top: var(--spacing-sm);
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .contact-divider {
+        margin: var(--spacing-xl) auto var(--spacing-lg);
+        font-size: 0.75rem;
+    }
+
+    .form-submit {
+        width: 100%;
+        min-width: auto;
+    }
 }
 
 .contact-note p {

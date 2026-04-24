@@ -1755,6 +1755,91 @@
                 </a>
             </div>
 
+            <!-- 区切り -->
+            <div class="contact-divider">
+                <span>または、フォームから送信</span>
+            </div>
+
+            <!-- お問い合わせフォーム -->
+            <form class="contact-form" action="https://formsubmit.co/info@likanon.com" method="POST">
+                <!-- FormSubmit設定 -->
+                <input type="hidden" name="_subject" value="【LIKaNON】お問い合わせ">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://likanon.com/thanks.html">
+                <input type="hidden" name="_autoresponse" value="この度はLIKaNONへお問い合わせいただきありがとうございます。内容を確認のうえ、通常24時間以内にご返信いたします。返信が届かない場合は、迷惑メールフォルダをご確認いただくか、LINE（https://lin.ee/43NTiCQ）よりご連絡ください。">
+                <!-- ハニーポット（スパム対策） -->
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="form-name">お名前 <span class="form-required">必須</span></label>
+                        <input type="text" id="form-name" name="お名前" required autocomplete="name" placeholder="山田 太郎">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-email">メールアドレス <span class="form-required">必須</span></label>
+                        <input type="email" id="form-email" name="メールアドレス" required autocomplete="email" placeholder="example@mail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-tel">電話番号 <span class="form-optional">任意</span></label>
+                        <input type="tel" id="form-tel" name="電話番号" autocomplete="tel" placeholder="090-0000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-type">ご相談内容 <span class="form-required">必須</span></label>
+                        <select id="form-type" name="ご相談内容" required>
+                            <option value="">選択してください</option>
+                            <option value="新規ホームページ制作">新規ホームページ制作</option>
+                            <option value="ホームページリニューアル">ホームページリニューアル</option>
+                            <option value="SNS運用代行">SNS運用代行（Instagram・LINE等）</option>
+                            <option value="LP（ランディングページ）制作">LP（ランディングページ）制作</option>
+                            <option value="ロゴ・デザイン制作">ロゴ・デザイン制作</option>
+                            <option value="SEO・MEO対策">SEO・MEO対策のご相談</option>
+                            <option value="運用・保守・改修">運用・保守・改修</option>
+                            <option value="補助金活用相談">補助金を使ったHP制作</option>
+                            <option value="その他">その他・未定</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="form-budget">ご予算（任意）</label>
+                        <select id="form-budget" name="ご予算">
+                            <option value="">選択してください</option>
+                            <option value="〜10万円">〜10万円</option>
+                            <option value="10〜30万円">10〜30万円</option>
+                            <option value="30〜50万円">30〜50万円</option>
+                            <option value="50万円〜">50万円〜</option>
+                            <option value="未定・相談希望">未定・相談したい</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="form-message">お問い合わせ内容 <span class="form-required">必須</span></label>
+                        <textarea id="form-message" name="お問い合わせ内容" rows="6" required placeholder="ご相談内容・ご希望・ご質問などをご記入ください。&#13;&#10;（例：美容室のホームページを新しく作りたい。予約機能も入れたい。）"></textarea>
+                    </div>
+
+                    <div class="form-group form-group-full form-privacy">
+                        <label class="form-checkbox">
+                            <input type="checkbox" name="プライバシー同意" value="同意する" required>
+                            <span>ご入力いただいた個人情報はお問い合わせへの返信目的以外には使用いたしません。</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group form-group-full form-submit-wrap">
+                        <button type="submit" class="btn btn-primary btn-large form-submit">
+                            送信する
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                        <p class="form-submit-note">相談無料・しつこい営業は一切いたしません</p>
+                    </div>
+                </div>
+            </form>
+
             <!-- 補足情報 -->
             <div class="contact-note">
                 <p>
