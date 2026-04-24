@@ -4190,10 +4190,6 @@ select {
 }
 
 .contact-note p {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 0.5rem;
     margin: 0 auto;
     max-width: 720px;
 }
@@ -4204,14 +4200,15 @@ select {
 
 .contact-note p svg {
     flex-shrink: 0;
-    margin-top: 0.2em;
+    vertical-align: -0.2em;
+    margin-right: 0.4em;
 }
 
 .contact-note-sub {
     font-size: 0.8125rem;
-    line-height: 1.75;
+    line-height: 1.8;
     text-align: left;
-    padding: 0.75rem 1rem;
+    padding: 0.875rem 1.125rem;
     background: var(--color-bg-soft);
     border-radius: var(--radius-md);
 }
