@@ -98,75 +98,127 @@
    =========================================== */
 .topic-nav-wrapper {
     margin-bottom: var(--spacing-3xl);
-    padding: var(--spacing-xl);
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--color-border);
 }
 
 .topic-nav-label {
-    font-size: 0.75rem;
+    font-size: 0.9375rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
+    color: var(--color-primary);
     margin-bottom: var(--spacing-lg);
     text-align: center;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.topic-nav-label::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 2px;
+    background: var(--color-primary);
+    border-radius: 2px;
 }
 
 .topic-nav-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--spacing-sm);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.topic-nav-grid .topic-nav-item {
+    flex: 0 1 calc(25% - var(--spacing-md) * 3 / 4);
+    min-width: 180px;
 }
 
 .topic-nav-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.625rem;
-    padding: 0.875rem 1rem;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    padding: 1.5rem 1rem;
     background: var(--color-bg);
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     text-decoration: none;
-    transition: all var(--transition-fast);
+    text-align: center;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.topic-nav-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--topic-color, rgba(30, 58, 95, 0.04)) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    pointer-events: none;
 }
 
 .topic-nav-item:hover {
-    transform: translateY(-2px);
-    border-color: var(--color-primary);
-    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.08);
+    transform: translateY(-4px);
+    border-color: var(--topic-border, var(--color-primary));
+    box-shadow: 0 8px 24px rgba(30, 58, 95, 0.1);
+}
+
+.topic-nav-item:hover::before {
+    opacity: 1;
 }
 
 .topic-nav-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    font-size: 1.75rem;
     line-height: 1;
+    border-radius: 50%;
+    background: var(--topic-bg, rgba(30, 58, 95, 0.08));
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .topic-nav-text {
     display: flex;
     flex-direction: column;
-    gap: 0.125rem;
-    min-width: 0;
-    flex: 1;
+    gap: 0.25rem;
+    width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .topic-nav-title {
-    font-size: 0.8125rem;
-    font-weight: 600;
+    font-size: 0.875rem;
+    font-weight: 700;
     color: var(--color-primary);
-    line-height: 1.3;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    line-height: 1.4;
+    white-space: normal;
+    word-break: auto-phrase;
 }
 
 .topic-nav-count {
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
+    font-weight: 600;
     color: var(--color-text-muted);
-    font-weight: 500;
+    letter-spacing: 0.02em;
 }
+
+/* トピック別カラー */
+.topic-nav-item[href="#subsidy-startup"]  { --topic-bg: rgba(16, 185, 129, 0.12);  --topic-border: #10b981; --topic-color: rgba(16, 185, 129, 0.08); }
+.topic-nav-item[href="#hp-production"]    { --topic-bg: rgba(59, 130, 246, 0.12);  --topic-border: #3b82f6; --topic-color: rgba(59, 130, 246, 0.08); }
+.topic-nav-item[href="#seo"]              { --topic-bg: rgba(245, 158, 11, 0.12);  --topic-border: #f59e0b; --topic-color: rgba(245, 158, 11, 0.08); }
+.topic-nav-item[href="#sns"]              { --topic-bg: rgba(236, 72, 153, 0.12);  --topic-border: #ec4899; --topic-color: rgba(236, 72, 153, 0.08); }
+.topic-nav-item[href="#marketing"]        { --topic-bg: rgba(139, 92, 246, 0.12);  --topic-border: #8b5cf6; --topic-color: rgba(139, 92, 246, 0.08); }
+.topic-nav-item[href="#industry"]         { --topic-bg: rgba(20, 184, 166, 0.12);  --topic-border: #14b8a6; --topic-color: rgba(20, 184, 166, 0.08); }
+.topic-nav-item[href="#tools"]            { --topic-bg: rgba(100, 116, 139, 0.12); --topic-border: #64748b; --topic-color: rgba(100, 116, 139, 0.08); }
 
 /* ===========================================
    トピックセクション見出し
@@ -568,30 +620,40 @@
 
     /* モバイル：トピックナビを2列に */
     .topic-nav-wrapper {
-        padding: var(--spacing-md);
-        margin-bottom: var(--spacing-xl);
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .topic-nav-label {
+        font-size: 0.875rem;
     }
 
     .topic-nav-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
+        gap: 0.625rem;
+    }
+
+    .topic-nav-grid .topic-nav-item {
+        flex: 0 1 calc(50% - 0.3125rem);
+        min-width: 0;
     }
 
     .topic-nav-item {
-        padding: 0.625rem 0.75rem;
+        padding: 1rem 0.5rem;
         gap: 0.5rem;
     }
 
     .topic-nav-icon {
-        font-size: 1.25rem;
+        width: 44px;
+        height: 44px;
+        font-size: 1.375rem;
     }
 
     .topic-nav-title {
         font-size: 0.75rem;
+        line-height: 1.3;
     }
 
     .topic-nav-count {
-        font-size: 0.625rem;
+        font-size: 0.6875rem;
     }
 
     /* モバイル：セクション見出し */
