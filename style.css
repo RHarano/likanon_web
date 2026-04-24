@@ -4190,6 +4190,28 @@ select {
     margin-top: var(--spacing-2xl);
 }
 
+/* 事前案内（LINE上部に表示） */
+.contact-note-top {
+    max-width: 720px;
+    margin: 0 auto var(--spacing-xl);
+    text-align: left;
+}
+
+.contact-note-top .contact-note-sub {
+    margin: 0;
+}
+
+.contact-note-top .contact-note-sub + .contact-note-sub {
+    margin-top: 0.75rem;
+}
+
+/* LINE単独表示 */
+.contact-methods-single {
+    max-width: 520px;
+    margin: 0 auto;
+    grid-template-columns: 1fr !important;
+}
+
 /* お問い合わせフォーム */
 .contact-divider {
     display: flex;
