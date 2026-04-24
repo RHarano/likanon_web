@@ -42,6 +42,80 @@
         <priority>0.9</priority>
     </url>
 
+    <!-- 新規ブログ記事（補助金・開業・SNSスキル・業種別・実務系） -->
+    <url>
+        <loc>https://likanon.com/blog/sustainability-subsidy-homepage.html</loc>
+        <lastmod>2026-04-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/it-subsidy-guide.html</loc>
+        <lastmod>2026-04-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/business-registration-guide.html</loc>
+        <lastmod>2026-04-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/instagram-reels-guide.html</loc>
+        <lastmod>2026-04-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/instagram-stories-guide.html</loc>
+        <lastmod>2026-04-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/chatgpt-business-guide.html</loc>
+        <lastmod>2026-04-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/personal-trainer-web-guide.html</loc>
+        <lastmod>2026-04-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/counselor-therapist-web-guide.html</loc>
+        <lastmod>2026-04-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/flower-shop-web-guide.html</loc>
+        <lastmod>2026-04-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/english-school-web-guide.html</loc>
+        <lastmod>2026-04-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/alt-attribute-guide.html</loc>
+        <lastmod>2026-04-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/google-forms-guide.html</loc>
+        <lastmod>2026-04-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <!-- SNS運用代行 関連ブログ記事 -->
     <url>
         <loc>https://likanon.com/blog/sns-management-outsourcing-guide.html</loc>

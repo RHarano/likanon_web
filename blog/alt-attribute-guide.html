@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N2Y1QF8ZQV');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="alt属性の正しい書き方を徹底解説。SEO・アクセシビリティ・画像検索での成果を最大化するための書き方、装飾画像とコンテンツ画像の使い分け、よくある間違い、画像SEOの総合対策まで網羅的に紹介します。">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1e3a5f">
+
+    <meta property="og:title" content="alt属性の書き方完全ガイド｜SEO・アクセシビリティ・画像検索で成果を出す方法 | LIKaNON">
+    <meta property="og:description" content="alt属性の正しい書き方を徹底解説。SEO・アクセシビリティ・画像検索で成果を出すための実践ノウハウを紹介します。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://likanon.com/blog/alt-attribute-guide.html">
+    <meta property="og:site_name" content="LIKaNON">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://likanon.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="alt属性の書き方完全ガイド｜SEO・アクセシビリティ・画像検索で成果を出す方法">
+    <meta name="twitter:description" content="alt属性の正しい書き方を徹底解説。SEO・アクセシビリティ・画像検索で成果を出すための実践ノウハウを紹介します。">
+    <meta name="twitter:image" content="https://likanon.com/img/og-image.png">
+
+    <link rel="canonical" href="https://likanon.com/blog/alt-attribute-guide.html">
+
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/likanonlogo.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+    <title>alt属性の書き方完全ガイド｜SEO・アクセシビリティ・画像検索で成果を出す方法 | LIKaNON</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "alt属性の書き方完全ガイド｜SEO・アクセシビリティ・画像検索で成果を出す方法",
+        "datePublished": "2026-04-12",
+        "dateModified": "2026-04-12",
+        "author": {
+            "@type": "Organization",
+            "name": "LIKaNON"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "LIKaNON",
+            "url": "https://likanon.com"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://likanon.com/"},
+            {"@type": "ListItem", "position": 2, "name": "ブログ", "item": "https://likanon.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": "alt属性の書き方完全ガイド", "item": "https://likanon.com/blog/alt-attribute-guide.html"}
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "alt属性はすべての画像に書かなければいけませんか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "HTML仕様上はすべてのimg要素にalt属性を記述する必要がありますが、「空のalt属性（alt=\"\"）」を使う場合もあります。装飾目的の画像やアイコン、意味を持たない背景的な画像は alt=\"\" と書くのが正解で、これにより支援技術がその画像を読み上げない挙動になります。コンテンツとして意味のある画像には必ず適切な説明を入れます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "alt属性はSEOにどれくらい影響しますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "alt属性はGoogleが画像内容を理解する主要な手がかりで、画像検索での表示や、ページ全体のトピック理解に影響します。ただし本文テキストほどの強い順位影響があるわけではなく、「ページの文脈に合致した自然な説明文」という前提が重要です。キーワード詰め込みはむしろマイナス評価の要因になります。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "画像検索で上位表示されるためのalt属性の書き方は？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "画像内容を正確に、かつ周辺テキストの文脈と矛盾しない形で説明することが基本です。具体的な被写体名、シチュエーション、場所などを含めつつ、50〜125文字程度で簡潔に書きます。ファイル名も英数字で内容を表すものにし、画像サイズ・フォーマット・表示速度といった画像SEO全体の要素も揃えると、画像検索での露出が大きく伸びます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "alt属性とtitle属性の違いは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "alt属性は画像が表示されなかった場合やスクリーンリーダーで読み上げる場合の「代替テキスト」で、すべての画像に適切に設定する必要があります。一方title属性はマウスオーバー時のツールチップ表示で、補助的な情報を追加するためのものです。SEOやアクセシビリティ観点では alt属性の方が圧倒的に重要で、title属性は省略しても問題ありません。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "alt属性に書いてはいけないことはありますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "「画像」「写真」「image」といった画像そのものを指す語、関係のないキーワードの羅列、同じキーワードの重複、ファイル名のままの英数字文字列などは避けるべきです。また、画像に映っていない情報を書くのも不適切です。スクリーンリーダーで読み上げられたときに「画像内容が正確に伝わるか」を基準に書くのが最も良い判断軸になります。"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/#service">サービス</a></li>
+                    <li><a href="/#portfolio">実績</a></li>
+                    <li><a href="/#merit">選ばれる理由</a></li>
+                    <li><a href="/blog.html" class="active">ブログ</a></li>
+                    <li><a href="/#contact" class="nav-cta">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li>
+                <li class="breadcrumb-item current" aria-current="page">alt属性の書き方完全ガイド</li>
+            </ol>
+        </div>
+    </nav>
+
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category seo">SEO対策</span>
+                    <time datetime="2026-04-12">2026.04.12</time>
+                    <span class="read-time">読了時間：11分</span>
+                </div>
+                <h1 class="article-title">alt属性の書き方完全ガイド｜SEO・アクセシビリティ・画像検索で成果を出す方法</h1>
+                <p class="article-lead">alt属性は、SEO・アクセシビリティ・画像検索の3つの観点から、Webサイトの品質を支える重要な要素です。しかし正しい書き方を理解しないまま、キーワードを詰め込んだり、空欄のままにしている例が非常に多いのが実情です。本記事では、alt属性の役割、正しい書き方、装飾画像とコンテンツ画像の違い、よくある間違い、画像SEO全体の対策まで、実例を交えて網羅的に解説します。</p>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#section1">alt属性とは何か</a></li>
+                            <li><a href="#section2">alt属性がSEOに与える影響</a></li>
+                            <li><a href="#section3">画像検索で見つけられるalt属性の書き方</a></li>
+                            <li><a href="#section4">アクセシビリティ視点でのalt属性</a></li>
+                            <li><a href="#section5">装飾画像とコンテンツ画像の書き分け</a></li>
+                            <li><a href="#section6">よくある間違った書き方8例</a></li>
+                            <li><a href="#section7">キーワードの詰め込み過ぎは逆効果</a></li>
+                            <li><a href="#section8">画像SEOの総合対策</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <section id="section1">
+                        <h2>alt属性とは何か</h2>
+                        <p>alt属性（alt attribute）は、HTMLのimg要素で画像の「代替テキスト（alternative text）」を指定するための属性です。「オルト属性」や「オルト」と略されて呼ばれることも多い、Webページの基礎要素のひとつです。</p>
+
+                        <h3>記述の基本形</h3>
+                        <p>基本的な書き方はとてもシンプルです。</p>
+                        <pre><code>&lt;img src="cat.jpg" alt="窓辺で丸くなって眠っている茶色の猫"&gt;</code></pre>
+                        <p>src属性で画像ファイルの場所を指定し、alt属性でその画像の意味を文章で表します。</p>
+
+                        <h3>alt属性の3つの役割</h3>
+                        <p>alt属性には、以下の3つの重要な役割があります。</p>
+                        <ul>
+                            <li><strong>代替テキストの表示</strong>：画像が読み込めないときや表示がオフのときに、代わりに表示されるテキスト</li>
+                            <li><strong>スクリーンリーダーへの情報提供</strong>：視覚に障害のあるユーザーに画像内容を伝える</li>
+                            <li><strong>検索エンジンへの情報提供</strong>：Googleなどが画像内容を理解するための手がかり</li>
+                        </ul>
+
+                        <h3>HTMLの仕様では必須属性</h3>
+                        <p>HTML Living Standardでは、img要素のalt属性は基本的に必須とされています。ただし、画像が純粋に装飾目的である場合は alt="" という「空のalt属性」で明示的に示すのが正しい書き方です。alt属性自体を省略することは、基本的に推奨されません。</p>
+
+                        <div class="info-box">
+                            <h4>alt属性の記述パターンまとめ</h4>
+                            <ul>
+                                <li><strong>意味のある画像</strong>：alt="画像の内容を正確に表す文章"</li>
+                                <li><strong>装飾画像</strong>：alt=""（空の値）</li>
+                                <li><strong>alt属性自体を省略</strong>：原則NG</li>
+                            </ul>
+                        </div>
+
+                        <h3>検索エンジンはどう使うのか</h3>
+                        <p>Googleなどの検索エンジンは画像認識AIも使いますが、ページ文脈とalt属性を組み合わせて画像内容を理解するのが基本です。正確なalt属性を書くことで、検索エンジンに「このページは何について書かれているか」「どの画像が何を表しているか」を正しく伝えられます。</p>
+                    </section>
+
+                    <section id="section2">
+                        <h2>alt属性がSEOに与える影響</h2>
+                        <p>alt属性はSEO対策の「基本中の基本」とされる要素ですが、具体的にどのような影響があるのかを整理しましょう。</p>
+
+                        <h3>ページ全体のトピック理解に寄与</h3>
+                        <p>Googleはページ内のテキストとalt属性を合わせてページのテーマを理解します。例えば「ラーメン」の記事で画像のalt属性が「ラーメン」「つけ麺」「スープの写真」などになっていれば、記事のトピックが明確に伝わります。</p>
+
+                        <h3>画像検索での表示</h3>
+                        <p>Google画像検索では、alt属性・ファイル名・周辺テキストから画像内容を判断します。適切なalt属性が設定された画像は、画像検索で上位表示されやすくなります。画像検索経由で集客している業種（レシピ・インテリア・ファッション・花屋など）では特に重要です。</p>
+
+                        <h3>E-E-A-Tの観点でもプラス</h3>
+                        <p>alt属性まで丁寧に設定されたサイトは「ユーザーへの配慮が行き届いたサイト」と評価され、E-E-A-T（経験・専門性・権威性・信頼性）の観点でも間接的にプラスになります。Googleは「アクセシビリティへの配慮」も広義の品質として評価しています。</p>
+
+                        <h3>本文テキストほどの影響力ではない</h3>
+                        <p>ただし注意したいのは、alt属性はあくまで「補助的な要素」である点です。見出し・本文・内部リンクほどの強いSEO効果は期待できません。alt属性を最適化するよりも先に、本文の質を上げる方が順位への影響は大きくなります。</p>
+
+                        <div class="tip-box">
+                            <h4>SEOの優先順位を見誤らない</h4>
+                            <p>alt属性最適化は「地味だけど必要な基礎工事」です。タイトル・見出し・本文がしっかりした上で、ページ全体の品質を底上げする役割と捉えましょう。alt属性だけに時間をかけても、大きな順位変動は起こりません。</p>
+                        </div>
+
+                        <h3>altタグに関するGoogleの公式見解</h3>
+                        <p>Googleの公式ドキュメントでは「alt属性は画像の内容を短くて意味のある言葉で表してください。キーワードの詰め込みは避けてください」と明記されています。SEOを意識しつつも、自然な記述を心がけることが最も重要です。</p>
+                    </section>
+
+                    <section id="section3">
+                        <h2>画像検索で見つけられるalt属性の書き方</h2>
+                        <p>画像検索からの流入を意識するなら、alt属性の書き方にはより戦略的な視点が必要です。</p>
+
+                        <h3>具体的な被写体・場面を描写</h3>
+                        <p>「料理」ではなく「和風ハンバーグとサラダが乗ったランチプレート」のように、具体的な被写体と状況を書きます。検索者は具体的なキーワードで画像を探しているため、抽象的な表現では引っかかりません。</p>
+
+                        <h3>文脈に合うキーワードを含める</h3>
+                        <p>ページのメインキーワードを自然に含めることで、画像検索での露出を高められます。例えばラーメン店の記事なら「家系ラーメンの特徴である濃厚なとんこつスープ」のように、記事テーマと関連するキーワードを含めます。</p>
+
+                        <h3>冗長にしすぎない</h3>
+                        <p>alt属性は50〜125文字程度が適切と言われています。長すぎるとスクリーンリーダーで読み上げる際に読みづらくなり、検索エンジンからも評価されにくくなります。情報量と簡潔さのバランスを取りましょう。</p>
+
+                        <h3>ファイル名との連携</h3>
+                        <p>画像のファイル名も画像検索に影響します。「IMG_1234.jpg」のような意味のない名前ではなく、「tonkotsu-ramen.jpg」「modern-living-room.jpg」のように、画像内容を表す英数字ファイル名にしましょう。alt属性と合わせて、画像内容を明確に伝えられます。詳しくは<a href="image-seo-guide.html">画像SEO完全ガイド</a>もあわせて参照してください。</p>
+
+                        <div class="info-box">
+                            <h4>画像検索で強いalt属性の書き方チェックリスト</h4>
+                            <ul>
+                                <li>具体的な被写体・場面を書いているか</li>
+                                <li>文脈に合うキーワードを含めているか</li>
+                                <li>50〜125文字程度に収まっているか</li>
+                                <li>ファイル名とalt属性が連携しているか</li>
+                                <li>検索者が使いそうな言葉を使っているか</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="section4">
+                        <h2>アクセシビリティ視点でのalt属性</h2>
+                        <p>alt属性の本来の目的はアクセシビリティ、つまり「誰もが情報にアクセスできる」ための配慮です。SEO目的だけでなく、この視点を持つことが重要です。</p>
+
+                        <h3>スクリーンリーダーでの読み上げ</h3>
+                        <p>視覚に障害があるユーザーは、スクリーンリーダー（画面読み上げソフト）を使ってWebを閲覧します。img要素に到達するとalt属性の値が読み上げられるため、ここに適切な情報がないと画像の意味が完全に失われます。</p>
+
+                        <h3>WCAGガイドライン</h3>
+                        <p>WCAG（Web Content Accessibility Guidelines）は国際的なアクセシビリティ標準で、画像の代替テキストは「達成基準1.1.1：非テキストコンテンツ」で必須要件とされています。公的機関のサイトや大企業のサイトでは、この基準への準拠が強く求められます。</p>
+
+                        <h3>「その画像が見えたら何を得るか」が基準</h3>
+                        <p>alt属性を書く最も良い判断軸は、「もしこの画像を見られない人がいたら、その人が得るべき情報は何か」です。装飾であれば情報不要、コンテンツであれば画像内容を文章化する必要があります。</p>
+
+                        <div class="tip-box">
+                            <h4>スクリーンリーダーで実際に聞いてみる</h4>
+                            <p>macOS（VoiceOver）やWindows（ナレーター）、スマートフォン（iOS VoiceOver / Android TalkBack）には、標準でスクリーンリーダーが内蔵されています。自分のサイトを実際に読み上げさせてみると、alt属性の改善ポイントが明確に見えてきます。一度は体験することを強くおすすめします。</p>
+                        </div>
+
+                        <h3>高齢者・認知機能の配慮</h3>
+                        <p>アクセシビリティの対象は視覚障害者だけではありません。高齢者、認知機能に困難を抱える方、画像読み込みが遅い通信環境のユーザーなど、多様な人が恩恵を受けます。alt属性の丁寧な記述は、すべてのユーザーへの配慮に直結します。</p>
+                    </section>
+
+                    <section id="section5">
+                        <h2>装飾画像とコンテンツ画像の書き分け</h2>
+                        <p>alt属性を書くうえで最も迷うのが「この画像は装飾なのか、コンテンツなのか」という判断です。ここを間違えると、SEOにもアクセシビリティにもマイナスになります。</p>
+
+                        <h3>装飾画像の判定基準</h3>
+                        <p>以下のような画像は装飾画像として扱い、alt="" を使用します。</p>
+                        <ul>
+                            <li>CSS背景画像として扱うべき装飾的な模様・罫線</li>
+                            <li>テキストと同じ情報を伝えているだけの画像（文字の隣のアイコン）</li>
+                            <li>デザイン上の区切り線・装飾パターン</li>
+                            <li>純粋なビジュアル装飾</li>
+                        </ul>
+
+                        <h3>コンテンツ画像の判定基準</h3>
+                        <p>以下のような画像はコンテンツ画像として、適切なalt属性を記述します。</p>
+                        <ul>
+                            <li>記事の内容を補強・説明する写真</li>
+                            <li>商品画像</li>
+                            <li>グラフ・図表・インフォグラフィック</li>
+                            <li>人物写真・風景写真</li>
+                            <li>ロゴ（会社名・サービス名を表す）</li>
+                        </ul>
+
+                        <h3>ロゴ画像の書き方</h3>
+                        <p>ロゴ画像は会社名・サービス名を伝える重要な要素です。「alt="LIKaNON"」のように、会社名・サービス名をそのまま書きます。ヘッダーのロゴがホームページに戻るリンクの場合は、「alt="LIKaNON ホームへ戻る"」でも構いません。</p>
+
+                        <h3>グラフ・図表のalt属性</h3>
+                        <p>グラフや図表は「何を示しているか」の要点を書くのが正しい書き方です。「alt="2023年の売上推移グラフ。4月から9月にかけて約1.5倍に増加"」のように、データの本質を文章で伝えます。詳細な数値は本文テキストで提示するのが理想です。</p>
+
+                        <div class="warning-box">
+                            <h4>背景画像の扱い方</h4>
+                            <p>CSS背景画像として使うものは HTMLのimg要素を使わないため、alt属性も不要です。重要な情報を伝える画像は必ず img要素で扱い、alt属性を設定しましょう。「alt属性を書くのが面倒だからCSS背景にする」は本末転倒です。</p>
+                        </div>
+                    </section>
+
+                    <section id="section6">
+                        <h2>よくある間違った書き方8例</h2>
+                        <p>alt属性で頻繁に見かける間違った書き方を、8つのパターンに分けて紹介します。自サイトでも当てはまっていないかチェックしてみてください。</p>
+
+                        <h3>1. 「画像」「写真」と書くだけ</h3>
+                        <p>alt="画像" alt="写真" は、検索エンジンにもスクリーンリーダーにも何の情報も与えません。具体的に何が写っているかを書きましょう。</p>
+
+                        <h3>2. ファイル名のまま</h3>
+                        <p>alt="IMG_1234.jpg" のような記述は典型的なNG例です。ファイル名をそのままコピペしているだけで、意味が全く伝わりません。</p>
+
+                        <h3>3. キーワードの羅列</h3>
+                        <p>alt="英会話 英会話教室 英会話スクール 新宿 英会話" のような記述は、スパム判定される可能性があります。自然な文章を心がけましょう。</p>
+
+                        <h3>4. 同じ画像に毎回同じalt</h3>
+                        <p>ページ内に複数枚の違う画像があるのに、全部同じalt属性にするのも不適切です。それぞれの画像に合った説明を書きましょう。</p>
+
+                        <h3>5. 長すぎる説明文</h3>
+                        <p>alt属性に200文字を超えるような長文を入れると、スクリーンリーダーで読み上げる際に負担になります。詳細は本文に書き、altは簡潔にまとめます。</p>
+
+                        <h3>6. 画像にない情報を書く</h3>
+                        <p>altは実際に写っているものを説明するものです。画像に写っていない「お得キャンペーン」「無料体験実施中」などを書くのは不適切です。</p>
+
+                        <h3>7. 「〜の画像」「〜の写真」をつける</h3>
+                        <p>alt="猫の画像" のように「〜の画像」と書くのは冗長です。スクリーンリーダーは事前に「画像」と認識しているため、「猫」だけで十分です。</p>
+
+                        <h3>8. 装飾画像に無理やりaltをつける</h3>
+                        <p>装飾目的の罫線や背景模様にまで alt="装飾線" などと書くのは、スクリーンリーダーユーザーにとって邪魔な情報になります。装飾画像は alt="" が正解です。</p>
+
+                        <div class="info-box">
+                            <h4>修正前後の比較例</h4>
+                            <p><strong>悪い例</strong>：&lt;img src="IMG_5678.jpg" alt="画像"&gt;</p>
+                            <p><strong>良い例</strong>：&lt;img src="tokyo-ramen-shop.jpg" alt="東京・新宿の人気ラーメン店の家系ラーメン"&gt;</p>
+                        </div>
+                    </section>
+
+                    <section id="section7">
+                        <h2>キーワードの詰め込み過ぎは逆効果</h2>
+                        <p>SEOを意識しすぎてキーワードを詰め込むのは、alt属性の最もよくある失敗パターンです。</p>
+
+                        <h3>キーワードスタッフィングの弊害</h3>
+                        <p>alt属性に不自然なキーワード羅列を行うと、Googleから「キーワードスタッフィング（詰め込み）」と判断され、SEO評価が下がります。過度な最適化は順位下落の原因になることを覚えておきましょう。</p>
+
+                        <h3>自然な文章が最も強い</h3>
+                        <p>「家系ラーメンの濃厚なとんこつ醤油スープ」のような自然な表現が、結果として画像検索でも上位表示されやすくなります。検索者の言葉遣いを意識した表現を選ぶのがコツです。</p>
+
+                        <h3>キーワードは1〜2個まで</h3>
+                        <p>alt属性内に入れるキーワードは、自然に含まれる範囲で1〜2個までが目安です。それ以上入れようとすると、文章が不自然になります。</p>
+
+                        <div class="warning-box">
+                            <h4>ペナルティ対象になる書き方</h4>
+                            <p>alt属性へのキーワード過剰詰め込み、隠しテキストの挿入、本文と関係ないキーワードの挿入などは、Googleのガイドライン違反となり、手動ペナルティの対象にもなり得ます。SEOの観点からも、健全なalt属性の記述が最優先です。</p>
+                        </div>
+
+                        <h3>チェックツールの活用</h3>
+                        <p>自サイトのalt属性の状態をチェックしたいときは、「WAVE」「axe DevTools」「Lighthouse」などのアクセシビリティチェックツールが便利です。alt属性が空になっている画像や、不適切な記述を自動で検出してくれます。</p>
+                    </section>
+
+                    <section id="section8">
+                        <h2>画像SEOの総合対策</h2>
+                        <p>alt属性はあくまで画像SEOの一部。本当に成果を出すには、画像全体の最適化が必要です。</p>
+
+                        <h3>適切なファイル形式</h3>
+                        <p>写真はJPEG、ロゴ・アイコンはPNGかSVG、アニメーションはWebPやGIF、というように目的に応じた形式を選びます。WebPは軽量で画質も高く、現代のWebサイトでは標準的な選択肢になっています。</p>
+
+                        <h3>ファイルサイズの最適化</h3>
+                        <p>画像が重いとページ表示速度が遅くなり、ユーザー体験もSEO評価も下がります。TinyPNGやImageOptimなどのツールで圧縮し、必要以上に大きな画像は避けます。一般的には1画像あたり100〜300KB程度に収めるのが目安です。</p>
+
+                        <h3>width・height属性の指定</h3>
+                        <p>img要素にはwidthとheightを明示的に指定しましょう。ブラウザが事前に画像サイズを確保でき、CLS（Cumulative Layout Shift）を防げます。Core Web Vitalsの観点でも重要な対策です。</p>
+
+                        <h3>遅延読み込み（Lazy Loading）</h3>
+                        <p>img要素にloading="lazy"属性を追加することで、画面外の画像の読み込みを遅延させられます。ページ初期表示が高速化し、UXとSEOの両方にプラスです。</p>
+
+                        <h3>レスポンシブ画像</h3>
+                        <p>srcsetとsizes属性を活用して、画面サイズに応じた最適な画像を配信することで、モバイルでの表示速度を大きく改善できます。</p>
+
+                        <h3>サイトマップに画像を含める</h3>
+                        <p>XMLサイトマップに画像情報を含めると、Google画像検索でのインデックスが促進されます。特に画像の数が多いサイトでは有効です。</p>
+
+                        <div class="info-box">
+                            <h4>画像SEOチェックリスト</h4>
+                            <ul>
+                                <li>ファイル名は英数字で内容が分かる名前に</li>
+                                <li>alt属性は自然な文章で画像内容を表現</li>
+                                <li>ファイル形式はWebP/JPEG/PNG/SVGを適切に選ぶ</li>
+                                <li>画像サイズを圧縮して軽量化</li>
+                                <li>width・height属性を明示</li>
+                                <li>Lazy Loadingを実装</li>
+                                <li>srcsetでレスポンシブ対応</li>
+                                <li>画像サイトマップの登録</li>
+                            </ul>
+                        </div>
+
+                        <h3>ライティング全体との連動</h3>
+                        <p>alt属性だけを最適化しても、本文の質が低いとSEO効果は限定的です。<a href="seo-writing-guide.html">SEOに強い文章の書き方</a>と合わせて総合的に取り組むことで、サイト全体の順位が上がります。サイト全体のWeb戦略を整えたい場合は、<a href="/lp/affordable-homepage.html">低価格で始められるホームページ制作プラン</a>もご検討ください。</p>
+                    </section>
+
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <p>alt属性は、SEO・アクセシビリティ・画像検索の3つの観点から重要な基礎要素です。キーワードを詰め込むのではなく、「画像が見えない人にその内容を伝えるなら何と書くか」を基準に、自然で正確な文章を書くことが最大のコツです。</p>
+                        <div class="summary-box">
+                            <h4>この記事のポイント</h4>
+                                                        <ul>
+                                <li>alt属性はSEO・アクセシビリティ・画像検索の3方向で重要</li>
+                                <li>装飾画像は alt="" 、コンテンツ画像は内容を文章で書く</li>
+                                <li>画像検索では具体的な被写体名・文脈キーワード・適切な長さが鍵</li>
+                                <li>スクリーンリーダーで聞いて違和感がないかが品質の判断軸</li>
+                                <li>キーワード詰め込みはペナルティ対象。自然な文章が最も強い</li>
+                                <li>alt属性は画像SEO全体の一部。ファイル名・形式・サイズ・速度もセットで最適化</li>
+                            </ul>
+                        </div>
+                        <p>alt属性は小さな要素ですが、積み重なるとサイト全体の品質を大きく左右します。ホームページ制作・改善で「何から手をつければいいか分からない」という方は、ぜひLIKaNONへ<a href="/#contact">ご相談</a>ください。既存サイトの診断からご対応いたします。</p>
+                    </section>
+
+                    <div class="article-cta">
+                        <h3>画像SEO・アクセシビリティ対策、お任せください</h3>
+                        <p>alt属性の最適化から画像SEO全体の見直しまで、LIKaNONがサポートします。</p>
+                        <a href="/#contact" class="btn btn-primary btn-large">
+                            無料相談はこちら
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h3>この記事を書いた人</h3>
+                        <div class="author-card">
+                            <div class="author-info">
+                                <p class="author-name">LIKaNON</p>
+                                <p class="author-desc">Web制作・デザイン歴8年以上。地域ビジネスのWeb集客もサポートしています。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>関連記事</h3>
+                        <ul class="related-posts">
+                            <li><a href="image-seo-guide.html">画像SEO完全ガイド</a></li>
+                            <li><a href="seo-writing-guide.html">SEOに強い文章の書き方</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="/blog.html?category=seo">SEO対策</a></li>
+                            <li><a href="/blog.html?category=web">Webの豆知識</a></li>
+                            <li><a href="/blog.html?category=sns">SNS運用の豆知識</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-profile">
+                <div class="footer-profile-inner">
+                    <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <div class="footer-profile-content">
+                        <p class="footer-profile-text">
+                            デザインとWeb制作で<strong>8年以上</strong>の実績。<br class="pc-only">
+                            HP制作・リニューアル・運用代行まで、一貫してサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LIKaNON. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <nav class="mobile-fixed-footer">
+        <a href="/#web-production">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span>Web制作</span>
+        </a>
+        <a href="/#service" class="instagram-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="url(#instagram-gradient)">
+                <defs>
+                    <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FFDC80"/>
+                        <stop offset="25%" style="stop-color:#F77737"/>
+                        <stop offset="50%" style="stop-color:#E1306C"/>
+                        <stop offset="75%" style="stop-color:#C13584"/>
+                        <stop offset="100%" style="stop-color:#833AB4"/>
+                    </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>運用代行</span>
+        </a>
+        <a href="/#contact" class="highlight-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>相談</span>
+        </a>
+        <a href="/#portfolio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <span>実績</span>
+        </a>
+        <a href="/blog.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <span>ブログ</span>
+        </a>
+    </nav>
+
+    <script src="../script.js" defer></script>
+    <script src="../blog.js" defer></script>
+</body>
+</html>
