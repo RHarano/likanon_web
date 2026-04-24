@@ -173,106 +173,73 @@
     <!-- ブログ記事一覧 -->
     <section class="blog-posts section">
         <div class="container">
-            <!-- 人気記事 -->
-            <div class="blog-section">
-                <h2 class="blog-section-title">
-                    <span class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                        </svg>
-                    </span>
-                    人気の記事
-                </h2>
-                <div class="blog-featured-grid">
-                    <article class="blog-card featured" data-category="seo">
-                        <a href="blog/seo-guide-2024.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder seo">
-                                    <span>SEO</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category seo">SEO対策</span>
-                                <h3 class="blog-card-title">【2025年最新】SEO対策完全ガイド｜AI時代の検索上位表示戦略</h3>
-                                <p class="blog-card-excerpt">AI Overview対策、E-E-A-T強化、Core Web Vitalsなど2025年最新のSEO施策を徹底解説</p>
-                                <div class="blog-card-meta">
-                                    <time datetime="2025-01-12">2025.01.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="blog-card featured" data-category="web">
-                        <a href="blog/website-speed-optimization.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>Web</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">ホームページの表示速度を改善する5つの方法</h3>
-                                <p class="blog-card-excerpt">サイトの読み込みが遅いと離脱率UP。今すぐできる表示速度改善テクニックをご紹介。</p>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-11-28">2024.11.28</time>
-                                    <span class="read-time">読了時間：5分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
+            <!-- トピックから探すナビ -->
+            <div class="topic-nav-wrapper">
+                <p class="topic-nav-label">トピックから探す</p>
+                <div class="topic-nav-grid">
+                    <a href="#subsidy-startup" class="topic-nav-item">
+                        <span class="topic-nav-icon">📑</span>
+                        <span class="topic-nav-text">
+                            <span class="topic-nav-title">補助金・開業・起業</span>
+                            <span class="topic-nav-count">4記事</span>
+                        </span>
+                    </a>
+                    <a href="#hp-production" class="topic-nav-item">
+                        <span class="topic-nav-icon">🌐</span>
+                        <span class="topic-nav-text">
+                            <span class="topic-nav-title">ホームページ制作・リニューアル</span>
+                            <span class="topic-nav-count">13記事</span>
+                        </span>
+                    </a>
+                    <a href="#seo" class="topic-nav-item">
+                        <span class="topic-nav-icon">🔍</span>
+                        <span class="topic-nav-text">
+                            <span class="topic-nav-title">SEO対策・アクセスアップ</span>
+                            <span class="topic-nav-count">16記事</span>
+                        </span>
+                    </a>
+                    <a href="#sns" class="topic-nav-item">
+                        <span class="topic-nav-icon">📱</span>
+                        <span class="topic-nav-text">
+                            <span class="topic-nav-title">SNS・Instagram運用</span>
+                            <span class="topic-nav-count">9記事</span>
+                        </span>
+                    </a>
+                    <a href="#marketing" class="topic-nav-item">
+                        <span class="topic-nav-icon">🎯</span>
+                        <span class="topic-nav-text">
+                            <span class="topic-nav-title">集客・マーケティング</span>
+                            <span class="topic-nav-count">15記事</span>
+                        </span>
+                    </a>
+                    <a href="#industry" class="topic-nav-item">
+                        <span class="topic-nav-icon">🏪</span>
+                        <span class="topic-nav-text">
+                            <span class="topic-nav-title">業種別のWeb集客</span>
+                            <span class="topic-nav-count">13記事</span>
+                        </span>
+                    </a>
+                    <a href="#tools" class="topic-nav-item">
+                        <span class="topic-nav-icon">🛠</span>
+                        <span class="topic-nav-text">
+                            <span class="topic-nav-title">Webツール・運用・保守</span>
+                            <span class="topic-nav-count">9記事</span>
+                        </span>
+                    </a>
                 </div>
             </div>
 
-            <!-- 最新記事 -->
-            <div class="blog-section">
-                <h2 class="blog-section-title">
-                    <span class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                    </span>
-                    最新記事
-                </h2>
+            <div class="blog-section" id="subsidy-startup">
+                <div class="topic-section-header">
+                    <h2 class="topic-section-title">
+                        <span class="topic-section-icon">📑</span>
+                        補助金・開業・起業
+                        <span class="topic-section-count">4記事</span>
+                    </h2>
+                    <p class="topic-section-desc">起業・開業時に知っておきたい補助金活用・開業手続きの知識</p>
+                </div>
                 <div class="blog-grid">
-                    <!-- 持続化補助金でホームページを作る方法 -->
-                    <article class="blog-card" data-category="marketing">
-                        <a href="blog/sustainability-subsidy-homepage.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder marketing">
-                                    <span>補助金</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category marketing">集客・マーケティング</span>
-                                <h3 class="blog-card-title">持続化補助金でホームページを作る方法｜申請手順・対象経費・採択のコツ完全ガイド</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：12分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- IT導入補助金の使い方 -->
-                    <article class="blog-card" data-category="marketing">
-                        <a href="blog/it-subsidy-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder marketing">
-                                    <span>IT補助金</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category marketing">集客・マーケティング</span>
-                                <h3 class="blog-card-title">IT導入補助金の使い方｜申請手順・対象ITツール・個人事業主の活用法ガイド</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：12分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 開業届の書き方・出し方 -->
-                    <article class="blog-card" data-category="column">
+                    <article class="blog-card is-new" data-category="column">
                         <a href="blog/business-registration-guide.html" class="blog-card-link">
                             <div class="blog-card-image">
                                 <div class="blog-card-placeholder column">
@@ -289,548 +256,7 @@
                             </div>
                         </a>
                     </article>
-                    <!-- Instagramリールの作り方・伸ばし方 -->
-                    <article class="blog-card" data-category="sns">
-                        <a href="blog/instagram-reels-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder sns">
-                                    <span>リール</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category sns">SNS運用の豆知識</span>
-                                <h3 class="blog-card-title">Instagramリールの作り方・伸ばし方｜個人事業主でもバズる動画を作るコツ</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：12分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- Instagramストーリーズ活用術 -->
-                    <article class="blog-card" data-category="sns">
-                        <a href="blog/instagram-stories-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder sns">
-                                    <span>ストーリーズ</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category sns">SNS運用の豆知識</span>
-                                <h3 class="blog-card-title">Instagramストーリーズ活用術｜フォロワーと絆を深める使い方完全ガイド</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：12分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- ChatGPTビジネス活用ガイド -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/chatgpt-business-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>ChatGPT</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">ChatGPTビジネス活用ガイド｜個人事業主・小さなお店のための使い方完全版</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：13分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- パーソナルトレーナー・ジムの集客方法 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/personal-trainer-web-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>ジム</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">パーソナルトレーナー・ジムの集客方法｜ホームページ×SNSで予約が増える戦略</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- カウンセラー・セラピストのHP集客 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/counselor-therapist-web-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>カウンセラー</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">カウンセラー・セラピストのHP集客ガイド｜信頼されるホームページの作り方</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：11分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 花屋・フラワーショップの集客 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/flower-shop-web-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>花屋</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">花屋・フラワーショップの集客方法｜HP×Instagramで売上を伸ばすコツ</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 英会話教室・スクールの集客 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/english-school-web-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>英会話</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">英会話教室・スクールの集客方法｜HP×SEOで生徒が増える戦略</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：11分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- alt属性の書き方 -->
-                    <article class="blog-card" data-category="seo">
-                        <a href="blog/alt-attribute-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder seo">
-                                    <span>alt属性</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category seo">SEO対策</span>
-                                <h3 class="blog-card-title">alt属性の書き方完全ガイド｜SEO・アクセシビリティ・画像検索で成果を出す方法</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：11分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- Googleフォームの作り方・活用ガイド -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/google-forms-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>フォーム</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">Googleフォームの作り方・活用ガイド｜個人事業主の問い合わせ・予約・アンケート活用法</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：13分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- SNS運用代行とは -->
-                    <article class="blog-card" data-category="marketing">
-                        <a href="blog/sns-management-outsourcing-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder marketing">
-                                    <span>SNS代行</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category marketing">集客・マーケティング</span>
-                                <h3 class="blog-card-title">SNS運用代行とは？依頼するメリット・費用相場・失敗しない選び方完全ガイド</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：12分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- Instagram運用代行 料金相場 -->
-                    <article class="blog-card" data-category="marketing">
-                        <a href="blog/instagram-outsourcing-pricing-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder marketing">
-                                    <span>料金</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category marketing">集客・マーケティング</span>
-                                <h3 class="blog-card-title">Instagram運用代行の料金相場｜月3万円〜30万円の違いとプラン選びのコツ</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：12分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- SNS運用 自分でやる vs 外注 -->
-                    <article class="blog-card" data-category="sns">
-                        <a href="blog/sns-diy-vs-outsourcing.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder sns">
-                                    <span>自作 vs 外注</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category sns">SNS運用の豆知識</span>
-                                <h3 class="blog-card-title">SNS運用は自分でやる？外注する？個人事業主のための判断基準10選</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：12分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- SNS運用代行で失敗するパターン -->
-                    <article class="blog-card" data-category="marketing">
-                        <a href="blog/sns-outsourcing-failure-cases.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder marketing">
-                                    <span>失敗回避</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category marketing">集客・マーケティング</span>
-                                <h3 class="blog-card-title">SNS運用代行で失敗する7つのパターン｜事例と回避策を徹底解説</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：12分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- LINE公式アカウント活用ガイド -->
-                    <article class="blog-card" data-category="sns">
-                        <a href="blog/line-official-account-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder sns">
-                                    <span>LINE</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category sns">SNS運用の豆知識</span>
-                                <h3 class="blog-card-title">LINE公式アカウントの始め方・活用ガイド｜集客に使える機能と運用のコツ</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- Google広告入門 -->
-                    <article class="blog-card" data-category="marketing">
-                        <a href="blog/google-ads-beginner-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder marketing">
-                                    <span>広告</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category marketing">集客・マーケティング</span>
-                                <h3 class="blog-card-title">Google広告の始め方｜個人事業主・小さなお店のためのリスティング広告入門</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 口コミ・レビュー集客 -->
-                    <article class="blog-card" data-category="marketing">
-                        <a href="blog/review-reputation-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder marketing">
-                                    <span>口コミ</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category marketing">集客・マーケティング</span>
-                                <h3 class="blog-card-title">口コミ・レビュー集客ガイド｜Googleの評価を上げて来店につなげる方法</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- ネイルサロンのホームページ集客 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/nail-salon-web-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>ネイル</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">ネイルサロンのホームページ集客ガイド｜予約が増えるサイトの作り方</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- エステサロンのWeb集客 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/esthetic-salon-web-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>エステ</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">エステサロンのWeb集客完全ガイド｜新規顧客を獲得するホームページ戦略</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 士業のホームページ制作 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/law-firm-website-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>士業</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">士業（弁護士・税理士・行政書士）のホームページ制作ガイド｜信頼される事務所サイトの作り方</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 学習塾・スクールのWeb集客 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/school-tutoring-web-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>塾</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">学習塾・スクールのWeb集客ガイド｜生徒が集まるホームページの作り方</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 予約システム導入ガイド -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/booking-system-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>予約</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">予約システム導入完全ガイド｜小さなお店におすすめの無料・有料ツール比較</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：12分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- ホームページのセキュリティ対策 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/website-security-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>セキュリティ</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">ホームページのセキュリティ対策ガイド｜小規模サイトでも狙われる理由と対処法</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- Canvaデザインガイド -->
-                    <article class="blog-card" data-category="sns">
-                        <a href="blog/canva-design-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder sns">
-                                    <span>Canva</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category sns">SNS運用の豆知識</span>
-                                <h3 class="blog-card-title">Canvaで作るバナー・SNS画像デザイン｜初心者でもプロ級の仕上がりにするコツ</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- メールマーケティング入門 -->
-                    <article class="blog-card" data-category="marketing">
-                        <a href="blog/email-marketing-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder marketing">
-                                    <span>メール</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category marketing">集客・マーケティング</span>
-                                <h3 class="blog-card-title">メールマーケティング入門｜個人事業主のためのメルマガ・ステップメール活用術</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 動画マーケティング入門 -->
-                    <article class="blog-card" data-category="marketing">
-                        <a href="blog/video-marketing-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder marketing">
-                                    <span>動画</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category marketing">集客・マーケティング</span>
-                                <h3 class="blog-card-title">動画マーケティング入門｜YouTube・リールで集客する方法</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 競合サイト分析 -->
-                    <article class="blog-card" data-category="seo">
-                        <a href="blog/competitor-analysis-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder seo">
-                                    <span>競合分析</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category seo">SEO対策</span>
-                                <h3 class="blog-card-title">競合サイト分析の方法｜無料ツールで他社のSEO・集客戦略を調べるコツ</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- リピーター獲得・顧客維持 -->
-                    <article class="blog-card" data-category="marketing">
-                        <a href="blog/customer-retention-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder marketing">
-                                    <span>リピーター</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category marketing">集客・マーケティング</span>
-                                <h3 class="blog-card-title">リピーター獲得・顧客維持の戦略ガイド｜小さなお店のファンづくり</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- ペルソナ設定 -->
-                    <article class="blog-card" data-category="marketing">
-                        <a href="blog/persona-targeting-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder marketing">
-                                    <span>ペルソナ</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category marketing">集客・マーケティング</span>
-                                <h3 class="blog-card-title">ペルソナ設定とターゲティングガイド｜「誰に届けるか」で集客は変わる</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- コンテンツマーケティング -->
-                    <article class="blog-card" data-category="marketing">
-                        <a href="blog/content-marketing-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder marketing">
-                                    <span>コンテンツ</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category marketing">集客・マーケティング</span>
-                                <h3 class="blog-card-title">コンテンツマーケティング入門｜ブログ・SNSで見込み客を集める方法</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- チラシ×Web連携 -->
-                    <article class="blog-card" data-category="marketing">
-                        <a href="blog/flyer-web-integration-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder marketing">
-                                    <span>チラシ×Web</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category marketing">集客・マーケティング</span>
-                                <h3 class="blog-card-title">チラシ×Web連携集客術｜紙とネットの相乗効果で売上を伸ばす方法</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 開業時のWeb準備 -->
-                    <article class="blog-card" data-category="web">
+                    <article class="blog-card is-new" data-category="web">
                         <a href="blog/business-startup-web-guide.html" class="blog-card-link">
                             <div class="blog-card-image">
                                 <div class="blog-card-placeholder web">
@@ -847,241 +273,53 @@
                             </div>
                         </a>
                     </article>
-                    <!-- ドメイン・サーバーの選び方 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/domain-server-guide.html" class="blog-card-link">
+                    <article class="blog-card is-new" data-category="marketing">
+                        <a href="blog/sustainability-subsidy-homepage.html" class="blog-card-link">
                             <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>ドメイン</span>
+                                <div class="blog-card-placeholder marketing">
+                                    <span>補助金</span>
                                 </div>
                             </div>
                             <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">ドメイン・サーバーの選び方ガイド｜初心者でも失敗しない基礎知識</h3>
+                                <span class="blog-card-category marketing">集客・マーケティング</span>
+                                <h3 class="blog-card-title">持続化補助金でホームページを作る方法｜申請手順・対象経費・採択のコツ完全ガイド</h3>
                                 <div class="blog-card-meta">
                                     <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
+                                    <span class="read-time">読了時間：12分</span>
                                 </div>
                             </div>
                         </a>
                     </article>
-                    <!-- AI活用術 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/ai-tools-small-business-guide.html" class="blog-card-link">
+                    <article class="blog-card is-new" data-category="marketing">
+                        <a href="blog/it-subsidy-guide.html" class="blog-card-link">
                             <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>AI</span>
+                                <div class="blog-card-placeholder marketing">
+                                    <span>IT補助金</span>
                                 </div>
                             </div>
                             <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">小さなお店のAI活用術｜ChatGPT・画像生成AIをビジネスに使う方法</h3>
+                                <span class="blog-card-category marketing">集客・マーケティング</span>
+                                <h3 class="blog-card-title">IT導入補助金の使い方｜申請手順・対象ITツール・個人事業主の活用法ガイド</h3>
                                 <div class="blog-card-meta">
                                     <time datetime="2026-04-12">2026.04.12</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- スマホ対応サイトを安く依頼する方法 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/mobile-site-affordable-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>モバイル</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Web制作</span>
-                                <h3 class="blog-card-title">スマホ対応サイトを安く依頼する方法｜モバイルサイト制作の費用相場</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-03-03">2026.03.03</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- ホームページが重い原因と解決方法 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/slow-website-fix-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>速度改善</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Web制作</span>
-                                <h3 class="blog-card-title">ホームページが重い原因と解決方法｜表示速度を改善して離脱を防ぐ</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-03-03">2026.03.03</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 福岡でホームページ制作会社を選ぶポイント -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/fukuoka-homepage-agency-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>福岡</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Web制作</span>
-                                <h3 class="blog-card-title">福岡でホームページ制作会社を選ぶ5つのポイント【2026年版】</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-03-03">2026.03.03</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 個人事業主がホームページで集客する方法 -->
-                    <article class="blog-card" data-category="column">
-                        <a href="blog/sole-proprietor-web-marketing.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder column">
-                                    <span>集客</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category column">マーケティング</span>
-                                <h3 class="blog-card-title">個人事業主がホームページで集客する方法｜低予算で成果を出すコツ</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-03-03">2026.03.03</time>
                                     <span class="read-time">読了時間：12分</span>
                                 </div>
                             </div>
                         </a>
                     </article>
-                    <!-- ホームページのアクセス数を増やす10の方法 -->
-                    <article class="blog-card" data-category="seo">
-                        <a href="blog/increase-website-traffic.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder seo">
-                                    <span>SEO</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category seo">マーケティング</span>
-                                <h3 class="blog-card-title">ホームページのアクセス数を増やす10の方法【初心者向け】</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-03-03">2026.03.03</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 小さなお店のWeb集客完全ガイド -->
-                    <article class="blog-card" data-category="column">
-                        <a href="blog/small-shop-web-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder column">
-                                    <span>集客</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category column">マーケティング</span>
-                                <h3 class="blog-card-title">小さなお店のWeb集客完全ガイド｜予算別の施策を解説</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-03-03">2026.03.03</time>
-                                    <span class="read-time">読了時間：12分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 無料でできるSEO対策入門 -->
-                    <article class="blog-card" data-category="seo">
-                        <a href="blog/free-seo-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder seo">
-                                    <span>SEO</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category seo">SEO対策</span>
-                                <h3 class="blog-card-title">無料でできるSEO対策入門｜今日から始める検索上位表示</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-03-03">2026.03.03</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 問い合わせが来ないホームページの改善策 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/no-inquiry-website-fix.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>CV改善</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Web制作</span>
-                                <h3 class="blog-card-title">問い合わせが来ないホームページの特徴と今すぐできる改善策</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-03-03">2026.03.03</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 整体院・治療院のホームページ集客術 -->
-                    <article class="blog-card" data-category="column">
-                        <a href="blog/seitaiin-web-marketing.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder column">
-                                    <span>整体院</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category column">業種別Web集客</span>
-                                <h3 class="blog-card-title">整体院・治療院のホームページ集客術｜新規患者を増やす方法</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-03-03">2026.03.03</time>
-                                    <span class="read-time">読了時間：12分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 美容室・サロンで予約を増やす方法 -->
-                    <article class="blog-card" data-category="column">
-                        <a href="blog/salon-booking-increase.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder column">
-                                    <span>サロン</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category column">業種別Web集客</span>
-                                <h3 class="blog-card-title">美容室・サロンのホームページで予約を増やす7つの方法</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-03-03">2026.03.03</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- 飲食店のホームページ活用術 -->
-                    <article class="blog-card" data-category="column">
-                        <a href="blog/restaurant-website-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder column">
-                                    <span>飲食店</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category column">業種別Web集客</span>
-                                <h3 class="blog-card-title">飲食店のホームページ活用術｜来店につなげるWeb戦略</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2026-03-03">2026.03.03</time>
-                                    <span class="read-time">読了時間：10分</span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- ホームページ制作の費用相場 -->
+                </div>
+            </div>
+
+            <div class="blog-section" id="hp-production">
+                <div class="topic-section-header">
+                    <h2 class="topic-section-title">
+                        <span class="topic-section-icon">🌐</span>
+                        ホームページ制作・リニューアル
+                        <span class="topic-section-count">13記事</span>
+                    </h2>
+                    <p class="topic-section-desc">HP制作の費用・流れ・構成・ツール選びの基本</p>
+                </div>
+                <div class="blog-grid">
                     <article class="blog-card" data-category="web">
                         <a href="blog/homepage-cost-guide-2026.html" class="blog-card-link">
                             <div class="blog-card-image">
@@ -1099,61 +337,54 @@
                             </div>
                         </a>
                     </article>
-                    <!-- 問い合わせが増えるホームページの特徴 -->
                     <article class="blog-card" data-category="web">
-                        <a href="blog/website-inquiry-improvement-guide.html" class="blog-card-link">
+                        <a href="blog/affordable-homepage-guide.html" class="blog-card-link">
                             <div class="blog-card-image">
                                 <div class="blog-card-placeholder web">
-                                    <span>CV改善</span>
+                                    <span>Web</span>
                                 </div>
                             </div>
                             <div class="blog-card-content">
-                                <span class="blog-card-category web">CV改善</span>
-                                <h3 class="blog-card-title">問い合わせが増えるホームページの5つの特徴｜CV改善の具体策</h3>
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">ホームページ制作を格安で依頼する方法｜失敗しない選び方5つのポイント</h3>
                                 <div class="blog-card-meta">
-                                    <time datetime="2026-02-06">2026.02.06</time>
-                                    <span class="read-time">読了時間：12分</span>
+                                    <time datetime="2024-12-29">2024.12.29</time>
                                 </div>
                             </div>
                         </a>
                     </article>
-                    <!-- ホームページで集客できない原因と改善策 -->
                     <article class="blog-card" data-category="web">
-                        <a href="blog/homepage-not-getting-customers.html" class="blog-card-link">
+                        <a href="blog/homepage-process-guide.html" class="blog-card-link">
                             <div class="blog-card-image">
                                 <div class="blog-card-placeholder web">
-                                    <span>集客</span>
+                                    <span>Web</span>
                                 </div>
                             </div>
                             <div class="blog-card-content">
-                                <span class="blog-card-category web">Web集客</span>
-                                <h3 class="blog-card-title">ホームページで集客できない7つの原因と改善策｜問い合わせが来ない理由を徹底解説</h3>
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">ホームページ制作の流れ｜初心者でもわかる7つのステップ</h3>
                                 <div class="blog-card-meta">
-                                    <time datetime="2026-01-20">2026.01.20</time>
-                                    <span class="read-time">読了時間：12分</span>
+                                    <time datetime="2024-12-14">2024.12.14</time>
                                 </div>
                             </div>
                         </a>
                     </article>
-                    <!-- 個人事業主の集客方法 -->
-                    <article class="blog-card" data-category="column">
-                        <a href="blog/sole-proprietor-marketing-guide-2026.html" class="blog-card-link">
+                    <article class="blog-card" data-category="web">
+                        <a href="blog/homepage-structure-guide.html" class="blog-card-link">
                             <div class="blog-card-image">
-                                <div class="blog-card-placeholder column">
-                                    <span>集客</span>
+                                <div class="blog-card-placeholder web">
+                                    <span>Web</span>
                                 </div>
                             </div>
                             <div class="blog-card-content">
-                                <span class="blog-card-category column">集客・マーケティング</span>
-                                <h3 class="blog-card-title">【2026年最新】個人事業主の集客方法10選｜予算別・業種別に徹底解説</h3>
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">ホームページに必要なページ構成｜効果的なサイト設計のコツ</h3>
                                 <div class="blog-card-meta">
-                                    <time datetime="2026-01-20">2026.01.20</time>
-                                    <span class="read-time">読了時間：15分</span>
+                                    <time datetime="2024-12-15">2024.12.15</time>
                                 </div>
                             </div>
                         </a>
                     </article>
-                    <!-- ホームページリニューアルのタイミング -->
                     <article class="blog-card" data-category="web">
                         <a href="blog/homepage-renewal-timing-guide.html" class="blog-card-link">
                             <div class="blog-card-image">
@@ -1171,7 +402,314 @@
                             </div>
                         </a>
                     </article>
-                    <!-- MEO対策完全ガイド -->
+                    <article class="blog-card" data-category="web">
+                        <a href="blog/website-renewal-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>Web</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">ホームページリニューアルのタイミング｜成功のポイントと費用相場</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-12-20">2024.12.20</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="web">
+                        <a href="blog/mobile-site-affordable-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>モバイル</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Web制作</span>
+                                <h3 class="blog-card-title">スマホ対応サイトを安く依頼する方法｜モバイルサイト制作の費用相場</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-03-03">2026.03.03</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="web">
+                        <a href="blog/wordpress-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>Web</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">WordPressとは？メリット・デメリットを初心者向けに徹底解説</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-12-22">2024.12.22</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="web">
+                        <a href="blog/landing-page-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>Web</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">【2025年版】LP（ランディングページ）の作り方完全ガイド｜構成・費用・成功のコツ</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2025-01-08">2025.01.08</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/google-forms-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>フォーム</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">Googleフォームの作り方・活用ガイド｜個人事業主の問い合わせ・予約・アンケート活用法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：13分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/domain-server-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>ドメイン</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">ドメイン・サーバーの選び方ガイド｜初心者でも失敗しない基礎知識</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="column">
+                        <a href="blog/freelance-vs-agency.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder column">
+                                    <span>Column</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category column">お役立ちコラム</span>
+                                <h3 class="blog-card-title">フリーランス vs 制作会社｜Web制作の依頼先はどちらがいい？</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-12-24">2024.12.24</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="web">
+                        <a href="blog/fukuoka-homepage-agency-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>福岡</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Web制作</span>
+                                <h3 class="blog-card-title">福岡でホームページ制作会社を選ぶ5つのポイント【2026年版】</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-03-03">2026.03.03</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="blog-section" id="seo">
+                <div class="topic-section-header">
+                    <h2 class="topic-section-title">
+                        <span class="topic-section-icon">🔍</span>
+                        SEO対策・アクセスアップ
+                        <span class="topic-section-count">16記事</span>
+                    </h2>
+                    <p class="topic-section-desc">検索上位表示・アクセス増加のための具体的な施策</p>
+                </div>
+                <div class="blog-grid">
+                    <article class="blog-card" data-category="seo">
+                        <a href="blog/seo-guide-2024.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">SEO対策のやり方｜初心者でも今すぐできる完全ガイド</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2025-01-12">2025.01.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="seo">
+                        <a href="blog/free-seo-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">無料でできるSEO対策入門｜今日から始める検索上位表示</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-03-03">2026.03.03</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="seo">
+                        <a href="blog/keyword-research-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">【初心者向け】SEOキーワード選定の完全ガイド｜検索上位を狙う方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-12-23">2024.12.23</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="seo">
+                        <a href="blog/search-intent-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">【SEO必須】検索意図（サーチインテント）完全ガイド｜4つの種類と見極め方</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-12-30">2024.12.30</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="seo">
+                        <a href="blog/seo-writing-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">【完全版】SEOライティングの書き方｜検索1位を狙う記事作成術</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-12-30">2024.12.30</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="seo">
+                        <a href="blog/eeat-seo-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">【2025年最新】E-E-A-T完全ガイド｜Googleが重視する信頼性・専門性の高め方</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-12-30">2024.12.30</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="seo">
+                        <a href="blog/mobile-seo-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">【2025年版】モバイルSEO完全ガイド｜モバイルファーストインデックス対応の必須施策</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-12-30">2024.12.30</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="seo">
+                        <a href="blog/alt-attribute-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>alt属性</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">alt属性の書き方完全ガイド｜SEO・アクセシビリティ・画像検索で成果を出す方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：11分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="seo">
+                        <a href="blog/backlink-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">被リンクとは？SEO効果と安全な獲得方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-12-18">2024.12.18</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="seo">
+                        <a href="blog/core-web-vitals-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">【2025年版】Core Web Vitals完全ガイド｜LCP・FID・CLSの改善方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-12-30">2024.12.30</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
                     <article class="blog-card" data-category="seo">
                         <a href="blog/meo-google-business-profile-guide.html" class="blog-card-link">
                             <div class="blog-card-image">
@@ -1189,7 +727,6 @@
                             </div>
                         </a>
                     </article>
-                    <!-- Google Search Console完全ガイド -->
                     <article class="blog-card" data-category="seo">
                         <a href="blog/google-search-console-guide.html" class="blog-card-link">
                             <div class="blog-card-image">
@@ -1206,188 +743,6 @@
                             </div>
                         </a>
                     </article>
-
-                    <!-- LP（ランディングページ）の作り方完全ガイド -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/landing-page-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>Web</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">【2025年版】LP（ランディングページ）の作り方完全ガイド｜構成・費用・成功のコツ</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2025-01-08">2025.01.08</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- 業界別HP成功事例 -->
-                    <article class="blog-card" data-category="column">
-                        <a href="blog/industry-hp-success-cases.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder column">
-                                    <span>Column</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category column">お役立ちコラム</span>
-                                <h3 class="blog-card-title">【業界別】ホームページ成功事例｜整体院・サロン・飲食店の集客実例</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2025-01-02">2025.01.02</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- 個人事業主がHPを持つべき理由 -->
-                    <article class="blog-card" data-category="column">
-                        <a href="blog/sole-proprietor-sns-not-enough.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder column">
-                                    <span>Column</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category column">お役立ちコラム</span>
-                                <h3 class="blog-card-title">個人事業主がHPを持つべき理由｜SNSだけじゃダメな理由</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2025-01-02">2025.01.02</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- E-E-A-T完全ガイド -->
-                    <article class="blog-card" data-category="seo">
-                        <a href="blog/eeat-seo-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder seo">
-                                    <span>SEO</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category seo">SEO対策</span>
-                                <h3 class="blog-card-title">【2025年最新】E-E-A-T完全ガイド｜Googleが重視する信頼性・専門性の高め方</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-30">2024.12.30</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- 検索意図完全ガイド -->
-                    <article class="blog-card" data-category="seo">
-                        <a href="blog/search-intent-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder seo">
-                                    <span>SEO</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category seo">SEO対策</span>
-                                <h3 class="blog-card-title">【SEO必須】検索意図（サーチインテント）完全ガイド｜4つの種類と見極め方</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-30">2024.12.30</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- モバイルSEO完全ガイド -->
-                    <article class="blog-card" data-category="seo">
-                        <a href="blog/mobile-seo-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder seo">
-                                    <span>SEO</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category seo">SEO対策</span>
-                                <h3 class="blog-card-title">【2025年版】モバイルSEO完全ガイド｜モバイルファーストインデックス対応の必須施策</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-30">2024.12.30</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- SEOライティング完全ガイド -->
-                    <article class="blog-card" data-category="seo">
-                        <a href="blog/seo-writing-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder seo">
-                                    <span>SEO</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category seo">SEO対策</span>
-                                <h3 class="blog-card-title">【完全版】SEOライティングの書き方｜検索1位を狙う記事作成術</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-30">2024.12.30</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- Core Web Vitals完全ガイド -->
-                    <article class="blog-card" data-category="seo">
-                        <a href="blog/core-web-vitals-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder seo">
-                                    <span>SEO</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category seo">SEO対策</span>
-                                <h3 class="blog-card-title">【2025年版】Core Web Vitals完全ガイド｜LCP・FID・CLSの改善方法</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-30">2024.12.30</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- ブログのアクセス増やす方法 -->
-                    <article class="blog-card" data-category="seo">
-                        <a href="blog/beginner-guide-increase-blog-traffic-seo-social-media-methods.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder seo">
-                                    <span>SEO</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category seo">SEO対策</span>
-                                <h3 class="blog-card-title">【初心者必見】ブログのアクセス増やす方法を徹底解説！検索エンジン・SNS集客の具体的手法</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-30">2024.12.30</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- ホームページ制作を格安で依頼する方法 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/affordable-homepage-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>Web</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">ホームページ制作を格安で依頼する方法｜失敗しない選び方5つのポイント</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-29">2024.12.29</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- SEO対策の効果を徹底検証 -->
                     <article class="blog-card" data-category="seo">
                         <a href="blog/2025-seo-strategy-benefits-beyond-rankings.html" class="blog-card-link">
                             <div class="blog-card-image">
@@ -1404,82 +759,42 @@
                             </div>
                         </a>
                     </article>
-
-                    <!-- 初心者のブログ始め方完全ガイド -->
-                    <article class="blog-card" data-category="column">
-                        <a href="blog/complete-beginner-blog-guide-setup-to-monetization.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder column">
-                                    <span>Column</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category column">お役立ちコラム</span>
-                                <h3 class="blog-card-title">【完全ガイド】初心者のブログ始め方｜開設から収益化まで全手順を徹底解説</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-27">2024.12.27</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- ホームページを放置するとどうなる？ -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/website-neglect-risks.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>Web</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">ホームページを放置するとどうなる？6つのリスクと今すぐできる対策</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-26">2024.12.26</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- 個人事業主のホームページ制作完全ガイド -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/sole-proprietor-homepage-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>Web</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">【2025年版】個人事業主のホームページ制作完全ガイド｜作り方・費用・補助金まで</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-25">2024.12.25</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- フリーランス vs 制作会社 -->
-                    <article class="blog-card" data-category="column">
-                        <a href="blog/freelance-vs-agency.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder column">
-                                    <span>Column</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category column">お役立ちコラム</span>
-                                <h3 class="blog-card-title">フリーランス vs 制作会社｜Web制作の依頼先はどちらがいい？</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-24">2024.12.24</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- SEOキーワード選定ガイド -->
                     <article class="blog-card" data-category="seo">
-                        <a href="blog/keyword-research-guide.html" class="blog-card-link">
+                        <a href="blog/increase-website-traffic.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>SEO</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">マーケティング</span>
+                                <h3 class="blog-card-title">ホームページのアクセス数を増やす10の方法【初心者向け】</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-03-03">2026.03.03</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="seo">
+                        <a href="blog/competitor-analysis-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder seo">
+                                    <span>競合分析</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category seo">SEO対策</span>
+                                <h3 class="blog-card-title">競合サイト分析の方法｜無料ツールで他社のSEO・集客戦略を調べるコツ</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="seo">
+                        <a href="blog/beginner-guide-increase-blog-traffic-seo-social-media-methods.html" class="blog-card-link">
                             <div class="blog-card-image">
                                 <div class="blog-card-placeholder seo">
                                     <span>SEO</span>
@@ -1487,15 +802,429 @@
                             </div>
                             <div class="blog-card-content">
                                 <span class="blog-card-category seo">SEO対策</span>
-                                <h3 class="blog-card-title">【初心者向け】SEOキーワード選定の完全ガイド｜検索上位を狙う方法</h3>
+                                <h3 class="blog-card-title">【初心者必見】ブログのアクセス増やす方法を徹底解説！検索エンジン・SNS集客の具体的手法</h3>
                                 <div class="blog-card-meta">
-                                    <time datetime="2024-12-23">2024.12.23</time>
+                                    <time datetime="2024-12-30">2024.12.30</time>
                                 </div>
                             </div>
                         </a>
                     </article>
+                </div>
+            </div>
 
-                    <!-- ECサイト構築ガイド -->
+            <div class="blog-section" id="sns">
+                <div class="topic-section-header">
+                    <h2 class="topic-section-title">
+                        <span class="topic-section-icon">📱</span>
+                        SNS・Instagram運用
+                        <span class="topic-section-count">9記事</span>
+                    </h2>
+                    <p class="topic-section-desc">Instagram・LINE・SNS運用代行のノウハウ</p>
+                </div>
+                <div class="blog-grid">
+                    <article class="blog-card is-new" data-category="sns">
+                        <a href="blog/line-official-account-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder sns">
+                                    <span>LINE</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category sns">SNS運用の豆知識</span>
+                                <h3 class="blog-card-title">LINE公式アカウントの始め方・活用ガイド｜集客に使える機能と運用のコツ</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="sns">
+                        <a href="blog/instagram-reels-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder sns">
+                                    <span>リール</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category sns">SNS運用の豆知識</span>
+                                <h3 class="blog-card-title">Instagramリールの作り方・伸ばし方｜個人事業主でもバズる動画を作るコツ</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：12分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="sns">
+                        <a href="blog/instagram-stories-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder sns">
+                                    <span>ストーリーズ</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category sns">SNS運用の豆知識</span>
+                                <h3 class="blog-card-title">Instagramストーリーズ活用術｜フォロワーと絆を深める使い方完全ガイド</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：12分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="sns">
+                        <a href="blog/canva-design-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder sns">
+                                    <span>Canva</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category sns">SNS運用の豆知識</span>
+                                <h3 class="blog-card-title">Canvaで作るバナー・SNS画像デザイン｜初心者でもプロ級の仕上がりにするコツ</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="marketing">
+                        <a href="blog/sns-management-outsourcing-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder marketing">
+                                    <span>SNS代行</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category marketing">集客・マーケティング</span>
+                                <h3 class="blog-card-title">SNS運用代行とは？依頼するメリット・費用相場・失敗しない選び方完全ガイド</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：12分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="marketing">
+                        <a href="blog/instagram-outsourcing-pricing-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder marketing">
+                                    <span>料金</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category marketing">集客・マーケティング</span>
+                                <h3 class="blog-card-title">Instagram運用代行の料金相場｜月3万円〜30万円の違いとプラン選びのコツ</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：12分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="sns">
+                        <a href="blog/sns-diy-vs-outsourcing.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder sns">
+                                    <span>自作 vs 外注</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category sns">SNS運用の豆知識</span>
+                                <h3 class="blog-card-title">SNS運用は自分でやる？外注する？個人事業主のための判断基準10選</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：12分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="marketing">
+                        <a href="blog/sns-outsourcing-failure-cases.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder marketing">
+                                    <span>失敗回避</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category marketing">集客・マーケティング</span>
+                                <h3 class="blog-card-title">SNS運用代行で失敗する7つのパターン｜事例と回避策を徹底解説</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：12分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="column">
+                        <a href="blog/sole-proprietor-sns-not-enough.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder column">
+                                    <span>Column</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category column">お役立ちコラム</span>
+                                <h3 class="blog-card-title">個人事業主がHPを持つべき理由｜SNSだけじゃダメな理由</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2025-01-02">2025.01.02</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="blog-section" id="marketing">
+                <div class="topic-section-header">
+                    <h2 class="topic-section-title">
+                        <span class="topic-section-icon">🎯</span>
+                        集客・マーケティング
+                        <span class="topic-section-count">15記事</span>
+                    </h2>
+                    <p class="topic-section-desc">広告・メール・コンテンツ・問い合わせ改善などの集客施策</p>
+                </div>
+                <div class="blog-grid">
+                    <article class="blog-card is-new" data-category="marketing">
+                        <a href="blog/google-ads-beginner-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder marketing">
+                                    <span>広告</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category marketing">集客・マーケティング</span>
+                                <h3 class="blog-card-title">Google広告の始め方｜個人事業主・小さなお店のためのリスティング広告入門</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="marketing">
+                        <a href="blog/email-marketing-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder marketing">
+                                    <span>メール</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category marketing">集客・マーケティング</span>
+                                <h3 class="blog-card-title">メールマーケティング入門｜個人事業主のためのメルマガ・ステップメール活用術</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="marketing">
+                        <a href="blog/video-marketing-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder marketing">
+                                    <span>動画</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category marketing">集客・マーケティング</span>
+                                <h3 class="blog-card-title">動画マーケティング入門｜YouTube・リールで集客する方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="marketing">
+                        <a href="blog/content-marketing-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder marketing">
+                                    <span>コンテンツ</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category marketing">集客・マーケティング</span>
+                                <h3 class="blog-card-title">コンテンツマーケティング入門｜ブログ・SNSで見込み客を集める方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="marketing">
+                        <a href="blog/customer-retention-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder marketing">
+                                    <span>リピーター</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category marketing">集客・マーケティング</span>
+                                <h3 class="blog-card-title">リピーター獲得・顧客維持の戦略ガイド｜小さなお店のファンづくり</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="marketing">
+                        <a href="blog/persona-targeting-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder marketing">
+                                    <span>ペルソナ</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category marketing">集客・マーケティング</span>
+                                <h3 class="blog-card-title">ペルソナ設定とターゲティングガイド｜「誰に届けるか」で集客は変わる</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="marketing">
+                        <a href="blog/flyer-web-integration-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder marketing">
+                                    <span>チラシ×Web</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category marketing">集客・マーケティング</span>
+                                <h3 class="blog-card-title">チラシ×Web連携集客術｜紙とネットの相乗効果で売上を伸ばす方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="marketing">
+                        <a href="blog/review-reputation-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder marketing">
+                                    <span>口コミ</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category marketing">集客・マーケティング</span>
+                                <h3 class="blog-card-title">口コミ・レビュー集客ガイド｜Googleの評価を上げて来店につなげる方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="web">
+                        <a href="blog/no-inquiry-website-fix.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>CV改善</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Web制作</span>
+                                <h3 class="blog-card-title">問い合わせが来ないホームページの特徴と今すぐできる改善策</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-03-03">2026.03.03</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="web">
+                        <a href="blog/website-inquiry-improvement-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>CV改善</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">CV改善</span>
+                                <h3 class="blog-card-title">問い合わせが増えるホームページの5つの特徴｜CV改善の具体策</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-02-06">2026.02.06</time>
+                                    <span class="read-time">読了時間：12分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="web">
+                        <a href="blog/homepage-not-getting-customers.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>集客</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Web集客</span>
+                                <h3 class="blog-card-title">ホームページで集客できない7つの原因と改善策｜問い合わせが来ない理由を徹底解説</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-01-20">2026.01.20</time>
+                                    <span class="read-time">読了時間：12分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="column">
+                        <a href="blog/sole-proprietor-web-marketing.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder column">
+                                    <span>集客</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category column">マーケティング</span>
+                                <h3 class="blog-card-title">個人事業主がホームページで集客する方法｜低予算で成果を出すコツ</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-03-03">2026.03.03</time>
+                                    <span class="read-time">読了時間：12分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="column">
+                        <a href="blog/sole-proprietor-marketing-guide-2026.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder column">
+                                    <span>集客</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category column">集客・マーケティング</span>
+                                <h3 class="blog-card-title">【2026年最新】個人事業主の集客方法10選｜予算別・業種別に徹底解説</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-01-20">2026.01.20</time>
+                                    <span class="read-time">読了時間：15分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="column">
+                        <a href="blog/small-shop-web-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder column">
+                                    <span>集客</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category column">マーケティング</span>
+                                <h3 class="blog-card-title">小さなお店のWeb集客完全ガイド｜予算別の施策を解説</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-03-03">2026.03.03</time>
+                                    <span class="read-time">読了時間：12分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
                     <article class="blog-card" data-category="web">
                         <a href="blog/ec-site-guide.html" class="blog-card-link">
                             <div class="blog-card-image">
@@ -1512,8 +1241,302 @@
                             </div>
                         </a>
                     </article>
+                </div>
+            </div>
 
-                    <!-- ホームページ保守・運用ガイド -->
+            <div class="blog-section" id="industry">
+                <div class="topic-section-header">
+                    <h2 class="topic-section-title">
+                        <span class="topic-section-icon">🏪</span>
+                        業種別のWeb集客
+                        <span class="topic-section-count">13記事</span>
+                    </h2>
+                    <p class="topic-section-desc">美容室・飲食店・クリニック・士業など業種ごとの集客戦略</p>
+                </div>
+                <div class="blog-grid">
+                    <article class="blog-card" data-category="column">
+                        <a href="blog/salon-booking-increase.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder column">
+                                    <span>サロン</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category column">業種別Web集客</span>
+                                <h3 class="blog-card-title">美容室・サロンのホームページで予約を増やす7つの方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-03-03">2026.03.03</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/nail-salon-web-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>ネイル</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">ネイルサロンのホームページ集客ガイド｜予約が増えるサイトの作り方</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/esthetic-salon-web-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>エステ</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">エステサロンのWeb集客完全ガイド｜新規顧客を獲得するホームページ戦略</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/personal-trainer-web-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>ジム</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">パーソナルトレーナー・ジムの集客方法｜ホームページ×SNSで予約が増える戦略</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/counselor-therapist-web-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>カウンセラー</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">カウンセラー・セラピストのHP集客ガイド｜信頼されるホームページの作り方</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：11分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="column">
+                        <a href="blog/seitaiin-web-marketing.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder column">
+                                    <span>整体院</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category column">業種別Web集客</span>
+                                <h3 class="blog-card-title">整体院・治療院のホームページ集客術｜新規患者を増やす方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-03-03">2026.03.03</time>
+                                    <span class="read-time">読了時間：12分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="column">
+                        <a href="blog/restaurant-website-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder column">
+                                    <span>飲食店</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category column">業種別Web集客</span>
+                                <h3 class="blog-card-title">飲食店のホームページ活用術｜来店につなげるWeb戦略</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-03-03">2026.03.03</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/flower-shop-web-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>花屋</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">花屋・フラワーショップの集客方法｜HP×Instagramで売上を伸ばすコツ</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/law-firm-website-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>士業</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">士業（弁護士・税理士・行政書士）のホームページ制作ガイド｜信頼される事務所サイトの作り方</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/school-tutoring-web-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>塾</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">学習塾・スクールのWeb集客ガイド｜生徒が集まるホームページの作り方</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/english-school-web-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>英会話</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">英会話教室・スクールの集客方法｜HP×SEOで生徒が増える戦略</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：11分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="column">
+                        <a href="blog/industry-hp-success-cases.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder column">
+                                    <span>Column</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category column">お役立ちコラム</span>
+                                <h3 class="blog-card-title">【業界別】ホームページ成功事例｜整体院・サロン・飲食店の集客実例</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2025-01-02">2025.01.02</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="web">
+                        <a href="blog/sole-proprietor-homepage-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>Web</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">【2025年版】個人事業主のホームページ制作完全ガイド｜作り方・費用・補助金まで</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-12-25">2024.12.25</time>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="blog-section" id="tools">
+                <div class="topic-section-header">
+                    <h2 class="topic-section-title">
+                        <span class="topic-section-icon">🛠</span>
+                        Webツール・運用・保守
+                        <span class="topic-section-count">9記事</span>
+                    </h2>
+                    <p class="topic-section-desc">AI活用・ツール・セキュリティ・速度改善など運用ノウハウ</p>
+                </div>
+                <div class="blog-grid">
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/ai-tools-small-business-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>AI</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">小さなお店のAI活用術｜ChatGPT・画像生成AIをビジネスに使う方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/chatgpt-business-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>ChatGPT</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">ChatGPTビジネス活用ガイド｜個人事業主・小さなお店のための使い方完全版</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：13分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/booking-system-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>予約</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">予約システム導入完全ガイド｜小さなお店におすすめの無料・有料ツール比較</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：12分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
                     <article class="blog-card" data-category="web">
                         <a href="blog/website-maintenance-guide.html" class="blog-card-link">
                             <div class="blog-card-image">
@@ -1530,10 +1553,59 @@
                             </div>
                         </a>
                     </article>
-
-                    <!-- WordPressとは？ -->
                     <article class="blog-card" data-category="web">
-                        <a href="blog/wordpress-guide.html" class="blog-card-link">
+                        <a href="blog/website-speed-optimization.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>速度改善</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">ホームページの表示速度を改善する5つの方法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2024-11-28">2024.11.28</time>
+                                    <span class="read-time">読了時間：5分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="web">
+                        <a href="blog/slow-website-fix-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>速度改善</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Web制作</span>
+                                <h3 class="blog-card-title">ホームページが重い原因と解決方法｜表示速度を改善して離脱を防ぐ</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-03-03">2026.03.03</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card is-new" data-category="web">
+                        <a href="blog/website-security-guide.html" class="blog-card-link">
+                            <div class="blog-card-image">
+                                <div class="blog-card-placeholder web">
+                                    <span>セキュリティ</span>
+                                </div>
+                            </div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-category web">Webの豆知識</span>
+                                <h3 class="blog-card-title">ホームページのセキュリティ対策ガイド｜小規模サイトでも狙われる理由と対処法</h3>
+                                <div class="blog-card-meta">
+                                    <time datetime="2026-04-12">2026.04.12</time>
+                                    <span class="read-time">読了時間：10分</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="blog-card" data-category="web">
+                        <a href="blog/website-neglect-risks.html" class="blog-card-link">
                             <div class="blog-card-image">
                                 <div class="blog-card-placeholder web">
                                     <span>Web</span>
@@ -1541,96 +1613,32 @@
                             </div>
                             <div class="blog-card-content">
                                 <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">WordPressとは？メリット・デメリットを初心者向けに徹底解説</h3>
+                                <h3 class="blog-card-title">ホームページを放置するとどうなる？6つのリスクと今すぐできる対策</h3>
                                 <div class="blog-card-meta">
-                                    <time datetime="2024-12-22">2024.12.22</time>
+                                    <time datetime="2024-12-26">2024.12.26</time>
                                 </div>
                             </div>
                         </a>
                     </article>
-
-                    <!-- ホームページリニューアルのタイミング -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/website-renewal-guide.html" class="blog-card-link">
+                    <article class="blog-card" data-category="column">
+                        <a href="blog/complete-beginner-blog-guide-setup-to-monetization.html" class="blog-card-link">
                             <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>Web</span>
+                                <div class="blog-card-placeholder column">
+                                    <span>Column</span>
                                 </div>
                             </div>
                             <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">ホームページリニューアルのタイミング｜成功のポイントと費用相場</h3>
+                                <span class="blog-card-category column">お役立ちコラム</span>
+                                <h3 class="blog-card-title">【完全ガイド】初心者のブログ始め方｜開設から収益化まで全手順を徹底解説</h3>
                                 <div class="blog-card-meta">
-                                    <time datetime="2024-12-20">2024.12.20</time>
+                                    <time datetime="2024-12-27">2024.12.27</time>
                                 </div>
                             </div>
                         </a>
                     </article>
-
-                    <!-- 被リンクとは？SEO効果と安全な獲得方法 -->
-                    <article class="blog-card" data-category="seo">
-                        <a href="blog/backlink-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder seo">
-                                    <span>SEO</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category seo">SEO対策</span>
-                                <h3 class="blog-card-title">被リンクとは？SEO効果と安全な獲得方法</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-18">2024.12.18</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- ホームページ制作の流れ -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/homepage-process-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>Web</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">ホームページ制作の流れ｜初心者でもわかる7つのステップ</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-14">2024.12.14</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- ホームページに必要なページ構成 -->
-                    <article class="blog-card" data-category="web">
-                        <a href="blog/homepage-structure-guide.html" class="blog-card-link">
-                            <div class="blog-card-image">
-                                <div class="blog-card-placeholder web">
-                                    <span>Web</span>
-                                </div>
-                            </div>
-                            <div class="blog-card-content">
-                                <span class="blog-card-category web">Webの豆知識</span>
-                                <h3 class="blog-card-title">ホームページに必要なページ構成｜効果的なサイト設計のコツ</h3>
-                                <div class="blog-card-meta">
-                                    <time datetime="2024-12-15">2024.12.15</time>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
                 </div>
             </div>
 
-            <!-- ページネーション -->
-            <nav class="pagination" aria-label="ブログ記事ページネーション">
-                <span class="pagination-item current">1</span>
-                <a href="blog-page2.html" class="pagination-item">2</a>
-                <a href="blog-page3.html" class="pagination-item">3</a>
-                <a href="blog-page2.html" class="pagination-item next">次へ →</a>
-            </nav>
         </div>
     </section>
 
