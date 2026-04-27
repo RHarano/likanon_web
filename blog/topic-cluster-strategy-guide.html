@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N2Y1QF8ZQV');</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="トピッククラスター戦略は、サイト全体のSEO評価を底上げする現代SEOの王道。ピラーページとクラスター記事の設計、内部リンクの組み方、実装手順を実例で解説。">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1e3a5f">
+    <meta property="og:title" content="トピッククラスター戦略｜サイト全体のSEO評価を底上げする設計術 | LIKaNON">
+    <meta property="og:description" content="ピラーページとクラスター記事の設計、内部リンク、実装手順を実例で解説。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://likanon.com/blog/topic-cluster-strategy-guide.html">
+    <meta property="og:site_name" content="LIKaNON">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://likanon.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="article:published_time" content="2026-04-27">
+    <meta property="article:modified_time" content="2026-04-27">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="トピッククラスター戦略｜サイト全体のSEO評価を底上げする設計術">
+    <meta name="twitter:description" content="ピラーページ・クラスター記事の設計と実装手順を実例で。">
+    <meta name="twitter:image" content="https://likanon.com/img/og-image.png">
+    <link rel="canonical" href="https://likanon.com/blog/topic-cluster-strategy-guide.html">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/likanonlogo.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <title>トピッククラスター戦略｜サイト全体のSEO評価を底上げする設計術 | LIKaNON</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"トピッククラスター戦略｜サイト全体のSEO評価を底上げする設計術","description":"トピッククラスター戦略は、サイト全体のSEO評価を底上げする現代SEOの王道。ピラーページとクラスター記事の設計、内部リンクの組み方、実装手順を実例で解説。","image":"https://likanon.com/img/likanonlogo.png","datePublished":"2026-04-27","dateModified":"2026-04-27","author":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com"},"publisher":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com","logo":{"@type":"ImageObject","url":"https://likanon.com/img/likanonlogo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://likanon.com/blog/topic-cluster-strategy-guide.html"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://likanon.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://likanon.com/blog.html"},{"@type":"ListItem","position":3,"name":"トピッククラスター戦略","item":"https://likanon.com/blog/topic-cluster-strategy-guide.html"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"トピッククラスター戦略とは何ですか？","acceptedAnswer":{"@type":"Answer","text":"1つの大きなテーマ（ピラー）を中心に、関連する詳細記事（クラスター）を内部リンクで束ねるSEO戦略です。テーマの専門性をGoogleに伝え、サイト全体の評価を底上げします。"}},{"@type":"Question","name":"何記事から始めるべきですか？","acceptedAnswer":{"@type":"Answer","text":"最小構成は1ピラー＋5〜7クラスターの計6〜8記事です。最初から大規模に始めず、1テーマで小さく実装→検証→次テーマへ拡張がおすすめです。"}},{"@type":"Question","name":"既存の記事を使い回せますか？","acceptedAnswer":{"@type":"Answer","text":"はい。既存記事を整理してピラー＋クラスターに分類し、内部リンクで結び直すだけでも効果が出ます。新規執筆と既存活用の併用が現実的です。"}}]}</script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo"><img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image"></a>
+            <nav class="nav"><ul class="nav-list">
+                <li><a href="/#service">サービス</a></li>
+                <li><a href="/#portfolio">実績</a></li>
+                <li><a href="/#merit">選ばれる理由</a></li>
+                <li><a href="/blog.html" class="active">ブログ</a></li>
+                <li><a href="/#contact" class="nav-cta">お問い合わせ</a></li>
+            </ul></nav>
+            <button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li>
+                <li class="breadcrumb-item current" aria-current="page">トピッククラスター戦略</li>
+            </ol>
+        </div>
+    </nav>
+
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category seo">SEO対策</span>
+                    <time datetime="2026-04-27">2026.04.27</time>
+                    <span class="read-time">読了時間：11分</span>
+                </div>
+                <h1 class="article-title">トピッククラスター戦略｜サイト全体のSEO評価を底上げする設計術</h1>
+                <p class="article-lead">単発記事を量産しても順位が上がらない時代。今のSEOは「テーマを束ねる設計」が鍵です。トピッククラスター戦略は、専門性をGoogleに伝え、サイト全体を評価される状態を作る現代SEOの王道。ピラーとクラスターの設計、内部リンクの組み方を実例で解説します。</p>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#what">トピッククラスターとは</a></li>
+                            <li><a href="#why">なぜ効くのか</a></li>
+                            <li><a href="#structure">基本構造：ピラーとクラスター</a></li>
+                            <li><a href="#design">設計の5ステップ</a></li>
+                            <li><a href="#linking">内部リンクの組み方</a></li>
+                            <li><a href="#example">実例：美容室サイトの場合</a></li>
+                            <li><a href="#mistakes">よくある失敗</a></li>
+                            <li><a href="#measure">効果測定</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <section id="what">
+                        <h2>トピッククラスターとは</h2>
+                        <p>トピッククラスター（Topic Cluster）とは、<strong>1つの大きなテーマ（ピラー）を中心に、関連する詳細記事（クラスター）を内部リンクで束ねる</strong>SEO設計手法です。</p>
+                        <p>従来のSEOは「キーワード単位で記事を作る」発想でした。しかし現代のSEOは<strong>「テーマ単位で専門性を示す」</strong>方向へ。トピッククラスターはこの新しい考え方を体現する戦略です。</p>
+                    </section>
+
+                    <section id="why">
+                        <h2>なぜ効くのか</h2>
+
+                        <h3>1. テーマの専門性が伝わる</h3>
+                        <p>「このサイトは○○について深く知っている」とGoogleに認識されます。<strong>1記事だけでは伝わらない専門性</strong>が、束ねることで明確に。</p>
+
+                        <h3>2. 関連キーワードに広く対応</h3>
+                        <p>1テーマで5〜10記事を持つことで、<strong>派生キーワード・ロングテールも自然にカバー</strong>。検索流入の入口が圧倒的に増えます。</p>
+
+                        <h3>3. 内部リンク評価が集中する</h3>
+                        <p>クラスター記事から内部リンクが集まるピラーページは、<strong>サイト内で評価が一極集中</strong>。検索順位が上がりやすくなります。</p>
+
+                        <h3>4. AI検索でも引用されやすい</h3>
+                        <p>「網羅的にテーマを扱っているサイト」はAI検索で引用されやすい。<strong>AI Overviews時代の戦略としても有効</strong>です。</p>
+                    </section>
+
+                    <section id="structure">
+                        <h2>基本構造：ピラーとクラスター</h2>
+
+                        <div class="info-box">
+                            <h4>2層構造</h4>
+                            <p><strong>ピラーページ（Pillar Page）</strong>：テーマ全体を網羅する大きな記事。「○○完全ガイド」のような総まとめ。</p>
+                            <p><strong>クラスター記事（Cluster Articles）</strong>：ピラー配下の詳細トピック。各クラスターは特定の質問・問題に深く答える。</p>
+                        </div>
+
+                        <h3>関係性のイメージ</h3>
+                        <pre><code>【ピラー】SEO対策完全ガイド
+   ├── クラスター1：タイトルタグ最適化
+   ├── クラスター2：見出しタグの使い方
+   ├── クラスター3：内部リンク設計
+   ├── クラスター4：構造化データ
+   ├── クラスター5：AI検索対応
+   └── クラスター6：コアアップデート対策</code></pre>
+
+                        <h3>各層の役割</h3>
+                        <ul>
+                            <li><strong>ピラー</strong>：ビッグキーワードを狙う、入口</li>
+                            <li><strong>クラスター</strong>：ロングテールを狙う、深掘り</li>
+                        </ul>
+                    </section>
+
+                    <section id="design">
+                        <h2>設計の5ステップ</h2>
+
+                        <h3>STEP 1：軸テーマを決める</h3>
+                        <p>サイトで<strong>「これが我々の専門領域」と言えるテーマ</strong>を1つ選びます。広すぎず狭すぎず、5〜10記事は書ける深さがあるテーマが理想。</p>
+
+                        <h3>STEP 2：ピラーページのキーワードを決定</h3>
+                        <p>そのテーマの<strong>最も検索ボリュームが大きいキーワード</strong>を選びます。例：「SEO対策」「ホームページ制作」「美容室 集客」など。</p>
+
+                        <h3>STEP 3：クラスタートピックを洗い出す</h3>
+                        <p>ピラーキーワードに対する<strong>関連質問・サブトピック</strong>を5〜10個リストアップ。「〇〇とは」「〇〇の方法」「〇〇 失敗」などのバリエーション。</p>
+                        <ul>
+                            <li>Googleの「他の人はこちらも質問」を参照</li>
+                            <li>ラッコキーワードでサジェスト取得</li>
+                            <li>ChatGPTに「○○について読者が知りたい質問を10個出して」と聞く</li>
+                        </ul>
+
+                        <h3>STEP 4：記事の優先順位を決める</h3>
+                        <p>全部一度に書けないので、<strong>検索ボリューム×自社の強み</strong>で優先順位を付けて順次執筆。</p>
+
+                        <h3>STEP 5：執筆＆内部リンク構築</h3>
+                        <p>記事を書きながら、<strong>ピラー↔クラスター、クラスター↔クラスター</strong>を内部リンクで結びます。</p>
+                    </section>
+
+                    <section id="linking">
+                        <h2>内部リンクの組み方</h2>
+
+                        <h3>ルール1：ピラー → 各クラスターへリンク</h3>
+                        <p>ピラーページ内で、<strong>各セクションから対応するクラスター記事へリンク</strong>。「詳しくはこちら」と誘導します。</p>
+
+                        <h3>ルール2：各クラスター → ピラーへリンク</h3>
+                        <p>クラスター記事の冒頭または末尾に、<strong>必ずピラーページへのリンク</strong>を入れます。「○○全体について知りたい方はこちら」。</p>
+
+                        <h3>ルール3：クラスター間も相互リンク</h3>
+                        <p>関連性のあるクラスター同士もリンクで繋ぎます。<strong>「クモの巣構造」</strong>を作ることで、テーマ全体の関連性が強化されます。</p>
+
+                        <h3>ルール4：アンカーテキストは自然に</h3>
+                        <p>「こちら」だけより、<strong>キーワードを含む自然な文言</strong>で。例：「タイトルタグの最適化方法」「内部リンク設計の詳細」。</p>
+
+                        <div class="tip-box">
+                            <p><strong>1記事あたり3〜5本</strong>の関連内部リンクが目安。多すぎても少なすぎてもダメ。</p>
+                        </div>
+                    </section>
+
+                    <section id="example">
+                        <h2>実例：美容室サイトの場合</h2>
+
+                        <div class="example-box">
+                            <p><strong>ピラー：「美容室の集客完全ガイド」</strong></p>
+                            <ul>
+                                <li>クラスター1：美容室のSEO対策</li>
+                                <li>クラスター2：美容室のInstagram活用法</li>
+                                <li>クラスター3：美容室のGoogleビジネスプロフィール</li>
+                                <li>クラスター4：リピーター獲得の仕組み作り</li>
+                                <li>クラスター5：新規客向けキャンペーン設計</li>
+                                <li>クラスター6：失客分析と改善</li>
+                                <li>クラスター7：口コミ獲得の方法</li>
+                            </ul>
+                        </div>
+
+                        <p>このような構成で、<strong>「美容室 集客」というビッグワードで上位表示</strong>を狙いつつ、各クラスターでロングテールも拾います。1テーマで7〜8記事の集合体になり、Googleに「ここは美容室集客の専門サイトだ」と認識されます。</p>
+                    </section>
+
+                    <section id="mistakes">
+                        <h2>よくある失敗</h2>
+                        <div class="info-box">
+                            <h4>NGリスト</h4>
+                            <ol>
+                                <li><strong>ピラーが薄い</strong>：3,000字未満の薄いピラーは効果ゼロ。<strong>10,000字以上</strong>の包括的記事が必要</li>
+                                <li><strong>クラスターが少ない</strong>：3記事未満では「クラスター」と呼べない。最低5記事</li>
+                                <li><strong>内部リンクを張り忘れ</strong>：リンクで繋がっていなければただの単発記事の集まり</li>
+                                <li><strong>テーマが広すぎる</strong>：「Web全般」では専門性が出ない。<strong>1段階絞る</strong></li>
+                                <li><strong>キーワードが重複</strong>：同じキーワードを2記事で狙うと共食い（カニバリ）に</li>
+                                <li><strong>更新を放置</strong>：1〜2年に1度は内容を見直す</li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <section id="measure">
+                        <h2>効果測定</h2>
+
+                        <h3>1. ピラーページの順位</h3>
+                        <p>狙ったビッグキーワードで何位か。<strong>1〜3ヶ月で動き始め、6〜12ヶ月で安定</strong>するのが目安。</p>
+
+                        <h3>2. クラスター記事の合計流入</h3>
+                        <p>個々のクラスター記事は中位でも、<strong>合計するとサイトの主要流入源になる</strong>のが理想形。</p>
+
+                        <h3>3. 内部リンクのクリック率</h3>
+                        <p>GA4で<strong>内部リンクのクリック率</strong>を確認。20〜30%以上であれば設計が機能している証拠。</p>
+
+                        <h3>4. ドメイン全体の評価</h3>
+                        <p>Ahrefsなどで<strong>ドメインオーソリティ</strong>の推移を見る。トピッククラスターが効くと、テーマ全体の評価が上がります。</p>
+                    </section>
+
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <div class="summary-box">
+                            <h4>この記事のポイント</h4>
+                            <ul>
+                                <li>トピッククラスターは「テーマ単位」で専門性を示す現代SEO戦略</li>
+                                <li>ピラー（包括記事）＋クラスター（詳細記事）の2層構造</li>
+                                <li>1ピラー＋5〜10クラスターが基本構成</li>
+                                <li>ピラー↔クラスター↔クラスター で内部リンクを密に</li>
+                                <li>テーマは絞る、キーワード重複は避ける</li>
+                                <li>効果は3〜6ヶ月で見え始め、12ヶ月で安定</li>
+                            </ul>
+                        </div>
+                        <p>記事を量産して順位が上がらないなら、<strong>「束ねる設計」に切り替える</strong>タイミングです。新規執筆だけでなく、既存記事の整理＆内部リンク張り直しでも効果が出ます。サイト全体の戦略として今日から取り組んでみてください。</p>
+                    </section>
+
+                    <div class="article-cta">
+                        <h3>サイトのSEO戦略設計、お任せください</h3>
+                        <p>トピッククラスター設計、内部リンク再構築、コンテンツ計画まで一貫サポート。</p>
+                        <a href="/#contact" class="btn btn-primary btn-large">無料相談はこちら
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h3>この記事を書いた人</h3>
+                        <div class="author-card"><div class="author-info">
+                            <p class="author-name">LIKaNON</p>
+                            <p class="author-desc">Web制作・デザイン歴8年以上。SEO対策を施したホームページ制作から運用まで一貫サポート。</p>
+                        </div></div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>関連記事</h3>
+                        <ul class="related-posts">
+                            <li><a href="internal-link-optimization.html">内部リンクの最適化</a></li>
+                            <li><a href="ai-search-seo-guide.html">AI検索対応SEO完全ガイド</a></li>
+                            <li><a href="google-core-update-guide.html">コアアップデート対策</a></li>
+                            <li><a href="seo-writing-guide.html">SEOライティングガイド</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="/blog.html?category=seo">SEO対策</a></li>
+                            <li><a href="/blog.html?category=web">Webの豆知識</a></li>
+                            <li><a href="/blog.html?category=design">デザインの豆知識</a></li>
+                            <li><a href="/blog.html?category=sns">SNS運用の豆知識</a></li>
+                            <li><a href="/blog.html?category=column">お役立ちコラム</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-profile">
+                <div class="footer-profile-inner">
+                    <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <div class="footer-profile-content"><p class="footer-profile-text">デザインとWeb制作で<strong>8年以上</strong>の実績。<br class="pc-only">HP制作・リニューアル・運用代行まで、一貫してサポートします。</p></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 LIKaNON. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る"><span class="back-to-top-arrow"></span><span class="back-to-top-text">TOP</span></a>
+
+    <nav class="mobile-fixed-footer">
+        <a href="/#web-production"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg><span>Web制作</span></a>
+        <a href="/#service" class="instagram-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="url(#instagram-gradient)"><defs><linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#FFDC80"/><stop offset="25%" style="stop-color:#F77737"/><stop offset="50%" style="stop-color:#E1306C"/><stop offset="75%" style="stop-color:#C13584"/><stop offset="100%" style="stop-color:#833AB4"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg><span>運用代行</span></a>
+        <a href="/#contact" class="highlight-cta"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg><span>相談</span></a>
+        <a href="/#portfolio"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg><span>実績</span></a>
+        <a href="/blog.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg><span>ブログ</span></a>
+    </nav>
+
+    <script src="../script.js" defer></script>
+    <script src="../blog.js" defer></script>
+</body>
+</html>

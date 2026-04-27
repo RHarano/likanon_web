@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N2Y1QF8ZQV');</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XMLサイトマップの作り方・送信方法を完全解説。手動作成・自動生成ツール・WordPressプラグイン・Search Consoleでの送信まで実例付き。">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1e3a5f">
+    <meta property="og:title" content="XMLサイトマップ完全ガイド｜作成から送信まで全手順 | LIKaNON">
+    <meta property="og:description" content="XMLサイトマップの作り方・送信・WordPressプラグインまで実例付きで。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://likanon.com/blog/xml-sitemap-guide.html">
+    <meta property="og:site_name" content="LIKaNON">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://likanon.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="article:published_time" content="2026-04-27">
+    <meta property="article:modified_time" content="2026-04-27">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="XMLサイトマップ完全ガイド｜作成から送信まで全手順">
+    <meta name="twitter:description" content="作り方・送信・WordPressプラグインまで実例付き。">
+    <meta name="twitter:image" content="https://likanon.com/img/og-image.png">
+    <link rel="canonical" href="https://likanon.com/blog/xml-sitemap-guide.html">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/likanonlogo.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <title>XMLサイトマップ完全ガイド｜作成から送信まで全手順 | LIKaNON</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"XMLサイトマップ完全ガイド｜作成から送信まで全手順","description":"XMLサイトマップの作り方・送信方法を完全解説。手動作成・自動生成ツール・WordPressプラグイン・Search Consoleでの送信まで実例付き。","image":"https://likanon.com/img/likanonlogo.png","datePublished":"2026-04-27","dateModified":"2026-04-27","author":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com"},"publisher":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com","logo":{"@type":"ImageObject","url":"https://likanon.com/img/likanonlogo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://likanon.com/blog/xml-sitemap-guide.html"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://likanon.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://likanon.com/blog.html"},{"@type":"ListItem","position":3,"name":"XMLサイトマップ","item":"https://likanon.com/blog/xml-sitemap-guide.html"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"XMLサイトマップは必須ですか？","acceptedAnswer":{"@type":"Answer","text":"小規模サイトでは必須ではありませんが、設置を強く推奨します。新規ページや更新の発見が速くなり、特に初期サイトでは効果が大きいです。"}},{"@type":"Question","name":"WordPressでサイトマップはどう作りますか？","acceptedAnswer":{"@type":"Answer","text":"WordPress 5.5以降は標準で /wp-sitemap.xml が自動生成されます。Yoast SEOやAll in One SEOを使えばさらに細かい制御が可能です。"}},{"@type":"Question","name":"サイトマップを送信した後、すぐ反映されますか？","acceptedAnswer":{"@type":"Answer","text":"通常は数日〜2週間でクロールが開始され、検索結果に反映されます。Search Consoleの「サイトマップ」レポートで進捗を確認できます。"}}]}</script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo"><img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image"></a>
+            <nav class="nav"><ul class="nav-list">
+                <li><a href="/#service">サービス</a></li>
+                <li><a href="/#portfolio">実績</a></li>
+                <li><a href="/#merit">選ばれる理由</a></li>
+                <li><a href="/blog.html" class="active">ブログ</a></li>
+                <li><a href="/#contact" class="nav-cta">お問い合わせ</a></li>
+            </ul></nav>
+            <button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li>
+                <li class="breadcrumb-item current" aria-current="page">XMLサイトマップ</li>
+            </ol>
+        </div>
+    </nav>
+
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category seo">SEO対策</span>
+                    <time datetime="2026-04-27">2026.04.27</time>
+                    <span class="read-time">読了時間：9分</span>
+                </div>
+                <h1 class="article-title">XMLサイトマップ完全ガイド｜作成から送信まで全手順</h1>
+                <p class="article-lead">XMLサイトマップは、Googleにサイト構造を伝える「地図」。これがあれば新規ページの発見が早まり、SEOスタートダッシュが切れます。手動作成・自動生成ツール・WordPress・Search Console送信まで、初心者でも30分で完結する手順をまとめました。</p>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#what">XMLサイトマップとは</a></li>
+                            <li><a href="#why">なぜ必要なのか</a></li>
+                            <li><a href="#format">基本フォーマット</a></li>
+                            <li><a href="#create">作成方法3パターン</a></li>
+                            <li><a href="#wordpress">WordPressでの作成</a></li>
+                            <li><a href="#submit">Search Consoleでの送信</a></li>
+                            <li><a href="#robots">robots.txtへの記載</a></li>
+                            <li><a href="#mistakes">よくある失敗</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <section id="what">
+                        <h2>XMLサイトマップとは</h2>
+                        <p>XMLサイトマップとは、<strong>サイト内のすべてのURLを一覧化したXML形式のファイル</strong>です。通常 <code>sitemap.xml</code> という名前でサイトのルートに配置します。</p>
+                        <p>HTMLサイトマップ（人間用の目次ページ）とは別物で、<strong>こちらは検索エンジン専用</strong>。Googleはこのファイルを読んで「このサイトにはどんなページがあるか」を把握します。</p>
+                    </section>
+
+                    <section id="why">
+                        <h2>なぜ必要なのか</h2>
+
+                        <h3>理由1：新規ページの発見を早める</h3>
+                        <p>Googleは普段リンクを辿ってサイトを巡回しますが、新規サイトや内部リンクが少ないページは発見が遅れます。<strong>サイトマップがあれば直接URLを伝えられる</strong>ため、インデックスが大幅に早まります。</p>
+
+                        <h3>理由2：構造の複雑なサイトで効果絶大</h3>
+                        <p>大規模サイト、ECサイト、深い階層のサイトでは、<strong>クロールの取りこぼし</strong>が発生しがちです。サイトマップで全URLを伝えることで、漏れを防げます。</p>
+
+                        <h3>理由3：更新情報を知らせる</h3>
+                        <p><code>&lt;lastmod&gt;</code> タグで「いつ更新したか」を伝えると、Googleが優先的に再クロールします。</p>
+                    </section>
+
+                    <section id="format">
+                        <h2>基本フォーマット</h2>
+                        <div class="example-box">
+                            <p><strong>最小構成</strong></p>
+                            <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://example.com/&lt;/loc&gt;
+    &lt;lastmod&gt;2026-04-27&lt;/lastmod&gt;
+    &lt;changefreq&gt;weekly&lt;/changefreq&gt;
+    &lt;priority&gt;1.0&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://example.com/blog&lt;/loc&gt;
+    &lt;lastmod&gt;2026-04-27&lt;/lastmod&gt;
+  &lt;/url&gt;
+&lt;/urlset&gt;</code></pre>
+                        </div>
+
+                        <h3>各タグの意味</h3>
+                        <ul>
+                            <li><code>&lt;loc&gt;</code>：ページのURL（必須）</li>
+                            <li><code>&lt;lastmod&gt;</code>：最終更新日（推奨）</li>
+                            <li><code>&lt;changefreq&gt;</code>：更新頻度（任意。daily/weekly/monthlyなど）</li>
+                            <li><code>&lt;priority&gt;</code>：優先度（任意。0.0〜1.0）</li>
+                        </ul>
+                        <p>Googleは<strong>locとlastmodを重視</strong>。changefreqとpriorityはほぼ無視されます。</p>
+                    </section>
+
+                    <section id="create">
+                        <h2>作成方法3パターン</h2>
+
+                        <h3>パターン1：手動作成（小規模サイト）</h3>
+                        <p>10ページ以下のサイトなら、上記の例をベースにテキストエディタで手書きでOK。<code>sitemap.xml</code>として保存し、サーバーのルートに置きます。</p>
+
+                        <h3>パターン2：オンライン自動生成ツール</h3>
+                        <ul>
+                            <li><strong>XML-Sitemaps.com</strong>：500ページまで無料、有料で無制限</li>
+                            <li><strong>Screaming Frog</strong>：500ページまで無料のクロールツール</li>
+                            <li><strong>Slickplan</strong>：視覚的にサイト構造を作りつつサイトマップ生成</li>
+                        </ul>
+                        <p>サイトURLを入れるだけで自動で全ページを抽出してくれます。中〜大規模サイト向け。</p>
+
+                        <h3>パターン3：CMSプラグイン</h3>
+                        <p>WordPressや他のCMSなら、プラグインで自動生成・自動更新できます。次のセクションで詳述。</p>
+                    </section>
+
+                    <section id="wordpress">
+                        <h2>WordPressでの作成</h2>
+
+                        <h3>標準機能（WordPress 5.5以降）</h3>
+                        <p>WordPressは<strong>5.5から標準でサイトマップを自動生成</strong>します。URLは <code>https://example.com/wp-sitemap.xml</code>。何もしなくても動いています。</p>
+
+                        <h3>SEOプラグインを使う（推奨）</h3>
+                        <p>標準のサイトマップは最小限の機能のみ。<strong>SEOプラグインで詳細制御</strong>するのがおすすめ。</p>
+                        <ul>
+                            <li><strong>Yoast SEO</strong>：<code>/sitemap_index.xml</code>に投稿・固定ページ・カテゴリ別のサイトマップを生成</li>
+                            <li><strong>All in One SEO</strong>：詳細な除外設定、ニュース・動画サイトマップ対応</li>
+                            <li><strong>Rank Math</strong>：軽量で高機能、画像サイトマップも標準対応</li>
+                        </ul>
+
+                        <div class="tip-box">
+                            <p>標準サイトマップとプラグインのサイトマップが両方有効になっている場合、<strong>標準を無効化</strong>してプラグイン側を使うのが推奨。重複は混乱の元です。</p>
+                        </div>
+                    </section>
+
+                    <section id="submit">
+                        <h2>Search Consoleでの送信</h2>
+
+                        <h3>手順</h3>
+                        <ol>
+                            <li>Google Search Consoleにログイン</li>
+                            <li>左メニュー「サイトマップ」をクリック</li>
+                            <li>「新しいサイトマップの追加」に <code>sitemap.xml</code> を入力</li>
+                            <li>「送信」ボタンをクリック</li>
+                        </ol>
+
+                        <h3>送信後の確認</h3>
+                        <p>「ステータス」が「成功しました」になればOK。<strong>「検出されたURL」の数が想定と合っているか</strong>確認しましょう。少なすぎる場合は除外設定を見直します。</p>
+
+                        <div class="info-box">
+                            <h4>送信後すぐに反映される？</h4>
+                            <p>クロールは数日〜2週間程度かかります。新規記事の場合、サイトマップ送信＋Search Consoleの「URL検査」→「インデックス登録をリクエスト」を併用すると最速です。</p>
+                        </div>
+                    </section>
+
+                    <section id="robots">
+                        <h2>robots.txtへの記載</h2>
+                        <p>サイトマップの場所をrobots.txtに書いておくと、Google以外の検索エンジンも発見できます。</p>
+                        <div class="example-box">
+                            <p><strong>robots.txt例</strong></p>
+                            <pre><code>User-agent: *
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml</code></pre>
+                        </div>
+                        <p><strong>絶対URLで記載</strong>するのがポイントです。</p>
+                    </section>
+
+                    <section id="mistakes">
+                        <h2>よくある失敗</h2>
+                        <div class="info-box">
+                            <h4>NGリスト</h4>
+                            <ol>
+                                <li><strong>noindexページを含めている</strong>：矛盾するシグナル。除外する</li>
+                                <li><strong>404ページを含めている</strong>：定期的にクリーンアップを</li>
+                                <li><strong>5万URL以上を1ファイルに</strong>：上限を超える。複数ファイルに分割し、index sitemapで束ねる</li>
+                                <li><strong>50MB超</strong>：圧縮するか分割する</li>
+                                <li><strong>リダイレクトURLを含める</strong>：最終URLを記載</li>
+                                <li><strong>サイトマップを更新していない</strong>：新規ページ追加時に自動更新される設定を</li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <div class="summary-box">
+                            <h4>この記事のポイント</h4>
+                            <ul>
+                                <li>XMLサイトマップは検索エンジン用の「サイト地図」</li>
+                                <li>新規ページの発見を速め、クロール効率を上げる</li>
+                                <li>WordPressなら標準＋SEOプラグインで自動生成</li>
+                                <li>Search Consoleで送信、ステータス確認</li>
+                                <li>robots.txtにもサイトマップURLを記載</li>
+                                <li>noindex・404・リダイレクトURLは除外する</li>
+                            </ul>
+                        </div>
+                        <p>サイトマップは<strong>「設置すれば完了」のシンプル施策</strong>です。新規サイト立ち上げ時、リニューアル時、SEO見直しのタイミングで必ずチェックしてください。</p>
+                    </section>
+
+                    <div class="article-cta">
+                        <h3>サイト立ち上げ・SEO設定、お任せください</h3>
+                        <p>サイトマップ・Search Console連携・SEO初期設定まで一貫サポート。</p>
+                        <a href="/#contact" class="btn btn-primary btn-large">無料相談はこちら
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h3>この記事を書いた人</h3>
+                        <div class="author-card"><div class="author-info">
+                            <p class="author-name">LIKaNON</p>
+                            <p class="author-desc">Web制作・デザイン歴8年以上。SEO対策を施したホームページ制作から運用まで一貫サポート。</p>
+                        </div></div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>関連記事</h3>
+                        <ul class="related-posts">
+                            <li><a href="google-search-console-guide.html">Search Console活用ガイド</a></li>
+                            <li><a href="canonical-tag-guide.html">canonicalタグ設定ガイド</a></li>
+                            <li><a href="structured-data-guide.html">構造化データ実装ガイド</a></li>
+                            <li><a href="ai-search-seo-guide.html">AI検索対応SEO完全ガイド</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="/blog.html?category=seo">SEO対策</a></li>
+                            <li><a href="/blog.html?category=web">Webの豆知識</a></li>
+                            <li><a href="/blog.html?category=design">デザインの豆知識</a></li>
+                            <li><a href="/blog.html?category=sns">SNS運用の豆知識</a></li>
+                            <li><a href="/blog.html?category=column">お役立ちコラム</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-profile">
+                <div class="footer-profile-inner">
+                    <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <div class="footer-profile-content"><p class="footer-profile-text">デザインとWeb制作で<strong>8年以上</strong>の実績。<br class="pc-only">HP制作・リニューアル・運用代行まで、一貫してサポートします。</p></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 LIKaNON. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る"><span class="back-to-top-arrow"></span><span class="back-to-top-text">TOP</span></a>
+
+    <nav class="mobile-fixed-footer">
+        <a href="/#web-production"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg><span>Web制作</span></a>
+        <a href="/#service" class="instagram-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="url(#instagram-gradient)"><defs><linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#FFDC80"/><stop offset="25%" style="stop-color:#F77737"/><stop offset="50%" style="stop-color:#E1306C"/><stop offset="75%" style="stop-color:#C13584"/><stop offset="100%" style="stop-color:#833AB4"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg><span>運用代行</span></a>
+        <a href="/#contact" class="highlight-cta"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg><span>相談</span></a>
+        <a href="/#portfolio"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg><span>実績</span></a>
+        <a href="/blog.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg><span>ブログ</span></a>
+    </nav>
+
+    <script src="../script.js" defer></script>
+    <script src="../blog.js" defer></script>
+</body>
+</html>

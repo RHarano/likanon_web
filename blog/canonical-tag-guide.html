@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N2Y1QF8ZQV');</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="canonicalタグは重複コンテンツ問題を防ぐSEO必須要素。設定方法、使うべき場面、よくある間違い、WordPressでの設定までわかりやすく解説します。">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1e3a5f">
+    <meta property="og:title" content="canonicalタグ設定ガイド｜重複コンテンツ対策の正しい使い方 | LIKaNON">
+    <meta property="og:description" content="canonicalタグの設定方法、使うべき場面、WordPressでの設定まで解説。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://likanon.com/blog/canonical-tag-guide.html">
+    <meta property="og:site_name" content="LIKaNON">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://likanon.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="article:published_time" content="2026-04-27">
+    <meta property="article:modified_time" content="2026-04-27">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="canonicalタグ設定ガイド｜重複コンテンツ対策の正しい使い方">
+    <meta name="twitter:description" content="設定方法、使うべき場面、WordPressでの設定まで解説。">
+    <meta name="twitter:image" content="https://likanon.com/img/og-image.png">
+    <link rel="canonical" href="https://likanon.com/blog/canonical-tag-guide.html">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/img/likanonlogo.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <title>canonicalタグ設定ガイド｜重複コンテンツ対策の正しい使い方 | LIKaNON</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="article.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"canonicalタグ設定ガイド｜重複コンテンツ対策の正しい使い方","description":"canonicalタグは重複コンテンツ問題を防ぐSEO必須要素。設定方法、使うべき場面、よくある間違い、WordPressでの設定までわかりやすく解説します。","image":"https://likanon.com/img/likanonlogo.png","datePublished":"2026-04-27","dateModified":"2026-04-27","author":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com"},"publisher":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com","logo":{"@type":"ImageObject","url":"https://likanon.com/img/likanonlogo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://likanon.com/blog/canonical-tag-guide.html"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://likanon.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://likanon.com/blog.html"},{"@type":"ListItem","position":3,"name":"canonicalタグ設定","item":"https://likanon.com/blog/canonical-tag-guide.html"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"canonicalタグは全ページに必要ですか？","acceptedAnswer":{"@type":"Answer","text":"はい、自己参照canonical（自分自身を指す）を全ページに設置するのが推奨です。意図しない重複コンテンツ問題を予防できます。"}},{"@type":"Question","name":"canonicalを設定すると301リダイレクトの代わりになりますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ、目的が違います。canonicalは「内容は重複だがアクセスは可能」、301は「URLが移転した」を意味します。混同しないでください。"}},{"@type":"Question","name":"WordPressでcanonicalはどう設定しますか？","acceptedAnswer":{"@type":"Answer","text":"Yoast SEO、All in One SEO、Rank Mathなどの主要SEOプラグインが自動で出力します。手動設定は基本不要です。"}}]}</script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo"><img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image"></a>
+            <nav class="nav"><ul class="nav-list">
+                <li><a href="/#service">サービス</a></li>
+                <li><a href="/#portfolio">実績</a></li>
+                <li><a href="/#merit">選ばれる理由</a></li>
+                <li><a href="/blog.html" class="active">ブログ</a></li>
+                <li><a href="/#contact" class="nav-cta">お問い合わせ</a></li>
+            </ul></nav>
+            <button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li>
+                <li class="breadcrumb-item current" aria-current="page">canonicalタグ設定</li>
+            </ol>
+        </div>
+    </nav>
+
+    <article class="article">
+        <header class="article-header">
+            <div class="container">
+                <div class="article-meta">
+                    <span class="article-category seo">SEO対策</span>
+                    <time datetime="2026-04-27">2026.04.27</time>
+                    <span class="read-time">読了時間：8分</span>
+                </div>
+                <h1 class="article-title">canonicalタグ設定ガイド｜重複コンテンツ対策の正しい使い方</h1>
+                <p class="article-lead">同じ内容のページが複数のURLでアクセスできる状態は、SEO評価の分散を招きます。canonicalタグはこれを防ぐ「正規URL指定」の仕組み。基本の設定方法から、WordPressでの扱い、よくある失敗まで実例で解説します。</p>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <div class="container">
+                <div class="article-body">
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ol>
+                            <li><a href="#what">canonicalタグとは</a></li>
+                            <li><a href="#why">なぜ必要なのか</a></li>
+                            <li><a href="#when">使うべき場面5つ</a></li>
+                            <li><a href="#how">基本の設定方法</a></li>
+                            <li><a href="#wordpress">WordPressでの設定</a></li>
+                            <li><a href="#vs-301">301リダイレクトとの違い</a></li>
+                            <li><a href="#mistakes">よくある失敗</a></li>
+                            <li><a href="#check">設定確認の方法</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <section id="what">
+                        <h2>canonicalタグとは</h2>
+                        <p>canonicalタグとは、<strong>「このページの正規URLはこちらです」とGoogleに伝えるためのタグ</strong>です。HTMLの<code>&lt;head&gt;</code>内に記述します。</p>
+                        <div class="example-box">
+                            <p><strong>記述例</strong></p>
+                            <pre><code>&lt;link rel="canonical" href="https://example.com/page" /&gt;</code></pre>
+                        </div>
+                        <p>同じ・類似のコンテンツが複数のURLで存在する場合、<strong>どれが代表（正規）URLかをGoogleに明示</strong>することで、SEO評価を1箇所に集約できます。</p>
+                    </section>
+
+                    <section id="why">
+                        <h2>なぜ必要なのか</h2>
+
+                        <h3>理由1：重複コンテンツによる評価分散を防ぐ</h3>
+                        <p>同じ内容が複数URLにあると、Googleは<strong>「どのURLを評価すべきか」を判断できず、被リンクや評価が分散</strong>します。canonicalで集約すれば1つのURLに評価が集まります。</p>
+
+                        <h3>理由2：意図しない重複の発生を防ぐ</h3>
+                        <p>たとえば以下のURLは技術的に別ページ扱いです：</p>
+                        <ul>
+                            <li><code>https://example.com/page</code></li>
+                            <li><code>https://example.com/page/</code>（末尾スラッシュ）</li>
+                            <li><code>https://example.com/page?utm_source=...</code>（パラメータ付き）</li>
+                            <li><code>http://example.com/page</code>（httpsとhttp）</li>
+                        </ul>
+                        <p>canonicalで正規URLを指定すれば、すべて1つの評価に集約されます。</p>
+
+                        <h3>理由3：SNSやメディアからの流入対策</h3>
+                        <p>パラメータ付きURLでシェアされた時も、canonicalで正規URLが指定されていればSEO評価がぶれません。</p>
+                    </section>
+
+                    <section id="when">
+                        <h2>使うべき場面5つ</h2>
+
+                        <div class="info-box">
+                            <h4>canonical必須シーン</h4>
+                            <ol>
+                                <li><strong>ECサイトの商品ページ</strong>：色違い・サイズ違いなど類似ページが多い</li>
+                                <li><strong>パラメータURLが発生する</strong>：UTM、フィルタリング、ソート機能</li>
+                                <li><strong>www有無・https/http混在</strong>：完全なURL正規化</li>
+                                <li><strong>PCとモバイルで別URL</strong>（古い構造）</li>
+                                <li><strong>記事を別カテゴリで再掲</strong>：オリジナルを正規指定</li>
+                            </ol>
+                        </div>
+
+                        <h3>普通のサイトでも自己参照canonicalが推奨</h3>
+                        <p>特に重複がなくても、<strong>各ページに「自分自身のURL」を指すcanonical</strong>を入れるのが現代の標準。意図しない重複の予防になります。</p>
+                    </section>
+
+                    <section id="how">
+                        <h2>基本の設定方法</h2>
+
+                        <h3>HTMLでの記述</h3>
+                        <p><code>&lt;head&gt;</code>内に1行追加するだけです。</p>
+                        <div class="example-box">
+                            <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;ページタイトル&lt;/title&gt;
+  &lt;link rel="canonical" href="https://example.com/page" /&gt;
+&lt;/head&gt;</code></pre>
+                        </div>
+
+                        <h3>絶対URLで記述する</h3>
+                        <p>相対パス（<code>/page</code>）ではなく、必ず<strong>絶対URL（<code>https://example.com/page</code>）</strong>で書きます。</p>
+
+                        <h3>1ページ1つだけ</h3>
+                        <p>複数のcanonicalがあるとGoogleが混乱します。<strong>1ページに1つだけ</strong>にしてください。</p>
+                    </section>
+
+                    <section id="wordpress">
+                        <h2>WordPressでの設定</h2>
+                        <p>WordPress利用なら、<strong>SEOプラグインが自動でcanonicalを出力</strong>してくれます。</p>
+                        <ul>
+                            <li><strong>Yoast SEO</strong>：自動で自己参照canonicalを出力</li>
+                            <li><strong>All in One SEO</strong>：自動出力＋ページ単位で上書き可能</li>
+                            <li><strong>Rank Math</strong>：自動出力＋詳細制御</li>
+                        </ul>
+                        <p>これらを入れている場合、手動設定は不要です。<strong>むしろ手動と二重になると問題</strong>なので注意。</p>
+
+                        <div class="tip-box">
+                            <p><strong>確認方法</strong>：ブラウザでページのソース表示（Ctrl+U）して、<code>rel="canonical"</code>を検索。1つだけ見つかればOK。</p>
+                        </div>
+                    </section>
+
+                    <section id="vs-301">
+                        <h2>301リダイレクトとの違い</h2>
+                        <p>「重複対策」として並べて議論されますが、<strong>用途は明確に異なります</strong>。</p>
+
+                        <div class="info-box">
+                            <h4>使い分け</h4>
+                            <table>
+                                <thead><tr><th>項目</th><th>canonical</th><th>301リダイレクト</th></tr></thead>
+                                <tbody>
+                                    <tr><td>意味</td><td>正規URLを指定</td><td>URLが移転</td></tr>
+                                    <tr><td>元URLへのアクセス</td><td>可能</td><td>不可（自動転送）</td></tr>
+                                    <tr><td>使う場面</td><td>類似コンテンツ・パラメータ</td><td>URL変更・サイト移転</td></tr>
+                                    <tr><td>SEO評価</td><td>正規URLに集約</td><td>転送先に引き継ぐ</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>「URLを変えた」場合は301、「同じ内容で別URLが残る」場合はcanonicalです。</p>
+                    </section>
+
+                    <section id="mistakes">
+                        <h2>よくある失敗</h2>
+                        <div class="info-box">
+                            <h4>NGリスト</h4>
+                            <ol>
+                                <li><strong>全ページのcanonicalがトップページを指す</strong>：すべての評価がトップに集約され、個別ページが評価されない致命的ミス</li>
+                                <li><strong>相対パスで記述</strong>：絶対URLでないと意図通りに動かない</li>
+                                <li><strong>noindexと併用</strong>：矛盾する指示でGoogleが混乱</li>
+                                <li><strong>http/https・www有無の不一致</strong>：実際のURLと完全一致させる</li>
+                                <li><strong>canonicalが複数</strong>：1ページに1つだけ</li>
+                                <li><strong>削除したページに残ったまま</strong>：404になり評価が消失</li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <section id="check">
+                        <h2>設定確認の方法</h2>
+
+                        <h3>1. ページソースで確認</h3>
+                        <p>ブラウザで右クリック→「ページのソースを表示」→<code>rel="canonical"</code>を検索。1つだけ、正しいURLが書かれているかチェック。</p>
+
+                        <h3>2. Search Consoleでの確認</h3>
+                        <p>「URL検査」ツールに各ページのURLを入力すると、<strong>「ユーザーが指定した正規URL」と「Googleが選択した正規URL」</strong>が表示されます。これが一致していればOK。</p>
+
+                        <h3>3. SEOツールで一括チェック</h3>
+                        <p>Screaming Frog、Ahrefs、SEMrushなどの<strong>クロールツール</strong>で、サイト全体のcanonicalを一覧確認できます。</p>
+                    </section>
+
+                    <section id="summary">
+                        <h2>まとめ</h2>
+                        <div class="summary-box">
+                            <h4>この記事のポイント</h4>
+                            <ul>
+                                <li>canonicalタグは「正規URL」をGoogleに伝える仕組み</li>
+                                <li>全ページに自己参照canonicalを設置するのが推奨</li>
+                                <li>絶対URLで記述、1ページ1つだけ</li>
+                                <li>WordPressならSEOプラグインが自動出力</li>
+                                <li>301リダイレクトとは目的が違う。混同注意</li>
+                                <li>全ページがトップページを指すミスは致命的</li>
+                            </ul>
+                        </div>
+                        <p>canonicalタグは地味ですが、<strong>正しく設定するだけでSEO評価の取りこぼしを防げる</strong>必須要素です。一度設定すれば長く効くので、未設定のサイトは今すぐ対応を。</p>
+                    </section>
+
+                    <div class="article-cta">
+                        <h3>サイトのSEO技術設定、診断します</h3>
+                        <p>canonical・noindex・構造化データなど、技術SEOの設定状況を無料診断。</p>
+                        <a href="/#contact" class="btn btn-primary btn-large">無料相談はこちら
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h3>この記事を書いた人</h3>
+                        <div class="author-card"><div class="author-info">
+                            <p class="author-name">LIKaNON</p>
+                            <p class="author-desc">Web制作・デザイン歴8年以上。SEO対策を施したホームページ制作から運用まで一貫サポート。</p>
+                        </div></div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>関連記事</h3>
+                        <ul class="related-posts">
+                            <li><a href="xml-sitemap-guide.html">XMLサイトマップ完全ガイド</a></li>
+                            <li><a href="structured-data-guide.html">構造化データ実装ガイド</a></li>
+                            <li><a href="google-search-console-guide.html">Search Console活用ガイド</a></li>
+                            <li><a href="internal-link-optimization.html">内部リンクの最適化</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3>カテゴリー</h3>
+                        <ul class="category-list">
+                            <li><a href="/blog.html?category=seo">SEO対策</a></li>
+                            <li><a href="/blog.html?category=web">Webの豆知識</a></li>
+                            <li><a href="/blog.html?category=design">デザインの豆知識</a></li>
+                            <li><a href="/blog.html?category=sns">SNS運用の豆知識</a></li>
+                            <li><a href="/blog.html?category=column">お役立ちコラム</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-profile">
+                <div class="footer-profile-inner">
+                    <img src="../img/likanonlogo.png" alt="LIKaNON" class="footer-logo">
+                    <div class="footer-profile-content"><p class="footer-profile-text">デザインとWeb制作で<strong>8年以上</strong>の実績。<br class="pc-only">HP制作・リニューアル・運用代行まで、一貫してサポートします。</p></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 LIKaNON. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る"><span class="back-to-top-arrow"></span><span class="back-to-top-text">TOP</span></a>
+
+    <nav class="mobile-fixed-footer">
+        <a href="/#web-production"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg><span>Web制作</span></a>
+        <a href="/#service" class="instagram-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="url(#instagram-gradient)"><defs><linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#FFDC80"/><stop offset="25%" style="stop-color:#F77737"/><stop offset="50%" style="stop-color:#E1306C"/><stop offset="75%" style="stop-color:#C13584"/><stop offset="100%" style="stop-color:#833AB4"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg><span>運用代行</span></a>
+        <a href="/#contact" class="highlight-cta"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg><span>相談</span></a>
+        <a href="/#portfolio"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg><span>実績</span></a>
+        <a href="/blog.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg><span>ブログ</span></a>
+    </nav>
+
+    <script src="../script.js" defer></script>
+    <script src="../blog.js" defer></script>
+</body>
+</html>
