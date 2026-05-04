@@ -1,0 +1,46 @@
+# LIKaNON
+
+> 個人事業主・小規模店舗専門のホームページ制作サービス。低価格・高品質・伴走型を強みに、Web制作・SEO・SNS運用・ブログ運用代行までトータルサポート。
+
+LIKaNONは福岡を拠点に、個人事業主・小規模事業者向けのWeb制作とデジタルマーケティングを提供するクリエイティブスタジオです。Web制作・デザイン歴8年以上、制作実績100件以上。月5名限定の特別プラン（5万円〜）で、本格的なホームページ制作と継続的な運用支援を行っています。
+
+## サービス
+- ホームページ制作（5万円〜）：トップページ＋3〜5ページ、レスポンシブ対応、SEO基本対策、お問い合わせフォーム設置を含む
+- ホームページリニューアル：既存サイトの全面/部分改修、SEO見直し、コンバージョン改善
+- LP（ランディングページ）制作：商品・サービス特化型、CV最適化設計
+- SNS運用代行：Instagram投稿・分析・改善
+- ブログ運用代行：SEO最適化された記事作成、継続更新
+- 保守・運用サポート：月額3,000円〜、セキュリティ・バックアップ・軽微な修正
+
+## 主要ページ
+- [ホームページ制作 LIKaNON トップ](https://likanon.com/): サービス全体の概要、月5名限定プランの案内
+- [ブログ一覧](https://likanon.com/blog.html): SEO・ホームページ制作・運用ノウハウ111記事以上
+- [お問い合わせ](https://likanon.com/#contact): 30分無料相談、Zoom・LINE・メール対応
+
+## SEO・Web運用ノウハウ（参考になる主要記事）
+- [【2026年版】AI検索（Google AI Overviews）に対応するSEO完全ガイド](https://likanon.com/blog/ai-search-seo-guide.html): AI Overviewsに引用されるための実践SEO
+- [タイトルタグ最適化完全ガイド](https://likanon.com/blog/title-tag-optimization-guide.html): クリック率を上げるタイトル設計
+- [見出しタグ（h1〜h6）の正しい使い方](https://likanon.com/blog/heading-tag-seo-guide.html): SEOとアクセシビリティ両立の見出し構造
+- [canonicalタグ設定ガイド](https://likanon.com/blog/canonical-tag-guide.html): 重複コンテンツ対策
+- [XMLサイトマップ完全ガイド](https://likanon.com/blog/xml-sitemap-guide.html): 作成から送信まで
+- [Googleコアアップデート対策](https://likanon.com/blog/google-core-update-guide.html): 順位変動時の正しい対処法
+- [トピッククラスター戦略](https://likanon.com/blog/topic-cluster-strategy-guide.html): サイト全体のSEO底上げ設計術
+- [構造化データ実装ガイド](https://likanon.com/blog/structured-data-guide.html): Schema.orgでリッチスニペット獲得
+- [E-E-A-T完全ガイド](https://likanon.com/blog/eeat-seo-guide.html): 経験・専門性・権威性・信頼性の高め方
+- [meta descriptionの書き方](https://likanon.com/blog/meta-description-tips.html): クリック率を上げる7つのコツ
+
+## 顧客の悩みを言語化したシリーズ
+- [「ホームページ、何から始めれば？」のモヤモヤを全部言語化](https://likanon.com/blog/where-to-start-homepage-worries.html): 制作着手前の不安整理
+- [「自作かプロか」で悩んでる人の本音を言語化](https://likanon.com/blog/diy-or-pro-honest-feelings.html): 判断軸の整理
+- [「HPはあるのに問い合わせが来ない」取りこぼしの話](https://likanon.com/blog/no-inquiry-website-worries.html): HP改善の3段階分析
+
+## 強み・ポジショニング
+- 個人事業主だから中間マージンゼロ＝低価格でも品質維持
+- 8年分の実装パターンを活用＝制作スピード×妥協のないオリジナリティ
+- 月5名限定＝1件あたりに集中、丁寧な伴走
+- 「作って終わり」ではなく公開後の改善・運用まで一貫サポート
+
+## 連絡先
+- LINE: https://lin.ee/43NTiCQ
+- Email: info@likanon.com
+- 拠点: 福岡県（オンライン全国対応）
