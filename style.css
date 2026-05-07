@@ -4536,3 +4536,811 @@ select {
         font-size: 1rem;
     }
 }
+
+/* ============================================================
+   CVR改修: 月5名限定帯 / 悩み共感 / 特別プラン / 継続提案
+   ============================================================ */
+
+/* 月5名限定の上部帯 */
+.offer-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    padding: 0.6rem 1rem;
+    background: linear-gradient(90deg, #1a1a1a 0%, #32373c 100%);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    transition: background var(--transition-fast);
+    flex-wrap: wrap;
+}
+
+.offer-strip:hover {
+    background: linear-gradient(90deg, #000 0%, #1a1d20 100%);
+}
+
+.offer-strip-badge {
+    background: #c9a96e;
+    color: #1a1a1a;
+    padding: 0.15rem 0.6rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+
+.offer-strip-text {
+    color: #fff;
+}
+
+.offer-strip-text strong {
+    color: #f5e6c8;
+    font-weight: 700;
+}
+
+.offer-strip-arrow {
+    font-weight: 700;
+    transition: transform var(--transition-fast);
+}
+
+.offer-strip:hover .offer-strip-arrow {
+    transform: translateX(4px);
+}
+
+/* Hero補助テキスト */
+.hero-note {
+    margin-top: var(--spacing-md);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+/* ===== 悩み共感セクション ===== */
+.empathy {
+    background: var(--color-bg-soft);
+}
+
+.empathy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.empathy-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.empathy-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.empathy-check {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.empathy-card p {
+    margin: 0;
+    color: var(--color-text);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.empathy-conclusion {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--color-primary);
+}
+
+.empathy-conclusion p {
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* ===== 月5名限定プラン ===== */
+.special-offer {
+    background: linear-gradient(180deg, #fafaf8 0%, #f5f1e8 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.special-offer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #c9a96e 0%, #1a1a1a 100%);
+}
+
+.special-offer-badge-top {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background: var(--color-primary);
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 auto var(--spacing-lg);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    display: flex;
+}
+
+.badge-pulse {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #c9a96e;
+    border-radius: var(--radius-full);
+    animation: badge-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* 価格比較カード */
+.offer-price-compare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    margin: var(--spacing-2xl) 0;
+    flex-wrap: wrap;
+}
+
+.offer-price-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    text-align: center;
+    min-width: 240px;
+    box-shadow: var(--shadow-sm);
+}
+
+.offer-price-normal {
+    opacity: 0.6;
+}
+
+.offer-price-special {
+    border: 3px solid #c9a96e;
+    box-shadow: var(--shadow-lg);
+    transform: scale(1.05);
+    position: relative;
+}
+
+.offer-price-special::before {
+    content: 'おすすめ';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #c9a96e;
+    color: #1a1a1a;
+    padding: 0.2rem 0.9rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.offer-price-label {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.offer-price-amount {
+    font-family: var(--font-accent);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+
+.offer-price-strike {
+    text-decoration: line-through;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.offer-price-big {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1;
+}
+
+.offer-price-unit {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 0.1em;
+}
+
+.offer-price-note {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.offer-price-arrow {
+    font-size: 2rem;
+    color: var(--color-text-muted);
+    font-weight: 300;
+}
+
+/* 含むもの（単体レイアウト） */
+.offer-includes {
+    margin: var(--spacing-2xl) auto;
+    padding: var(--spacing-xl);
+    background: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    max-width: 760px;
+}
+
+.offer-includes-single {
+    text-align: left;
+}
+
+.offer-include-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0 var(--spacing-xl);
+}
+
+.offer-include-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.offer-include-yes {
+    color: #1a7f4e;
+    border-bottom-color: #1a7f4e;
+}
+
+.offer-include-no {
+    color: #888;
+}
+
+.offer-include-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.offer-include-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.offer-include-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #1a7f4e;
+    font-weight: 700;
+}
+
+.offer-include-list-no li::before {
+    content: '—';
+    color: #aaa;
+}
+
+.offer-include-caption {
+    margin-top: var(--spacing-md);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* なぜ安いのか */
+.offer-reasons {
+    margin: var(--spacing-3xl) 0 var(--spacing-2xl);
+}
+
+.offer-reasons-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--color-primary);
+    position: relative;
+    padding-bottom: var(--spacing-md);
+}
+
+.offer-reasons-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 3px;
+    background: #c9a96e;
+    border-radius: var(--radius-full);
+}
+
+.offer-reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* コンパクト版 4理由カード */
+.offer-reasons-grid-compact {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+}
+
+.offer-reason-compact {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl) var(--spacing-md);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.offer-reason-compact:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: #c9a96e;
+}
+
+.offer-reason-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #f5e6c8 0%, #c9a96e 100%);
+    color: #1a1a1a;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-md);
+}
+
+.offer-reason-compact h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.4;
+}
+
+.offer-reason-compact p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.offer-reason-card {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.offer-reason-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.offer-reason-num {
+    display: block;
+    font-family: var(--font-accent);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #c9a96e;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.offer-reason-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+}
+
+.offer-reason-card p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+/* オファー末尾CTA */
+.offer-final-cta {
+    text-align: center;
+    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-xl);
+    background: var(--color-primary);
+    border-radius: var(--radius-lg);
+    color: #fff;
+}
+
+.offer-final-cta-note {
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+    color: rgba(255,255,255,0.85);
+}
+
+.offer-final-cta .btn-primary {
+    background: #c9a96e;
+    color: #1a1a1a;
+    border: none;
+    font-weight: 700;
+}
+
+.offer-final-cta .btn-primary:hover {
+    background: #d4b57f;
+    color: #1a1a1a;
+}
+
+.offer-final-cta-sub {
+    margin-top: var(--spacing-md);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+}
+
+/* オファー末尾: LINE＋フォーム 二択CTA */
+.offer-final-cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-md);
+}
+
+.btn-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #06c755;
+    color: #fff;
+    padding: 1rem 1.75rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background var(--transition-fast), transform var(--transition-fast);
+    border: none;
+    position: relative;
+}
+
+.btn-line:hover {
+    background: #05a546;
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+.btn-line .btn-note {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-left: 0.3rem;
+    padding-left: 0.6rem;
+    border-left: 1px solid rgba(255,255,255,0.4);
+}
+
+.btn-primary-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #c9a96e;
+    color: #1a1a1a;
+    padding: 1rem 1.75rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background var(--transition-fast), transform var(--transition-fast);
+    border: none;
+}
+
+.btn-primary-gold:hover {
+    background: #d4b57f;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+/* ===== 継続提案: Growth Journey ===== */
+.growth-journey {
+    background: var(--color-bg-soft);
+}
+
+.journey-steps {
+    max-width: 760px;
+    margin: var(--spacing-2xl) auto 0;
+    position: relative;
+}
+
+.journey-step {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
+    background: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    align-items: flex-start;
+}
+
+.journey-step-num {
+    font-family: var(--font-accent);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #c9a96e;
+    letter-spacing: 0.1em;
+    padding-top: 0.2rem;
+}
+
+.journey-step-body h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+
+.journey-step-body p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.journey-connector {
+    width: 2px;
+    height: 32px;
+    background: linear-gradient(180deg, #c9a96e 0%, rgba(201,169,110,0.3) 100%);
+    margin: 0 auto;
+    margin-left: 60px;
+}
+
+.journey-conclusion {
+    margin-top: var(--spacing-2xl);
+}
+
+.journey-conclusion-card {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: var(--radius-lg);
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.journey-conclusion-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: #fff;
+}
+
+.journey-conclusion-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: var(--spacing-sm);
+}
+
+.journey-conclusion-note {
+    font-size: 0.85rem !important;
+    color: rgba(255,255,255,0.65) !important;
+    margin-top: var(--spacing-md);
+}
+
+/* ===== FAQハイライト（価格不安系） ===== */
+.faq-highlight {
+    border-left: 3px solid #c9a96e !important;
+}
+
+.faq-highlight .faq-question {
+    background: linear-gradient(90deg, rgba(201,169,110,0.08) 0%, transparent 100%);
+}
+
+/* ===== 最終CTA再設計 ===== */
+.cta-ribbon {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background: #c9a96e;
+    color: #1a1a1a;
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+}
+
+.cta-benefits {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-lg) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+.cta-benefits li {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.85);
+    padding-left: 1.3rem;
+    position: relative;
+}
+
+.cta-benefits li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #c9a96e;
+    font-weight: 700;
+}
+
+/* ===== レスポンシブ調整 ===== */
+@media (max-width: 768px) {
+    .offer-strip {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.75rem;
+        gap: 0.5rem;
+    }
+
+    .offer-strip-badge {
+        font-size: 0.7rem;
+        padding: 0.1rem 0.5rem;
+    }
+
+    .empathy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-price-compare {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .offer-price-arrow {
+        transform: rotate(90deg);
+    }
+
+    .offer-price-special {
+        transform: scale(1);
+    }
+
+    .offer-price-big {
+        font-size: 2.8rem;
+    }
+
+    .offer-includes {
+        padding: var(--spacing-lg);
+    }
+
+    .offer-include-list-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-reasons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-reasons-grid-compact {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .offer-reason-compact {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .offer-reason-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .offer-reason-icon svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .offer-reason-compact h4 {
+        font-size: 0.9rem;
+    }
+
+    .offer-reason-compact p {
+        font-size: 0.78rem;
+    }
+
+    .offer-final-cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-line, .btn-primary-gold {
+        justify-content: center;
+    }
+
+    .btn-line .btn-note {
+        display: inline;
+        border-left: none;
+        padding-left: 0.4rem;
+        margin-left: 0.3rem;
+        opacity: 0.85;
+    }
+
+    .journey-step {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-lg);
+    }
+
+    .journey-connector {
+        margin-left: auto;
+    }
+
+    .journey-conclusion-card {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+
+    .journey-conclusion-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .cta-benefits {
+        gap: var(--spacing-sm) var(--spacing-md);
+    }
+}
+
