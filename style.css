@@ -5344,3 +5344,156 @@ select {
     }
 }
 
+/* ============================================================
+   Knowledge Hub: 人気記事 + トピックハブ
+   ============================================================ */
+.hub-subtitle {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: var(--spacing-2xl) 0 var(--spacing-lg);
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.popular-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.popular-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.popular-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: #c9a96e;
+}
+
+.popular-card-num {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    font-family: var(--font-accent);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: rgba(201,169,110,0.35);
+    line-height: 1;
+}
+
+.popular-card-cat {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #c9a96e;
+    background: #f5e6c8;
+    padding: 0.2rem 0.7rem;
+    border-radius: var(--radius-full);
+    letter-spacing: 0.04em;
+    margin-bottom: var(--spacing-md);
+    width: fit-content;
+}
+
+.popular-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.55;
+    color: var(--color-primary);
+    margin: 0 0 var(--spacing-sm);
+    padding-right: 2rem;
+}
+
+.popular-card p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.topic-hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.topic-hub-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-lg);
+    background: var(--color-bg-soft);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+    gap: 0.4rem;
+}
+
+.topic-hub-card:hover {
+    transform: translateY(-3px);
+    background: #fff;
+    border-color: #c9a96e;
+}
+
+.topic-hub-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.topic-hub-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.4;
+}
+
+.topic-hub-count {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-accent);
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .popular-articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .popular-articles-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .topic-hub-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .topic-hub-title {
+        font-size: 0.82rem;
+    }
+
+    .hub-subtitle {
+        font-size: 1rem;
+        margin: var(--spacing-xl) 0 var(--spacing-md);
+    }
+}
+
+
