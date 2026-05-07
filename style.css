@@ -2991,7 +2991,7 @@ select {
 /* ----- Back to Top Button ----- */
 .back-to-top {
     position: fixed;
-    bottom: 2rem;
+    bottom: 7rem;
     right: 2rem;
     display: flex;
     flex-direction: column;
@@ -3002,7 +3002,7 @@ select {
     visibility: hidden;
     transform: translateY(20px);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 999;
+    z-index: 998;
 }
 
 .back-to-top-arrow {
@@ -3056,7 +3056,7 @@ select {
 
 @media (max-width: 768px) {
     .back-to-top {
-        bottom: 1.5rem;
+        bottom: 6rem;
         right: 1rem;
     }
 
