@@ -5496,4 +5496,148 @@ select {
     }
 }
 
+/* ============================================================
+   無料サイト診断オファー（低敷居エントリ）
+   ============================================================ */
+.site-diagnosis {
+    background: linear-gradient(180deg, #f5f1e8 0%, #fafaf8 100%);
+    padding: var(--spacing-3xl) 0;
+}
+
+.diagnosis-card {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #fff;
+    border: 3px solid #c9a96e;
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+}
+
+.diagnosis-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background: #1a1a1a;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+.diagnosis-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.4;
+}
+
+.diagnosis-highlight {
+    color: #c9a96e;
+    border-bottom: 3px solid #c9a96e;
+    padding-bottom: 2px;
+}
+
+.diagnosis-lead {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+}
+
+.diagnosis-includes {
+    list-style: none;
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+    background: var(--color-bg-soft);
+    border-radius: var(--radius-md);
+    text-align: left;
+}
+
+.diagnosis-includes li {
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.diagnosis-note {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xl);
+}
+
+.diagnosis-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-align: left;
+}
+
+.diagnosis-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.diagnosis-form input[type="text"],
+.diagnosis-form input[type="email"],
+.diagnosis-form input[type="url"] {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-family: var(--font-primary);
+    transition: border-color var(--transition-fast);
+    background: #fff;
+}
+
+.diagnosis-form input:focus {
+    outline: none;
+    border-color: #c9a96e;
+}
+
+.diagnosis-submit {
+    background: #c9a96e !important;
+    color: #1a1a1a !important;
+    border: none !important;
+    font-weight: 700 !important;
+    margin-top: var(--spacing-sm);
+    justify-content: center;
+}
+
+.diagnosis-submit:hover {
+    background: #d4b57f !important;
+    color: #1a1a1a !important;
+}
+
+.diagnosis-submit-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .diagnosis-card {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+
+    .diagnosis-title {
+        font-size: 1.4rem;
+    }
+
+    .diagnosis-form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 
