@@ -5313,12 +5313,15 @@ select {
         justify-content: center;
     }
 
+    .btn-line {
+        white-space: nowrap;
+        padding: 0.9rem 1.25rem;
+        font-size: 0.95rem;
+        justify-content: center;
+    }
+
     .btn-line .btn-note {
-        display: inline;
-        border-left: none;
-        padding-left: 0.4rem;
-        margin-left: 0.3rem;
-        opacity: 0.85;
+        display: none;
     }
 
     .journey-step {
