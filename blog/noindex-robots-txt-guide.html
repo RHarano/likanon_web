@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N2Y1QF8ZQV');</script><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="noindex・robots.txtの使い分けと設定方法を完全解説。クロール制御・インデックス制御の違いと、避けるべき設定ミスを実例で。">
+<meta property="og:title" content="noindex・robots.txt活用ガイド｜クロール/インデックス制御の正しい使い分け | LIKaNON">
+<meta property="og:description" content="クロール制御とインデックス制御の違いを実例で解説。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://likanon.com/blog/noindex-robots-txt-guide.html">
+<meta property="og:image" content="https://likanon.com/img/og-image.png">
+<meta property="article:published_time" content="2026-05-08">
+<meta property="article:modified_time" content="2026-05-08">
+<link rel="canonical" href="https://likanon.com/blog/noindex-robots-txt-guide.html">
+<title>noindex・robots.txt活用ガイド｜クロール/インデックス制御の正しい使い分け | LIKaNON</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../blog.css"><link rel="stylesheet" href="article.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"noindex・robots.txt活用ガイド","datePublished":"2026-05-08","dateModified":"2026-05-08","author":{"@type":"Organization","name":"LIKaNON"},"publisher":{"@type":"Organization","name":"LIKaNON","logo":{"@type":"ImageObject","url":"https://likanon.com/img/likanonlogo.png"}}}</script>
+</head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo"><img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image"></a><nav class="nav"><ul class="nav-list"><li><a href="/blog.html" class="active">ブログ</a></li><li><a href="/#contact" class="nav-cta">お問い合わせ</a></li></ul></nav></div></header>
+<nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="/">ホーム</a></li><li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li><li class="breadcrumb-item current">noindex・robots.txt</li></ol></div></nav>
+
+<article class="article"><header class="article-header"><div class="container"><div class="article-meta"><span class="article-category seo">SEO対策</span><time datetime="2026-05-08">2026.05.08</time><span class="read-time">8分</span></div>
+<h1 class="article-title">noindex・robots.txt活用ガイド｜クロール/インデックス制御の正しい使い分け</h1>
+<p class="article-lead">「サイトマップを送ったのにインデックスされない」「会員ページが検索結果に出てしまう」——どれもクロール制御・インデックス制御の知識不足が原因。noindexとrobots.txtの使い分けを正しく理解しましょう。</p>
+</div></header>
+
+<div class="article-content"><div class="container"><div class="article-body">
+<section><h2>2つの違い</h2>
+<table>
+<tr><th>項目</th><th>noindex</th><th>robots.txt</th></tr>
+<tr><td>場所</td><td>各ページの&lt;head&gt;</td><td>サイトルート/robots.txt</td></tr>
+<tr><td>目的</td><td>インデックスを止める</td><td>クロールを止める</td></tr>
+<tr><td>クロール</td><td>される</td><td>されない</td></tr>
+<tr><td>インデックス</td><td>される</td><td>される可能性あり（注意）</td></tr>
+</table>
+</section>
+
+<section><h2>noindexの使い方</h2>
+<pre><code>&lt;meta name="robots" content="noindex"&gt;</code></pre>
+<h3>noindexすべきページ例</h3>
+<ul>
+<li>サンクスページ（送信完了画面）</li>
+<li>ログイン後の会員専用ページ</li>
+<li>カートページ・購入確認画面</li>
+<li>検索結果ページ（サイト内検索）</li>
+<li>タグページ・カテゴリの薄いページ</li>
+</ul>
+</section>
+
+<section><h2>robots.txtの使い方</h2>
+<pre><code>User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml</code></pre>
+<h3>robots.txtで制御すべきもの</h3>
+<ul>
+<li>管理画面（/wp-admin/等）</li>
+<li>大量の動的ページ（クロールバジェット節約）</li>
+<li>テスト環境</li>
+<li>不要なリソース（画像・JS・CSSは基本Allow）</li>
+</ul>
+</section>
+
+<section><h2>大事な注意点</h2>
+<div class="info-box">
+<p><strong>robots.txtでDisallowにしたページは、noindexが効きません</strong>。クロールされないので、noindexタグを読まれないからです。</p>
+<p>インデックスを止めたいなら<strong>noindex</strong>を使い、クロールも止めたい場合だけrobots.txtでDisallowします。両方使うと矛盾します。</p>
+</div>
+</section>
+
+<section><h2>WordPressでの設定</h2>
+<ul>
+<li>「設定」→「表示設定」→「検索エンジンがインデックスしないようにする」（サイト全体のnoindex化）</li>
+<li>Yoast SEO/All in One SEOでページ別noindex設定</li>
+<li>robots.txtは多くのプラグインで自動生成</li>
+</ul>
+</section>
+
+<section><h2>確認方法</h2>
+<ul>
+<li>Search Console「URL検査」でnoindex判定確認</li>
+<li>ブラウザでrobots.txt直接表示（example.com/robots.txt）</li>
+<li>「site:example.com」検索で実際の表示</li>
+</ul>
+</section>
+
+<section><h2>まとめ</h2>
+<ul>
+<li>noindex＝インデックス禁止、robots.txt＝クロール禁止</li>
+<li>会員・サンクスページはnoindex</li>
+<li>管理画面はrobots.txtでDisallow</li>
+<li>両方の併用は矛盾なので避ける</li>
+<li>Search Consoleで動作確認</li>
+</ul>
+</section>
+
+<div class="article-cta"><h3>テクニカルSEOもお任せください</h3><a href="/#contact" class="btn btn-primary btn-large">無料相談はこちら</a></div>
+</div>
+<aside class="article-sidebar"><div class="sidebar-section"><h3>関連記事</h3><ul class="related-posts">
+<li><a href="seo-complete-map.html">SEO対策完全マップ</a></li>
+<li><a href="xml-sitemap-guide.html">XMLサイトマップ完全ガイド</a></li>
+<li><a href="canonical-tag-guide.html">canonicalタグ設定ガイド</a></li>
+</ul></div></aside>
+</div></div></article>
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2024 LIKaNON. All rights reserved.</p></div></div></footer>
+<a href="#" class="back-to-top" id="backToTop"><span class="back-to-top-arrow"></span><span class="back-to-top-text">TOP</span></a>
+<script src="../script.js" defer></script><script src="../blog.js" defer></script>
+</body></html>

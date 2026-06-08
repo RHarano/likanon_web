@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N2Y1QF8ZQV');</script><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="多言語サイトのhreflang設定ガイド。日英対応・地域別配信・正しい記述方法と確認方法を解説。">
+<meta property="og:title" content="多言語サイトのhreflang設定ガイド｜日英対応・地域別配信 | LIKaNON">
+<meta property="og:description" content="多言語サイトのSEO設定とhreflangの正しい記述方法。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://likanon.com/blog/hreflang-multilingual.html">
+<meta property="og:image" content="https://likanon.com/img/og-image.png">
+<meta property="article:published_time" content="2026-05-08">
+<meta property="article:modified_time" content="2026-05-08">
+<link rel="canonical" href="https://likanon.com/blog/hreflang-multilingual.html">
+<title>多言語サイトのhreflang設定ガイド｜日英対応・地域別配信 | LIKaNON</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../blog.css"><link rel="stylesheet" href="article.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"多言語サイトのhreflang設定ガイド","datePublished":"2026-05-08","dateModified":"2026-05-08","author":{"@type":"Organization","name":"LIKaNON"},"publisher":{"@type":"Organization","name":"LIKaNON","logo":{"@type":"ImageObject","url":"https://likanon.com/img/likanonlogo.png"}}}</script>
+</head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo"><img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image"></a><nav class="nav"><ul class="nav-list"><li><a href="/blog.html" class="active">ブログ</a></li><li><a href="/#contact" class="nav-cta">お問い合わせ</a></li></ul></nav></div></header>
+<nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="/">ホーム</a></li><li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li><li class="breadcrumb-item current">hreflang設定</li></ol></div></nav>
+
+<article class="article"><header class="article-header"><div class="container"><div class="article-meta"><span class="article-category seo">SEO対策</span><time datetime="2026-05-08">2026.05.08</time><span class="read-time">7分</span></div>
+<h1 class="article-title">多言語サイトのhreflang設定ガイド｜日英対応・地域別配信</h1>
+<p class="article-lead">日本語と英語の両方を提供するサイトで<strong>適切な言語が表示されるための設定がhreflang</strong>。インバウンド対応・越境ECで必須の知識を解説します。</p>
+</div></header>
+
+<div class="article-content"><div class="container"><div class="article-body">
+<section><h2>hreflangとは</h2>
+<p>「このページは○○語向け、別言語版は××にある」とGoogleに伝える仕組み。日本人ユーザーには日本語ページ、英語ユーザーには英語ページが表示される。</p>
+</section>
+
+<section><h2>基本の記述</h2>
+<pre><code>&lt;link rel="alternate" hreflang="ja" href="https://example.com/ja/page" /&gt;
+&lt;link rel="alternate" hreflang="en" href="https://example.com/en/page" /&gt;
+&lt;link rel="alternate" hreflang="x-default" href="https://example.com/" /&gt;</code></pre>
+<p><strong>x-default</strong>はマッチする言語版がない場合のデフォルトを指定。</p>
+</section>
+
+<section><h2>地域コードの活用</h2>
+<ul>
+<li><code>en-US</code>：英語・米国向け</li>
+<li><code>en-GB</code>：英語・英国向け</li>
+<li><code>zh-CN</code>：中国語・中国向け</li>
+<li><code>zh-TW</code>：中国語・台湾向け</li>
+</ul>
+<p>同じ言語でも地域で表記が違う場合に使う。</p>
+</section>
+
+<section><h2>双方向設定が必須</h2>
+<p>A→Bを設定したらB→Aも必須。<strong>片方向だけだとGoogleは無視</strong>します。</p>
+</section>
+
+<section><h2>サイト構造の3パターン</h2>
+<ul>
+<li><strong>サブディレクトリ</strong>：example.com/ja/ ← おすすめ</li>
+<li><strong>サブドメイン</strong>：ja.example.com</li>
+<li><strong>別ドメイン</strong>：example.jp / example.com</li>
+</ul>
+<p>サブディレクトリが管理しやすく、SEO評価も統合できる。</p>
+</section>
+
+<section><h2>確認方法</h2>
+<ul>
+<li>Search Console「インターナショナルターゲティング」（旧機能）</li>
+<li>HTMLビュー（&lt;head&gt;内のlink要素）確認</li>
+<li>Screaming Frog等のクロールツール</li>
+</ul>
+</section>
+
+<section><h2>まとめ</h2>
+<ul>
+<li>多言語サイトには hreflang 必須</li>
+<li>双方向設定がルール</li>
+<li>x-default でデフォルト指定</li>
+<li>サブディレクトリ構造が管理楽</li>
+</ul>
+</section>
+
+<div class="article-cta"><h3>多言語サイト構築、ご相談ください</h3><a href="/#contact" class="btn btn-primary btn-large">無料相談はこちら</a></div>
+</div>
+<aside class="article-sidebar"><div class="sidebar-section"><h3>関連記事</h3><ul class="related-posts">
+<li><a href="seo-complete-map.html">SEO対策完全マップ</a></li>
+<li><a href="canonical-tag-guide.html">canonicalタグ設定</a></li>
+</ul></div></aside>
+</div></div></article>
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2024 LIKaNON. All rights reserved.</p></div></div></footer>
+<a href="#" class="back-to-top" id="backToTop"><span class="back-to-top-arrow"></span><span class="back-to-top-text">TOP</span></a>
+<script src="../script.js" defer></script><script src="../blog.js" defer></script>
+</body></html>

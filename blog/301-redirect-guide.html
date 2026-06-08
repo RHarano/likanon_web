@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N2Y1QF8ZQV');</script><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="301リダイレクト完全ガイド。.htaccess・WordPress・サーバー別の設定方法とSEO評価を維持する正しい手順を解説します。">
+<meta property="og:title" content="301リダイレクト完全ガイド｜SEO評価を維持する正しい設定 | LIKaNON">
+<meta property="og:description" content=".htaccess・WordPress・サーバー別の設定方法を解説。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://likanon.com/blog/301-redirect-guide.html">
+<meta property="og:image" content="https://likanon.com/img/og-image.png">
+<meta property="article:published_time" content="2026-05-08">
+<meta property="article:modified_time" content="2026-05-08">
+<link rel="canonical" href="https://likanon.com/blog/301-redirect-guide.html">
+<title>301リダイレクト完全ガイド｜SEO評価を維持する正しい設定 | LIKaNON</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../blog.css"><link rel="stylesheet" href="article.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"301リダイレクト完全ガイド","datePublished":"2026-05-08","dateModified":"2026-05-08","author":{"@type":"Organization","name":"LIKaNON"},"publisher":{"@type":"Organization","name":"LIKaNON","logo":{"@type":"ImageObject","url":"https://likanon.com/img/likanonlogo.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://likanon.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://likanon.com/blog.html"},{"@type":"ListItem","position":3,"name":"301リダイレクト","item":"https://likanon.com/blog/301-redirect-guide.html"}]}</script>
+</head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo"><img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image"></a><nav class="nav"><ul class="nav-list"><li><a href="/blog.html" class="active">ブログ</a></li><li><a href="/#contact" class="nav-cta">お問い合わせ</a></li></ul></nav></div></header>
+<nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="/">ホーム</a></li><li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li><li class="breadcrumb-item current">301リダイレクト</li></ol></div></nav>
+
+<article class="article"><header class="article-header"><div class="container"><div class="article-meta"><span class="article-category seo">SEO対策</span><time datetime="2026-05-08">2026.05.08</time><span class="read-time">8分</span></div>
+<h1 class="article-title">301リダイレクト完全ガイド｜SEO評価を維持する正しい設定</h1>
+<p class="article-lead">URLを変更した時、サイトをリニューアルした時、ドメインを移転した時——<strong>301リダイレクトが正しく設定されていないとSEO評価がゼロから</strong>になります。サーバー別の設定方法と注意点を解説します。</p>
+</div></header>
+
+<div class="article-content"><div class="container"><div class="article-body">
+<section><h2>301リダイレクトとは</h2>
+<p>「<strong>URLが恒久的に移動した</strong>」とブラウザ・Googleに伝える仕組み。旧URLにアクセスすると自動的に新URLへ転送され、SEO評価も<strong>90〜99%引き継がれます</strong>。</p>
+<h3>302との違い</h3>
+<ul>
+<li><strong>301</strong>：恒久的な移転（SEO評価を引き継ぐ）</li>
+<li><strong>302</strong>：一時的な移転（評価を引き継がない）</li>
+</ul>
+<p>URL変更時は<strong>必ず301</strong>を使うのが正解です。</p>
+</section>
+
+<section><h2>必須シーン5つ</h2>
+<ul>
+<li>サイトリニューアルでURL構造を変更した</li>
+<li>独自ドメインに移行した</li>
+<li>http→https化した</li>
+<li>www有無を統一したい</li>
+<li>古いページを統合した</li>
+</ul>
+</section>
+
+<section><h2>設定方法：Apache（.htaccess）</h2>
+<pre><code># 個別URL → 個別URL
+Redirect 301 /old-page.html https://example.com/new-page.html
+
+# www なし → www あり
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^example\.com [NC]
+RewriteRule ^(.*)$ https://www.example.com/$1 [L,R=301]
+
+# http → https
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]</code></pre>
+</section>
+
+<section><h2>設定方法：WordPress</h2>
+<ul>
+<li><strong>Redirection</strong>プラグイン（無料・最定番）</li>
+<li><strong>Rank Math / Yoast SEO</strong>有料版にもリダイレクト機能</li>
+<li>管理画面で旧URL→新URLを登録するだけ</li>
+</ul>
+</section>
+
+<section><h2>設定方法：Nginx</h2>
+<pre><code>server {
+    listen 80;
+    server_name example.com www.example.com;
+    return 301 https://example.com$request_uri;
+}</code></pre>
+</section>
+
+<section><h2>よくある失敗</h2>
+<ul>
+<li><strong>リダイレクトチェーン</strong>：A→B→Cと連鎖（評価がどんどん減衰）</li>
+<li><strong>リダイレクトループ</strong>：A→Bで終わってない、設定ミス</li>
+<li><strong>302で設定</strong>：SEO評価が引き継がれない</li>
+<li><strong>301設定後の旧URLが404</strong>：実は転送できていない</li>
+</ul>
+</section>
+
+<section><h2>確認方法</h2>
+<ul>
+<li>ブラウザで旧URLにアクセス→新URLに転送される</li>
+<li>Search Consoleの「URL検査」で確認</li>
+<li>「Redirect Checker」（無料Webツール）</li>
+<li>サーバーレスポンスが「HTTP/1.1 301 Moved Permanently」</li>
+</ul>
+</section>
+
+<section><h2>まとめ</h2>
+<ul>
+<li>URL変更時は必ず301</li>
+<li>サーバー別（.htaccess/Nginx/WordPress）で設定法が違う</li>
+<li>リダイレクトチェーン・ループに注意</li>
+<li>Search Consoleで動作確認</li>
+</ul>
+</section>
+
+<div class="article-cta"><h3>サイト移転・URL変更もお任せください</h3><a href="/#contact" class="btn btn-primary btn-large">無料相談はこちら</a></div>
+</div>
+<aside class="article-sidebar"><div class="sidebar-section"><h3>関連記事</h3><ul class="related-posts">
+<li><a href="seo-complete-map.html">SEO対策完全マップ</a></li>
+<li><a href="canonical-tag-guide.html">canonicalタグ設定ガイド</a></li>
+<li><a href="ssl-certificate-guide.html">SSL証明書とは</a></li>
+</ul></div></aside>
+</div></div></article>
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2024 LIKaNON. All rights reserved.</p></div></div></footer>
+<a href="#" class="back-to-top" id="backToTop"><span class="back-to-top-arrow"></span><span class="back-to-top-text">TOP</span></a>
+<script src="../script.js" defer></script><script src="../blog.js" defer></script>
+</body></html>

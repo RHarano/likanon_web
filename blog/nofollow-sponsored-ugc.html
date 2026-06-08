@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-N2Y1QF8ZQV"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N2Y1QF8ZQV');</script><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="rel属性（nofollow・sponsored・ugc）の使い分けを完全解説。アフィリエイト・広告リンク・ユーザー投稿の正しい処理方法。">
+<meta property="og:title" content="rel=nofollow/sponsored/ugc 使い分けガイド | LIKaNON">
+<meta property="og:description" content="アフィリエイト・広告・UGCの正しい処理方法。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://likanon.com/blog/nofollow-sponsored-ugc.html">
+<meta property="og:image" content="https://likanon.com/img/og-image.png">
+<meta property="article:published_time" content="2026-05-08">
+<meta property="article:modified_time" content="2026-05-08">
+<link rel="canonical" href="https://likanon.com/blog/nofollow-sponsored-ugc.html">
+<title>rel=nofollow/sponsored/ugc 使い分けガイド | LIKaNON</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../blog.css"><link rel="stylesheet" href="article.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"rel=nofollow/sponsored/ugc 使い分けガイド","datePublished":"2026-05-08","dateModified":"2026-05-08","author":{"@type":"Organization","name":"LIKaNON"},"publisher":{"@type":"Organization","name":"LIKaNON","logo":{"@type":"ImageObject","url":"https://likanon.com/img/likanonlogo.png"}}}</script>
+</head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo"><img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image"></a><nav class="nav"><ul class="nav-list"><li><a href="/blog.html" class="active">ブログ</a></li><li><a href="/#contact" class="nav-cta">お問い合わせ</a></li></ul></nav></div></header>
+<nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="/">ホーム</a></li><li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li><li class="breadcrumb-item current">rel属性の使い分け</li></ol></div></nav>
+
+<article class="article"><header class="article-header"><div class="container"><div class="article-meta"><span class="article-category seo">SEO対策</span><time datetime="2026-05-08">2026.05.08</time><span class="read-time">7分</span></div>
+<h1 class="article-title">rel=nofollow/sponsored/ugc 使い分けガイド</h1>
+<p class="article-lead">外部リンクを貼る時の<code>rel</code>属性。アフィリエイト・広告は<code>sponsored</code>、コメント欄は<code>ugc</code>、それ以外の評価渡したくないリンクは<code>nofollow</code>。正しい使い分けで違反リスクを回避します。</p>
+</div></header>
+
+<div class="article-content"><div class="container"><div class="article-body">
+<section><h2>3種類の違い</h2>
+<table>
+<tr><th>属性</th><th>意味</th><th>使う場面</th></tr>
+<tr><td><code>nofollow</code></td><td>リンク評価を渡さない</td><td>信頼性不明のサイト</td></tr>
+<tr><td><code>sponsored</code></td><td>広告・スポンサー</td><td>アフィリエイト・PR記事</td></tr>
+<tr><td><code>ugc</code></td><td>ユーザー生成コンテンツ</td><td>コメント欄・フォーラム</td></tr>
+</table>
+</section>
+
+<section><h2>記述例</h2>
+<pre><code>&lt;!-- アフィリエイト・広告 --&gt;
+&lt;a href="https://example.com" rel="sponsored noopener" target="_blank"&gt;商品リンク&lt;/a&gt;
+
+&lt;!-- コメント欄のリンク --&gt;
+&lt;a href="https://example.com" rel="ugc noopener" target="_blank"&gt;リンク&lt;/a&gt;
+
+&lt;!-- 信頼性低い・評価渡したくない --&gt;
+&lt;a href="https://example.com" rel="nofollow noopener" target="_blank"&gt;参考リンク&lt;/a&gt;
+
+&lt;!-- 複数指定もOK --&gt;
+&lt;a href="https://example.com" rel="sponsored ugc noopener"&gt;リンク&lt;/a&gt;</code></pre>
+</section>
+
+<section><h2>各属性の詳細</h2>
+
+<h3>sponsored（2019年新設）</h3>
+<ul>
+<li>アフィリエイトリンク（Amazon・楽天等）</li>
+<li>PR記事・タイアップ記事</li>
+<li>有料リンク・スポンサーリンク</li>
+<li><strong>未指定だとGoogleペナルティリスク</strong></li>
+</ul>
+
+<h3>ugc（2019年新設）</h3>
+<ul>
+<li>ブログのコメント欄</li>
+<li>掲示板・フォーラム投稿</li>
+<li>口コミ・レビュー機能</li>
+<li>スパム対策にも有効</li>
+</ul>
+
+<h3>nofollow（昔からある）</h3>
+<ul>
+<li>信頼性不明の外部サイト</li>
+<li>競合のリンクを貼る時</li>
+<li>ログイン・ログアウト等の機能リンク</li>
+</ul>
+</section>
+
+<section><h2>注意：通常リンクはrel不要</h2>
+<p>信頼できる関連サイトへのリンクは<strong>何も付けない</strong>のが正解。SEO評価を分け合うのが本来の姿。乱発すると逆効果。</p>
+</section>
+
+<section><h2>WordPressでの設定</h2>
+<ul>
+<li>テキストエディタ：HTML直接編集</li>
+<li>Yoast SEO：リンク挿入時にチェックボックス</li>
+<li>外部リンクプラグイン：自動でnofollow・sponsored付与</li>
+</ul>
+</section>
+
+<section><h2>まとめ</h2>
+<ul>
+<li>アフィ・広告は<code>sponsored</code>必須</li>
+<li>コメント欄は<code>ugc</code></li>
+<li>信頼性不明は<code>nofollow</code></li>
+<li>通常リンクは何も付けない</li>
+<li>未指定でアフィリエイトはペナルティリスク</li>
+</ul>
+</section>
+
+<div class="article-cta"><h3>テクニカルSEOもお任せください</h3><a href="/#contact" class="btn btn-primary btn-large">無料相談はこちら</a></div>
+</div>
+<aside class="article-sidebar"><div class="sidebar-section"><h3>関連記事</h3><ul class="related-posts">
+<li><a href="seo-complete-map.html">SEO対策完全マップ</a></li>
+<li><a href="backlink-guide.html">被リンク獲得ガイド</a></li>
+</ul></div></aside>
+</div></div></article>
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2024 LIKaNON. All rights reserved.</p></div></div></footer>
+<a href="#" class="back-to-top" id="backToTop"><span class="back-to-top-arrow"></span><span class="back-to-top-text">TOP</span></a>
+<script src="../script.js" defer></script><script src="../blog.js" defer></script>
+</body></html>
