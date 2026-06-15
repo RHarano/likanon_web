@@ -9,6 +9,12 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-N2Y1QF8ZQV');
+        // GA4 推奨イベント：見込み顧客発掘のキーイベント
+        gtag('event', 'generate_lead', {
+            'value': 50000,
+            'currency': 'JPY',
+            'lead_type': 'contact_form'
+        });
         gtag('event', 'conversion', { 'send_to': 'G-N2Y1QF8ZQV', 'event_category': 'form', 'event_label': 'contact_submit' });
     </script>
 

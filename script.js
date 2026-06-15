@@ -843,13 +843,35 @@ document.addEventListener('DOMContentLoaded', function() {
     // GA4 Event Tracking - コンバージョン計測
     // ========================================
 
-    // LINEリンクのクリック計測
+    // LINEリンクのクリック計測（GA4推奨 generate_lead イベントも併用）
     document.querySelectorAll('a[href*="lin.ee"]').forEach(function(link) {
         link.addEventListener('click', function() {
             if (typeof gtag === 'function') {
                 gtag('event', 'click_line', {
                     event_category: 'contact',
                     event_label: 'LINE問い合わせ'
+                });
+                gtag('event', 'generate_lead', {
+                    value: 50000,
+                    currency: 'JPY',
+                    lead_type: 'line'
+                });
+            }
+        });
+    });
+
+    // 電話番号リンクのクリック計測
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'click_phone', {
+                    event_category: 'contact',
+                    event_label: '電話問い合わせ'
+                });
+                gtag('event', 'generate_lead', {
+                    value: 50000,
+                    currency: 'JPY',
+                    lead_type: 'phone'
                 });
             }
         });
@@ -863,6 +885,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     event_category: 'contact',
                     event_label: 'メール問い合わせ'
                 });
+                gtag('event', 'generate_lead', {
+                    value: 50000,
+                    currency: 'JPY',
+                    lead_type: 'email'
+                });
             }
         });
     });
@@ -873,9 +900,71 @@ document.addEventListener('DOMContentLoaded', function() {
             if (typeof gtag === 'function') {
                 gtag('event', 'click_cta', {
                     event_category: 'engagement',
-                    event_label: this.textContent.trim() || 'CTA'
+                    event_label: this.textContent.trim().substring(0, 50) || 'CTA'
                 });
             }
         });
+    });
+
+    // フォーム送信開始の計測（フォーム本送信前）
+    document.querySelectorAll('form.contact-form').forEach(function(form) {
+        form.addEventListener('submit', function() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'form_submit_attempt', {
+                    event_category: 'form',
+                    event_label: 'contact_form'
+                });
+            }
+        });
+    });
+
+    document.querySelectorAll('form.diagnosis-form').forEach(function(form) {
+        form.addEventListener('submit', function() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'form_submit_attempt', {
+                    event_category: 'form',
+                    event_label: 'diagnosis_form'
+                });
+                gtag('event', 'generate_lead', {
+                    value: 50000,
+                    currency: 'JPY',
+                    lead_type: 'diagnosis'
+                });
+            }
+        });
+    });
+
+    // スクロール深度トラッキング（25/50/75/100%）
+    var scrollMarks = [25, 50, 75, 100];
+    var scrolledMarks = {};
+    window.addEventListener('scroll', function() {
+        var scrollPercent = Math.round(
+            (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+        );
+        scrollMarks.forEach(function(mark) {
+            if (scrollPercent >= mark && !scrolledMarks[mark]) {
+                scrolledMarks[mark] = true;
+                if (typeof gtag === 'function') {
+                    gtag('event', 'scroll_depth', {
+                        event_category: 'engagement',
+                        event_label: mark + '%',
+                        value: mark
+                    });
+                }
+            }
+        });
+    }, { passive: true });
+
+    // 30秒・1分・3分の滞在時間計測
+    [30, 60, 180].forEach(function(seconds) {
+        setTimeout(function() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'time_on_page', {
+                    event_category: 'engagement',
+                    event_label: seconds + 's',
+                    value: seconds
+                });
+            }
+        }, seconds * 1000);
     });
 });
