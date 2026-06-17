@@ -967,4 +967,71 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, seconds * 1000);
     });
+
+    // ========================================
+    // Spam protection for FormSubmit forms
+    // ========================================
+    const spamProtectedForms = document.querySelectorAll('form.contact-form, form.diagnosis-form');
+    spamProtectedForms.forEach(function(form) {
+        const loadedAt = Date.now();
+
+        const tokenInput = document.createElement('input');
+        tokenInput.type = 'hidden';
+        tokenInput.name = 'js_verified';
+        tokenInput.value = 'human_' + loadedAt.toString(36);
+        form.appendChild(tokenInput);
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            setTimeout(function() { submitBtn.disabled = false; }, 2000);
+        }
+
+        form.addEventListener('submit', function(e) {
+            const elapsed = Date.now() - loadedAt;
+
+            if (elapsed < 3000) {
+                e.preventDefault();
+                alert('お手数ですが、もう一度送信ボタンを押してください。');
+                setTimeout(function() { if (submitBtn) submitBtn.disabled = false; }, 1000);
+                return false;
+            }
+
+            const honeypots = ['_honey', 'website_url', 'company_name'];
+            for (let i = 0; i < honeypots.length; i++) {
+                const field = form.querySelector('input[name="' + honeypots[i] + '"]');
+                if (field && field.value !== '') {
+                    e.preventDefault();
+                    return false;
+                }
+            }
+
+            const nameField = form.querySelector('input[name="お名前"]');
+            const messageField = form.querySelector('textarea[name="お問い合わせ内容"]');
+            const checkText = (nameField ? nameField.value : '') + ' ' + (messageField ? messageField.value : '');
+
+            if (/[Ѐ-ӿ]/.test(checkText)) {
+                e.preventDefault();
+                alert('日本語でご入力ください。');
+                return false;
+            }
+
+            if (messageField) {
+                const urlCount = (messageField.value.match(/https?:\/\//gi) || []).length;
+                if (urlCount > 3) {
+                    e.preventDefault();
+                    alert('URLは3つまでにしてください。');
+                    return false;
+                }
+
+                const asciiOnly = /^[\x00-\x7F\s]*$/.test(messageField.value);
+                const hasMinLength = messageField.value.length >= 20;
+                if (asciiOnly && hasMinLength) {
+                    e.preventDefault();
+                    alert('日本語でご入力ください。');
+                    return false;
+                }
+            }
+        });
+    });
 });
