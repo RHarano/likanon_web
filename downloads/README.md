@@ -47,16 +47,31 @@ downloads/
 
 GBP「投稿」機能・Instagram・各種SNSに**そのまま使える**1200x900サイズのカード画像。
 
+### 業種別 制作実績カード（01〜08）— ブラウザモックアップ付き
+
+| ファイル | 内容 | 業種カラー |
+|---|---|---|
+| `portfolio-01-salon.jpg` | サロン業の HP制作 | ピンク |
+| `portfolio-02-beauty.jpg` | 美容室・ネイルサロン | ローズ |
+| `portfolio-03-clinic.jpg` | クリニック・治療院 | ティール |
+| `portfolio-04-cafe.jpg` | カフェ・飲食店 | オレンジ |
+| `portfolio-05-school.jpg` | 学習塾・スクール | ブルー |
+| `portfolio-06-counselor.jpg` | カウンセラー・整体院 | グリーン |
+| `portfolio-07-shigyou.jpg` | 士業・専門家 | ネイビー |
+| `portfolio-08-trainer.jpg` | パーソナルトレーナー | レッド |
+
+→ 業種別の集客事例として投稿に使えます。架空の事例（業種ジャンルそのものの強み訴求）なので特定クライアントの名前は出していません。
+
+### サービス・キャンペーンカード（09〜14）
+
 | ファイル | 内容 | 使用シーン |
 |---|---|---|
-| `portfolio-01-nicolon.jpg` | nicolon サンドアート 制作実績 | 業種別事例紹介の投稿 |
-| `portfolio-02-raizan-judo.jpg` | らいざん少年柔道 制作実績 | 業種別事例紹介の投稿 |
-| `portfolio-03-starter-plan.jpg` | 月5名限定 5万円〜プラン | サービス紹介投稿 |
-| `portfolio-04-sns-management.jpg` | Instagram運用代行 | サービス紹介投稿 |
-| `portfolio-05-hp-management.jpg` | HP管理 月5,000円〜 | サービス紹介投稿 |
-| `portfolio-06-free-diagnosis.jpg` | 無料サイト診断キャンペーン | キャンペーン投稿 |
-| `portfolio-07-design.jpg` | ロゴ・名刺デザイン制作 | サービス紹介投稿 |
-| `portfolio-08-fukuoka.jpg` | 福岡を拠点に全国対応 | エリア訴求投稿 |
+| `portfolio-09-starter-plan.jpg` | 月5名限定 5万円〜プラン | サービス紹介投稿 |
+| `portfolio-10-sns-management.jpg` | Instagram運用代行 | サービス紹介投稿 |
+| `portfolio-11-hp-management.jpg` | HP管理 月5,000円〜 | サービス紹介投稿 |
+| `portfolio-12-free-diagnosis.jpg` | 無料サイト診断 | キャンペーン投稿 |
+| `portfolio-13-design.jpg` | ロゴ・名刺デザイン | サービス紹介投稿 |
+| `portfolio-14-fukuoka.jpg` | 福岡を拠点に全国対応 | エリア訴求投稿 |
 
 すべて **1200x900 / 4:3** のGBP最適サイズ。投稿テンプレ（`GBP_OPERATION_TEMPLATES.md`）と組み合わせて使ってください。
 
