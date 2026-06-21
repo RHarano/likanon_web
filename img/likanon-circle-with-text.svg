@@ -1,11 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&amp;display=swap');
+      .likanon-text {
+        font-family: 'Montserrat', 'Outfit', 'Helvetica Neue', 'Arial', sans-serif;
+        font-weight: 200;
+        letter-spacing: 0.18em;
+      }
+    </style>
+  </defs>
   <!-- 黒丸背景 -->
   <circle cx="256" cy="256" r="256" fill="#000000"/>
-  <!-- チェーンリンクアイコン（白・少し上に配置） -->
-  <g transform="translate(256 200) scale(9) translate(-12 -12)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- チェーンリンクアイコン（上部に配置） -->
+  <g transform="translate(256 200) scale(8) translate(-12 -12)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
   </g>
-  <!-- LIKaNON テキスト -->
-  <text x="256" y="400" font-family="'Helvetica Neue', Arial, sans-serif" font-size="56" font-weight="300" fill="#ffffff" text-anchor="middle" letter-spacing="2">LIKaNON</text>
+  <!-- LIKaNON テキスト（元ロゴの細めジオメトリックフォントを再現） -->
+  <text x="256" y="395" class="likanon-text" font-size="62" fill="#ffffff" text-anchor="middle">LIKaNON</text>
 </svg>
