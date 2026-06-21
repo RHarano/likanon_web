@@ -47,20 +47,23 @@ downloads/
 
 GBP「投稿」機能・Instagram・各種SNSに**そのまま使える**1200x900サイズのカード画像。
 
-### 業種別 制作実績カード（01〜08）— ブラウザモックアップ付き
+### 業種別 制作実績カード（01〜08）— **実スクショ付き** 🆕
 
-| ファイル | 内容 | 業種カラー |
+8つの業種別カードに、**LIKaNON が実際に制作した本物のサイトスクリーンショット**を使用。
+
+| ファイル | 業種 | 元サイト |
 |---|---|---|
-| `portfolio-01-salon.jpg` | サロン業の HP制作 | ピンク |
-| `portfolio-02-beauty.jpg` | 美容室・ネイルサロン | ローズ |
-| `portfolio-03-clinic.jpg` | クリニック・治療院 | ティール |
-| `portfolio-04-cafe.jpg` | カフェ・飲食店 | オレンジ |
-| `portfolio-05-school.jpg` | 学習塾・スクール | ブルー |
-| `portfolio-06-counselor.jpg` | カウンセラー・整体院 | グリーン |
-| `portfolio-07-shigyou.jpg` | 士業・専門家 | ネイビー |
-| `portfolio-08-trainer.jpg` | パーソナルトレーナー | レッド |
+| `portfolio-01-beauty.jpg` | アイラッシュサロン | FLEURIR様 |
+| `portfolio-02-hair-salon.jpg` | ヘアサロン | cocoro様 |
+| `portfolio-03-cafe.jpg` | カフェ・パーラー | 糸島フルーツパーラー様 |
+| `portfolio-04-osteopathy.jpg` | 整骨院・治療院 | Tono Osteopathy様 |
+| `portfolio-05-clinic.jpg` | クリニック | 師田こども内科クリニック様 |
+| `portfolio-06-salon.jpg` | エステサロン | lovelye様 |
+| `portfolio-07-sweets.jpg` | スイーツ・小規模店舗 | shine様 |
+| `portfolio-08-restaurant.jpg` | レストラン・飲食店 | sakedress様 |
 
-→ 業種別の集客事例として投稿に使えます。架空の事例（業種ジャンルそのものの強み訴求）なので特定クライアントの名前は出していません。
+→ 本物のサイト画面が入っているので「こんなサイトが作れる」が一目で伝わります。
+→ 各カードには「実現した成果」も金枠で強調表示。
 
 ### サービス・キャンペーンカード（09〜14）
 
