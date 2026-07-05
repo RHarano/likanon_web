@@ -293,10 +293,13 @@
     <section class="hero" id="hero">
         <div class="hero-inner">
             <div class="hero-content">
-                <p class="hero-sub">Creative Web Studio</p>
+                <p class="hero-sub">個人事業主・小規模事業者専門</p>
+                <div class="hero-badge">
+                    <span class="hero-badge-limit">今月残り <strong id="remainingSlots">3</strong> 名</span>
+                </div>
                 <h1 class="hero-title">
-                    <span class="title-line-1">「そろそろHPを…」と思ったまま、</span>
-                    <span class="title-line-2"><span class="highlight">何ヶ月</span>経ちましたか？</span>
+                    <span class="title-line-1">ホームページ制作</span>
+                    <span class="title-line-2"><span class="highlight">5万円〜</span></span>
                 </h1>
                 <!-- 浮き出るアイデア要素 -->
                 <div class="floating-ideas">
@@ -307,18 +310,14 @@
                     <span class="idea-bubble idea-5">LP</span>
                 </div>
                 <p class="hero-description">
-                    動かない間に、お客様は競合に流れています。<br class="pc-only">
-                    個人事業主だから実現できる<strong>低価格×高品質</strong>で、最初の一歩を一緒に踏み出しませんか。
+                    デザイン・Web制作 <strong>8年以上／100件超</strong>の実績。<br class="pc-only">
+                    「作って終わり」にしない、<strong>成果が出るサイト</strong>を福岡から全国対応でお届けします。
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        <span>まずは無料で相談する</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
+                    <a href="#lead-magnet" class="btn btn-primary">
+                        <span>📄 費用早見表を無料DL（30秒）</span>
                     </a>
-                    <a href="#diagnosis" class="btn btn-outline">無料サイト診断を受ける</a>
+                    <a href="#quick-contact" class="btn btn-outline">簡単フォームで相談（30秒）</a>
                 </div>
                 <p class="hero-note">Zoom・LINE対応／相談無料／しつこい営業なし</p>
             </div>
@@ -381,6 +380,73 @@
                 <p>その悩み、<strong>毎月何人もの見込み客を静かに取りこぼしている</strong>というサインかもしれません。</p>
                 <a href="#special-offer" class="btn btn-primary">解決策を見る</a>
             </div>
+        </div>
+    </section>
+
+    <!-- リードマグネット（無料資料DL） -->
+    <section class="section lead-magnet" id="lead-magnet">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-sub">Free Download</p>
+                <h2 class="section-title"><span class="highlight">無料</span>で今すぐ受け取れる資料</h2>
+                <p class="section-description">
+                    「相談する前に、まず情報だけ欲しい」方向け。<br class="pc-only">
+                    メールアドレスだけで、以下の資料を即受け取れます。
+                </p>
+            </div>
+            <div class="lead-magnet-cards">
+                <div class="lead-magnet-card">
+                    <div class="lead-magnet-icon">📄</div>
+                    <h3>HP制作 費用早見表</h3>
+                    <p>業種別・機能別の相場と、5万円プランで作れるサイトの実例集。</p>
+                    <ul class="lead-magnet-includes">
+                        <li>個人事業主向け料金表</li>
+                        <li>制作期間の目安</li>
+                        <li>補助金活用の可否チェック</li>
+                    </ul>
+                </div>
+                <div class="lead-magnet-card">
+                    <div class="lead-magnet-icon">📊</div>
+                    <h3>業種別 成功事例集</h3>
+                    <p>サロン・クリニック・カフェなど8業種の集客成功パターン。</p>
+                    <ul class="lead-magnet-includes">
+                        <li>業種別ベストプラクティス</li>
+                        <li>「予約3倍」の実装法</li>
+                        <li>SEO/MEO設計事例</li>
+                    </ul>
+                </div>
+                <div class="lead-magnet-card">
+                    <div class="lead-magnet-icon">✅</div>
+                    <h3>Web集客チェックリスト</h3>
+                    <p>あなたのHPが「集客できるHP」か診断できる50項目。</p>
+                    <ul class="lead-magnet-includes">
+                        <li>SEO 15項目チェック</li>
+                        <li>CVR 20項目チェック</li>
+                        <li>SNS連携 15項目チェック</li>
+                    </ul>
+                </div>
+            </div>
+            <form class="lead-magnet-form" action="https://formsubmit.co/info@likanon.com" method="POST">
+                <input type="hidden" name="_subject" value="【LIKaNON】無料資料DL申込み">
+                <input type="hidden" name="_captcha" value="true">
+                <input type="hidden" name="_next" value="https://likanon.com/thanks.html">
+                <input type="hidden" name="_autoresponse" value="この度はLIKaNONの無料資料DLにお申込みいただきありがとうございます。ご希望の資料を24時間以内にメールでお送りします。返信が届かない場合は迷惑メールフォルダをご確認いただくか、LINE（https://lin.ee/43NTiCQ）よりご連絡ください。">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                <div class="lead-magnet-form-row">
+                    <input type="email" name="メールアドレス" placeholder="メールアドレス" required autocomplete="email">
+                    <select name="希望資料" required>
+                        <option value="">受け取りたい資料を選択</option>
+                        <option value="HP制作費用早見表">📄 HP制作 費用早見表</option>
+                        <option value="業種別成功事例集">📊 業種別 成功事例集</option>
+                        <option value="Web集客チェックリスト">✅ Web集客チェックリスト</option>
+                        <option value="全部欲しい">🎁 全部欲しい</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">
+                        <span>無料で受け取る</span>
+                    </button>
+                </div>
+                <p class="lead-magnet-note">✓ 完全無料　✓ 24時間以内に送信　✓ しつこい営業なし</p>
+            </form>
         </div>
     </section>
 
@@ -1117,6 +1183,55 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- お客様の声 -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-sub">Voice</p>
+                <h2 class="section-title">お客様の声</h2>
+                <p class="section-description">
+                    LIKaNONにご依頼いただいた個人事業主様の実際の声を紹介します。
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">「予約が取れる」と評判のサイトに。<strong>指名予約が月10名増えました</strong>。SNSと連動した集客の設計が素晴らしく、想像以上の成果です。</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:#d4a5a5">🌸</div>
+                        <div>
+                            <div class="testimonial-name">サロン経営者様</div>
+                            <div class="testimonial-role">福岡・個人サロン</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">院の温かさが伝わるサイトに感動。<strong>新患問合せが月20名増加</strong>し、地域SEOでも上位表示されるようになりました。伴走型のサポートに感謝です。</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:#6ba5b8">🏥</div>
+                        <div>
+                            <div class="testimonial-name">院長様</div>
+                            <div class="testimonial-role">佐賀・治療院</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">「HP作って終わり」を心配していましたが、月次で改善提案をくれるので安心。<strong>3ヶ月で問合せ0→月15件</strong>になりました。個人事業主に本気で寄り添ってくれます。</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:#c9a96e">💼</div>
+                        <div>
+                            <div class="testimonial-name">士業事務所様</div>
+                            <div class="testimonial-role">福岡・個人事務所</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="testimonials-note">※ プライバシー配慮のため業種のみ記載。実名・詳細はご相談時に類似事例をご紹介できます。</p>
         </div>
     </section>
 
@@ -2107,12 +2222,60 @@
         </div>
     </section>
 
+    <!-- 30秒で完了・簡単相談フォーム -->
+    <section class="section quick-contact" id="quick-contact">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-sub">Quick Contact</p>
+                <h2 class="section-title">30秒で完了・<span class="highlight">簡単相談</span></h2>
+                <p class="section-description">
+                    「まだ相談段階だけど、価格や進め方を聞きたい」方はこちら。<br class="pc-only">
+                    3項目だけ入力すれば、必要な情報をメールでお送りします。
+                </p>
+            </div>
+            <form class="quick-contact-form" action="https://formsubmit.co/info@likanon.com" method="POST">
+                <input type="hidden" name="_subject" value="【LIKaNON】簡単相談フォーム">
+                <input type="hidden" name="_captcha" value="true">
+                <input type="hidden" name="_next" value="https://likanon.com/thanks.html">
+                <input type="hidden" name="_autoresponse" value="この度はLIKaNONに簡単相談をお申し込みいただきありがとうございます。24時間以内にご質問への回答をメールでお送りします。返信が届かない場合は迷惑メールフォルダをご確認いただくか、LINE（https://lin.ee/43NTiCQ）よりご連絡ください。">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                <div class="quick-contact-grid">
+                    <div class="form-group">
+                        <label>お名前</label>
+                        <input type="text" name="お名前" required autocomplete="name" placeholder="山田 太郎">
+                    </div>
+                    <div class="form-group">
+                        <label>メールアドレス</label>
+                        <input type="email" name="メールアドレス" required autocomplete="email" placeholder="example@mail.com">
+                    </div>
+                    <div class="form-group form-group-full">
+                        <label>まず何が知りたいですか？</label>
+                        <select name="質問内容" required>
+                            <option value="">選択してください</option>
+                            <option value="料金の詳細を知りたい">💰 料金の詳細を知りたい</option>
+                            <option value="制作期間・進め方を知りたい">⏰ 制作期間・進め方を知りたい</option>
+                            <option value="サンプル・実績を見たい">🎨 サンプル・実績を見たい</option>
+                            <option value="補助金を使いたい">🎁 補助金を使いたい</option>
+                            <option value="SNS運用について相談したい">📱 SNS運用について相談したい</option>
+                            <option value="まずは相談したい">🗣 まずは相談したい</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large quick-contact-submit">
+                    <span>30秒で送信する</span>
+                </button>
+                <p class="quick-contact-note">✓ 24時間以内返信　✓ 相談無料　✓ しつこい営業なし　✓ 電話番号不要</p>
+                <p class="quick-contact-detailed"><a href="#contact">詳しく相談したい方はこちら（詳細フォーム）→</a></p>
+            </form>
+        </div>
+    </section>
+
     <!-- お問い合わせ -->
     <section class="section contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <p class="section-sub">Contact</p>
-                <h2 class="section-title">お問い合わせ</h2>
+                <p class="section-sub">Detailed Contact</p>
+                <h2 class="section-title">詳細お問い合わせ</h2>
                 <p class="section-description">
                     ご質問・ご相談はお気軽にどうぞ。<br class="sp-only">
                     通常24時間以内に<br class="sp-only">ご返信いたします。

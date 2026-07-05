@@ -5644,3 +5644,287 @@ select {
 
 
 
+
+/* ===== ヒーローバッジ（今月残り○名） ===== */
+.hero-badge {
+    display: inline-flex;
+    margin-bottom: 1rem;
+    animation: pulseBadge 2s ease-in-out infinite;
+}
+.hero-badge-limit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: linear-gradient(135deg, #c9a96e, #d4b57f);
+    color: #1a1a1a;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(201, 169, 110, 0.4);
+}
+.hero-badge-limit strong {
+    font-size: 1.15rem;
+}
+@keyframes pulseBadge {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* ===== リードマグネット ===== */
+.section.lead-magnet {
+    background: linear-gradient(135deg, #fafaf7 0%, #f5ede0 100%);
+    padding: var(--spacing-4xl) 0;
+}
+.lead-magnet-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0 3rem;
+}
+.lead-magnet-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+.lead-magnet-card:hover {
+    transform: translateY(-4px);
+    border-color: #c9a96e;
+    box-shadow: 0 10px 30px rgba(201, 169, 110, 0.2);
+}
+.lead-magnet-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.lead-magnet-card h3 {
+    font-size: 1.15rem;
+    margin: 0 0 0.75rem;
+    color: #1a1a1a;
+}
+.lead-magnet-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0 0 1rem;
+    line-height: 1.6;
+}
+.lead-magnet-includes {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 0.85rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+.lead-magnet-includes li {
+    padding: 0.35rem 0;
+    color: #555;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.lead-magnet-includes li::before {
+    content: "✓";
+    color: #c9a96e;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+.lead-magnet-form {
+    max-width: 720px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.lead-magnet-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 0.75rem;
+    align-items: stretch;
+}
+.lead-magnet-form-row input,
+.lead-magnet-form-row select {
+    padding: 0.85rem 1rem;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: white;
+}
+.lead-magnet-form-row input:focus,
+.lead-magnet-form-row select:focus {
+    outline: none;
+    border-color: #c9a96e;
+}
+.lead-magnet-form-row button {
+    white-space: nowrap;
+    padding: 0.85rem 1.5rem;
+}
+.lead-magnet-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin: 1rem 0 0;
+}
+@media (max-width: 768px) {
+    .lead-magnet-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .lead-magnet-form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== 簡単相談フォーム（Quick Contact） ===== */
+.section.quick-contact {
+    background: white;
+    padding: var(--spacing-4xl) 0;
+}
+.quick-contact-form {
+    max-width: 720px;
+    margin: 2rem auto 0;
+    background: #fafafa;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #c9a96e;
+}
+.quick-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.quick-contact-grid .form-group-full {
+    grid-column: 1 / -1;
+}
+.quick-contact-grid label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+}
+.quick-contact-grid input,
+.quick-contact-grid select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: white;
+    box-sizing: border-box;
+}
+.quick-contact-grid input:focus,
+.quick-contact-grid select:focus {
+    outline: none;
+    border-color: #c9a96e;
+}
+.quick-contact-submit {
+    display: block;
+    width: 100%;
+    padding: 1.1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.quick-contact-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin: 1rem 0 0;
+}
+.quick-contact-detailed {
+    text-align: center;
+    margin: 0.75rem 0 0;
+    font-size: 0.9rem;
+}
+.quick-contact-detailed a {
+    color: #c9a96e;
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .quick-contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== お客様の声 ===== */
+.section.testimonials {
+    background: #fafafa;
+    padding: var(--spacing-4xl) 0;
+}
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+.testimonial-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border-top: 4px solid #c9a96e;
+    transition: transform 0.3s;
+}
+.testimonial-card:hover {
+    transform: translateY(-4px);
+}
+.testimonial-stars {
+    color: #f5b800;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+}
+.testimonial-text {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.7;
+    margin: 0 0 1.5rem;
+}
+.testimonial-text strong {
+    color: #c9a96e;
+    font-weight: 700;
+}
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    flex-shrink: 0;
+}
+.testimonial-name {
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+}
+.testimonial-role {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 2px;
+}
+.testimonials-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999;
+    margin: 1.5rem 0 0;
+}
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}

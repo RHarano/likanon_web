@@ -11,6 +11,26 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('loaded');
 
     // ========================================
+    // 今月残り○名（動的表示）
+    // ========================================
+    // 月初は5名、月末に近づくにつれて減少する演出
+    const remainingSlotsEl = document.getElementById('remainingSlots');
+    if (remainingSlotsEl) {
+        const now = new Date();
+        const day = now.getDate();
+        const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+        const progressRatio = day / daysInMonth;
+        // 月初5名 → 月末1名 で線形減少
+        let remaining;
+        if (progressRatio < 0.2) remaining = 5;
+        else if (progressRatio < 0.4) remaining = 4;
+        else if (progressRatio < 0.6) remaining = 3;
+        else if (progressRatio < 0.8) remaining = 2;
+        else remaining = 1;
+        remainingSlotsEl.textContent = remaining;
+    }
+
+    // ========================================
     // Design Gallery - Dynamic Image Loading & Shuffle
     // ========================================
     const galleryImages = [
