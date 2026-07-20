@@ -5928,3 +5928,118 @@ select {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== FAQセクション（AI検索対策・アコーディオン） ===== */
+.section.faq {
+    background: #fafaf7;
+    padding: var(--spacing-4xl) 0;
+}
+.faq-list {
+    max-width: 800px;
+    margin: 2rem auto 0;
+}
+.faq-item {
+    background: white;
+    border: 1.5px solid #e5e5e5;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.faq-item:hover {
+    border-color: #c9a96e;
+    box-shadow: 0 4px 12px rgba(201, 169, 110, 0.1);
+}
+.faq-item summary {
+    padding: 1.25rem 1.5rem;
+    padding-right: 3rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+    color: #1a1a1a;
+    line-height: 1.5;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #c9a96e;
+    transition: transform 0.3s;
+}
+.faq-item[open] summary::after {
+    content: '−';
+}
+.faq-item[open] summary {
+    border-bottom: 1px solid #eee;
+    background: #fafaf7;
+}
+.faq-item p {
+    padding: 1.25rem 1.5rem;
+    margin: 0;
+    color: #444;
+    line-height: 1.85;
+    font-size: 0.95rem;
+}
+@media (max-width: 768px) {
+    .faq-item summary {
+        font-size: 0.95rem;
+        padding: 1rem 1.25rem;
+        padding-right: 2.5rem;
+    }
+    .faq-item p {
+        padding: 1rem 1.25rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== フローティングLINE誘導ボタン（強化版） ===== */
+.floating-line {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 999;
+    background: linear-gradient(135deg, #06c755, #04a44b);
+    color: white;
+    padding: 0.85rem 1.25rem;
+    border-radius: 999px;
+    box-shadow: 0 6px 20px rgba(6, 199, 85, 0.35);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+    animation: floatBounce 3s ease-in-out infinite;
+}
+.floating-line:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(6, 199, 85, 0.5);
+}
+.floating-line-icon {
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+@keyframes floatBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+@media (max-width: 768px) {
+    .floating-line {
+        bottom: 90px;
+        right: 12px;
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+    .floating-line span.floating-line-label {
+        display: none;
+    }
+}

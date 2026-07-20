@@ -3,7 +3,7 @@
     <!-- メインページ -->
     <url>
         <loc>https://likanon.com/</loc>
-        <lastmod>2026-05-05</lastmod>
+        <lastmod>2026-07-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -863,9 +863,9 @@
     <url><loc>https://likanon.com/resources/hp-cost-guide.html</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
     <url><loc>https://likanon.com/resources/success-cases.html</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
     <url><loc>https://likanon.com/resources/web-marketing-checklist.html</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-    <url><loc>https://likanon.com/blog/expense-tips-7.html</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://likanon.com/blog/invoice-tools-5.html</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://likanon.com/blog/customer-magic-words-10.html</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://likanon.com/blog/tax-saving-first-year-5.html</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://likanon.com/blog/instagram-likes-double-5secrets.html</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://likanon.com/blog/expense-tips-7.html</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://likanon.com/blog/invoice-tools-5.html</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://likanon.com/blog/customer-magic-words-10.html</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://likanon.com/blog/tax-saving-first-year-5.html</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://likanon.com/blog/instagram-likes-double-5secrets.html</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
