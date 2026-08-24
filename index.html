@@ -463,6 +463,10 @@
                         <span>無料で受け取る</span>
                     </button>
                 </div>
+                <!-- Cloudflare Turnstile -->
+                <div style="text-align:center;margin:1rem 0;">
+                    <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light"></div>
+                </div>
                 <p class="lead-magnet-note">✓ 完全無料　✓ 24時間以内に送信　✓ しつこい営業なし</p>
             </form>
         </div>
@@ -2279,6 +2283,10 @@
                         <input type="email" name="メールアドレス" placeholder="メールアドレス" required autocomplete="email">
                     </div>
                     <input type="url" name="現在のHP_URL" placeholder="現在のHPのURL（無くてもOK・空欄可）" autocomplete="url">
+                    <!-- Cloudflare Turnstile -->
+                    <div style="text-align:center;margin:1rem 0;">
+                        <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light"></div>
+                    </div>
                     <button type="submit" class="btn btn-primary btn-large diagnosis-submit">
                         無料診断を申し込む（30秒）
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -2476,6 +2484,11 @@
                         </label>
                     </div>
 
+                    <!-- Cloudflare Turnstile（スパム対策） 本番はご自身のsite-keyに置換してください -->
+                    <div class="form-group form-group-full" style="text-align:center;margin:1rem 0;">
+                        <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light"></div>
+                    </div>
+
                     <div class="form-group form-group-full form-submit-wrap">
                         <button type="submit" class="btn btn-primary btn-large form-submit">
                             送信する
@@ -2644,5 +2657,57 @@
 
     <!-- JavaScript -->
     <script src="script.js" defer></script>
+
+    <!-- Cloudflare Turnstile（スパム対策・キャプチャ代替） -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script>
+    // === スパム対策強化スクリプト ===
+    (function(){
+        const PAGE_LOAD_TIME = Date.now();
+        const MIN_FILL_TIME_MS = 3000; // 3秒以内の送信はスパム扱い
+
+        document.addEventListener('DOMContentLoaded', function(){
+            const forms = document.querySelectorAll('form[action*="formsubmit.co"]');
+            forms.forEach(function(form){
+                // ページ滞在時間を隠しフィールドに埋め込み
+                const timeField = document.createElement('input');
+                timeField.type = 'hidden';
+                timeField.name = '_time_on_page';
+                form.appendChild(timeField);
+
+                form.addEventListener('submit', function(e){
+                    const elapsed = Date.now() - PAGE_LOAD_TIME;
+                    timeField.value = elapsed + 'ms';
+
+                    // 3秒以内の送信をブロック（ボット対策）
+                    if (elapsed < MIN_FILL_TIME_MS) {
+                        e.preventDefault();
+                        alert('入力が早すぎます。もう一度お試しください。');
+                        return false;
+                    }
+
+                    // メッセージ本文のURL数チェック（3個以上でスパム扱い）
+                    const textareas = form.querySelectorAll('textarea');
+                    for (let i = 0; i < textareas.length; i++) {
+                        const urlCount = (textareas[i].value.match(/https?:\/\//gi) || []).length;
+                        if (urlCount >= 3) {
+                            e.preventDefault();
+                            alert('メッセージ内のURLが多すぎます。');
+                            return false;
+                        }
+                    }
+
+                    // お名前フィールドにキリル文字・アラビア文字が含まれる場合ブロック
+                    const nameField = form.querySelector('input[name="お名前"]');
+                    if (nameField && /[Ѐ-ӿ؀-ۿ]/.test(nameField.value)) {
+                        e.preventDefault();
+                        alert('お名前は日本語または英字でご入力ください。');
+                        return false;
+                    }
+                });
+            });
+        });
+    })();
+    </script>
 </body>
 </html>
