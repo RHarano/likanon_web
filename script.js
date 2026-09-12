@@ -11,24 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('loaded');
 
     // ========================================
-    // 今月残り○名（動的表示）
-    // ========================================
-    // 月初は5名、月末に近づくにつれて減少する演出
-    const remainingSlotsEl = document.getElementById('remainingSlots');
-    if (remainingSlotsEl) {
-        const now = new Date();
-        const day = now.getDate();
-        const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
-        const progressRatio = day / daysInMonth;
-        // 月初5名 → 月末1名 で線形減少
-        let remaining;
-        if (progressRatio < 0.2) remaining = 5;
-        else if (progressRatio < 0.4) remaining = 4;
-        else if (progressRatio < 0.6) remaining = 3;
-        else if (progressRatio < 0.8) remaining = 2;
-        else remaining = 1;
-        remainingSlotsEl.textContent = remaining;
-    }
+    // 「今月残り○名」の自動計算ロジックは削除（景表法対応・事実ベース表示へ）
+    // 受付状況を数値表示したい場合は、実際の受付管理システムと連携させること
+    // 現状は index.html 側で「対応品質を保つため、月間受付件数を調整しています」と静的表示
 
     // ========================================
     // Design Gallery - Dynamic Image Loading & Shuffle
