@@ -1040,3 +1040,113 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// ============================================
+// GA4 イベント計測（Section 26対応）
+// ============================================
+// 個人情報は送信しない。ボタン種別・位置・ページのみ。
+(function(){
+    if (typeof gtag !== 'function') return;
+
+    function track(eventName, params){
+        try {
+            gtag('event', eventName, Object.assign({
+                page_name: document.title || '',
+                page_url: location.href || ''
+            }, params || {}));
+        } catch(e){}
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+        // ① LINEクリック計測
+        document.querySelectorAll('a[href*="lin.ee"], a[href*="line.me"]').forEach(function(a){
+            a.addEventListener('click', function(){
+                track('click_line', {
+                    button_text: (a.textContent||'').trim().slice(0,60),
+                    button_position: a.closest('section')?.id || 'other'
+                });
+            });
+        });
+
+        // ② 無料集客診断・無料相談ボタン計測
+        document.querySelectorAll('a[href*="#diagnosis"], a[href*="#contact"]').forEach(function(a){
+            a.addEventListener('click', function(){
+                const isDiagnosis = a.href.includes('#diagnosis');
+                track(isDiagnosis ? 'click_free_diagnosis' : 'click_free_consultation', {
+                    button_text: (a.textContent||'').trim().slice(0,60),
+                    button_position: a.closest('section')?.id || 'other'
+                });
+            });
+        });
+
+        // ③ 電話・メールクリック計測
+        document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
+            a.addEventListener('click', function(){ track('click_phone'); });
+        });
+        document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+            a.addEventListener('click', function(){ track('click_email'); });
+        });
+
+        // ④ フォーム入力開始（1度だけ）計測
+        document.querySelectorAll('form[action*="formsubmit.co"]').forEach(function(form){
+            let started = false;
+            form.addEventListener('focusin', function(e){
+                if (started) return;
+                if (!['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)) return;
+                if (e.target.type === 'hidden') return;
+                started = true;
+                const formType = form.className.includes('lead-magnet') ? 'lead_magnet'
+                    : form.className.includes('diagnosis') ? 'diagnosis'
+                    : 'contact';
+                track('form_start', { form_type: formType });
+            });
+            // フォーム送信計測（generate_lead）
+            form.addEventListener('submit', function(){
+                const formType = form.className.includes('lead-magnet') ? 'lead_magnet'
+                    : form.className.includes('diagnosis') ? 'diagnosis'
+                    : 'contact';
+                const serviceEl = form.querySelector('[name="ご相談内容"], [name="質問内容"], [name="希望資料"]');
+                track('generate_lead', {
+                    form_type: formType,
+                    service_type: (serviceEl && serviceEl.value) ? serviceEl.value.slice(0,50) : ''
+                });
+            });
+        });
+
+        // ⑤ スクロール到達計測（50% / 90%）
+        let scrolled50 = false, scrolled90 = false;
+        window.addEventListener('scroll', function(){
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const ratio = docHeight > 0 ? scrollTop / docHeight : 0;
+            if (!scrolled50 && ratio >= 0.5) { scrolled50 = true; track('scroll_50'); }
+            if (!scrolled90 && ratio >= 0.9) { scrolled90 = true; track('scroll_90'); }
+        }, { passive: true });
+
+        // ⑥ 主要セクションの閲覧計測（IntersectionObserver）
+        if ('IntersectionObserver' in window){
+            const observed = new Set();
+            const observer = new IntersectionObserver(function(entries){
+                entries.forEach(function(entry){
+                    if (!entry.isIntersecting) return;
+                    const id = entry.target.id;
+                    if (observed.has(id)) return;
+                    observed.add(id);
+                    const map = {
+                        'special-offer': 'view_pricing',
+                        'portfolio': 'view_portfolio',
+                        'service': 'view_service',
+                        'contact': 'view_contact_form',
+                        'diagnosis': 'view_diagnosis',
+                        'founder': 'view_founder_profile'
+                    };
+                    if (map[id]) track(map[id]);
+                });
+            }, { threshold: 0.35 });
+            ['special-offer','portfolio','service','contact','diagnosis','founder'].forEach(function(id){
+                const el = document.getElementById(id);
+                if (el) observer.observe(el);
+            });
+        }
+    });
+})();
