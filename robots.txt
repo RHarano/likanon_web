@@ -1,9 +1,93 @@
 # robots.txt for likanon.com
-User-agent: *
+# Optimized for AI search engines (ChatGPT, Perplexity, Copilot, Gemini) + traditional SE
+
+# ==========================================
+# AI検索エンジン（明示的に許可・優先クロール）
+# ==========================================
+
+# OpenAI ChatGPT（GPTBot: モデル学習用 / ChatGPT-User: ChatGPT検索）
+User-agent: GPTBot
 Allow: /
 
-# サイトマップの場所
-Sitemap: https://likanon.com/sitemap.xml
+User-agent: ChatGPT-User
+Allow: /
 
-# クロール遅延（サーバー負荷軽減）
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google Gemini/Bard
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Microsoft Copilot / Bing AI
+User-agent: bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+# Common Crawl（AI学習データとして広く利用）
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# その他AI検索
+User-agent: YouBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# ==========================================
+# その他全てのbot（デフォルト許可）
+# ==========================================
+User-agent: *
+Allow: /
 Crawl-delay: 1
+
+# ==========================================
+# サイトマップ
+# ==========================================
+Sitemap: https://likanon.com/sitemap.xml

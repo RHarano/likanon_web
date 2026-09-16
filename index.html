@@ -32,9 +32,16 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="【月5名限定】ホームページ制作5万円〜｜個人事業主向けWeb制作">
-    <meta name="twitter:description" content="月5名限定で5万円〜。中間マージンゼロで低価格×高品質。SEO・AI検索対応・公開後の伴走まで込み。30分無料相談から。">
+    <meta name="twitter:title" content="個人事業主・小規模店舗の集客支援｜HP・SEO・SNS・MEOで伴走 | LIKaNON">
+    <meta name="twitter:description" content="集客の悩み、変えませんか？HP＋SEO＋SNS＋MEOの4本柱で「問い合わせが来る仕組み」を伴走で構築。10年以上・100件超の支援実績。無料集客診断30秒。">
     <meta name="twitter:image" content="https://likanon.com/img/og-image.png">
+
+    <!-- AI検索最適化: 追加ヒント -->
+    <meta name="author" content="原野 令奈 (LIKaNON代表)">
+    <meta name="publisher" content="LIKaNON">
+    <meta name="geo.region" content="JP-40">
+    <meta name="geo.placename" content="Fukuoka">
+    <link rel="alternate" type="application/rss+xml" title="LIKaNON ブログ RSS" href="/feed.xml">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://likanon.com/">
@@ -59,40 +66,81 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- 構造化データ (JSON-LD) - Organization -->
+    <!-- 構造化データ (JSON-LD) - ProfessionalService（集客支援ブランド反映） -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
+        "@id": "https://likanon.com/#organization",
         "name": "LIKaNON",
-        "description": "Web制作・ホームページ制作からインスタグラム運用代行まで、集客に強いサイトを制作。SEO対策・SNS運用を一貫サポート。",
+        "alternateName": "リカノン",
+        "description": "個人事業主・小規模店舗のための集客支援サービス。HP制作＋SEO＋MEO＋SNS運用の4本柱で、公開後の集客まで一貫して伴走します。福岡拠点・全国オンライン対応。",
         "url": "https://likanon.com/",
         "logo": "https://likanon.com/img/likanonlogo.png",
         "image": "https://likanon.com/img/likanonlogo.png",
-        "serviceType": ["Web制作", "ホームページ制作", "インスタグラム運用代行", "Instagram運用", "SNS運用代行", "SEO対策", "ロゴ制作", "動画制作"],
-        "areaServed": {
-            "@type": "Country",
-            "name": "Japan"
+        "serviceType": ["ホームページ制作", "Web制作", "SEO対策", "MEO対策", "Googleビジネスプロフィール運用", "Instagram運用代行", "SNS運用代行", "LP制作", "サイトリニューアル", "WordPress制作", "Shopify構築", "ロゴ制作", "ブランディング"],
+        "areaServed": [
+            {"@type": "Country", "name": "Japan"},
+            {"@type": "AdministrativeArea", "name": "福岡県"}
+        ],
+        "priceRange": "¥50,000〜",
+        "knowsAbout": ["ホームページ制作", "集客支援", "SEO対策", "MEO対策", "Web集客", "Instagram運用", "SNS運用代行", "LP制作", "Webデザイン", "WordPress", "Shopify", "GA4", "Google Search Console"],
+        "founder": {
+            "@type": "Person",
+            "@id": "https://likanon.com/about.html#founder",
+            "name": "原野 令奈",
+            "givenName": "令奈",
+            "familyName": "原野",
+            "jobTitle": "LIKaNON代表 / Webデザイナー・集客コンサルタント",
+            "url": "https://likanon.com/about.html",
+            "description": "デザイン・Web制作10年以上の経験を持つ個人事業主向けWebパートナー。福岡拠点、全国オンライン対応。",
+            "knowsAbout": ["ホームページ制作", "SEO対策", "MEO対策", "Instagram運用", "WordPress", "Shopify", "Webデザイン"],
+            "worksFor": {"@id": "https://likanon.com/#organization"}
         },
-        "priceRange": "¥¥",
-        "knowsAbout": ["Web制作", "ホームページ制作", "インスタ運用", "Instagram運用代行", "SNS運用", "SEO対策", "Webデザイン"],
+        "employee": {
+            "@id": "https://likanon.com/about.html#founder"
+        },
         "sameAs": []
     }
     </script>
 
-    <!-- 構造化データ (JSON-LD) - WebSite -->
+    <!-- 構造化データ (JSON-LD) - WebSite + SearchAction -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
+        "@id": "https://likanon.com/#website",
         "name": "LIKaNON",
         "url": "https://likanon.com/",
-        "description": "Web制作・インスタ運用代行ならLIKaNON。SEO対策からSNS運用まで一貫サポート。",
-        "publisher": {
-            "@type": "Organization",
-            "name": "LIKaNON",
-            "url": "https://likanon.com/"
+        "description": "個人事業主・小規模店舗のための集客支援。HP制作＋SEO＋MEO＋SNSで問い合わせが来る仕組みを構築。",
+        "inLanguage": "ja",
+        "publisher": {"@id": "https://likanon.com/#organization"},
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://likanon.com/blog.html?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
         }
+    }
+    </script>
+
+    <!-- Speakable（AI音声・回答生成エンジン向け） -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://likanon.com/#webpage",
+        "url": "https://likanon.com/",
+        "name": "個人事業主・小規模店舗の集客支援｜HP・SEO・SNS・MEOで伴走 | LIKaNON",
+        "isPartOf": {"@id": "https://likanon.com/#website"},
+        "about": {"@id": "https://likanon.com/#organization"},
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".hero-title", ".hero-description", ".section-title"]
+        },
+        "inLanguage": "ja"
     }
     </script>
 
