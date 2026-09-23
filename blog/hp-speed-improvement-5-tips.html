@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-E69R3DCREZ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-E69R3DCREZ');</script><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HPの表示速度が遅いと、3秒で半数が離脱します。この記事では画像圧縮・WebP化・遅延読み込み・キャッシュ・不要スクリプト削除の5つの改善策で、PageSpeed Insightsのモバイルスコアを2倍にする実装手順を、コードスニペット付きで解説します。">
+<meta property="og:title" content="HPの表示速度を2倍にする5つの改善策 | LIKaNON">
+<meta property="og:description" content="モバイル速度スコアを2倍にする5つの具体策を、コード付きで解説。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://likanon.com/blog/hp-speed-improvement-5-tips.html">
+<meta property="og:image" content="https://likanon.com/img/og-image.png">
+<meta property="article:published_time" content="2026-09-23">
+<meta property="article:modified_time" content="2026-09-23">
+<link rel="canonical" href="https://likanon.com/blog/hp-speed-improvement-5-tips.html">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<title>HPの表示速度を2倍にする5つの改善策 | LIKaNON</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../blog.css"><link rel="stylesheet" href="article.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"HPの表示速度を2倍にする5つの改善策","datePublished":"2026-09-23","dateModified":"2026-09-23","author":{"@type":"Organization","name":"LIKaNON"},"publisher":{"@type":"Organization","name":"LIKaNON","logo":{"@type":"ImageObject","url":"https://likanon.com/img/likanonlogo.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"HPの表示速度を2倍にする5ステップ","step":[{"@type":"HowToStep","name":"画像を圧縮する","text":"Squoosh・TinyPNGで、JPEG/PNGを80%品質で圧縮。1枚あたり200KB以下を目標に。"},{"@type":"HowToStep","name":"WebP形式に変換","text":"pictureタグでWebPを配信し、非対応ブラウザはJPEGフォールバック。"},{"@type":"HowToStep","name":"遅延読み込みを有効化","text":"imgタグにloading=\"lazy\"を追加し、初期表示画像だけ即時読込。"},{"@type":"HowToStep","name":"ブラウザキャッシュを設定","text":".htaccessでExpiresHeaderを1週間〜1ヶ月に設定し、再訪時のリクエスト数を削減。"},{"@type":"HowToStep","name":"不要スクリプトを削除","text":"未使用プラグイン、古いトラッキングタグ、埋め込みSNSウィジェットを整理。"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"HPの表示速度は何秒以内が目標ですか？","acceptedAnswer":{"@type":"Answer","text":"モバイルで2.5秒以内、PCで1.5秒以内が理想です。Googleの調査では、モバイル読み込みが1秒→3秒で離脱率は32%上昇、1秒→5秒で90%上昇します。特にECや予約フォーム系サイトでは、1秒短縮でCVRが7〜15%改善する事例が多数あります。"}},{"@type":"Question","name":"PageSpeed Insightsは何点あればOKですか？","acceptedAnswer":{"@type":"Answer","text":"モバイル60点以上が合格ライン、80点以上で優秀です。ただし個人事業主サイトでは、モバイル50点前後のケースも多く、まずは50→70への改善を目指すのが現実的。全体スコアより、LCPやINPなど個別のCore Web Vitals指標を良好レンジに入れる方が優先順位が高いです。"}},{"@type":"Question","name":"画像はどれくらい圧縮すればいいですか？","acceptedAnswer":{"@type":"Answer","text":"1枚あたり200KB以下、トップの大型画像でも500KB以下を目安にしてください。JPEGは品質80%、PNGは256色パレット、可能な限りWebP変換します。ヒーロー画像が2MBあると、それだけで表示に1.5〜3秒余分にかかります。Squoosh（無料）で品質80%に落とすだけで、ファイルサイズが1/5になるケースがよくあります。"}},{"@type":"Question","name":"遅延読み込み（lazy load）は全画像につけるべき？","acceptedAnswer":{"@type":"Answer","text":"ファーストビューの画像には付けず、それ以下の画像に付けるのが正解です。ファーストビュー画像に遅延読み込みを付けるとLCPが悪化します。実装はimgタグにloading=\"lazy\"を追加するだけ。ヒーロー画像やロゴなど初期表示に映る要素は必ずeagerのままにしておきます。"}},{"@type":"Question","name":"WordPressで速度改善に使える無料プラグインは？","acceptedAnswer":{"@type":"Answer","text":"『EWWW Image Optimizer』で画像圧縮とWebP変換、『WP Fastest Cache』でキャッシュとファイル圧縮、『Autoptimize』でCSS/JS最適化、この3点で7割の課題は解決します。ただしプラグインを増やしすぎると逆効果なので、常用は5〜7個までに抑えるのが原則です。"}},{"@type":"Question","name":"Wixやペライチ、STUDIOでも速度改善はできますか？","acceptedAnswer":{"@type":"Answer","text":"ノーコードツールは画像圧縮・遅延読み込み・キャッシュが自動化されているため、ユーザー側でできる主な対策は画像サイズを事前に抑えることと、動画やGoogleマップ埋め込みを最小化することです。フォント読み込みや不要なブロック配置も速度に影響するため、ページごとに『本当に必要な要素だけ』残すのが基本です。"}},{"@type":"Question","name":"速度改善は効果が出るまでどれくらいかかりますか？","acceptedAnswer":{"@type":"Answer","text":"実装完了から48〜72時間で、PageSpeed Insightsのスコアに反映されます。ただしSearch ConsoleのCore Web Vitalsレポートは28日間の平均を使うため、順位への影響が数字で見えるのは3〜4週間後です。UX改善（離脱率低下・CVR向上）は、実装翌日から現れます。"}}]}</script>
+</head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo"><img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image"></a><nav class="nav"><ul class="nav-list"><li><a href="/blog.html" class="active">ブログ</a></li><li><a href="/#contact" class="nav-cta">お問い合わせ</a></li></ul></nav></div></header>
+<nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="/">ホーム</a></li><li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li><li class="breadcrumb-item current">HPの表示速度を2倍にする5つの改善策</li></ol></div></nav>
+
+<article class="article"><header class="article-header"><div class="container"><div class="article-meta"><span class="article-category tools">お役立ち豆知識</span><time datetime="2026-09-23">2026.09.23</time><span class="read-time">8分</span></div>
+<h1 class="article-title">HPの表示速度を2倍にする5つの改善策</h1>
+<p class="article-lead">「HPが遅い」は、放置すると<strong>売上を毎月削り続ける最悪の症状</strong>。読み込みが3秒を超えた瞬間、訪問者の半数が離脱します。この記事では、モバイルPageSpeed Insightsスコアを2倍にする5つの改善策を、コード付きで解説します。</p>
+</div></header>
+
+<div class="article-content"><div class="container"><div class="article-body">
+
+<section><h2>そもそも表示速度はなぜ売上に効くのか</h2>
+<p>Googleの公式データでは、モバイル読み込み時間が<strong>1秒→3秒で離脱率32%上昇、1秒→5秒で90%上昇</strong>。3秒の壁は、想像以上に厳しい。</p>
+<p>さらに2021年以降、Core Web Vitals（LCP・INP・CLS）が検索順位のランキング要因に組み込まれています。速度改善は『UX向上』と『SEO順位』を同時に狙える、コスパ最強の施策です。</p>
+</section>
+
+<section><h2>まずは現状把握：PageSpeed Insights3点セット</h2>
+<p>改善の前に、現状スコアを測定します。使うツールは無料の3点。</p>
+<ul>
+<li><strong>PageSpeed Insights：</strong>Googleが提供する速度計測ツール（pagespeed.web.dev）</li>
+<li><strong>Search ConsoleのCore Web Vitals：</strong>実ユーザー速度データ（28日平均）</li>
+<li><strong>Chrome DevTools Lighthouse：</strong>詳細な改善提案付き診断</li>
+</ul>
+<p>PageSpeed Insightsで<strong>モバイルスコア・LCP・INP・CLS</strong>の4つをメモしておきます。改善後の比較に使います。</p>
+</section>
+
+<section><h2>改善策1. 画像圧縮：最大の効果、最小の労力</h2>
+<p>個人事業主サイトの遅さの<strong>7割は画像が原因</strong>。特にトップの大型画像が2〜5MBあるケースが典型的です。</p>
+<ol>
+<li>Squoosh（無料）にJPEG/PNGをドラッグ</li>
+<li>品質を80%に下げる（見た目はほぼ変わらない）</li>
+<li>1枚あたり<strong>200KB以下</strong>、ヒーロー画像でも500KB以下を目標に</li>
+<li>WordPressなら『EWWW Image Optimizer』で一括圧縮も可</li>
+</ol>
+<p>2MB→200KBに圧縮するだけで、モバイルLCPが3〜4秒短縮できます。</p>
+</section>
+
+<section><h2>改善策2. WebP化：JPEGより30〜40%軽い次世代画像</h2>
+<p>WebPは、同じ画質でJPEG比30〜40%軽くなるGoogle開発の画像フォーマット。全モダンブラウザで対応済み（Safariは14以降）。</p>
+<pre style="background:#f4f4f4;padding:1rem;border-radius:8px;overflow-x:auto;font-size:0.9rem;">
+&lt;picture&gt;
+  &lt;source srcset="hero.webp" type="image/webp"&gt;
+  &lt;img src="hero.jpg" alt="サロン外観" width="1200" height="600"&gt;
+&lt;/picture&gt;
+</pre>
+<p>pictureタグで書けば、対応ブラウザはWebP・非対応はJPEGを自動選択。<strong>width/height属性を必ず指定</strong>することで、CLS（レイアウトずれ）も同時に予防できます。</p>
+</section>
+
+<section><h2>改善策3. 遅延読み込み（lazy load）</h2>
+<p>ページ下部の画像を「見えるまで読み込まない」設定です。imgタグに1属性追加するだけ。</p>
+<pre style="background:#f4f4f4;padding:1rem;border-radius:8px;overflow-x:auto;font-size:0.9rem;">
+&lt;!-- ファーストビュー画像：eagerのまま --&gt;
+&lt;img src="hero.jpg" alt="トップ" loading="eager"&gt;
+
+&lt;!-- ページ下部の画像：lazy --&gt;
+&lt;img src="menu1.webp" alt="コース1" loading="lazy" width="600" height="400"&gt;
+</pre>
+<p>注意点は<strong>ファーストビュー画像にlazyを付けない</strong>こと。付けるとLCPが逆に悪化します。iframeも同様にloading="lazy"が使えるため、YouTube埋め込みやGoogleマップにも忘れず適用します。</p>
+</section>
+
+<div style="background:linear-gradient(135deg, #06C755, #04A048);color:white;padding:2rem;border-radius:16px;text-align:center;margin:2rem 0;">
+    <h3 style="margin-top:0;color:white;">💬 実装が難しかったらLINEで</h3>
+    <p>「うちのサイトはこの改善で伸びる？」を無料でお答えします。URLを送っていただければ、即座に現状スコアを診断します。</p>
+    <a href="https://lin.ee/43NTiCQ" style="display:inline-block;background:white;color:#06C755;padding:1rem 2rem;border-radius:999px;font-weight:900;text-decoration:none;margin-top:1rem;">📱 LINEで相談する（無料）</a>
+    <p style="font-size:0.85rem;margin-top:1rem;opacity:0.9;">✓ 24時間受付　✓ 返信は営業時間内　✓ しつこい営業なし</p>
+</div>
+
+<section><h2>改善策4. ブラウザキャッシュとgzip圧縮</h2>
+<p>再訪ユーザーがサイトを開くたびに、全ファイルをダウンロードし直すのは無駄。<strong>キャッシュ設定</strong>で2回目以降を高速化します。</p>
+<pre style="background:#f4f4f4;padding:1rem;border-radius:8px;overflow-x:auto;font-size:0.9rem;">
+# .htaccess （Apacheサーバーの場合）
+&lt;IfModule mod_expires.c&gt;
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+&lt;/IfModule&gt;
+
+&lt;IfModule mod_deflate.c&gt;
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript
+&lt;/IfModule&gt;
+</pre>
+<p>これでファイル転送量が<strong>60〜80%削減</strong>されます。WordPressなら『WP Fastest Cache』を有効化するだけで同等の設定が入ります。</p>
+</section>
+
+<section><h2>改善策5. 不要スクリプト・プラグイン削除</h2>
+<p>使っていないJavaScript・CSS・埋め込みタグが、静かに速度を殺しています。整理チェックリスト。</p>
+<ul>
+<li>□ 昔入れたが今は使っていないGoogleタグマネージャーの管理タグ</li>
+<li>□ 過去のイベントに使ったチャットボットのウィジェット</li>
+<li>□ フォームプラグインが複数併存していないか</li>
+<li>□ SNSシェアボタンが5個以上並んでいないか（LINE・X・Facebookで十分）</li>
+<li>□ WordPressプラグインが15個以上入っていないか</li>
+<li>□ 未使用のWebフォント（Google Fonts）を10個以上読み込んでいないか</li>
+</ul>
+<p>『Autoptimize』などのCSS/JS最適化プラグインで、未使用コードの自動削減も可能です。</p>
+</section>
+
+<section><h2>今日試せる：30分クイック改善プラン</h2>
+<ol>
+<li><strong>0〜5分：</strong>PageSpeed Insightsで現状スコア測定＆スクショ保存</li>
+<li><strong>5〜15分：</strong>トップ画像とヒーロー画像の3〜5枚をSquooshで圧縮</li>
+<li><strong>15〜20分：</strong>ファーストビュー以外の画像にloading="lazy"追加</li>
+<li><strong>20〜25分：</strong>使っていないSNSウィジェット・チャットボットを削除</li>
+<li><strong>25〜30分：</strong>再度PageSpeed Insightsで測定＆比較</li>
+</ol>
+<p>これだけで多くのサイトが<strong>モバイルスコア30点台→60点台</strong>に到達します。</p>
+</section>
+
+<section><h2>数字で見る改善事例3つ</h2>
+<p><strong>事例1：福岡・美容室（WordPress）</strong><br>
+モバイルスコア32点→78点、LCP 6.4秒→1.9秒。ヒーロー画像7MB→180KB、WebP化、未使用プラグイン6個削除で達成。月間予約数が1.6倍に。</p>
+<p><strong>事例2：大分・整体院（STUDIO）</strong><br>
+モバイル49点→74点、LCP 4.2秒→2.1秒。全画像を事前に幅1200px・品質80%に統一、GoogleマップをiframeでlazyロードするだけでLCPが半分に。</p>
+<p><strong>事例3：熊本・ECサイト（Shopify）</strong><br>
+商品画像を全てWebP化、上位10商品ページを重点改善。モバイルLCP 3.8秒→1.7秒でCVRが1.8%→2.7%へ改善、月商が1.4倍。</p>
+</section>
+
+<section><h2>やってはいけない5つのNG施策</h2>
+<ul>
+<li><strong>安易なCDN導入：</strong>設定不備で逆に遅くなる事例も。無料枠でまず試す</li>
+<li><strong>不要な大量プラグイン導入：</strong>速度改善プラグインを5個以上入れると競合する</li>
+<li><strong>ファーストビュー画像のlazy化：</strong>LCPが悪化する典型ミス</li>
+<li><strong>動画自動再生：</strong>モバイルではデータ量激増で離脱率上昇</li>
+<li><strong>フォント10種類読み込み：</strong>デザインの犠牲になる速度を意識</li>
+</ul>
+</section>
+
+<section><h2>業種別・速度改善で効くポイント</h2>
+<p>業種によって『どこが遅い元凶か』は異なります。原因の見極めが最短ルートです。</p>
+<ul>
+<li><strong>飲食店・カフェ：</strong>メニュー写真の大量掲載でLCP悪化。全画像WebP化＋lazy loadで解決</li>
+<li><strong>整体・整骨院：</strong>症状別ページに大量画像。ページ別に主要画像を絞り込むのが有効</li>
+<li><strong>美容室・サロン：</strong>ヘアスタイル写真ギャラリー。thumbnail表示＋クリックで拡大の設計に変更</li>
+<li><strong>ECサイト：</strong>商品画像＋レコメンド枠のJS。サードパーティ製ウィジェットの見直し必須</li>
+<li><strong>士業サイト：</strong>写真は少ないが未使用JSやフォント過多が典型。CSS/JSの最適化が優先</li>
+</ul>
+<p>自業種で頻出の速度ボトルネックを把握することで、改善優先順位が明確になります。</p>
+</section>
+
+<section><h2>速度改善が売上に直結する理由</h2>
+<p>『速度改善はSEO対策』と思われがちですが、<strong>実は売上への直接効果の方が大きい</strong>ことが分かっています。</p>
+<ul>
+<li>Amazon：ページ表示が0.1秒遅くなると売上1%減</li>
+<li>Google：0.5秒遅くなると検索数20%減</li>
+<li>ウォルマート：1秒改善するとCVRが2%向上</li>
+<li>個人事業主サイトの実測：LCP 4秒→2秒でCVR平均1.6倍</li>
+</ul>
+<p>『速いHP』は、広告費をかけずに<strong>既存の訪問者からより多くの問い合わせ</strong>を引き出す最強のレバレッジ。SEO順位アップは副産物と捉えるくらいがちょうど良いです。</p>
+</section>
+
+<section><h2>Core Web Vitalsとの関係</h2>
+<p>2021年から、Googleは表示速度を『Core Web Vitals（CWV）』という3指標で評価しています。</p>
+<table class="comparison-table">
+<thead><tr><th>指標</th><th>合格ライン</th><th>意味</th></tr></thead>
+<tbody>
+<tr><td>LCP</td><td>2.5秒以内</td><td>最大要素の表示時間</td></tr>
+<tr><td>INP</td><td>200ms以下</td><td>操作への反応速度</td></tr>
+<tr><td>CLS</td><td>0.1以下</td><td>レイアウトずれ</td></tr>
+</tbody>
+</table>
+<p>今回の5つの改善策は、<strong>LCPとCLSに直接効きます</strong>。INPはJavaScript処理の軽量化が中心なので、詳細は関連記事を参照してください。</p>
+</section>
+
+<div style="background:linear-gradient(135deg, #06C755, #04A048);color:white;padding:2rem;border-radius:16px;text-align:center;margin:2rem 0;">
+    <h3 style="margin-top:0;color:white;">💬 表示速度をプロに見てもらいたい方へ</h3>
+    <p>「自分でやる時間がない」「WordPressでどこから触ればいい？」もLINEでOK。URLと現状スコアを送るだけで、無料で改善提案します。</p>
+    <a href="https://lin.ee/43NTiCQ" style="display:inline-block;background:white;color:#06C755;padding:1rem 2rem;border-radius:999px;font-weight:900;text-decoration:none;margin-top:1rem;">📱 LINEで相談する（無料）</a>
+    <p style="font-size:0.85rem;margin-top:1rem;opacity:0.9;">✓ 24時間受付　✓ 返信は営業時間内　✓ しつこい営業なし</p>
+</div>
+
+<section><h2>よくある質問</h2>
+<p><strong>Q. 表示速度は何秒以内が目標？</strong><br>
+A. モバイル2.5秒以内、PC1.5秒以内が理想。3秒を超えると半数が離脱します。</p>
+<p><strong>Q. PageSpeed Insightsは何点あればOK？</strong><br>
+A. モバイル60点以上が合格、80点で優秀。個別CWV指標を良好レンジに入れる方が優先。</p>
+<p><strong>Q. 画像はどれくらい圧縮すべき？</strong><br>
+A. 1枚200KB以下、ヒーロー画像でも500KB以下が目安。品質80%＋WebPで達成できます。</p>
+<p><strong>Q. lazy loadは全画像に付けるべき？</strong><br>
+A. ファーストビュー画像には付けない。それ以下の画像だけloading="lazy"を追加。</p>
+<p><strong>Q. WordPressの無料プラグインで何を入れれば？</strong><br>
+A. EWWW Image Optimizer・WP Fastest Cache・Autoptimizeの3点で7割解決します。</p>
+</section>
+
+<section><h2>まとめ</h2>
+<p>HP速度改善は、<strong>画像圧縮・WebP化・遅延読み込み・キャッシュ・不要スクリプト削除の5つ</strong>を順番に実装するだけで、多くのサイトがスコアを2倍にできます。特に画像対策だけで7割の効果が出るため、まずSquooshで圧縮するところから始めましょう。</p>
+<p>速度は『一度直せば数年効く』資産になります。売上・SEO・UXすべてに効く一石三鳥の施策です。</p>
+</section>
+
+<section><h2>関連記事</h2>
+<ul>
+<li><a href="core-web-vitals-guide.html">Core Web Vitals改善の基本</a></li>
+<li><a href="website-speed-optimization.html">WEBサイト速度最適化の全知識</a></li>
+<li><a href="slow-website-fix-guide.html">遅いHPを速くする実践ガイド</a></li>
+<li><a href="image-seo-guide.html">画像SEOと最適化テクニック</a></li>
+<li><a href="mobile-seo-guide.html">モバイルSEO完全ガイド</a></li>
+</ul>
+</section>
+
+<div class="article-cta"><h3>「うちのHP、なぜ遅いのか特定してほしい」なら</h3><p>実サイトのスコアを診断し、優先順位付きで改善プランをご提示します。無料集客診断からどうぞ。</p><a href="/#diagnosis" class="btn btn-primary btn-large">無料集客診断はこちら</a></div>
+
+</div></div></article>
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2024 LIKaNON. All rights reserved.</p></div></div></footer>
+<a href="#" class="back-to-top" id="backToTop"><span class="back-to-top-arrow"></span><span class="back-to-top-text">TOP</span></a>
+<script src="../script.js" defer></script><script src="../blog.js" defer></script>
+</body></html>

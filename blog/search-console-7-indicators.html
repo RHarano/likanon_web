@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-E69R3DCREZ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-E69R3DCREZ');</script><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Google Search Consoleは無料なのに、見るべき指標が多すぎて挫折しがち。この記事では「表示回数」「クリック数」「CTR」「平均掲載順位」など7つの重要指標に絞って、個人事業主でも今日から使いこなせる見方と改善策を解説します。">
+<meta property="og:title" content="Google Search Consoleで見るべき7つの指標 | LIKaNON">
+<meta property="og:description" content="Search Consoleの7つの必須指標を、見方・合格ライン・改善策までまるごと解説。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://likanon.com/blog/search-console-7-indicators.html">
+<meta property="og:image" content="https://likanon.com/img/og-image.png">
+<meta property="article:published_time" content="2026-09-23">
+<meta property="article:modified_time" content="2026-09-23">
+<link rel="canonical" href="https://likanon.com/blog/search-console-7-indicators.html">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<title>Google Search Consoleで見るべき7つの指標 | LIKaNON</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../blog.css"><link rel="stylesheet" href="article.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Google Search Consoleで見るべき7つの指標","datePublished":"2026-09-23","dateModified":"2026-09-23","author":{"@type":"Organization","name":"LIKaNON"},"publisher":{"@type":"Organization","name":"LIKaNON","logo":{"@type":"ImageObject","url":"https://likanon.com/img/likanonlogo.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Google Search Consoleで7つの指標をチェックする手順","step":[{"@type":"HowToStep","name":"Search Consoleにログイン","text":"search.google.com/search-consoleにアクセスし、対象プロパティを選択します。"},{"@type":"HowToStep","name":"検索パフォーマンスを開く","text":"左メニューの「検索パフォーマンス」から、過去28日または3ヶ月の期間を選びます。"},{"@type":"HowToStep","name":"4指標を表示","text":"『クリック数』『表示回数』『平均CTR』『平均掲載順位』の4つのチェックボックスを全てONにします。"},{"@type":"HowToStep","name":"クエリ・ページ別に確認","text":"下部の『クエリ』『ページ』タブで、上位20件をエクスポートします。"},{"@type":"HowToStep","name":"インデックスとCWVを確認","text":"『ページ』『Core Web Vitals』でエラーを、『拡張』でリッチリザルトの状態を点検します。"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Google Search Consoleは無料ですか？有料プランはありますか？","acceptedAnswer":{"@type":"Answer","text":"完全に無料です。Googleアカウントさえあれば、サイト所有権を確認するだけで全機能が使えます。有料プランは存在しません。ドメイン単位・URLプレフィックス単位のどちらでも登録でき、複数サイトを1アカウントで管理可能です。"}},{"@type":"Question","name":"Search ConsoleとGoogleアナリティクスの違いは？","acceptedAnswer":{"@type":"Answer","text":"Search Consoleは『検索結果でどう見られているか』、GA4は『サイト内でどう動いたか』を見るツールです。SCは表示回数・掲載順位・CTRなど検索側の指標を、GA4はセッション・滞在時間・コンバージョンなどサイト内行動を担当します。両方を連携させると『何のキーワードで来た人が問い合わせに至ったか』まで見えるようになります。"}},{"@type":"Question","name":"平均CTRはどれくらいが合格ラインですか？","acceptedAnswer":{"@type":"Answer","text":"検索順位によって大きく変わります。1位は約28%、3位で約11%、10位で約2.5%が業界平均です。順位に対して平均を大きく下回っていれば、タイトルタグとメタディスクリプションの見直しでCTRを1.5〜2倍にできる可能性があります。"}},{"@type":"Question","name":"『インデックス登録されていません』と表示されるのはなぜ？","acceptedAnswer":{"@type":"Answer","text":"主な原因は5つ。①robots.txtでブロック、②noindexタグ、③重複コンテンツ、④クロールエラー、⑤コンテンツ品質不足です。URL検査ツールで個別ページを検査し、原因を特定してから修正→インデックス登録リクエストを送ります。"}},{"@type":"Question","name":"Core Web Vitalsのスコアはどこで確認できますか？","acceptedAnswer":{"@type":"Answer","text":"Search Consoleの『Core Web Vitals』レポートで、モバイル・PCそれぞれの『良好』『改善が必要』『不良』のURL数を確認できます。個別ページの詳細スコアはPageSpeed Insightsで確認します。LCP 2.5秒以内、INP 200ms以下、CLS 0.1以下が合格ラインです。"}},{"@type":"Question","name":"データを見始めるのは公開後どれくらいから？","acceptedAnswer":{"@type":"Answer","text":"新規サイトなら公開2〜4週間後からデータが蓄積されます。最初の1ヶ月は『まずインデックスされているか』のみを確認し、2ヶ月目以降にクエリ・CTR・掲載順位の分析を始めるのが現実的です。既存サイトなら登録翌日からデータが見え始めます。"}},{"@type":"Question","name":"『表示回数はあるのにクリックが少ない』ときは？","acceptedAnswer":{"@type":"Answer","text":"タイトルタグとメタディスクリプションのミスマッチが最大要因です。検索クエリと本文がずれていないか、タイトルに『地域名+業種+ベネフィット』が入っているか、ディスクリプションが120文字前後で明確な誘い文句になっているかを見直します。この修正だけでCTRが2倍以上になる事例は珍しくありません。"}}]}</script>
+</head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo"><img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image"></a><nav class="nav"><ul class="nav-list"><li><a href="/blog.html" class="active">ブログ</a></li><li><a href="/#contact" class="nav-cta">お問い合わせ</a></li></ul></nav></div></header>
+<nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="/">ホーム</a></li><li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li><li class="breadcrumb-item current">Google Search Consoleで見るべき7つの指標</li></ol></div></nav>
+
+<article class="article"><header class="article-header"><div class="container"><div class="article-meta"><span class="article-category tools">お役立ち豆知識</span><time datetime="2026-09-23">2026.09.23</time><span class="read-time">7分</span></div>
+<h1 class="article-title">Google Search Consoleで見るべき7つの指標</h1>
+<p class="article-lead">Search Consoleは無料なのに、指標が多すぎて「何を見ればいいか分からない」と挫折する方が続出。<strong>実は個人事業主が押さえるべき指標は、たった7つ</strong>。この記事では、見方・合格ライン・改善策までを一気に解説します。</p>
+</div></header>
+
+<div class="article-content"><div class="container"><div class="article-body">
+
+<section><h2>そもそもSearch Consoleとは何か</h2>
+<p>Google Search Console（以下SC）は、Googleが無料提供する「検索結果におけるあなたのサイトの成績表」です。Googleアナリティクス（GA4）が『サイト内の動き』を測るのに対し、SCは<strong>『Googleの検索結果でどう扱われたか』</strong>を可視化します。</p>
+<p>登録は5分で完了し、以降は自動でデータが蓄積されます。順位確認ツール（有料月5,000〜30,000円）を契約する前に、まずSCの活用度を100%にするのが個人事業主の鉄則です。</p>
+</section>
+
+<section><h2>指標1. クリック数：実際の来訪の総量</h2>
+<p><strong>合格ライン：月100クリック以上（開設半年後の目安）</strong></p>
+<p>検索結果からあなたのサイトに何回クリックされたか、の実数値です。GA4の『Organic Searchセッション』とほぼ一致します。</p>
+<ul>
+<li>月100未満：そもそも検索経由の露出が不足（表示回数を見直す）</li>
+<li>月100〜500：地域集客のスタートライン。ブログ更新で伸びる</li>
+<li>月500以上：SEOが機能している状態。CVR改善フェーズへ</li>
+</ul>
+<p>まずはこの数字が『上向きに推移しているか』を毎月1回チェックする習慣が第一歩です。</p>
+</section>
+
+<section><h2>指標2. 表示回数：検索結果に何回出たか</h2>
+<p><strong>合格ライン：クリック数の20〜40倍（CTR2.5〜5%を想定）</strong></p>
+<p>表示回数はクリックの前段階、つまり『何回、あなたのサイトが検索結果に登場したか』です。ここが少なければ、そもそも上位表示できていません。</p>
+<p>表示回数がクリック数の50倍以上ある場合は、『順位は取れているが選ばれていない』状態。タイトルタグ・メタディスクリプションの見直しでクリック数を1.5〜2倍にできる可能性が高いです。</p>
+</section>
+
+<section><h2>指標3. 平均CTR：クリック率</h2>
+<p>CTR（クリック率）＝クリック数 ÷ 表示回数 × 100 で計算されます。順位別の業界平均は以下の通り。</p>
+<table class="comparison-table">
+<thead><tr><th>掲載順位</th><th>平均CTR</th><th>合格ライン</th></tr></thead>
+<tbody>
+<tr><td>1位</td><td>約28%</td><td>25%以上</td></tr>
+<tr><td>3位</td><td>約11%</td><td>10%以上</td></tr>
+<tr><td>5位</td><td>約6%</td><td>5%以上</td></tr>
+<tr><td>10位</td><td>約2.5%</td><td>2%以上</td></tr>
+</tbody>
+</table>
+<p>順位に対してCTRが低ければ、<strong>タイトルとディスクリプションが原因</strong>です。逆にCTRが高ければ、順位を上げるだけでクリックが伸びます。</p>
+</section>
+
+<div style="background:linear-gradient(135deg, #06C755, #04A048);color:white;padding:2rem;border-radius:16px;text-align:center;margin:2rem 0;">
+    <h3 style="margin-top:0;color:white;">💬 データの読み方で迷ったらLINEで</h3>
+    <p>「うちのサイトはどの指標から改善すべき？」を無料でお答えします。SCの画面を見ながら、優先順位まで一緒に整理します。</p>
+    <a href="https://lin.ee/43NTiCQ" style="display:inline-block;background:white;color:#06C755;padding:1rem 2rem;border-radius:999px;font-weight:900;text-decoration:none;margin-top:1rem;">📱 LINEで相談する（無料）</a>
+    <p style="font-size:0.85rem;margin-top:1rem;opacity:0.9;">✓ 24時間受付　✓ 返信は営業時間内　✓ しつこい営業なし</p>
+</div>
+
+<section><h2>指標4. 平均掲載順位：Google上の位置</h2>
+<p>あなたのサイトが検索結果で表示された平均順位。10位以内でようやくクリックが本格化し、3位以内で表示回数の10%以上がクリックに変わります。</p>
+<ul>
+<li>1〜3位：純粋な検索需要をほぼ独占できる</li>
+<li>4〜10位：クリック争奪戦、タイトルとディスクリプションの質で差がつく</li>
+<li>11〜30位：2ページ目以降。改善余地が最も大きい層</li>
+<li>31位以下：コンテンツ・被リンク・E-E-A-Tの本格見直しが必要</li>
+</ul>
+<p>『クエリ別平均順位』を見て、11〜20位のキーワードを1つずつ10位以内へ押し上げるのが最短の伸ばし方です。</p>
+</section>
+
+<section><h2>指標5. クエリ別データ：実際に検索された言葉</h2>
+<p><strong>ここがSCの最重要データ</strong>です。『検索パフォーマンス→クエリ』で、実際にユーザーが打ち込んだ検索語が全て見えます。</p>
+<ul>
+<li>想定していなかったキーワードで来訪していないか</li>
+<li>ブランド名検索（指名検索）がどれくらいあるか</li>
+<li>『地域名＋業種』の検索順位はどのくらいか</li>
+<li>『料金』『口コミ』『比較』などの購買前ワードで表示されているか</li>
+</ul>
+<p>上位20クエリをCSVで書き出し、月1回<strong>『次に狙う10位以内候補』を選定</strong>するのが、伸びるサイトの共通ルーティンです。</p>
+</section>
+
+<section><h2>指標6. ページ別データ：どの記事が稼いでいるか</h2>
+<p>『検索パフォーマンス→ページ』で、記事単位のクリック数・表示回数・CTR・順位が確認できます。多くのサイトで、<strong>全記事の20%が検索流入の80%を占める（パレートの法則）</strong>のが実情です。</p>
+<p>トップ20の記事に絞り、以下の3施策で伸ばします。</p>
+<ol>
+<li><strong>タイトルタグをブラッシュアップ：</strong>数字・年号・地域名を追加してCTR改善</li>
+<li><strong>本文リライト：</strong>関連する検索クエリを見出しに追加して滞在時間を伸ばす</li>
+<li><strong>内部リンク集約：</strong>関連記事から重要記事へリンクを貼り評価を集約</li>
+</ol>
+</section>
+
+<section><h2>指標7. インデックス状況とCore Web Vitals</h2>
+<p>『ページ』レポートで、<strong>『登録済み』『登録されていない』のURL数と理由</strong>が確認できます。個人事業主サイトでよく見る非登録理由は以下。</p>
+<ul>
+<li>『クロール済み - インデックス未登録』：コンテンツの独自性不足</li>
+<li>『検出 - インデックス未登録』：クロール優先度が低い</li>
+<li>『重複しています』：正規URL指定の設定漏れ</li>
+<li>『代替ページ（適切な canonical タグあり）』：多くの場合問題なし</li>
+</ul>
+<p>あわせて『Core Web Vitals』で『不良URL』が10件以上ある場合は、モバイル表示速度の改善が急務です。<strong>LCP 2.5秒以内・INP 200ms以下・CLS 0.1以下</strong>が合格ライン。</p>
+</section>
+
+<section><h2>今日試せる：15分レポートの作り方</h2>
+<p>SCを『開いて眺めるだけ』で終わらせないため、月1回15分のミニレポートを作りましょう。</p>
+<pre style="background:#f4f4f4;padding:1rem;border-radius:8px;overflow-x:auto;font-size:0.9rem;">
+【SC月次レポート テンプレート】
+■ 集計期間：先月1日〜末日（前月比）
+■ 総クリック数：___（前月比 __%）
+■ 総表示回数：___（前月比 __%）
+■ 平均CTR：__%
+■ 平均掲載順位：__位
+■ 伸びたクエリTOP3：
+■ 落ちたクエリTOP3：
+■ 新規インデックスページ：__本
+■ CWV 不良URL：__件
+■ 次月アクション：
+</pre>
+<p>スプレッドシートに毎月転記するだけで、成長も課題も一目瞭然になります。</p>
+</section>
+
+<section><h2>やってはいけない5つのNG運用</h2>
+<ul>
+<li><strong>毎日順位を見る：</strong>Googleは日次で変動するので週1で十分</li>
+<li><strong>単発クエリだけ見る：</strong>全体の傾向を掴む前にキーワード追いすると迷子に</li>
+<li><strong>表示回数だけを追う：</strong>ノイズクエリを増やしてもCVには繋がらない</li>
+<li><strong>CTRだけで判断する：</strong>母数（表示回数）が小さいと数字が暴れる</li>
+<li><strong>URL検査で毎日リクエスト：</strong>短期の連打はレート制限に引っかかる</li>
+</ul>
+</section>
+
+<section><h2>数字で見る成長パターン3例</h2>
+<p><strong>事例1：福岡・整体院（開設8ヶ月）</strong><br>
+月100クリック→400クリックまで4ヶ月で伸長。伸びたのは『久留米 整体 骨盤矯正』など地域＋症状の複合クエリ。ブログ月2本＋既存記事のタイトルリライトで達成。</p>
+<p><strong>事例2：大分・カフェ（開設1年3ヶ月）</strong><br>
+CTR 1.8%→4.2%へ改善。タイトルに『大分駅徒歩3分』を追加し、メタディスクリプションを『営業時間・座席数・Wi-Fi有無』を明記した120文字構成に変更しただけで表示回数はほぼ横ばい・クリックは2.3倍に。</p>
+<p><strong>事例3：熊本・パーソナルジム（開設6ヶ月）</strong><br>
+インデックス登録率が62%→94%に。原因は重複タイトルとページ構造の薄さ。全ページ独自タイトル化＋見出し構造の整理で改善しました。</p>
+</section>
+
+<section><h2>業種別・優先的に追うべき指標</h2>
+<p>業種によって『重視すべき指標』は変わります。個人事業主が業種別に最初に押さえるべき指標マップを整理しました。</p>
+<ul>
+<li><strong>飲食店・カフェ：</strong>『地域名＋業種』クエリの平均掲載順位＋クリック数。Googleマップからの流入とセットで見る</li>
+<li><strong>整体・整骨院：</strong>症状別クエリ（腰痛・肩こり・骨盤矯正）のクリック数と滞在時間。症状ページの評価が命</li>
+<li><strong>美容室・サロン：</strong>スタイル系＋地域名クエリのCTR。写真リッチリザルトが表示されているかも確認</li>
+<li><strong>士業（税理士・社労士）：</strong>『地域名＋業種』＋『料金』『相談』など購買前クエリの掲載順位</li>
+<li><strong>教室・スクール：</strong>『体験』『無料』『初心者』などのロングテールクエリのクリック数推移</li>
+<li><strong>ECサイト：</strong>商品名クエリと『買う』『通販』など購買意図クエリの平均掲載順位＋CTR</li>
+</ul>
+<p>自業種で成果が出やすいクエリ群を把握すれば、リライトすべき記事の優先順位が明確になります。</p>
+</section>
+
+<section><h2>Search Consoleのデータエクスポート活用</h2>
+<p>Search Consoleの画面だけでは、深掘り分析に限界があります。<strong>データをCSVで書き出し</strong>、スプレッドシートで扱うのが上級者の定番技。</p>
+<ul>
+<li>『クエリ』『ページ』『デバイス』『国』『日付』の全データを1クリックでエクスポート可能</li>
+<li>Google スプレッドシートアドオン『Search Analytics for Sheets』（無料）で自動取得</li>
+<li>Looker Studio（旧データポータル・無料）と接続すれば自動ダッシュボード化</li>
+<li>16ヶ月分の履歴データを一元管理できる</li>
+</ul>
+<p>『毎月手動でスクショ』を卒業して、Looker Studioの月次自動レポートに切り替えるだけで、分析にかける時間が1/5になります。</p>
+</section>
+
+<section><h2>関連ツールとの連携</h2>
+<p>SC単体では見えない部分を補完する、無料の相棒ツール3つ。</p>
+<ol>
+<li><strong>Googleアナリティクス（GA4）：</strong>SCと連携すると『どのクエリで来た人が問い合わせに至ったか』が見える</li>
+<li><strong>PageSpeed Insights：</strong>Core Web Vitalsの詳細スコアと具体的な改善提案が確認できる</li>
+<li><strong>Bing Webmaster Tools：</strong>Bing検索の指標も無料で取得できる。BingはCTRが高い傾向</li>
+</ol>
+<p>個人事業主ならこの3つで十分。高額な有料ツールを検討する前に、無料で取れるデータを取り切りましょう。</p>
+</section>
+
+<div style="background:linear-gradient(135deg, #06C755, #04A048);color:white;padding:2rem;border-radius:16px;text-align:center;margin:2rem 0;">
+    <h3 style="margin-top:0;color:white;">💬 実装が難しかったらLINEで</h3>
+    <p>「うちのサイトはこの改善で伸びる？」を無料でお答えします。SCの数字を送っていただくだけで診断可能です。</p>
+    <a href="https://lin.ee/43NTiCQ" style="display:inline-block;background:white;color:#06C755;padding:1rem 2rem;border-radius:999px;font-weight:900;text-decoration:none;margin-top:1rem;">📱 LINEで相談する（無料）</a>
+    <p style="font-size:0.85rem;margin-top:1rem;opacity:0.9;">✓ 24時間受付　✓ 返信は営業時間内　✓ しつこい営業なし</p>
+</div>
+
+<section><h2>よくある質問</h2>
+<p><strong>Q. Search Consoleは無料ですか？</strong><br>
+A. 完全無料です。Googleアカウントさえあれば、所有権確認だけで全機能が使えます。</p>
+<p><strong>Q. GA4との違いは？</strong><br>
+A. SCは『検索結果でどう扱われたか』、GA4は『サイト内でどう動いたか』。両方連携で『問い合わせに至ったクエリ』が分かります。</p>
+<p><strong>Q. 平均CTRの合格ラインは？</strong><br>
+A. 順位で変わります。1位28%、3位11%、10位2.5%が業界平均。順位より低ければ改善余地。</p>
+<p><strong>Q. インデックスされない主な原因は？</strong><br>
+A. robots.txtブロック・noindex・重複・クロールエラー・コンテンツ品質不足の5つ。URL検査ツールで特定します。</p>
+<p><strong>Q. データはいつから見えますか？</strong><br>
+A. 新規サイトは公開2〜4週間後、既存サイトなら登録翌日から蓄積が始まります。</p>
+</section>
+
+<section><h2>まとめ</h2>
+<p>Search Consoleで見るべき指標はたった7つ。<strong>クリック数・表示回数・CTR・掲載順位・クエリ・ページ・インデックス状況</strong>を月1回15分で確認するだけで、あなたのサイトの成長は数字で追えるようになります。</p>
+<p>『順位を追う』のではなく『クエリと行動を追う』のがSC活用の本質。数字が読めるようになれば、次にやるべき打ち手は自然と見えてきます。</p>
+</section>
+
+<section><h2>関連記事</h2>
+<ul>
+<li><a href="google-search-console-guide.html">Google Search Console完全ガイド（初期設定編）</a></li>
+<li><a href="search-console-errors.html">Search Consoleのエラー対処完全マニュアル</a></li>
+<li><a href="google-analytics-guide.html">GA4の見方と初期設定ガイド</a></li>
+<li><a href="core-web-vitals-guide.html">Core Web Vitals改善の基本</a></li>
+<li><a href="seo-kpi-measurement.html">SEO KPIの正しい測り方</a></li>
+</ul>
+</section>
+
+<div class="article-cta"><h3>「うちのSCの数字、良いのか悪いのか分からない」なら</h3><p>7指標をあなたのサイトデータで採点し、改善優先順位まで具体的にお伝えします。無料集客診断からどうぞ。</p><a href="/#diagnosis" class="btn btn-primary btn-large">無料集客診断はこちら</a></div>
+
+</div></div></article>
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2024 LIKaNON. All rights reserved.</p></div></div></footer>
+<a href="#" class="back-to-top" id="backToTop"><span class="back-to-top-arrow"></span><span class="back-to-top-text">TOP</span></a>
+<script src="../script.js" defer></script><script src="../blog.js" defer></script>
+</body></html>
