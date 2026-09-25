@@ -3627,7 +3627,7 @@ select {
     padding: var(--spacing-sm) 0;
     background: var(--color-bg);
     border-bottom: 1px solid var(--color-border);
-    margin-top: 70px;
+    margin-top: 100px;
 }
 
 .breadcrumb-list {
@@ -3661,13 +3661,13 @@ select {
     color: var(--color-text);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .page-hero {
         padding: 8rem 0 3rem;
     }
-    
+
     .breadcrumb {
-        margin-top: 60px;
+        margin-top: 88px;
     }
 }
 
