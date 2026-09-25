@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-E69R3DCREZ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-E69R3DCREZ');</script><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="コンバージョン率（CVR）が0.5%→2%に伸びる、7つの改善ポイント。個人事業主・小規模店舗が今日から実装できる具体策と、GA4でのチェック方法まで一気に解説します。">
+<meta property="og:title" content="コンバージョン率（CVR）を上げる7つの改善ポイント | LIKaNON">
+<meta property="og:description" content="アクセスはあるのに問い合わせにつながらない。CVRを上げる7つの具体策と優先順位を解説します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://likanon.com/blog/cvr-improvement-7-points.html">
+<meta property="og:image" content="https://likanon.com/img/og-image.png">
+<meta property="article:published_time" content="2026-09-26">
+<meta property="article:modified_time" content="2026-09-26">
+<link rel="canonical" href="https://likanon.com/blog/cvr-improvement-7-points.html">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<title>コンバージョン率（CVR）を上げる7つの改善ポイント | LIKaNON</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../blog.css"><link rel="stylesheet" href="article.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"コンバージョン率（CVR）を上げる7つの改善ポイント","datePublished":"2026-09-26","dateModified":"2026-09-26","author":{"@type":"Organization","name":"LIKaNON"},"publisher":{"@type":"Organization","name":"LIKaNON","logo":{"@type":"ImageObject","url":"https://likanon.com/img/likanonlogo.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"CVR（コンバージョン率）とは何ですか？","acceptedAnswer":{"@type":"Answer","text":"HPを訪問した人のうち、問い合わせ・予約・購入など「成約行動」に至った割合のことです。計算式は「コンバージョン数 ÷ セッション数 × 100」。地域集客系のHPなら2〜5%が合格ライン、5%以上なら優秀です。0.5%未満は改善余地が非常に大きい状態で、まず問い合わせ導線から見直す必要があります。"}},{"@type":"Question","name":"CVRとCVは何が違いますか？","acceptedAnswer":{"@type":"Answer","text":"CV（コンバージョン）は「成約数」そのもので、CVRは「訪問者に対する成約の割合」です。CVは絶対数、CVRは効率の指標。集客数が同じなら、CVRを上げるだけでCVは増えます。だからこそ、集客数を増やす前にまずCVRを整えるのが定石です。"}},{"@type":"Question","name":"CVRを上げるのに一番効果的なのは何ですか？","acceptedAnswer":{"@type":"Answer","text":"「問い合わせ導線の見直し」が最短で効きます。具体的には、ヘッダー・スマホ画面下部への固定ボタン設置、電話・LINE・フォームの3択提示、ボタンの色を目立つ暖色系に変更、の3点。ここだけでCVRが0.5%→2%に伸びるケースが多く、追加コストもかかりません。"}},{"@type":"Question","name":"お客様の声はCVRに影響しますか？","acceptedAnswer":{"@type":"Answer","text":"大きく影響します。初めて訪問する人は「本当に大丈夫か」を判断する材料を探しており、お客様の声はその不安を解消する最強の証拠です。目安として5件以上、可能なら顔写真・名前・日付付きで掲載すると信頼感が跳ね上がります。Google口コミの引用転載も有効です。"}},{"@type":"Question","name":"フォームの入力項目は何個までがいいですか？","acceptedAnswer":{"@type":"Answer","text":"必須項目は「名前・連絡先・相談内容」の3つで十分です。項目数が7つを超えると、フォーム離脱率が30〜50%上昇するというデータがあります。特にスマホでは入力の負担が大きく、住所・生年月日・郵便番号などは初回の問い合わせでは不要です。ヒアリングは相談後で構いません。"}},{"@type":"Question","name":"CVRの改善効果はどれくらいで出ますか？","acceptedAnswer":{"@type":"Answer","text":"変更した翌日から数字は動き始めます。ただし判断は最低2週間、できれば1ヶ月のデータを見てから。1週間だとブレが大きく、改善効果と偶然の差が区別できません。GA4で「変更前1ヶ月」と「変更後1ヶ月」を比較する形で評価するのが正確です。"}}]}</script>
+</head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo"><img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image"></a><nav class="nav"><ul class="nav-list"><li><a href="/hp-instagram-set.html">セット運用</a></li><li><a href="/blog.html" class="active">ブログ</a></li><li><a href="/#contact" class="nav-cta">お問い合わせ</a></li></ul></nav></div></header>
+<nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="/">ホーム</a></li><li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li><li class="breadcrumb-item current">コンバージョン率（CVR）を上げる7つの改善ポイント</li></ol></div></nav>
+
+<article class="article"><header class="article-header"><div class="container"><div class="article-meta"><span class="article-category tools">お役立ち豆知識</span><time datetime="2026-09-26">2026.09.26</time><span class="read-time">8分</span></div>
+<h1 class="article-title">コンバージョン率（CVR）を上げる7つの改善ポイント</h1>
+<p class="article-lead">アクセスはあるのに問い合わせにつながらない。それは<strong>CVR（コンバージョン率）</strong>の課題です。個人事業主・小規模店舗のCVRを0.5%→2%へ引き上げる、実装しやすい7つの改善ポイントを、優先順位付きで解説します。</p>
+</div></header>
+
+<div class="article-content"><div class="container"><div class="article-body">
+
+<section><h2>CVRとは：まず数字の意味を揃える</h2>
+<p>CVR（Conversion Rate）は「HPを訪問した人のうち、問い合わせ・予約に至った人の割合」です。計算式はシンプル。</p>
+<p><strong>CVR = コンバージョン数 ÷ セッション数 × 100（%）</strong></p>
+<table class="comparison-table">
+<thead><tr><th>CVR</th><th>状態</th><th>優先アクション</th></tr></thead>
+<tbody>
+<tr><td>0.5%未満</td><td>導線が機能していない</td><td>問い合わせボタンの位置</td></tr>
+<tr><td>0.5〜1.5%</td><td>改善余地大</td><td>お客様の声追加</td></tr>
+<tr><td>2〜5%</td><td>合格</td><td>集客数の拡大</td></tr>
+<tr><td>5%以上</td><td>優秀</td><td>単価向上・LTV改善</td></tr>
+</tbody>
+</table>
+<p>地域集客系ならCVR 2%が最低ライン。ここを下回っていたら、集客数を増やす前にCVR改善が先です。</p>
+</section>
+
+<section><h2>ポイント1. 問い合わせボタンの位置と目立ち方</h2>
+<p><strong>優先順位：★★★★★（最優先）</strong></p>
+<p>7つの中で最も効果が大きく、実装コストも一番低いのがここ。今日から動かせます。</p>
+<ul>
+<li>ヘッダー右上に「電話・LINE・予約」の3ボタンを固定表示</li>
+<li>スマホ画面下部に「固定バー」で常時1タップ距離に</li>
+<li>ボタンの色は本文と対比する暖色（オレンジ・赤・緑）</li>
+<li>ボタンの高さは44px以上（Apple推奨サイズ）</li>
+<li>ボタン内のラベルは「予約する」ではなく「今すぐ予約」「30秒で予約」など動詞＋具体性</li>
+</ul>
+<p>これだけでCVRが0.5%→2%に伸びた事例は珍しくありません。まずここから。</p>
+</section>
+
+<section><h2>ポイント2. ファーストビューでターゲットを明示</h2>
+<p><strong>優先順位：★★★★★</strong></p>
+<p>トップ画面を開いた3秒で「これは自分向けだ」と伝えられなければ、後の情報は読まれません。</p>
+<ul>
+<li>見出しは「地域名 ＋ 業種 ＋ 対象者 ＋ 強み」で構成</li>
+<li>NG例：「あなたに寄り添う整体院」</li>
+<li>OK例：「福岡・薬院で産後ママの骨盤矯正に特化した整体院」</li>
+<li>写真はターゲット層と同じ性別・年代・雰囲気の人物を選ぶ</li>
+<li>キャッチコピーは1行、10〜25文字が読みやすい</li>
+</ul>
+<p>ターゲットを絞ると集客対象が減ると心配する方が多いですが、実際には<strong>「刺さる人が増えて成約数は上がる」</strong>のが常です。</p>
+</section>
+
+<section><h2>ポイント3. お客様の声・実績の掲載</h2>
+<p><strong>優先順位：★★★★</strong></p>
+<p>初訪問の人が抱く「本当に大丈夫か」の不安は、お客様の声でしか消せません。</p>
+<ul>
+<li>最低5件、可能なら10件以上</li>
+<li>顔写真・名前（イニシャル可）・日付・年代を添える</li>
+<li>Before / Afterがある業種は必ず掲載（施術系・美容系）</li>
+<li>数字を含める：「◯回通って改善」「◯kg減量」「累計◯名施術」</li>
+<li>Google口コミの引用転載も有効（本文コピー＋出典明記）</li>
+</ul>
+<p>お客様の声を5件から10件に増やしただけでCVRが1.4倍になったサロンの事例もあります。</p>
+</section>
+
+<section><h2>ポイント4. 料金の目安を明記</h2>
+<p><strong>優先順位：★★★★</strong></p>
+<p>「料金は問い合わせで」というHPは、それだけで大量に離脱されます。訪問者は<strong>「自分の予算感に合うかどうか」</strong>を先に知りたい。</p>
+<ul>
+<li>コース名・時間・料金目安を表形式で</li>
+<li>メニューが多い場合は「代表的な3つ」だけでも掲載</li>
+<li>「初回限定」「回数券」など変動要素は注釈で説明</li>
+<li>「相場感が近い」と分かると問い合わせのハードルが劇的に下がる</li>
+</ul>
+<p>料金非公開のままだと、比較検討段階で候補から外されてしまいます。オープンにすることで、そもそも予算が合う人だけが問い合わせしてくれる、というフィルター効果もあります。</p>
+</section>
+
+<section><h2>ポイント5. 問い合わせフォームの項目を削る</h2>
+<p><strong>優先順位：★★★</strong></p>
+<p>フォームの必須項目は<strong>「名前・連絡先・相談内容」の3つ</strong>で十分。項目が7つを超えると、離脱率は30〜50%上昇します。</p>
+<ul>
+<li>住所・郵便番号・生年月日は初回問い合わせでは不要</li>
+<li>電話番号 or メール、どちらか一つを必須に（両方はNG）</li>
+<li>相談内容は自由記述の1行で開始、必要なら選択肢を後付け</li>
+<li>スマホで1画面に収まる項目数を厳守</li>
+<li>送信ボタンは「送信」ではなく「無料で相談する」など目的語付きに</li>
+</ul>
+<p>フォームを短くしただけで問い合わせ数が2倍になった事例は、実は最も多い改善パターンの一つです。</p>
+</section>
+
+<section><h2>ポイント6. FAQで不安を先回りして潰す</h2>
+<p><strong>優先順位：★★★</strong></p>
+<p>問い合わせに至らない理由の多くは「聞くほどではないけど不安」。この不安をFAQで先に消します。</p>
+<ul>
+<li>「初めてでも大丈夫ですか？」</li>
+<li>「駐車場はありますか？」</li>
+<li>「支払い方法は？（現金・カード・電子マネー）」</li>
+<li>「予約変更・キャンセルは何時間前まで可能？」</li>
+<li>「持ち物は何が必要？服装は？」</li>
+<li>「所要時間はどれくらい？」</li>
+</ul>
+<p>実際の問い合わせで多い質問を集めて、そのままFAQに転載するのが最速です。5〜10問を用意しておけば、問い合わせのハードルは大きく下がります。</p>
+</section>
+
+<div style="background:linear-gradient(135deg, #06C755, #04A048);color:white;padding:2rem;border-radius:16px;text-align:center;margin:2rem 0;">
+    <h3 style="margin-top:0;color:white;">💬 数字を一緒に読み解きます</h3>
+    <p>「見るべき指標が分からない」段階から、無料でご相談いただけます。</p>
+    <a href="https://lin.ee/43NTiCQ" style="display:inline-block;background:white;color:#06C755;padding:1rem 2rem;border-radius:999px;font-weight:900;text-decoration:none;margin-top:1rem;">📱 LINEで相談する（無料）</a>
+    <p style="font-size:0.85rem;margin-top:1rem;opacity:0.9;">✓ 24時間受付　✓ 返信は営業時間内　✓ しつこい営業なし</p>
+</div>
+
+<section><h2>ポイント7. 「今すぐ動く理由」を作る</h2>
+<p><strong>優先順位：★★★</strong></p>
+<p>人は「今」動く理由がなければ、「あとで」に流されて忘れます。緊急性を無理なく作ります。</p>
+<ul>
+<li>「今月の予約可能枠：残り◯枠」を表示</li>
+<li>「◯月末までに予約の方に体験特典」（キャンペーンではなく特典）</li>
+<li>予約カレンダーで空き状況を可視化</li>
+<li>「先着◯名様まで」と数字を入れる</li>
+<li>「初回相談は無料」を目立たせる</li>
+</ul>
+<p>誇大表現や偽の希少性はNG。実際の空き枠に基づく可視化が、信頼を保ちながら行動を促します。</p>
+</section>
+
+<section><h2>改善の優先順位：4週間プラン</h2>
+<p>7つを一気にやろうとすると挫折します。次の4週間プランで進めるのがおすすめ。</p>
+<ol>
+<li><strong>1週目：</strong>問い合わせボタンの位置と目立ち方（ポイント1）</li>
+<li><strong>2週目：</strong>ファーストビューの見出し書き換え（ポイント2）</li>
+<li><strong>3週目：</strong>お客様の声を5件掲載（ポイント3）</li>
+<li><strong>4週目：</strong>料金目安の掲載＋フォーム項目の削減（ポイント4・5）</li>
+<li><strong>5週目以降：</strong>FAQ・緊急性の追加（ポイント6・7）</li>
+</ol>
+<p>この順で進めれば、1ヶ月目からCVRの変化が数字で見えます。</p>
+</section>
+
+<section><h2>改善効果の測り方（GA4）</h2>
+<p>感覚ではなく数字で判断するために、GA4で次の設定と確認を行います。</p>
+<ul>
+<li>問い合わせ完了ページ到達をキーイベントに設定</li>
+<li>電話番号のtel:リンククリックをキーイベントに設定</li>
+<li>LINE公式アカウントの友だち追加ボタンクリックをキーイベントに設定</li>
+<li>「レポート → エンゲージメント → コンバージョン」で月次のキーイベント数を確認</li>
+<li>「キーイベント数 ÷ セッション数」でCVRを算出</li>
+</ul>
+<p>改善前1ヶ月と改善後1ヶ月のCVRを比較すれば、施策の効果が定量的に分かります。</p>
+</section>
+
+<section><h2>数字で見る改善事例3つ</h2>
+<p><strong>事例1：福岡・薬院のパーソナルジム</strong><br>
+改善前は月間セッション180件・問い合わせ2件（CVR 1.1%）。トップ見出しを「産後ママ専門」に変更、スマホ画面下部に予約バーを固定、お客様の声を8件追加した結果、3ヶ月後は月間セッション210件・問い合わせ9件（CVR 4.3%）に。<strong>アクセスはほぼ変わらず、問い合わせが4.5倍</strong>という典型例です。</p>
+<p><strong>事例2：北九州の整体院</strong><br>
+問い合わせフォームの必須項目を8個から3個に削減、料金の目安表を掲載、Google口コミ引用を5件追加。改善前CVR 0.7%が、2ヶ月後には2.6%へ。フォーム完了率が22%→68%に跳ね上がった影響が大きく、集客数を変えずに問い合わせ3.7倍という結果になりました。</p>
+<p><strong>事例3：大分の美容室</strong><br>
+「予約する」ボタンを目立たないグレーから暖色のオレンジに変更、画面下部に予約バーを固定、ボタンラベルを「今すぐ予約する」に。それだけでCVR 1.5%→3.1%へ。1つの改善で成果が出た分かりやすい例です。</p>
+</section>
+
+<section><h2>やってはいけない5つのNG改善</h2>
+<ul>
+<li><strong>ポップアップ広告：</strong>スマホでは離脱率を大きく上げる</li>
+<li><strong>自動チャットボット：</strong>小規模店舗ではむしろ機会損失に</li>
+<li><strong>デザインの大幅リニューアル：</strong>問題は見た目ではなく導線</li>
+<li><strong>1週間で判断：</strong>ブレが大きく効果測定にならない</li>
+<li><strong>ボタンを増やしすぎ：</strong>選択肢が多いと決められず離脱する</li>
+</ul>
+<p>「引き算の改善」が基本。増やすより減らすほうが効きます。</p>
+</section>
+
+<section><h2>スマホでの押しやすさ、5つの基準</h2>
+<p>いまや訪問者の75〜85%はスマホ。PC画面で「きれい」と満足しても、スマホで押しづらければCVRは伸びません。次の5つを必ず点検します。</p>
+<ul>
+<li><strong>親指ゾーン：</strong>片手で持った時の親指が届く範囲（画面下部〜中央）に主要ボタンを配置</li>
+<li><strong>ボタンサイズ：</strong>高さ44px以上、横幅は指の腹（約48px）以上</li>
+<li><strong>ボタン間の間隔：</strong>隣接ボタンとは8px以上空ける（誤タップ防止）</li>
+<li><strong>フォントサイズ：</strong>本文16px以上、ボタンラベルは太字＋14px以上</li>
+<li><strong>コントラスト：</strong>ボタンと背景の色差（コントラスト比4.5以上）</li>
+</ul>
+<p>Chromeのデベロッパーツール「デバイスモード」で、iPhone SE・iPhone Pro Max・Androidの3サイズを最低確認してください。実機がなくても十分検証できます。</p>
+</section>
+
+<section><h2>ABテストは1施策1ヶ月ルール</h2>
+<p>CVR改善を続けていくと「AとBどちらが良いか」を比べたくなります。ここで守るべき鉄則は3つ。</p>
+<ol>
+<li><strong>1度に1箇所だけ変える：</strong>ボタン色とフォーム項目を同時に変えると効果切り分け不能</li>
+<li><strong>最低1ヶ月は続ける：</strong>短期間ではブレが大きく判断できない</li>
+<li><strong>季節要因を除外：</strong>年末年始・GW・お盆を挟む月は比較しない</li>
+</ol>
+<p>個人事業主の規模ではGA4のABテスト機能を使うほどのアクセスがないため、「変更前1ヶ月」と「変更後1ヶ月」を単純比較する形で十分です。</p>
+</section>
+
+<section><h2>業種別・特に効くCVR改善</h2>
+<ul>
+<li><strong>飲食店：</strong>営業時間・駐車場・支払い方法のFAQ、Googleマップ埋め込み</li>
+<li><strong>整体・治療院：</strong>Before / After写真、症状別ページの充実</li>
+<li><strong>美容室：</strong>スタイル写真ギャラリー、スタイリスト指名予約</li>
+<li><strong>士業：</strong>初回無料相談の明示、料金体系の透明化</li>
+<li><strong>教室・スクール：</strong>体験レッスンの申込動線、受講者の声</li>
+<li><strong>小売店：</strong>在庫状況の可視化、SNSギャラリー連動</li>
+</ul>
+</section>
+
+<section><h2>よくある質問</h2>
+<p><strong>Q. CVRを上げるのに一番効果的なのは？</strong><br>
+A. 問い合わせボタンの位置と目立ち方です。ヘッダーとスマホ画面下部に固定ボタンを置くだけで、CVRが数倍になる事例が多くあります。</p>
+<p><strong>Q. お客様の声はどれくらい必要？</strong><br>
+A. 最低5件、できれば10件以上。顔写真・名前・日付があると信頼感が跳ね上がります。</p>
+<p><strong>Q. フォームの項目は何個までがいい？</strong><br>
+A. 必須は3つ（名前・連絡先・相談内容）。7つを超えると離脱率が30〜50%上昇します。</p>
+<p><strong>Q. 改善効果はどれくらいで出る？</strong><br>
+A. 数字は翌日から動きますが、判断は最低2週間、できれば1ヶ月のデータで。</p>
+<p><strong>Q. デザインを刷新すべき？</strong><br>
+A. まず不要。問題は見た目より導線と情報の質。部分修正から始めます。</p>
+</section>
+
+<section><h2>ボタンラベルの言葉選び</h2>
+<p>意外と見落とされがちなのが、ボタンの中に書く文字。同じ場所・同じ色でも、ラベルを変えるだけでクリック率が1.5〜2倍変わるケースが珍しくありません。</p>
+<ul>
+<li><strong>NG例：</strong>「送信」「予約」「お問い合わせ」——動作しか書かれていない</li>
+<li><strong>OK例：</strong>「30秒で予約する」「無料で相談する」「今月の空き枠を見る」——目的語＋具体性</li>
+<li>相手が得られる価値と、必要な労力の少なさをセットで書くと反応が上がる</li>
+<li>ボタン直下に注釈「1分で完了」「事前情報不要」を添えるとさらに押しやすい</li>
+</ul>
+<p>ラベルを変えるだけなら実装コストはほぼゼロ。今日のうちに1つ試して、翌月の数字を見るところから始められます。</p>
+</section>
+
+<section><h2>まとめ</h2>
+<p>CVR改善は<strong>「導線・情報・動機」の3層</strong>で組み立てます。導線（ボタン位置・フォーム）→ 情報（ターゲット・お客様の声・料金）→ 動機（FAQ・緊急性）の順で整えれば、地域集客系のCVRは無理なく2%以上に到達します。</p>
+<p>集客数を増やす前に、まずCVRを整える。これが遠回りに見えて最短ルートです。</p>
+</section>
+
+<div style="background:linear-gradient(135deg, #06C755, #04A048);color:white;padding:2rem;border-radius:16px;text-align:center;margin:2rem 0;">
+    <h3 style="margin-top:0;color:white;">💬 数字を一緒に読み解きます</h3>
+    <p>「見るべき指標が分からない」段階から、無料でご相談いただけます。</p>
+    <a href="https://lin.ee/43NTiCQ" style="display:inline-block;background:white;color:#06C755;padding:1rem 2rem;border-radius:999px;font-weight:900;text-decoration:none;margin-top:1rem;">📱 LINEで相談する（無料）</a>
+    <p style="font-size:0.85rem;margin-top:1rem;opacity:0.9;">✓ 24時間受付　✓ 返信は営業時間内　✓ しつこい営業なし</p>
+</div>
+
+<section><h2>関連記事</h2>
+<ul>
+<li><a href="ga4-6-key-marketing-indicators.html">GA4で見るべき集客の6つの指標</a></li>
+<li><a href="traffic-vs-conversion-which-first.html">集客数と成約率、どちらから改善すべきか</a></li>
+<li><a href="monthly-marketing-report-template.html">月次で集客をふりかえる報告テンプレート</a></li>
+<li><a href="marketing-troubleshooting.html">集客が伸びない時のトラブルシューティング</a></li>
+<li><a href="no-inquiry-7-reasons.html">HPあるのに問い合わせが来ない7つの原因と対策</a></li>
+</ul>
+</section>
+
+<div class="article-cta"><h3>「うちのCVR、どこから直せばいい？」なら</h3><p>7つのポイントのうち、あなたのHPに最も効く改善策を無料で診断します。優先順位まで具体的にお伝えします。</p><a href="/#contact" class="btn btn-primary btn-large">集客について相談する</a></div>
+
+</div></div></article>
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2024 LIKaNON. All rights reserved.</p></div></div></footer>
+<a href="#" class="back-to-top" id="backToTop"><span class="back-to-top-arrow"></span><span class="back-to-top-text">TOP</span></a>
+<script src="../script.js" defer></script><script src="../blog.js" defer></script>
+</body></html>
