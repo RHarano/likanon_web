@@ -183,6 +183,68 @@
         ]
     }
     </script>
+
+<style id="rebrand-typography">
+/* 見出しの改行制御 - 助詞の孤立防止 */
+.section-title, .hero-title, h1, h2, h3 {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    line-break: strict;
+}
+/* 追い出し禁則 */
+.section-title span, .hero-title span {
+    display: inline-block;
+}
+/* セクションのゆとり */
+section .section-header {
+    margin-bottom: 3rem;
+}
+.section-title {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+.section-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 3.5rem;
+}
+section.section {
+    padding: 5rem 0;
+}
+@media (max-width: 768px) {
+    section.section {
+        padding: 3.5rem 0;
+    }
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+}
+.section-description {
+    line-height: 2;
+    color: #444;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* カード類の余白 */
+.merit-card, .service-card, .case-card, .empathy-card {
+    padding: 1.75rem !important;
+}
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 1.35rem;
+        line-height: 1.7;
+    }
+    .section-description {
+        font-size: 0.95rem;
+        line-height: 1.9;
+    }
+}
+</style>
+
 </head>
 <body>
     <!-- ヘッダー -->
@@ -214,23 +276,15 @@
             <div class="hero-content">
                 <p class="hero-sub">個人事業主・小規模店舗の集客支援</p>
                 <div class="hero-badge">
-                    <span class="hero-badge-limit">本気で集客したい方向け／月の受付件数を調整しています</span>
+                    <span class="hero-badge-limit">本気で集客を改善したい方へ</span>
                 </div>
                 <h1 class="hero-title">
                     <span class="title-line-1">広告・SNS・検索を、</span>
                     <span class="title-line-2"><span class="highlight">問い合わせにつなげたい方へ</span></span>
                 </h1>
-                <!-- 浮き出るアイデア要素 -->
-                <div class="floating-ideas">
-                    <span class="idea-bubble idea-1">HP</span>
-                    <span class="idea-bubble idea-2">SEO</span>
-                    <span class="idea-bubble idea-3">SNS</span>
-                    <span class="idea-bubble idea-4">MEO</span>
-                    <span class="idea-bubble idea-5">LP</span>
-                </div>
                 <p class="hero-description">
-                    HP・SEO・Instagram運用・GA4計測を<br class="sp-only">必要に応じて組み合わせ、<br class="pc-only">
-                    認知から比較・問い合わせまでの動線を、<br class="sp-only">相談から運用まで<strong>同じ担当者が伴走</strong>して改善します。
+                    HP・SEO・Instagram運用・GA4計測を組み合わせ、認知から問い合わせまでの動線を改善します。<br class="pc-only">
+                    相談から運用まで<strong>同じ担当者が伴走</strong>します。
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">
@@ -263,8 +317,7 @@
     <section class="section empathy" id="empathy">
         <div class="container">
             <div class="section-header">
-                <p class="section-sub">Your Challenges</p>
-                <h2 class="section-title">こんな集客の悩み、<br class="sp-only">ありませんか？</h2>
+                <h2 class="section-title">こんな悩み、ありませんか</h2>
                 <p class="section-description">
                     1つでも当てはまる方は、<br class="sp-only">現状の整理からご一緒できます
                 </p>
@@ -306,8 +359,7 @@
     <section class="section" id="flow" style="background:#fafafa;padding:5rem 0;">
         <div class="container">
             <div class="section-header">
-                <p class="section-sub">Flow &amp; Approach</p>
-                <h2 class="section-title">流入から問い合わせまでの動線を、<br class="sp-only"><span class="highlight">3層で改善</span>します</h2>
+                <h2 class="section-title">動線を<span class="highlight">3層で改善</span></h2>
                 <p class="section-description">
                     見込み客は「投稿を見る → プロフィールを確認 →<br class="sp-only">HPで比較 → 問い合わせ」の順で動きます。<br class="pc-only">
                     どこで離れているかを見ながら、必要な施策を組み合わせて改善します。
@@ -317,17 +369,17 @@
             <!-- 3層モデル -->
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;max-width:1080px;margin:2.5rem auto 3rem;">
                 <div style="background:white;border-radius:16px;padding:1.75rem 1.5rem;border-top:4px solid #c9a96e;box-shadow:0 4px 12px rgba(0,0,0,.04);">
-                    <div style="font-size:0.8rem;color:#c9a96e;font-weight:700;letter-spacing:1.5px;margin-bottom:0.5rem;">LAYER 01</div>
+                    <div style="font-size:0.85rem;color:#c9a96e;font-weight:700;margin-bottom:0.75rem;">1. 認知</div>
                     <h3 style="font-size:1.15rem;margin:0 0 0.75rem;color:#1a1a1a;">認知（SNS・検索）</h3>
                     <p style="font-size:0.92rem;line-height:1.75;color:#555;margin:0;">Instagramの投稿・検索結果・MEOで、まず<strong>見つけてもらう</strong>層。ここが弱いと、比較の土俵に乗れません。</p>
                 </div>
                 <div style="background:white;border-radius:16px;padding:1.75rem 1.5rem;border-top:4px solid #c9a96e;box-shadow:0 4px 12px rgba(0,0,0,.04);">
-                    <div style="font-size:0.8rem;color:#c9a96e;font-weight:700;letter-spacing:1.5px;margin-bottom:0.5rem;">LAYER 02</div>
+                    <div style="font-size:0.85rem;color:#c9a96e;font-weight:700;margin-bottom:0.75rem;">2. 比較</div>
                     <h3 style="font-size:1.15rem;margin:0 0 0.75rem;color:#1a1a1a;">比較（HP・LP）</h3>
                     <p style="font-size:0.92rem;line-height:1.75;color:#555;margin:0;">プロフィールから遷移した先で、他社と<strong>比較して選ばれる</strong>層。HPの構成・情報量・導線が問い合わせ数を左右します。</p>
                 </div>
                 <div style="background:white;border-radius:16px;padding:1.75rem 1.5rem;border-top:4px solid #c9a96e;box-shadow:0 4px 12px rgba(0,0,0,.04);">
-                    <div style="font-size:0.8rem;color:#c9a96e;font-weight:700;letter-spacing:1.5px;margin-bottom:0.5rem;">LAYER 03</div>
+                    <div style="font-size:0.85rem;color:#c9a96e;font-weight:700;margin-bottom:0.75rem;">3. 計測</div>
                     <h3 style="font-size:1.15rem;margin:0 0 0.75rem;color:#1a1a1a;">計測（GA4・Search Console）</h3>
                     <p style="font-size:0.92rem;line-height:1.75;color:#555;margin:0;">どのページで離脱しているか、どの流入が問い合わせにつながっているかを<strong>数字で見て次の一手を決める</strong>層。</p>
                 </div>
@@ -335,7 +387,6 @@
 
             <!-- 動線イメージ -->
             <div style="max-width:960px;margin:0 auto 3rem;background:white;border-radius:16px;padding:1.75rem 1.5rem;border:1px solid #ececec;">
-                <p style="font-size:0.85rem;color:#888;letter-spacing:1px;margin:0 0 0.75rem;text-align:center;">CUSTOMER JOURNEY</p>
                 <p style="font-size:1rem;line-height:1.9;text-align:center;margin:0;color:#333;">
                     <strong>投稿を見る</strong><span style="color:#c9a96e;margin:0 0.5rem;">→</span>
                     <strong>プロフィールを確認</strong><span style="color:#c9a96e;margin:0 0.5rem;">→</span>
@@ -384,7 +435,6 @@
     <section class="section service" id="service">
         <div class="container">
             <div class="section-header">
-                <p class="section-sub">Service</p>
                 <h2 class="section-title">対応できる<span class="highlight">4つの施策</span></h2>
                 <p class="section-description">
                     ご相談内容と現状を確認したうえで、<br class="sp-only">
@@ -471,7 +521,6 @@
     <section class="section portfolio" id="portfolio">
         <div class="container">
             <div class="section-header">
-                <p class="section-sub">Case Studies</p>
                 <h2 class="section-title">改善<span class="highlight">事例</span></h2>
                 <p class="section-description">
                     課題・対応・確認できた変化を、代表的な6事例で紹介します。<br class="pc-only">
@@ -632,8 +681,7 @@
     <section class="section founder-profile" id="founder">
         <div class="container">
             <div class="section-header">
-                <p class="section-sub">Who You Talk To</p>
-                <h2 class="section-title">相談から運用まで、<br class="sp-only"><span class="highlight">同じ人が担当</span>します</h2>
+                <h2 class="section-title"><span class="highlight">同じ担当者</span>が最後まで</h2>
             </div>
             <div style="max-width:960px;margin:0 auto;background:#fafafa;border-radius:20px;padding:2.5rem 2rem;border:1px solid #ececec;">
                 <div style="display:grid;grid-template-columns:minmax(120px,150px) 1fr;gap:2rem;align-items:start;">
@@ -687,7 +735,6 @@
     <section class="section process" id="process">
         <div class="container">
             <div class="section-header">
-                <p class="section-sub">Flow</p>
                 <h2 class="section-title">相談後の<span class="highlight">流れ</span></h2>
                 <p class="section-description">
                     無料相談から運用まで、<br class="sp-only">段階を踏んで進めます
@@ -754,7 +801,6 @@
     <section class="section faq" id="faq">
         <div class="container">
             <div class="section-header">
-                <p class="section-sub">FAQ</p>
                 <h2 class="section-title">よくある<span class="highlight">ご質問</span></h2>
                 <p class="section-description">
                     お問い合わせの前に、<br class="sp-only">よくいただくご質問をご確認ください
@@ -839,8 +885,7 @@
     <section class="section contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <p class="section-sub">Contact</p>
-                <h2 class="section-title">集客について<br class="sp-only">相談する</h2>
+                <h2 class="section-title">集客のご相談</h2>
                 <p class="section-description">
                     ご相談内容を確認したうえで、<br class="sp-only">
                     必要な施策と進め方を提案します。<br class="pc-only">
