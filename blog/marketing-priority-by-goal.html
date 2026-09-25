@@ -19,15 +19,92 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"集客施策の優先順位はどう決めますか？","acceptedAnswer":{"@type":"Answer","text":"「目的」と「現在地」の2軸で決めます。目的とは新規獲得・リピート・単価アップ・認知拡大などのゴール、現在地とはアクセス数・CVR・リピート率などの現状の数字。目的だけで施策を選ぶと、土台が整っていないのに集客だけ加速する結果になり、逆に穴の空いたバケツ状態になります。まず現在地を数値化し、目的とのギャップの大きい部分に投資してください。"}},{"@type":"Question","name":"新規獲得を最優先すべきなのはどんな時？","acceptedAnswer":{"@type":"Answer","text":"開業から半年以内、または既存客の再来店率が業種平均を上回っているのに売上が足りない時です。再来店率が低い状態で新規ばかり集めると、いつまでも新規頼みの不安定な経営になります。既存客の満足度・再来店率が土台として整ってから、新規集客に力を入れるのが基本です。"}},{"@type":"Question","name":"リピート施策を先にすべきなのはどんな時？","acceptedAnswer":{"@type":"Answer","text":"月の新規客数は取れているのに売上が伸び悩む時、再来店率が30%未満の時、既存客の連絡先が取れていない時です。新規獲得コストは既存客維持コストの5〜7倍と言われるので、まず既存の穴を塞ぐ方が投資対効果は圧倒的に高くなります。LINE公式アカウントでの再来店促進、初回来店後のフォローが基本です。"}},{"@type":"Question","name":"単価アップと集客はどちらを先にすべき？","acceptedAnswer":{"@type":"Answer","text":"来客数が安定していて、既存客に「もっと使いたい」ニーズがある業種なら単価アップが先。逆に来客数がそもそも少ないなら集客が先です。単価アップは「もっと使いたい」ニーズが自然にある業種（美容室のカラー追加、飲食店のドリンク・デザート追加）で伸びやすく、逆に単発利用が中心の業種では効きにくい傾向があります。"}},{"@type":"Question","name":"複数施策を同時にやってはいけない？","acceptedAnswer":{"@type":"Answer","text":"同時にやること自体は問題ありませんが、「主軸1つ・補助2つ」までに絞ってください。3つ以上を主軸にすると、どれも中途半端で成果が出ません。1つ目の主軸が回るようになってから、2つ目に広げるのが個人事業主・小規模店舗にとっての現実的な進め方です。"}},{"@type":"Question","name":"施策の優先順位は業種で変わりますか？","acceptedAnswer":{"@type":"Answer","text":"はい、大きく変わります。飲食店・カフェは新規獲得＋Googleビジネスプロフィール、整体・治療院はリピート＋お客様の声、美容室・サロンは指名予約獲得＋SNS、士業は信頼構築＋SEOブログが基本の重心です。業種の特性（単発or継続、地域or広域、感情or論理）で優先順位が変わるので、業種別のセオリーを踏まえて設計してください。"}},{"@type":"Question","name":"広告と無料施策、どちらから始めるべき？","acceptedAnswer":{"@type":"Answer","text":"予約・問い合わせ導線が整っていない状態で広告を回すのは、水を撒くだけで容器がザルの状態と同じです。まずMEO・SEO・HP改善など無料〜低コストの土台施策で、CVR2%以上を確保してから広告を検討してください。順序を間違えると、広告費だけが減っていきます。"}}]}</script>
 </head>
 <body>
-<header class="header"><div class="header-inner"><a href="/" class="logo"><img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image"></a><nav class="nav">
+<header class="header" id="header">
+        <div class="header-inner">
+            <a href="/" class="logo" aria-label="LIKaNON トップへ">
+                <img src="/img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav" id="nav" aria-label="メインナビゲーション">
                 <ul class="nav-list">
-                    <li><a href="/#service">サービス</a></li>
-                    <li><a href="/hp-instagram-set.html">セット運用</a></li>
-                    <li><a href="/#portfolio">事例</a></li>
-                    <li><a href="/blog.html">ブログ</a></li>
-                    <li><a href="/#contact" class="nav-cta">無料相談</a></li>
+                    <li class="nav-item nav-dropdown">
+                        <button type="button" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-services-panel">
+                            サービス
+                            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="nav-dropdown-panel" id="nav-services-panel" role="menu">
+                            <ul class="nav-dropdown-list">
+                                <li><a href="/#service-hp" class="nav-dropdown-item" role="menuitem">
+                                    <span class="nav-dd-title">HP・LP制作／リニューアル</span>
+                                    <span class="nav-dd-desc">問い合わせ動線と検索対策を最初から組み込むサイト設計</span>
+                                </a></li>
+                                <li><a href="/#service-seo" class="nav-dropdown-item" role="menuitem">
+                                    <span class="nav-dd-title">SEO</span>
+                                    <span class="nav-dd-desc">キーワード設計・内部改善・記事で検索流入を積み上げ</span>
+                                </a></li>
+                                <li><a href="/#service-sns" class="nav-dropdown-item" role="menuitem">
+                                    <span class="nav-dd-title">Instagram・SNS運用</span>
+                                    <span class="nav-dd-desc">認知の入り口からHPへの動線まで一貫設計</span>
+                                </a></li>
+                                <li><a href="/#service-meo" class="nav-dropdown-item" role="menuitem">
+                                    <span class="nav-dd-title">MEO・GA4計測</span>
+                                    <span class="nav-dd-desc">地図検索対策と、数字で判断できる計測環境の構築</span>
+                                </a></li>
+                            </ul>
+                            <a href="/hp-instagram-set.html" class="nav-dropdown-feature" role="menuitem">
+                                <span class="nav-dd-feat-label">おすすめの組み合わせ</span>
+                                <span class="nav-dd-feat-title">HP＋Instagram セット運用 →</span>
+                                <span class="nav-dd-feat-desc">認知（Instagram）と比較（HP）を一体で改善</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="/works.html" class="nav-link">改善事例</a></li>
+                    <li class="nav-item"><a href="/about.html" class="nav-link">代表紹介</a></li>
+                    <li class="nav-item"><a href="/#faq" class="nav-link">よくある質問</a></li>
+                    <li class="nav-item"><a href="/blog.html" class="nav-link">ブログ</a></li>
                 </ul>
-            </nav></div></header>
+                <div class="header-actions">
+                    <a href="https://lin.ee/43NTiCQ" target="_blank" rel="noopener" class="nav-btn nav-btn-line">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.631-.63.346 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+                        <span>LINEで相談</span>
+                    </a>
+                    <a href="/#contact" class="nav-btn nav-btn-primary">無料で相談する</a>
+                </div>
+            </nav>
+            <button class="hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+    <aside class="drawer" id="drawer" aria-hidden="true" aria-label="モバイルメニュー">
+        <div class="drawer-inner">
+            <div class="drawer-group">
+                <h3 class="drawer-group-title">サービス</h3>
+                <ul class="drawer-list">
+                    <li><a href="/#service-hp">HP・LP制作／リニューアル</a></li>
+                    <li><a href="/#service-seo">SEO（検索流入）</a></li>
+                    <li><a href="/#service-sns">Instagram・SNS運用</a></li>
+                    <li><a href="/#service-meo">MEO・GA4計測</a></li>
+                    <li><a href="/hp-instagram-set.html" class="drawer-feature">★ HP＋Instagram セット運用</a></li>
+                </ul>
+            </div>
+            <div class="drawer-group">
+                <h3 class="drawer-group-title">LIKaNONについて</h3>
+                <ul class="drawer-list">
+                    <li><a href="/works.html">改善事例</a></li>
+                    <li><a href="/about.html">代表紹介</a></li>
+                    <li><a href="/#faq">よくある質問</a></li>
+                    <li><a href="/blog.html">ブログ</a></li>
+                </ul>
+            </div>
+            <div class="drawer-cta">
+                <a href="https://lin.ee/43NTiCQ" target="_blank" rel="noopener" class="drawer-btn drawer-btn-line">LINEで相談</a>
+                <a href="/#contact" class="drawer-btn drawer-btn-primary">無料で相談する</a>
+            </div>
+        </div>
+    </aside>
 <nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="/">ホーム</a></li><li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li><li class="breadcrumb-item current">集客の目的別に選ぶ、施策の優先順位</li></ol></div></nav>
 
 <article class="article"><header class="article-header"><div class="container"><div class="article-meta"><span class="article-category tools">お役立ち豆知識</span><time datetime="2026-09-26">2026.09.26</time><span class="read-time">7分</span></div>
@@ -246,4 +323,13 @@ A. まずMEO・SEO・HP改善など無料〜低コストの土台施策でCVR2%�
 <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2024 LIKaNON. All rights reserved.</p></div></div></footer>
 <a href="#" class="back-to-top" id="backToTop"><span class="back-to-top-arrow"></span><span class="back-to-top-text">TOP</span></a>
 <script src="../script.js" defer></script><script src="../blog.js" defer></script>
+    <div class="bottom-bar" role="navigation" aria-label="固定アクション">
+        <a href="https://lin.ee/43NTiCQ" target="_blank" rel="noopener" class="bottom-bar-btn bottom-bar-line">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.631-.63.346 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            <span>LINEで相談</span>
+        </a>
+        <a href="/#contact" class="bottom-bar-btn bottom-bar-primary">
+            <span>無料で相談する</span>
+        </a>
+    </div>
 </body></html>

@@ -79,42 +79,86 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', handleScroll, { passive: true });
 
     // ========================================
-    // Mobile navigation
+    // Global Navigation (dropdown + drawer)
     // ========================================
     const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('nav');
-    const navLinks = document.querySelectorAll('.nav-list a');
-    let isNavOpen = false;
+    const drawer = document.getElementById('drawer');
+    const drawerBackdrop = document.getElementById('drawer-backdrop');
+    const dropdowns = document.querySelectorAll('.nav-dropdown');
 
-    function toggleNav() {
-        isNavOpen = !isNavOpen;
-        hamburger.classList.toggle('active', isNavOpen);
-        nav.classList.toggle('active', isNavOpen);
-        document.body.style.overflow = isNavOpen ? 'hidden' : '';
+    function openDrawer() {
+        if (!drawer) return;
+        drawer.classList.add('is-open');
+        if (drawerBackdrop) drawerBackdrop.classList.add('is-open');
+        if (hamburger) {
+            hamburger.classList.add('active');
+            hamburger.setAttribute('aria-expanded', 'true');
+        }
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('nav-open');
+    }
+    function closeDrawer() {
+        if (!drawer) return;
+        drawer.classList.remove('is-open');
+        if (drawerBackdrop) drawerBackdrop.classList.remove('is-open');
+        if (hamburger) {
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        }
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('nav-open');
+    }
+    function toggleDrawer() {
+        if (!drawer) return;
+        if (drawer.classList.contains('is-open')) closeDrawer();
+        else openDrawer();
     }
 
-    function closeNav() {
-        isNavOpen = false;
-        hamburger.classList.remove('active');
-        nav.classList.remove('active');
-        document.body.style.overflow = '';
+    if (hamburger) hamburger.addEventListener('click', toggleDrawer);
+    if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+    if (drawer) {
+        drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
     }
 
-    hamburger.addEventListener('click', toggleNav);
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', closeNav);
+    // Dropdown toggles (click to open, click again to close)
+    function closeAllDropdowns(except) {
+        dropdowns.forEach(dd => {
+            if (dd !== except) {
+                dd.classList.remove('is-open');
+                const btn = dd.querySelector('.nav-dropdown-toggle');
+                if (btn) btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+    dropdowns.forEach(dd => {
+        const btn = dd.querySelector('.nav-dropdown-toggle');
+        if (!btn) return;
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const willOpen = !dd.classList.contains('is-open');
+            closeAllDropdowns(dd);
+            dd.classList.toggle('is-open', willOpen);
+            btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        });
+        // Close dropdown when clicking a link inside
+        dd.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => closeAllDropdowns(null));
+        });
     });
 
+    // Outside click closes dropdowns
     document.addEventListener('click', function(e) {
-        if (isNavOpen && !nav.contains(e.target) && !hamburger.contains(e.target)) {
-            closeNav();
+        if (!e.target.closest('.nav-dropdown')) {
+            closeAllDropdowns(null);
         }
     });
 
+    // Esc closes everything
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && isNavOpen) {
-            closeNav();
+        if (e.key === 'Escape') {
+            closeAllDropdowns(null);
+            if (drawer && drawer.classList.contains('is-open')) closeDrawer();
         }
     });
 

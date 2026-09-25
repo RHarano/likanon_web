@@ -19,15 +19,92 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"カフェのホームページのPVを10倍にするにはどれくらいかかりますか？","acceptedAnswer":{"@type":"Answer","text":"事例では月間PV1万→10万まで6ヶ月かかりました。1〜2ヶ月目は既存記事のリライトとMEO整備で2倍、3〜4ヶ月目は地域キーワード記事の追加で4倍、5〜6ヶ月目はSNSからの流入増で10倍まで到達。小規模カフェでも半年あれば十分現実的な数字です。"}},{"@type":"Question","name":"カフェ集客に効くキーワードは何ですか？","acceptedAnswer":{"@type":"Answer","text":"「地域名＋カフェ＋用途（wifi/電源/デート/勉強/ランチ）」の組み合わせが最も効きます。事例では『博多 カフェ 電源』『天神 カフェ 勉強』などの記事が月8,000PVを叩き出しました。単に『美味しいカフェ』では埋もれるので、来店目的とセットで発信するのが正解です。"}},{"@type":"Question","name":"PVが増えれば売上も増えますか？","acceptedAnswer":{"@type":"Answer","text":"増えますが、比例するわけではありません。事例ではPVが10倍になり、来店客は月380人→月1,240人（3.3倍）、月商は月8ご相談→月258万円（3.0倍）に増加。PVの全てが来店につながるわけではなく、記事末尾に『地図・営業時間・電話』を必ず配置する導線設計が売上化のカギです。"}},{"@type":"Question","name":"カフェのブログはどんな内容が伸びますか？","acceptedAnswer":{"@type":"Answer","text":"『地域＋シーン別のカフェ紹介』『豆知識（コーヒーの選び方など）』『店主のこだわりストーリー』の3種類が特に伸びます。事例では地域シーン別記事が全PVの62%、豆知識が21%、ストーリーが17%を占めました。自分の店の宣伝より、読者の悩み解決を優先する構成が効きます。"}},{"@type":"Question","name":"MEOとPV獲得は両立できますか？","acceptedAnswer":{"@type":"Answer","text":"できます。むしろ両輪で回すべきです。MEOは『今すぐ来店したい人』を、SEOブログは『検討段階の人』を集めます。事例ではMEO経由の来店が月180件、ブログ経由の来店が月410件で、両方を強化することで年間売上が1,000万円以上増えました。"}},{"@type":"Question","name":"個人カフェでもPV10万は達成できますか？","acceptedAnswer":{"@type":"Answer","text":"できます。事例は席数14席の小規模カフェで、記事執筆はオーナー1人＋週末のスタッフ2名の体制。専業ライターは雇わずに達成しました。重要なのは『地域＋シーン別』の型を守ること。この型に沿って月4本ずつ書けば、6ヶ月で40本超のストックとなり、PVは自然に伸びていきます。"}},{"@type":"Question","name":"Instagramとブログはどう連携させますか？","acceptedAnswer":{"@type":"Answer","text":"Instagramで話題化→プロフィールから店舗ブログへ誘導→ブログ内で予約・地図・LINE登録に流す動線が鉄板です。事例では投稿の最後に『詳細はプロフィールURL』と明記し、ブログ経由でのLINE登録が月0件→月82件に増えました。SNSは入口、ブログは受け皿と考えると設計しやすくなります。"}}]}</script>
 </head>
 <body>
-<header class="header"><div class="header-inner"><a href="/" class="logo"><img src="../img/likanonlogo.png" alt="LIKaNON" class="logo-image"></a><nav class="nav">
+<header class="header" id="header">
+        <div class="header-inner">
+            <a href="/" class="logo" aria-label="LIKaNON トップへ">
+                <img src="/img/likanonlogo.png" alt="LIKaNON" class="logo-image">
+            </a>
+            <nav class="nav" id="nav" aria-label="メインナビゲーション">
                 <ul class="nav-list">
-                    <li><a href="/#service">サービス</a></li>
-                    <li><a href="/hp-instagram-set.html">セット運用</a></li>
-                    <li><a href="/#portfolio">事例</a></li>
-                    <li><a href="/blog.html">ブログ</a></li>
-                    <li><a href="/#contact" class="nav-cta">無料相談</a></li>
+                    <li class="nav-item nav-dropdown">
+                        <button type="button" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="nav-services-panel">
+                            サービス
+                            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="nav-dropdown-panel" id="nav-services-panel" role="menu">
+                            <ul class="nav-dropdown-list">
+                                <li><a href="/#service-hp" class="nav-dropdown-item" role="menuitem">
+                                    <span class="nav-dd-title">HP・LP制作／リニューアル</span>
+                                    <span class="nav-dd-desc">問い合わせ動線と検索対策を最初から組み込むサイト設計</span>
+                                </a></li>
+                                <li><a href="/#service-seo" class="nav-dropdown-item" role="menuitem">
+                                    <span class="nav-dd-title">SEO</span>
+                                    <span class="nav-dd-desc">キーワード設計・内部改善・記事で検索流入を積み上げ</span>
+                                </a></li>
+                                <li><a href="/#service-sns" class="nav-dropdown-item" role="menuitem">
+                                    <span class="nav-dd-title">Instagram・SNS運用</span>
+                                    <span class="nav-dd-desc">認知の入り口からHPへの動線まで一貫設計</span>
+                                </a></li>
+                                <li><a href="/#service-meo" class="nav-dropdown-item" role="menuitem">
+                                    <span class="nav-dd-title">MEO・GA4計測</span>
+                                    <span class="nav-dd-desc">地図検索対策と、数字で判断できる計測環境の構築</span>
+                                </a></li>
+                            </ul>
+                            <a href="/hp-instagram-set.html" class="nav-dropdown-feature" role="menuitem">
+                                <span class="nav-dd-feat-label">おすすめの組み合わせ</span>
+                                <span class="nav-dd-feat-title">HP＋Instagram セット運用 →</span>
+                                <span class="nav-dd-feat-desc">認知（Instagram）と比較（HP）を一体で改善</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="/works.html" class="nav-link">改善事例</a></li>
+                    <li class="nav-item"><a href="/about.html" class="nav-link">代表紹介</a></li>
+                    <li class="nav-item"><a href="/#faq" class="nav-link">よくある質問</a></li>
+                    <li class="nav-item"><a href="/blog.html" class="nav-link">ブログ</a></li>
                 </ul>
-            </nav></div></header>
+                <div class="header-actions">
+                    <a href="https://lin.ee/43NTiCQ" target="_blank" rel="noopener" class="nav-btn nav-btn-line">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.631-.63.346 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+                        <span>LINEで相談</span>
+                    </a>
+                    <a href="/#contact" class="nav-btn nav-btn-primary">無料で相談する</a>
+                </div>
+            </nav>
+            <button class="hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+    <aside class="drawer" id="drawer" aria-hidden="true" aria-label="モバイルメニュー">
+        <div class="drawer-inner">
+            <div class="drawer-group">
+                <h3 class="drawer-group-title">サービス</h3>
+                <ul class="drawer-list">
+                    <li><a href="/#service-hp">HP・LP制作／リニューアル</a></li>
+                    <li><a href="/#service-seo">SEO（検索流入）</a></li>
+                    <li><a href="/#service-sns">Instagram・SNS運用</a></li>
+                    <li><a href="/#service-meo">MEO・GA4計測</a></li>
+                    <li><a href="/hp-instagram-set.html" class="drawer-feature">★ HP＋Instagram セット運用</a></li>
+                </ul>
+            </div>
+            <div class="drawer-group">
+                <h3 class="drawer-group-title">LIKaNONについて</h3>
+                <ul class="drawer-list">
+                    <li><a href="/works.html">改善事例</a></li>
+                    <li><a href="/about.html">代表紹介</a></li>
+                    <li><a href="/#faq">よくある質問</a></li>
+                    <li><a href="/blog.html">ブログ</a></li>
+                </ul>
+            </div>
+            <div class="drawer-cta">
+                <a href="https://lin.ee/43NTiCQ" target="_blank" rel="noopener" class="drawer-btn drawer-btn-line">LINEで相談</a>
+                <a href="/#contact" class="drawer-btn drawer-btn-primary">無料で相談する</a>
+            </div>
+        </div>
+    </aside>
 <nav class="breadcrumb"><div class="container"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="/">ホーム</a></li><li class="breadcrumb-item"><a href="/blog.html">ブログ</a></li><li class="breadcrumb-item current">月間PV1万→10万にしたカフェの具体的な戦略</li></ol></div></nav>
 
 <article class="article"><header class="article-header"><div class="container"><div class="article-meta"><span class="article-category tools">お役立ち豆知識</span><time datetime="2026-09-11">2026.09.11</time><span class="read-time">7分</span></div>
@@ -270,4 +347,13 @@ A. 現実的です。事例は席数14席の個人カフェ。型を守れば半
 <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2024 LIKaNON. All rights reserved.</p></div></div></footer>
 <a href="#" class="back-to-top" id="backToTop"><span class="back-to-top-arrow"></span><span class="back-to-top-text">TOP</span></a>
 <script src="../script.js" defer></script><script src="../blog.js" defer></script>
+    <div class="bottom-bar" role="navigation" aria-label="固定アクション">
+        <a href="https://lin.ee/43NTiCQ" target="_blank" rel="noopener" class="bottom-bar-btn bottom-bar-line">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.631-.63.346 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            <span>LINEで相談</span>
+        </a>
+        <a href="/#contact" class="bottom-bar-btn bottom-bar-primary">
+            <span>無料で相談する</span>
+        </a>
+    </div>
 </body></html>
