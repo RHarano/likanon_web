@@ -62,7 +62,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css?v=20260926s">
+    <link rel="stylesheet" href="style.css?v=20260926t">
 
     <!-- 構造化データ (JSON-LD) - ProfessionalService -->
     <script type="application/ld+json">
@@ -181,6 +181,16 @@
         ]
     }
     </script>
+
+    <!-- Service schemas (for AI/検索の「何をやっているか」の理解を助ける) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"ホームページ制作","provider":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com/"},"areaServed":{"@type":"Country","name":"日本"},"description":"個人事業主・小規模店舗向けのHP・LP制作／リニューアル。集客動線・SEO内部対策・スマホ対応・お問い合わせ導線を最初から組み込みます。他社制作サイトの改修・リニューアルも対応。","offers":{"@type":"Offer","priceCurrency":"JPY","price":"300000","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"JPY","minPrice":300000,"description":"内容により変動、初回相談後にお見積り"}}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"HP＋Instagram セット運用","provider":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com/"},"areaServed":{"@type":"Country","name":"日本"},"description":"認知(Instagram)と比較(HP)を一体で改善する主力サービス。HP制作/改修 + Instagram運用戦略 + HP⇔Instagram動線設計 + 数値分析&改善の4本柱で伴走します。","url":"https://likanon.com/hp-instagram-set.html"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"SEO対策","provider":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com/"},"description":"キーワード設計・内部構造・記事改善・Search Console分析まで対応。検索から自動的に見込み客が来る状態を、時間をかけて積み上げます。"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Instagram・SNS運用","provider":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com/"},"description":"プロフィール設計・投稿・HP動線までを一貫して組み立て、フォロワー数だけで終わらない設計にします。"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"MEO・GA4計測","provider":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com/"},"description":"実店舗の地図検索対策(Googleビジネスプロフィール)と、GA4・Search Consoleでの計測設計。数字で見て次の一手を決められる状態にします。"}</script>
+
+    <!-- Speakable schema (音声アシスタント/AI回答生成向け) -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://likanon.com/","speakable":{"@type":"SpeakableSpecification","cssSelector":[".hero-title",".hero-description",".section-title"]}}</script>
 
 <style id="rebrand-typography">
 /* 見出しの改行制御 - 助詞の孤立防止 */
@@ -1286,7 +1296,7 @@ section.section {
 <!-- Mobile Fixed Footer -->
 
     <!-- JavaScript -->
-    <script src="script.js?v=20260926s" defer></script>
+    <script src="script.js?v=20260926t" defer></script>
 
     <script>
     // === スパム対策スクリプト（緩和版・正当な問い合わせを妨げない設計） ===
