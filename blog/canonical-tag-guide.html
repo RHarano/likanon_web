@@ -31,10 +31,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css?v=20260926t">
+    <link rel="stylesheet" href="../style.css?v=20260926u">
     <link rel="stylesheet" href="../blog.css">
     <link rel="stylesheet" href="article.css">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"canonicalタグ設定ガイド｜重複コンテンツ対策の正しい使い方","description":"canonicalタグは重複コンテンツ問題を防ぐSEO必須要素。設定方法、使うべき場面、よくある間違い、WordPressでの設定までわかりやすく解説します。","image":"https://likanon.com/img/likanonlogo.png","datePublished":"2026-04-27","dateModified":"2026-04-27","author":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com"},"publisher":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com","logo":{"@type":"ImageObject","url":"https://likanon.com/img/likanonlogo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://likanon.com/blog/canonical-tag-guide.html"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"canonicalタグ設定ガイド｜重複コンテンツ対策の正しい使い方","description":"canonicalタグは重複コンテンツ問題を防ぐSEO必須要素。設定方法、使うべき場面、よくある間違い、WordPressでの設定までわかりやすく解説します。","image":"https://likanon.com/img/likanonlogo.png","datePublished":"2026-04-27","dateModified":"2026-09-26","author":{"@type":"Person","@id":"https://likanon.com/about.html#founder","name":"原野 玲未","url":"https://likanon.com/about.html"},"publisher":{"@type":"Organization","name":"LIKaNON","url":"https://likanon.com","logo":{"@type":"ImageObject","url":"https://likanon.com/img/likanonlogo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://likanon.com/blog/canonical-tag-guide.html"},"inLanguage":"ja"}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://likanon.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://likanon.com/blog.html"},{"@type":"ListItem","position":3,"name":"canonicalタグ設定","item":"https://likanon.com/blog/canonical-tag-guide.html"}]}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"canonicalタグは全ページに必要ですか？","acceptedAnswer":{"@type":"Answer","text":"はい、自己参照canonical（自分自身を指す）を全ページに設置するのが推奨です。意図しない重複コンテンツ問題を予防できます。"}},{"@type":"Question","name":"canonicalを設定すると301リダイレクトの代わりになりますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ、目的が違います。canonicalは「内容は重複だがアクセスは可能」、301は「URLが移転した」を意味します。混同しないでください。"}},{"@type":"Question","name":"WordPressでcanonicalはどう設定しますか？","acceptedAnswer":{"@type":"Answer","text":"Yoast SEO、All in One SEO、Rank Mathなどの主要SEOプラグインが自動で出力します。手動設定は基本不要です。"}}]}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"canonicalタグを設定する手順","description":"重複コンテンツ対策のため、各ページに正規URLを指定するcanonicalタグの設定手順","totalTime":"PT15M","step":[{"@type":"HowToStep","name":"正規URLを決定する","text":"そのページの代表URL（http/https・www有無・末尾スラッシュを統一）を決めます。"},{"@type":"HowToStep","name":"head内にcanonicalタグを記述","text":"HTMLの<head>内に<link rel=\"canonical\" href=\"https://example.com/page\" />を1行追加します。絶対URLで記述するのが必須です。"},{"@type":"HowToStep","name":"全ページに自己参照canonicalを設置","text":"各ページが自分自身のURLを指すcanonicalを設置。意図しない重複の予防になります。"},{"@type":"HowToStep","name":"WordPressならプラグインで自動化","text":"Yoast SEO・All in One SEO・Rank Mathなどを導入すれば自動で出力されます。手動設定との重複に注意。"},{"@type":"HowToStep","name":"設定を確認","text":"ブラウザでページソースを表示しrel=\"canonical\"が1つだけ正しく入っているか確認、Search Consoleの「URL検査」で正規URLが期待通りかチェックします。"}]}</script>
@@ -150,6 +150,10 @@
                 <p class="article-lead">同じ内容のページが複数のURLでアクセスできる状態は、SEO評価の分散を招きます。canonicalタグはこれを防ぐ「正規URL指定」の仕組み。基本の設定方法から、WordPressでの扱い、よくある失敗まで実例で解説します。</p>
             </div>
         </header>
+<aside id="article-tldr" role="note" aria-labelledby="tldr-title" style="max-width:800px;margin:1.5rem auto;padding:1.25rem 1.5rem;background:#faf7f0;border-left:4px solid #c9a96e;border-radius:8px;">
+    <p id="tldr-title" style="margin:0 0 0.5rem;font-size:0.75rem;letter-spacing:2px;font-weight:700;color:#8a6a3b;">TL;DR — この記事の要点</p>
+    <p style="margin:0;font-size:0.95rem;line-height:1.75;color:#333;">【2026年版】canonicalタグ設定完全ガイド。重複コンテンツ問題を防ぎSEO評価を集約する正しい使い方、必須シーン5つ、WordPress・自作HTMLでの設定方法、自己参照canonical、よくある5つの間違いと検証方法まで個人事業主向けに実例で解説。</p>
+</aside>
 
         <div class="article-content">
             <div class="container">
@@ -315,7 +319,24 @@
                         <p>canonicalタグは地味ですが、<strong>正しく設定するだけでSEO評価の取りこぼしを防げる</strong>必須要素です。一度設定すれば長く効くので、未設定のサイトは今すぐ対応を。</p>
                     </section>
 
-                    <div class="article-cta">
+                    <aside id="article-author-bio" role="contentinfo" aria-labelledby="bio-title" style="max-width:800px;margin:2.5rem auto 1rem;padding:1.5rem;background:#fafafa;border-radius:12px;border:1px solid #ececec;">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+        <img src="/img/founder-profile-face.webp" alt="LIKaNON 代表 原野 玲未" width="60" height="60" style="width:60px;height:60px;border-radius:50%;object-fit:cover;object-position:center 22%;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.08);">
+        <div style="flex:1;min-width:200px;">
+            <p id="bio-title" style="margin:0 0 0.15rem;font-size:0.75rem;letter-spacing:1px;color:#8a6a3b;font-weight:700;">この記事の執筆者</p>
+            <p style="margin:0;font-size:1rem;font-weight:700;color:#1a1a1a;"><a href="/about.html" style="color:inherit;text-decoration:none;">原野 玲未</a><span style="font-weight:400;font-size:0.85rem;color:#666;"> — LIKaNON 代表</span></p>
+        </div>
+    </div>
+    <p style="margin:1rem 0 0;font-size:0.88rem;line-height:1.7;color:#555;">
+        デザイン・Web制作10年以上、HP・LP <strong>100件以上</strong>の制作経験。個人事業主・小規模店舗の集客支援を福岡から全国オンラインで対応しています。
+    </p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem;">
+        <a href="/about.html" style="display:inline-block;padding:0.4rem 0.9rem;background:#fff;border:1px solid #ddd;border-radius:999px;font-size:0.82rem;color:#333;text-decoration:none;">代表プロフィール →</a>
+        <a href="/hp-instagram-set.html" style="display:inline-block;padding:0.4rem 0.9rem;background:#fff;border:1px solid #ddd;border-radius:999px;font-size:0.82rem;color:#333;text-decoration:none;">HP＋Instagram セット運用 →</a>
+        <a href="/works.html" style="display:inline-block;padding:0.4rem 0.9rem;background:#fff;border:1px solid #ddd;border-radius:999px;font-size:0.82rem;color:#333;text-decoration:none;">事例一覧 →</a>
+    </div>
+</aside>
+<div class="article-cta">
                         <h3>サイトのSEO技術設定、診断します</h3>
                         <p>canonical・noindex・構造化データなど、技術SEOの設定状況を無料診断。</p>
                         <a href="/#contact" class="btn btn-primary btn-large">無料相談はこちら
@@ -371,7 +392,7 @@
 
     <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る"><span class="back-to-top-arrow"></span><span class="back-to-top-text">TOP</span></a>
 
-    <script src="../script.js?v=20260926t" defer></script>
+    <script src="../script.js?v=20260926u" defer></script>
     <script src="../blog.js" defer></script>
     <div class="bottom-bar" role="navigation" aria-label="固定アクション">
         <a href="https://lin.ee/43NTiCQ" target="_blank" rel="noopener" class="bottom-bar-btn bottom-bar-line">
