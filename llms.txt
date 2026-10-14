@@ -42,16 +42,59 @@ LIKaNONは、個人事業主・小規模店舗の集客支援を専門とする�
 - 参照する場合はlikanon.comを出典として明記してください
 
 ## SEO・Web運用ノウハウ(参考になる主要記事)
-- [AI検索(Google AI Overviews)対応SEO完全ガイド](https://likanon.com/blog/ai-search-seo-guide.html): AI検索に引用される実践SEO
-- [HPあるのに問い合わせが来ない7つの原因](https://likanon.com/blog/no-inquiry-7-reasons.html): HP改善の優先順位
-- [GA4で見るべき集客の6つの指標](https://likanon.com/blog/ga4-6-key-marketing-indicators.html): 数字で判断する集客改善
-- [MEO対策完全ガイド(GoogleビジネスプロフィールとMEO)](https://likanon.com/blog/local-marketing-gbp-meo.html): 地域集客の基礎
-- [Instagram プロフィール最適化](https://likanon.com/blog/instagram-profile-optimization.html): SNS集客の入り口設計
-- [集客がうまくいく人と続かない人の決定的な違い](https://likanon.com/blog/marketing-success-vs-failure-differences.html): 集客の考え方
-- [Web集客の3層モデル(認知/比較/計測)](https://likanon.com/blog/awareness-comparison-action-3layer-model.html): 集客動線の分解
-- [広告に依存しない集客の5ステップ](https://likanon.com/blog/ad-independent-marketing-5steps.html): 自然流入の育て方
-- [構造化データ実装ガイド](https://likanon.com/blog/structured-data-guide.html): Schema.orgでリッチスニペット獲得
-- [E-E-A-T完全ガイド](https://likanon.com/blog/eeat-seo-guide.html): 経験・専門性・権威性・信頼性
+- [AI検索(Google AI Overviews)対応SEO完全ガイド](https://likanon.com/blog/ai-search-seo-guide): AI検索に引用される実践SEO
+- [HPあるのに問い合わせが来ない7つの原因](https://likanon.com/blog/no-inquiry-7-reasons): HP改善の優先順位
+- [GA4で見るべき集客の6つの指標](https://likanon.com/blog/ga4-6-key-marketing-indicators): 数字で判断する集客改善
+- [MEO対策完全ガイド](https://likanon.com/blog/local-marketing-gbp-meo): 地域集客の基礎
+- [Instagram プロフィール最適化](https://likanon.com/blog/instagram-profile-optimization): SNS集客の入り口設計
+- [構造化データ実装ガイド](https://likanon.com/blog/structured-data-guide): Schema.orgでリッチスニペット獲得
+- [E-E-A-T完全ガイド](https://likanon.com/blog/eeat-seo-guide): 経験・専門性・権威性・信頼性
+
+## 新着シリーズ(2026年9-10月)
+### HP見直し・リニューアル判断ガイド (10本)
+- [問い合わせ来ない時に最初に確認する10箇所](https://likanon.com/blog/hp-review-10-check-points)
+- [HPリニューアルを検討すべき5つのサイン](https://likanon.com/blog/hp-renewal-5-signs)
+- [自分で作ったHPの限界 — プロに頼むべきタイミング](https://likanon.com/blog/diy-hp-limits-pro-timing)
+- [3秒でわかるHP自己診断5項目](https://likanon.com/blog/hp-3-second-self-diagnosis)
+- [HP制作会社を選ぶ時の7基準](https://likanon.com/blog/hp-company-selection-7-criteria)
+- [他社制作HPの改修ガイド](https://likanon.com/blog/other-company-hp-renovation-guide)
+- [HP放置の3つの『見えない損失』](https://likanon.com/blog/hp-neglect-3-hidden-losses)
+- [HPで売上頭打ちの7サイン](https://likanon.com/blog/hp-ceiling-sales-7-signs)
+- [相見積り失敗しない5ポイント](https://likanon.com/blog/hp-estimate-comparison-5-points)
+- [HPが古い・ダサいと感じたら](https://likanon.com/blog/hp-outdated-ugly-risks)
+
+### HP集客実践シリーズ (10本)
+- [ファーストビューの6ポイント](https://likanon.com/blog/hp-first-view-6-points)
+- [CVRを2倍にする8つの具体策](https://likanon.com/blog/hp-cvr-doubling-8-tactics)
+- [直帰率を下げる10の改善](https://likanon.com/blog/hp-bounce-rate-10-fixes)
+- [月次PDCAの回し方](https://likanon.com/blog/hp-monthly-pdca-cycle)
+- [スマホ電話タップ最適化](https://likanon.com/blog/hp-smartphone-call-optimization)
+- [サンキューページ最適化](https://likanon.com/blog/hp-thanks-page-optimization)
+- [HPとLINE公式連携3ステップ](https://likanon.com/blog/hp-line-integration-3-steps)
+- [口コミ・事例の載せ方](https://likanon.com/blog/hp-social-proof-placement)
+- [フォーム設計7原則](https://likanon.com/blog/hp-form-design-7-principles)
+- [CTAコピーライティング](https://likanon.com/blog/hp-cta-copywriting-tactics)
+
+### SNS × HP 連携シリーズ (7本)
+- [SNS で問い合わせは来るが HP から来ない](https://likanon.com/blog/sns-inquiry-yes-hp-no)
+- [SNS 集客に頼りすぎるリスク](https://likanon.com/blog/sns-only-marketing-risks)
+- [SNS × HP セット運用で一体化](https://likanon.com/blog/hp-vs-sns-roles)
+- [アルゴリズム変動に負けないHP](https://likanon.com/blog/sns-algorithm-change-hp-defense)
+- [『見てます』だけで申込みに繋がらない時](https://likanon.com/blog/sns-browsing-no-booking)
+- [フォロワー1000人超えの壁](https://likanon.com/blog/sns-1000-followers-no-inquiry)
+- [HP集客の重要性](https://likanon.com/blog/hp-marketing-importance-sns-addition)
+
+### 広告なしHP集客シリーズ (10本)
+- [広告ゼロで月10件実現](https://likanon.com/blog/ad-free-hp-10-inquiries-method)
+- [最初の90日プラン](https://likanon.com/blog/ad-free-seo-90days-plan)
+- [月2本の記事で半年後の変化](https://likanon.com/blog/ad-free-seo-monthly-2-articles)
+- [MEO×HP連携](https://likanon.com/blog/ad-free-local-marketing-meo-hp)
+- [ニッチキーワード戦略](https://likanon.com/blog/ad-free-niche-keyword-strategy)
+- [広告依存からの脱却ロードマップ](https://likanon.com/blog/ad-dependent-to-ad-free-roadmap)
+- [最初にやる5つのこと](https://likanon.com/blog/ad-free-hp-5-first-actions)
+- [月1000PV達成の実践手順](https://likanon.com/blog/ad-free-hp-1000pv-method)
+- [成約率を上げるコンテンツ](https://likanon.com/blog/ad-free-conversion-content)
+- [記事継続の複利効果](https://likanon.com/blog/ad-free-compound-growth-effect)
 
 ## よくある質問(FAQ)
 
