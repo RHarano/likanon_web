@@ -1309,3 +1309,93 @@
 .nav-next:hover::before {
     opacity: 0.8;
 }
+
+/* ==========================================================================
+   Article Body - Generic Tables (読みやすさ強化)
+   ========================================================================== */
+.article-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.article-body table thead {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+}
+
+.article-body table tr:first-child {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+}
+
+.article-body table tr:first-child th,
+.article-body table tr:first-child td,
+.article-body table thead th {
+    color: #fff;
+    font-weight: 700;
+    padding: 0.9rem 1rem;
+    text-align: left;
+    letter-spacing: 0.03em;
+    border: none;
+    background: transparent;
+}
+
+.article-body table tbody tr:not(:first-child),
+.article-body table tr:not(:first-child) {
+    border-bottom: 1px solid #ececec;
+    transition: background 0.15s;
+}
+
+.article-body table tbody tr:not(:first-child):hover,
+.article-body table tr:not(:first-child):hover {
+    background: #faf7f0;
+}
+
+.article-body table td,
+.article-body table th {
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+    line-height: 1.6;
+    color: #333;
+    border: none;
+}
+
+.article-body table tbody tr:nth-child(even):not(:first-child),
+.article-body table tr:nth-child(even):not(:first-child) {
+    background: #fafafa;
+}
+
+/* ◎○△× のアイコン色付け */
+.article-body table td:nth-child(2) {
+    font-weight: 700;
+}
+
+/* スマホ対応: 横スクロール可 + 文字小さく */
+@media (max-width: 640px) {
+    .article-body table {
+        font-size: 0.85rem;
+        white-space: normal;
+        display: table;
+    }
+    .article-body table td,
+    .article-body table th,
+    .article-body table tr:first-child th,
+    .article-body table tr:first-child td {
+        padding: 0.6rem 0.75rem;
+    }
+    .article-body table thead th {
+        font-size: 0.78rem;
+    }
+}
+
+/* テーブル直前の『◎可能』などを強調するクラス不要の自動化 */
+.article-body table td {
+    position: relative;
+}
