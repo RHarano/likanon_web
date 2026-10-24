@@ -581,8 +581,11 @@ select {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .service-card {
