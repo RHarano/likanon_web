@@ -6472,6 +6472,9 @@ body.nav-open {
 }
 
 @media (max-width: 640px) {
+    .synergy-scenarios-grid {
+        grid-template-columns: 1fr !important;
+    }
     .founder-card {
         padding: 1.75rem 1.25rem;
         border-radius: 16px;
