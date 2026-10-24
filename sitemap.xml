@@ -1357,4 +1357,28 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://likanon.com/blog/server-5xx-error-seo-recovery</loc>
+        <lastmod>2026-10-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/google-penalty-diagnosis-recovery</loc>
+        <lastmod>2026-10-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/crawl-frequency-improvement-10-methods</loc>
+        <lastmod>2026-10-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://likanon.com/blog/chatgpt-search-citation-content-design</loc>
+        <lastmod>2026-10-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
