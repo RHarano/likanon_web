@@ -14,7 +14,7 @@
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <title>Core Web Vitalsを完全攻略する実践ガイド | LIKaNON</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css?v=20261025"><link rel="stylesheet" href="../blog.css"><link rel="stylesheet" href="article.css?v=20261016c">
+<link rel="stylesheet" href="../style.css?v=20261028b"><link rel="stylesheet" href="../blog.css"><link rel="stylesheet" href="article.css?v=20261016c">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Core Web Vitalsを完全攻略する実践ガイド","datePublished":"2026-09-23","dateModified":"2026-09-26","author":{"@type":"Person","@id":"https://likanon.com/about.html#founder","name":"原野 玲未","url":"https://likanon.com/about.html"},"publisher":{"@type":"Organization","name":"LIKaNON","logo":{"@type":"ImageObject","url":"https://likanon.com/img/likanonlogo.png"}},"image":"https://likanon.com/img/likanonlogo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://likanon.com/blog/core-web-vitals-complete-guide"},"inLanguage":"ja","wordCount":5420,"timeRequired":"PT14M"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Core Web Vitalsを改善する5ステップ","step":[{"@type":"HowToStep","name":"現状測定","text":"PageSpeed InsightsとSearch ConsoleのCore Web Vitalsレポートで、LCP・INP・CLSの現在値を記録します。"},{"@type":"HowToStep","name":"LCP改善","text":"ヒーロー画像のWebP化・preload・fetchpriority=highでLCPを2.5秒以内に短縮します。"},{"@type":"HowToStep","name":"INP改善","text":"重いJavaScriptの分割、イベントリスナーの最適化でINPを200ms以下に。"},{"@type":"HowToStep","name":"CLS改善","text":"img/iframeにwidth/height属性を指定し、Webフォント読み込みでのレイアウトずれを防止。"},{"@type":"HowToStep","name":"再測定と検証","text":"実装後72時間でPageSpeed Insights再測定、28日後にSearch Consoleで実ユーザーデータ確認。"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Core Web Vitalsは本当に検索順位に影響しますか？","acceptedAnswer":{"@type":"Answer","text":"はい、2021年6月から公式ランキング要因として組み込まれています。ただし単独で大きく順位を変える要因ではなく、コンテンツの質が同等の競合と並んだ時にタイブレーカーとして働く『同点決勝の判定基準』のような扱いです。3指標すべてが『良好』レンジに入るサイトは、平均で2〜7位の順位向上が実測されています。"}},{"@type":"Question","name":"LCP・INP・CLSの合格ラインは？","acceptedAnswer":{"@type":"Answer","text":"LCP（最大要素の表示時間）は2.5秒以内、INP（操作への反応速度）は200ms以下、CLS（レイアウトずれ）は0.1以下が『良好』の合格ラインです。この3つ全てをモバイル環境でクリアすれば、Search Consoleで『良好』と判定されます。まずは1つずつ、悪い指標から順に改善するのが現実的です。"}},{"@type":"Question","name":"FIDはなくなったのですか？","acceptedAnswer":{"@type":"Answer","text":"2024年3月にFID（First Input Delay）は廃止され、代わりにINP（Interaction to Next Paint）が新指標として採用されました。FIDが『最初の操作の反応時間』のみを見ていたのに対し、INPはページ滞在中の全操作の反応時間から悪い方の値を使うため、より実態に近い評価になります。既存の速度改善策の多くはINPにも有効です。"}},{"@type":"Question","name":"PageSpeed Insightsのスコアと実ユーザーデータの違いは？","acceptedAnswer":{"@type":"Answer","text":"PageSpeed Insightsは『ラボデータ（Lighthouse）』と『フィールドデータ（実ユーザー）』の2種類を表示します。ラボは仮想環境での即時測定、フィールドは過去28日の実ユーザー計測値。Search Consoleが評価に使うのはフィールドデータです。ラボで合格でも、実機の遅い端末や3G回線で使われる実ユーザーではフィールドデータが悪いことがあり、両方確認が必要です。"}},{"@type":"Question","name":"CLSはなぜ発生するのですか？","acceptedAnswer":{"@type":"Answer","text":"主原因は5つ。①画像やiframeにwidth/height属性がない、②Webフォントの読み込みで文字幅が変わる、③動的挿入される広告・バナー、④埋め込み動画（YouTubeなど）の遅延読込、⑤JavaScriptで後から挿入される要素。特に①②で全体の7割の原因を占めるため、まずimg/iframeの属性指定とfont-display:swap設定から始めます。"}},{"@type":"Question","name":"INPを改善するもっとも効果的な方法は？","acceptedAnswer":{"@type":"Answer","text":"JavaScriptの実行時間を減らすことです。具体的には①未使用JSの削除、②サードパーティスクリプト（チャットボット、SNSウィジェット）の遅延読込、③重い処理をrequestIdleCallbackで分割、④イベントリスナーをpassive: true化、の4つ。個人事業主サイトなら、②の不要ウィジェット削除だけでINPが400ms→150msに改善するケースが多発します。"}},{"@type":"Question","name":"WordPressでCore Web Vitalsを改善する近道は？","acceptedAnswer":{"@type":"Answer","text":"3ステップで大半が解決します。①テーマをCWV最適化された高速テーマ（SWELL・Cocoonなど）に変更、②プラグインを7個以下に整理、③『Perfmatters』などの最適化プラグイン1つで遅延読込とpreloadを一括設定。この構成でLCP 4秒→1.8秒、INP 350ms→130ms、CLS 0.25→0.05という改善事例が多数あります。"}}],"inLanguage":"ja"}</script>
@@ -255,11 +255,11 @@ element.addEventListener('touchstart', handler, { passive: true });
 </section>
 
 <section><h2>数字で見る改善事例3つ</h2>
-<p><strong>事例1：福岡・パーソナルジム（WordPress）</strong><br>
+<p><strong>事例1：福岡・パーソナルジム（WordPress）</strong><br class="pc-only">
 LCP 5.2秒→1.8秒、INP 380ms→140ms、CLS 0.28→0.06。SWELLテーマに変更＋不要プラグイン8個削除＋画像WebP化で達成。3ヶ月後の検索順位は8位→3位、月間問い合わせが4件→11件に増加。</p>
-<p><strong>事例2：大分・整体院（STUDIO）</strong><br>
+<p><strong>事例2：大分・整体院（STUDIO）</strong><br class="pc-only">
 LCP 4.5秒→2.2秒、CLS 0.19→0.04。ヒーロー画像をSTUDIOのアップロード前にSquooshで200KBに圧縮、GoogleマップをiframeでlazyロードするだけでCLSが1/5に。</p>
-<p><strong>事例3：熊本・ECサイト（Shopify）</strong><br>
+<p><strong>事例3：熊本・ECサイト（Shopify）</strong><br class="pc-only">
 INP 450ms→130ms。決済ウィジェットの遅延読込＋チャットボット削除＋商品ページのJS軽量化で、CVR 1.4%→2.3%へ改善。</p>
 </section>
 
@@ -314,15 +314,15 @@ INP 450ms→130ms。決済ウィジェットの遅延読込＋チャットボッ
 </div>
 
 <section><h2>よくある質問</h2>
-<p><strong>Q. CWVは本当に順位に影響する？</strong><br>
+<p><strong>Q. CWVは本当に順位に影響する？</strong><br class="pc-only">
 A. はい、公式ランキング要因。ただし同等コンテンツ間でのタイブレーカー扱いです。</p>
-<p><strong>Q. 合格ラインは？</strong><br>
+<p><strong>Q. 合格ラインは？</strong><br class="pc-only">
 A. LCP 2.5秒以内、INP 200ms以下、CLS 0.1以下です。</p>
-<p><strong>Q. FIDはなくなった？</strong><br>
+<p><strong>Q. FIDはなくなった？</strong><br class="pc-only">
 A. 2024年3月にINPへ更新。全操作の最悪値で評価する仕組みです。</p>
-<p><strong>Q. CLSはなぜ発生する？</strong><br>
+<p><strong>Q. CLSはなぜ発生する？</strong><br class="pc-only">
 A. 画像属性未指定・Webフォント切替・遅延広告が主原因。img/iframeへの幅高さ指定で7割解決。</p>
-<p><strong>Q. WordPressでの近道は？</strong><br>
+<p><strong>Q. WordPressでの近道は？</strong><br class="pc-only">
 A. 高速テーマ変更＋プラグイン整理＋最適化プラグイン1つの3ステップです。</p>
 </section>
 
